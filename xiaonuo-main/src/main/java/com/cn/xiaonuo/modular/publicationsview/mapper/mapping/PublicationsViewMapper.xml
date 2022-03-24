@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.xiaonuo.modular.publicationsview.mapper.PublicationsViewMapper">
+
+	<resultMap id="librariesPublications4PubPage" type="com.cn.xiaonuo.modular.librariespublications.param.LibrariesPublications4PubPage">
+		<result column="library_ids" property="libraryIds" />
+		<result column="group_name" property="groupName" />
+		<result column="pmid" property="pmid" />
+		<result column="pmcid" property="pmcid" />
+		<result column="doi" property="doi" />
+		<result column="pub_title" property="pubTitle" />
+		<result column="pub_authors" property="pubAuthors" />
+		<result column="pub_journal" property="pubJournal" />
+		<result column="pub_year" property="pubYear" />
+		<result column="pub_if2020" property="pubIf2020" />
+		<result column="pub_citation" property="pubCitation" />
+		<result column="pub_abstract" property="pubAbstract" />
+    </resultMap>
+    
+    <!--获取不带文库信息的非冗余文献列表-->
+    <select id="pubPage" resultMap="librariesPublications4PubPage">
+        select group_name, pmid, pmcid, doi, pub_title, pub_authors, pub_journal, pub_year, pub_if2020, pub_citation, pub_abstract, GROUP_CONCAT(library_id) as library_ids
+        from view_publications_view
+        ${ew.customSqlSegment}
+        group by group_name, pmid, pmcid, doi, pub_title, pub_authors, pub_journal, pub_year, pub_if2020, pub_citation, pub_abstract
+        ${ewo.customSqlSegment}
+    </select>
+
+</mapper>

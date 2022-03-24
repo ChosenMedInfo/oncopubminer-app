@@ -1,0 +1,299 @@
+/* ChosenReportInfo Styles */
+.colorBlue{
+	color: #0091ea;
+}
+.colorGray{
+	color: #595959;
+}
+.colorRed{
+	color: red;
+}
+.alignCenter{
+	text-align: center;
+	vertical-align: middle;
+}
+.borderImgs{
+	border: 1px solid #E6E6E6;
+	border-radius: 8px;
+	width: 80px;
+}
+.layui-form-label {
+	width: 100px !important;
+}
+.layui-input-block {
+	margin-left: 130px !important;
+}
+#paramsSettingForm .layui-form-label {
+	width: 180px !important;
+}
+#paramsSettingForm .layui-input-block {
+	margin-left: 210px !important;
+}
+
+.layui-layer-page{
+	/*background-color: #F5F7F9 !important;*/
+}
+
+/* 小面板相关 */
+.borderCard{
+	border:1px solid #E6E6E6;
+	border-radius: 8px;
+}
+.borderCard .layui-card-header{
+	/*font-weight: bold;*/
+}
+.borderCard .layui-card-header .layui-card-header-right{
+	position: absolute;
+	right: 15px;
+	top: 0px;
+	color: #595959;
+	font-size: 12px;
+	font-weight: normal; /* 不加粗 */
+}
+
+/* 面板间分隔线 */
+.sample-detail-splitter{
+	margin: 15px 1px 10px 1px;
+}
+
+/* 信息标准化相关 */
+.needStandardization,
+.needSelection{
+	color: red;
+	font-style: italic;
+}
+.doneStandardization,
+.doneSelection{
+	color: green;
+}
+
+/* 链接样式 */
+.reportInfoLink{
+	color: #595959;
+	font-weight: normal; /* 不加粗 */
+	text-decoration: underline; /* 下划线 */
+}
+
+/* 报告数据审核页面文本域设置 */
+#reportForm .layui-textarea{
+	height: 300px !important; /* 高度设置，配合rows属性使用 */
+}
+
+/* 样本详情页面：样本信息 */
+.styleSampleInfo{
+	border-left: 1px solid #E6E6E6;
+	border-right: 1px solid #E6E6E6;
+}
+.styleSampleNumber{
+	font-size: 16px !important;
+	font-weight: bold;
+}
+.styleNameAndDiagnosis{
+	font-size: 14px !important;
+	font-weight: bold;
+}
+
+/* 样本详情页面：QC信息 */
+.qcNone{
+	font-style: italic;
+	color: gray;
+	text-align: center;
+}
+
+/* 样本详情页面 */
+.console-app-name{
+	white-space: nowrap;/*一行显示*/
+	overflow: hidden;/*超出部分隐藏*/
+	text-overflow: ellipsis;/*用...代替超出部分*/
+}
+
+/* 样本详情页面：报告相关*/
+#idDivReportRelated{
+	display: none;
+}
+
+/* 样本详情页面：证据子表*/
+.table-item .layui-table-tool {
+	background-color: #F5F7F9;
+}
+
+/* 样本详情页面：日志/反馈结果列表 */
+.layui-timeline-content {
+	padding-bottom: 5px;
+}
+.showOneLine {
+	white-space: nowrap;/*一行显示*/
+	overflow: hidden;/*超出部分隐藏*/
+	text-overflow: ellipsis;/*用...代替超出部分*/
+}
+
+/* 样本详情页面：免疫检测结果*/
+.immunoResult1 {
+	font-size: 20px;
+	color: #2d8cf0;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	
+	white-space: nowrap;/*一行显示*/
+	overflow: hidden;/*超出部分隐藏*/
+	text-overflow: ellipsis;/*用...代替超出部分*/
+}
+
+/* 样本详情页面：顶部样本信息条 */
+.ele-cell {
+	display: flex;
+}
+.ele-cell:not(.ele-cell-align-top) {
+	align-items: center;
+}
+.ele-cell > .ele-cell-content {
+	flex: 1;
+	box-sizing: border-box;
+}
+.ele-cell > * + .ele-cell-content {
+	padding-left: 10px;
+}
+.workplace-user-card .ele-cell-content[data-v-1259e8c6] {
+	overflow: hidden;
+}
+.el-avatar {
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+	overflow: hidden;
+	color: #fff;
+	background: #fff;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.el-avatar > img {
+	width: 100%;
+}
+.el-avatar--circle {
+	border-radius: 50%;
+}
+.ele-cell-content h4 {
+	font-size: 20px;
+}
+.ele-elip {
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: break-all;
+	text-overflow: ellipsis;
+}
+.ele-text-secondary {
+	color: #909399;
+}
+[class*=" el-icon-"], [class^="el-icon-"] {
+	font-family: element-icons !important;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	vertical-align: baseline;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.workplace-count-group[data-v-1259e8c6] {
+	white-space: nowrap;
+}
+.workplace-count-item[data-v-1259e8c6] {
+	padding: 0 5px 0 25px;
+	box-sizing: border-box;
+	display: inline-block;
+	text-align: right;
+}
+.ele-tag-round.el-tag--small {
+	width: 24px;
+}
+.workplace-count-name[data-v-1259e8c6] {
+	padding-left: 8px;
+}
+.workplace-count-num[data-v-1259e8c6] {
+	font-size: 16px;
+	margin-top: 6px;
+}
+.el-tag {
+	background-color: #ecf5ff;
+	border-color: #d9ecff;
+	display: inline-block;
+	height: 32px;
+	padding: 0 10px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #409eff;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 4px;
+	box-sizing: border-box;
+	white-space: nowrap;
+}
+.el-tag--small {
+	height: 24px;
+	padding: 0 8px;
+	line-height: 22px;
+}
+.ele-tag-round {
+	width: 32px;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 50%;
+	text-align: center;
+}
+.ele-tag-round.el-tag--small {
+	width: 24px;
+}
+
+/* 专为打开新的标签页而设置的链接：隐藏 */
+#idHideLink{
+	display: none;
+	color: white; /* 双重隐藏保障 */
+}
+
+/* 样本原始信息弹框 */
+.divOriInfo{
+	padding: 5px 2px;
+}
+
+/* 样本编辑弹框 */
+#addOrUpdateForm .layui-inline{
+	width: 32.5%;
+}
+.formTips{
+	color: grey;
+	font-size: 12px;
+	margin-top: 5px;
+}
+@media ( max-width : 1024px) {
+	#addOrUpdateForm .layui-inline{
+		width: 49%;
+	}
+}
+
+/* 样本详情页面：IHC相关 */
+#idIhcImgsTable{
+	margin-top: 35px;
+}
+#idIhcImgsTable img{
+	max-width: 200px;
+	width: 100%;
+}
+
+/* 样本详情页面：结果版块显示与否 */
+.classBmcModules1,
+.classBmcModules2,
+.classBmcModules3,
+.classBmcModules4,
+.classBmcModules5,
+.classBmcModules6,
+.classBmcModules7,
+.classBmcModules8,
+.classBmcModules9{
+	display: none;
+}
+

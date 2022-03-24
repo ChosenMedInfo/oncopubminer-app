@@ -1,0 +1,5 @@
+[
+	{"name": "NSCLC (Non-small cell lung cancer)", "value": "NSCLC"},
+	{"name": "GC (Gastric Cancer)", "value": "GC"},
+	{"name": "HC (Hepatocellular carcinoma)", "value": "HC"}
+]

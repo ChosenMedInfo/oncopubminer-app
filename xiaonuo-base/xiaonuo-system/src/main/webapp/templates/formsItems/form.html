@@ -1,0 +1,482 @@
+<style>
+#addOrUpdateForm4FormsItems .itemOption{
+	margin-bottom: 10px;
+}
+#addOrUpdateForm4FormsItems .dataBtnGroup{
+	float: right;
+}
+</style>
+
+<form id="addOrUpdateForm4FormsItems" lay-filter="addOrUpdateForm4FormsItems" class="layui-form model-form popupForm">
+	
+	<input name="id" type="hidden"/>
+	<input name="formId" type="hidden"/>
+	<input name="formItemDefaultValue4DataEcho" id="idFormItemDefaultValue4DataEcho" type="hidden"/>
+	
+	<!-- F01. 表单项名称 -->
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">Item Name</label>
+		<div class="layui-input-block">
+			<input id="idItemName" name="itemName" class="layui-input" placeholder="Please input item name" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	
+	<!-- F02. 表单项类型 -->
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">Item Type</label>
+		<div class="layui-input-block">
+			<select id="idItemType" name="itemType" lay-filter="itemType" lay-verify="required" required></select>
+		</div>
+	</div>
+	
+	<!-- F03. 表单项选项类别：自定义/癌种列表/药物列表/基因列表/变异列表 -->
+	<div class="layui-form-item" id="idDivItemOptionType">
+		<label class="layui-form-label layui-form-required">Option Type</label>
+		<div class="layui-input-block">
+			<select name="itemOptionType" id="idItemOptionType" lay-filter="itemOptionType" lay-verify="required" required></select>
+		</div>
+	</div>
+	
+	<!-- F04. 表单项选项列表：自定义对应的列表 -->
+	<div class="layui-form-item" id="idDivItemOptionList" style="display: none;">
+		<label class="layui-form-label layui-form-required">Option List</label>
+		<div class="layui-input-block">
+			<div id="idItemOptionList">
+				
+			</div>
+			<button type="button" class="layui-btn layui-btn-sm layui-btn-primary" id="idBtnAddItemOption"><i class="layui-icon">&#xe654;</i> Add</button>
+		</div>
+	</div>
+	
+	<!-- F05-01. 表单项默认值：适用于文本框或文本域 -->
+	<div class="layui-form-item" id="idDivDefaultValue4Text" style="display: none;">
+		<label class="layui-form-label">Default Value</label>
+		<div class="layui-input-block">
+			<input id="idDefaultValue4Text" name="itemDefault" class="layui-input" placeholder="Please input default value" lay-verType="tips"/>
+		</div>
+	</div>
+	<!-- F05-02. 表单项选项默认值：适用于单选框、多选框、下拉菜单、xmSelect -->
+	<div class="layui-form-item" id="idDivDefaultValue4Options" style="display: none;">
+		<label class="layui-form-label">Default Value</label>
+		<div class="layui-input-block">
+			<div id="idDefaultValue4Options" class="xm-select-style"></div>
+		</div>
+	</div>
+	
+	<!-- F06-01. 表单项内容最大长度：适用于文本框或文本域 -->
+	<div class="layui-form-item" id="idDivMaxLength" style="display: none;">
+		<label class="layui-form-label">Max Length</label>
+		<div class="layui-input-block">
+			<input id="idItemMaxLength" name="itemMaxLength" class="layui-input" type="number" placeholder="Please input max length" lay-verType="tips"/>
+		</div>
+	</div>
+	
+	<!-- F06-02. 表单项最多可选个数：适用于checkBox或xmSelect -->
+	<div class="layui-form-item" id="idDivMaxCount" style="display: none;">
+		<label class="layui-form-label layui-form-required">Max Count</label>
+		<div class="layui-input-block">
+			<input id="idItemMaxCount" name="itemMaxCount" class="layui-input" type="number" placeholder="Please input max count" lay-verType="tips"/>
+		</div>
+	</div>
+	
+	<!-- F07. 表单项是否必需 -->
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">Required</label>
+		<div class="layui-input-block">
+			<select id="idItemRequired" name="itemRequired" lay-verify="required" required></select>
+		</div>
+	</div>
+	
+	<!-- F08. 表单项提示文字内容 -->
+	<div class="layui-form-item">
+		<label class="layui-form-label">Item Tips</label>
+		<div class="layui-input-block">
+			<input id="idItemTips" name="itemTips" class="layui-input" placeholder="Please input item tips" lay-verType="tips"/>
+		</div>
+	</div>
+	
+	<!-- F09. 表单项排序序号：不填的话默认值为0 -->
+	<div class="layui-form-item">
+		<label class="layui-form-label">Sort</label>
+		<div class="layui-input-block">
+			<input id="idItemSort" name="itemSort" class="layui-input" type="number" placeholder="Please input sort number (default 100)" lay-verType="tips"/>
+		</div>
+	</div>
+	
+	<!-- 操作按钮 -->
+	<div class="layui-form-item text-right">
+		<button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">Cancel</button>
+		<button class="layui-btn" lay-filter="formSubmitBtn" lay-submit>Save</button>
+	</div>
+	
+</form>
+
+<script>
+	var $, xmSelectObj;
+	layui.use(['layer', 'form', 'admin', 'xnUtil'], function () {
+		$ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+		
+		// 渲染字典下拉
+        xnUtil.rendDictDropDown(null, 'itemType', 'lr_item_type', 'Please select item type', null);
+        xnUtil.rendDictDropDown(null, 'itemOptionType', 'lr_item_option_type', 'Please select option type', null);
+        xnUtil.rendDictDropDown(null, 'itemRequired', 'lr_yes_no', null, null);
+
+		// 数据回显！
+		var editData = admin.getLayerData('#addOrUpdateForm4FormsItems').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('addOrUpdateForm4FormsItems', editData);
+		}
+		
+		// 获取数据！
+		if(editData != null && editData.id != null){
+			$.ajax({
+				type: "get",
+				url: "/formsItems/detail",
+				async: true,
+				contentType: "application/json; charset=utf-8",
+				data: {id: editData.id},
+				dataType: "json",
+				success: function (res) {
+					if(res != null && res.data != null){
+						
+						// F01. 表单项名称！
+						$("#idItemName").val(res.data.itemName);
+						
+						// F02. 表单项类型！
+						$("#idItemType").val(res.data.itemType);
+						funcFormOnSelectItemType({value: res.data.itemType});
+						
+						// F03. 表单项选项类别：自定义/癌种列表/药物列表/基因列表/变异列表！
+						$("#idItemOptionType").val(res.data.itemOptionType);
+						funcListenItemOptionType($("#idItemOptionType").val());
+						
+						// F04. 表单项选项列表：自定义对应的列表！
+						$.ajax({
+							type: "get",
+							url: "/formsItemsOptions/list",
+							async: false, // 这个不能异步，因为后面“F05-02”选项回显需要基于这里的结果！
+							contentType: "application/json; charset=utf-8",
+							data: {itemId: editData.id},
+							dataType: "json",
+							success: function (result) {
+								if(result != null && result.data != null && result.data.length != 0){
+									for(var m = 0; m < result.data.length; m++){
+										var thisId = "idItemOption2CustomizeFromDataEcho" + (m+1);
+										var itemOptionInputTemplate = 
+										'<div>' +
+										'	<div class ="dataBtnGroup" style="height: 38px; line-height: 38px">' +
+							            '		<i class ="layui-icon layui-icon-delete" style="font-size: 22px" onclick="funcDeleteItemOption(this)"></i> ' +
+							            '	</div>' +
+							            '	<div style="margin-right: 30px"><input id="' + thisId + '" name="nameItemOption2Customize" value="' + result.data[m].optionValue + '" class="layui-input itemOption" placeholder="Please input item option"/></div>' + 
+							            "</div>";
+										$("#idItemOptionList").append(itemOptionInputTemplate);
+										
+										// 默认值相关设置！
+										funcItemDefaultValueSetting(1); // 有选项的情况，肯定不为“0”！
+										
+										// 监听表单项选项值input内容改变事件！
+										$("#" + thisId).on("input propertychange", function(){
+											// 默认值相关设置！
+											funcItemDefaultValueSetting(1); // 同步更新默认值列表：有选项的情况，肯定不为“0”！
+										});
+									}
+								}else if(result != null && result.data != null && result.data.length == 0){
+									// 默认值相关设置！
+									funcItemDefaultValueSetting(0); // 没有选项的情况：文本类型！
+								}
+							}
+						});
+						
+						// F05-01. 表单项默认值：适用于文本框或文本域！
+						if(res.data.itemType == 0 || res.data.itemType == 1){
+							$("#idDefaultValue4Text").val(res.data.itemDefault);
+						}
+						
+						// F05-02. 表单项选项默认值：适用于单选框、多选框、下拉菜单、xmSelect！
+						if(res.data.itemType != 0 && res.data.itemType != 1){
+							if(res.data.itemDefault.trim() != ""){
+								$("#idFormItemDefaultValue4DataEcho").val(res.data.itemDefault); // 先回显数据到临时的文本框中！
+								funcItemDefaultValueSetting(1); // 有选项的情况，肯定不为“0”！
+							}
+							
+						}
+						
+						// F06-01. 表单项内容最大长度：适用于文本框或文本域！
+						$("#idItemMaxLength").val(res.data.itemMaxLength);
+						
+						// F06-02. 表单项最多可选个数：适用于checkBox或xmSelect！
+						$("#idItemMaxCount").val(res.data.itemMaxCount);
+						
+						// F07. 表单项是否必需！
+						$("#idItemRequired").val(res.data.itemRequired);
+						
+						// F08. 表单项提示文字内容！
+						$("#idItemTips").val(res.data.itemTips);
+						
+						// F09. 表单项排序序号：不填的话默认值为0！
+						$("#idItemSort").val(res.data.itemSort);
+						
+						// 重新渲染表单！
+						form.render();
+					}
+				}
+			});
+		}
+		
+		// 监听表项类型的选择事件！
+		form.on('select(itemType)', function(data){
+			funcFormOnSelectItemType(data);
+		});
+		function funcFormOnSelectItemType(data){
+			if(data.value == 0 || data.value == 1){ // 文本或文本域，不需要选项！
+				// 字段最大长度相关设置！
+				$("#idDivMaxLength").show(); // 显示该div：文本框或文本域可能需要限制最大长度！
+				$("#idDivMaxCount").hide(); // 隐藏该div：不需要显示个数：没有选项！
+				
+				// 选项类型相关设置！
+				$("#idDivItemOptionType").hide(); // 隐藏该div！
+				$("#idItemOptionType").val("0"); // NONE！
+				$("#idItemOptionType").attr("disabled", "disabled"); // 禁止修改！
+				
+				// 默认值相关设置！
+				funcItemDefaultValueSetting(0);
+				
+			}else {
+				
+				if(data.value == 2 || data.value == 3 || data.value == 4){ // 这两种情况只能是自定义的！// 2021-10-20新增：select也只能是自定义的！
+					
+					// 字段最大长度相关设置！
+					$("#idDivMaxLength").hide(); // 隐藏该div：不需要限制最大长度，由选项而定！
+					
+					// 选项类型相关设置！
+					$("#idDivItemOptionType").hide(); // 隐藏该div！
+					$("#idItemOptionType").val("1"); // Customize！
+					$("#idItemOptionType").attr("disabled", "disabled"); // 禁止修改！
+					
+				}else{ // 2021-10-20：也就是说，只有xm-select才能选择癌种、基因、药物、变异列表！
+					
+					// 字段最大长度相关设置！
+					$("#idDivMaxLength").hide(); // 隐藏该div：不需要限制最大长度，由选项而定！
+					
+					// 选项类型相关设置！
+					$("#idDivItemOptionType").show(); // 显示该div！
+					$("#idItemOptionType").val(""); // 清空，由用户选择！
+					$("#idItemOptionType").removeAttr("disabled"); // 允许修改！
+					$("#idItemOptionType").find('option[value="' + 0 + '"]').remove(); // 隐藏“NONE”，即不允许被选择！
+					
+				}
+				
+				// 最多选项个数！
+				if(data.value == 3 || data.value == 5) {
+					$("#idDivMaxCount").show(); // 显示该div：需要设置最多选项个数！
+				}else{
+					$("#idDivMaxCount").hide(); // 隐藏该div：不需要显示个数：单选！
+				}
+				
+				// 选项监听事件！
+				funcListenItemOptionType($("#idItemOptionType").val()); // 由于该监听事件中有进行默认值相关设置，所以这里不需要了！
+				
+			}
+			
+			// 重新渲染表单！
+			form.render();
+		}
+		
+		// 监听表项选项类型的选择事件！
+		form.on('select(itemOptionType)', function(data){
+			funcListenItemOptionType(data.value);
+		});
+		function funcListenItemOptionType(thisVal){
+			if(thisVal == 1){ // 为“Customize”的时候才显示该版块！
+				$("#idDivItemOptionList").show();
+			}else{ // 其他情况都隐藏！
+				$("#idDivItemOptionList").hide();
+				$("#idItemOptionList").html(""); // 清空！
+			}
+			
+			// 默认值相关设置！
+			funcItemDefaultValueSetting(1); // 有选项的情况，肯定不为“0”！
+		}
+		
+		// 监听表项选项增加/删除按钮点击事件！
+		let intIdBtnAddItemOptionClickCount = 0; // 添加按钮点击次数统计，用于创建唯一的id，便于监听！
+		$("#idBtnAddItemOption").click(function(){
+			intIdBtnAddItemOptionClickCount++;
+			var thisId = "idItemOption2Customize" + intIdBtnAddItemOptionClickCount;
+			var itemOptionInputTemplate = 
+			'<div>' +
+			'	<div class ="dataBtnGroup" style="height: 38px; line-height: 38px">' +
+            '		<i class ="layui-icon layui-icon-delete" style="font-size: 22px" onclick="funcDeleteItemOption(this)"></i> ' +
+            '	</div>' +
+            '	<div style="margin-right: 30px"><input id="' + thisId + '" name="nameItemOption2Customize" class="layui-input itemOption" placeholder="Please input item option"/></div>' + 
+            "</div>";
+			$("#idItemOptionList").append(itemOptionInputTemplate);
+			
+			// 默认值相关设置！
+			funcItemDefaultValueSetting(1); // 有选项的情况，肯定不为“0”！
+			
+			// 监听表单项选项值input内容改变事件！
+			$("#" + thisId).on("input propertychange", function(){
+				// 默认值相关设置！
+				funcItemDefaultValueSetting(1); // 同步更新默认值列表：有选项的情况，肯定不为“0”！
+			});
+		});
+		
+		// 监听多选个数设定！
+		function funcCheckMaxCountRelatedValid(){
+			// 判断选项个数限定值及相关设置是否合理！
+			var itemTypeSelected = $("#idItemType").val();
+			var itemMaxCount = $("#idItemMaxCount").val().trim();
+			if(itemTypeSelected == 3 || itemTypeSelected == 5){
+				//if(itemMaxCount == "" || itemMaxCount == 0){
+				if(itemMaxCount == ""){ // 2022-01-13（V0025-01.02.02-05）：需要允许设置为0，为0表示不限制！
+					$("#idDivMaxCount").show(); // 显示该div：需要设置个数！
+					$("#idItemMaxCount").val(""); // 清空！
+					$("#idItemMaxCount").focus();
+					layer.msg("Please set the maximum optional number; if you don't wish to limit it, leave it at 0.");
+					return false;
+				}else{
+					var countDefaultValsCount = funcGetDefaultValue().split(funcGetSplitter4DefaultValues()).length;
+					if(itemMaxCount != 0 && countDefaultValsCount > itemMaxCount){
+						$("#idDivMaxCount").show(); // 显示该div：需要设置个数！
+						$("#idItemMaxCount").val(""); // 清空！
+						$("#idItemMaxCount").focus();
+						layer.msg("The default option count cannot exceed the maximum count!");
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+		$("#idItemMaxCount").on("input propertychange", function(){
+			funcCheckMaxCountRelatedValid();
+		});
+		
+		/**
+		 * @func 表单提交事件
+		 */
+		form.on('submit(formSubmitBtn)', function (data) {
+			
+			//// 字段名称只能由纯小写字母组成！
+			//var isChars = /^[a-z]+$/.test(data.field.itemFieldName.trim());
+			//if(data.field.itemFieldName.trim() == ""){
+			//	layer.msg("Please input item field name!");
+			//	$("#idItemFieldName").focus();
+			//	return false;
+			//}else if(!isChars){
+			//	layer.msg("Item field name can only be consist of 'a-z' characters!");
+			//	$("#idItemFieldName").focus();
+			//	return false;
+			//}
+			
+			// 获取选项列表！
+			var itemOptionList = [];
+			$(".itemOption").each(function(){
+				itemOptionList.push($(this).val());
+			});
+			data.field.itemOptionList = itemOptionList;
+			
+			// 获取默认值！
+			data.field.itemDefault = funcGetDefaultValue();
+			
+			// 判断选项个数限定值！
+			if(!funcCheckMaxCountRelatedValid()) return false;
+			
+			// 提交数据！
+			layer.load(2);
+			var url = editData && editData.id ? 'formsItems/edit' : 'formsItems/add';
+			admin.req(url, JSON.stringify(data.field), function(res){
+				layer.msg(res.message, {icon: 1, time: 1000}, function () {
+					admin.putLayerData('formOk', true, '#addOrUpdateForm4FormsItems');
+					admin.closeDialog('#addOrUpdateForm4FormsItems');
+				});
+			}, 'post');
+			return false;
+			
+		});
+	});
+	
+	// 删除表项选项！
+	function funcDeleteItemOption(othis){
+		$(othis).parent().parent().remove();
+		// 默认值相关设置！
+		funcItemDefaultValueSetting(1); // 有选项的情况，肯定不为“0”！
+	}
+	
+	// 获取默认值！
+	function funcGetDefaultValue(){
+		var strDefaultVals = "";
+		var itemTypeVal = $("#idItemType").val();
+		if(itemTypeVal == 0 || itemTypeVal == 1){
+			strDefaultVals = $("#idDefaultValue4Text").val();
+		}else{
+			if(xmSelectObj){
+				var arrDefaultVals = xmSelectObj.getValue('value');
+				for(var i = 0; i < arrDefaultVals.length; i++){
+					strDefaultVals = strDefaultVals == "" ? arrDefaultVals[i] : strDefaultVals + funcGetSplitter4DefaultValues() + arrDefaultVals[i];
+				}
+			}
+		}
+		return strDefaultVals;
+	}
+	
+	// 默认值相关设置！
+	function funcItemDefaultValueSetting(maxNum){
+		if(maxNum == 0){ // for text related!
+			$("#idDivDefaultValue4Text").show(); // 显示文本相关默认值设置！
+			$("#idDivDefaultValue4Options").hide(); // 隐藏选项相关默认值设置！
+		}else{
+			// 最大数量！
+			var itemTypeVal = $("#idItemType").val();
+			if(itemTypeVal == 2 || itemTypeVal == 4){ // radio或select，单选，最多默认选择一个！
+				maxNum = 1;
+			}else{
+				maxNum = 5; // checkbox或xmSelect，多选，最多选5个！
+			}
+			
+			// 默认值相关设置！
+			$("#idDivDefaultValue4Text").hide(); // 隐藏文本相关默认值设置！
+			$("#idDivDefaultValue4Options").show(); // 显示选项相关默认值设置！
+			let xmSelectRenderObj = funcGenerateXmSelectRenderObj("idDefaultValue4Options", "idDefaultValue4OptionsName", '', maxNum, $("#idItemOptionType").val());
+        	xmSelectObj = xmSelect.render(xmSelectRenderObj);
+            let xmData = [];
+            if($("#idItemOptionType").val() == ""){ // 表单项选项类别未选择的情况下，隐藏选项相关默认值设置！
+            	$("#idDivDefaultValue4Options").hide();
+            }else {
+            	
+            	if($("#idItemOptionType").val() == "1"){ // 表单项选项类别为“Customize”时，获取选项列表！
+            		$(":input[name=nameItemOption2Customize]").each(function(){
+            			var thisVal = $(this).val().trim();
+                		if(!(thisVal == "")){ // 不为空的情况下才添加！
+	                		
+                			// 数据回显：判断是否需要默认选中！
+                			var strArrDefaultVals = $("#idFormItemDefaultValue4DataEcho").val().split(funcGetSplitter4DefaultValues());
+                			var bolSelected = false;
+                			for(var k = 0; k < strArrDefaultVals.length; k++){
+                				if(thisVal == strArrDefaultVals[k]) bolSelected = true;
+                			}
+                			
+                			// 选项！
+                			xmData.push({name: thisVal, value: thisVal, selected: bolSelected});
+                			
+                		}
+                	});
+                }else {
+                	xmData = funcFromItemOptionType2XmData($("#idItemOptionType").val()); // 癌种、药物、基因、变异等列表！
+                }
+                
+            	// 更新列表！
+            	xmSelectObj.update({
+                    data: xmData
+                });
+            }
+		}
+	}
+	
+</script>
+</body>
+</html>

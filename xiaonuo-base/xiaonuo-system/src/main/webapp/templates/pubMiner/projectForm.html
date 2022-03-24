@@ -1,0 +1,175 @@
+<form id="addOrUpdateForm" lay-filter="addOrUpdateForm" class="layui-form model-form popupForm">
+	<input name="id" type="hidden"/>
+	<input name="groupId" type="hidden"/>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">Project Name</label>
+		<div class="layui-input-block">
+			<input name="projectName" class="layui-input" placeholder="Please input project name" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">Project Desc</label>
+		<div class="layui-input-block">
+			<textarea name="projectDesc" class="layui-textarea" placeholder="Please input project description" lay-verType="tips"></textarea>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">Data Form</label>
+		<div class="layui-input-block">
+			<select name="formId" id="idSelectFormId" placeholder="Please select data form"></select>
+			<p class="formItemTips">* Only locked data collection form can be selected here.</p>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">Collection</label>
+		<div class="layui-input-block">
+			<select name="libraryId" id="idSelectLibraryId" placeholder="Please select collection">
+				<option></option>
+			</select>
+			<p class="formItemTips">* Only locked publication collection can be selected here.</p>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">Members</label>
+		<div class="layui-input-block">
+			<div id="idDivMembers" name="members" class="xm-select-style"></div>
+		</div>
+	</div>
+	<div class="layui-form-item text-right">
+		<button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">Cancel</button>
+		<button class="layui-btn" lay-filter="formSubmitBtn" lay-submit>Submit</button>
+		<button class="layui-btn" lay-filter="formSubmitSaveBtn" lay-submit>Submit and Lock</button>
+	</div>
+</form>
+
+<script>
+	layui.use(['layer', 'form', 'admin', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+		
+		// 数据回显！
+		var editData = admin.getLayerData('#addOrUpdateForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('addOrUpdateForm', editData);
+		}
+		
+		// 获取表单列表！
+		$.ajax({
+			type: "get",
+			url: "/forms/list",
+			async: false,
+			data: {date: new Date()},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function (result) {
+				if(result == null || result.data == null || result.data.length == 0){
+					// do nothing!
+				}else{
+					for(var i = 0; i < result.data.length; i++){
+						if(editData != null && editData.formId != null && editData.formId == result.data[i].id){
+							$("#idSelectFormId").append('<option value="' + result.data[i].id + '" selected="selected">' + result.data[i].formName + '</option>');
+						}else{
+							$("#idSelectFormId").append('<option value="' + result.data[i].id + '">' + result.data[i].formName + '</option>');
+						}
+					}
+				}
+				form.render();
+			}
+		});
+		
+		// 获取文库列表！
+		$.ajax({
+			type: "get",
+			url: "/libraries/list",
+			async: false,
+			data: {date: new Date(), status: 2}, // 只能采用封存的文库！
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function (result) {
+				if(result == null || result.data == null || result.data.length == 0){
+					// do nothing!
+				}else{
+					for(var i = 0; i < result.data.length; i++){
+						if(editData != null && editData.libraryId != null && editData.libraryId == result.data[i].id){
+							$("#idSelectLibraryId").append('<option value="' + result.data[i].id + '" selected="selected">' + result.data[i].libraryName + '</option>');
+						}else{
+							$("#idSelectLibraryId").append('<option value="' + result.data[i].id + '">' + result.data[i].libraryName + '</option>');
+						}
+					}
+				}
+				form.render();
+			}
+		});
+		
+		// 获取成员列表！
+		//var xmSelectRenderObj = funcGenerateXmSelectRenderObj('idDivMembers', "members", 'required', 5);
+		var xmSelectRenderObj = funcGenerateXmSelectRenderObj('idDivMembers', "members", 'required', 100, 6); // 2021-11-30（V0008-01.00.05-11）：解决人员搜索不成功的问题！
+		var xs = xmSelect.render(xmSelectRenderObj);
+		var xmData = [];
+		$.ajax({
+			type: "get",
+			url: "/sysUser/listMember",
+			async: false,
+			data: {date: new Date()},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function (result) {
+				if(result == null || result.data == null || result.data.length == 0){
+					// do nothing!
+				}else{
+					for(var i = 0; i < result.data.length; i++){
+						if(editData != null && editData.memberIds != null && editData.memberIds.indexOf(result.data[i].id) > -1){
+							xmData.push({name: result.data[i].name, value: result.data[i].id, selected: true});
+						}else{
+							xmData.push({name: result.data[i].name, value: result.data[i].id});
+						}
+					}
+				}
+				// 更新列表！
+				xs.update({
+					data: xmData
+				});
+			}
+		});
+
+		/**
+		 * @func 表单提交事件
+		 */
+		form.on('submit(formSubmitBtn)', function (data) {
+			funcRealSubmit(data);
+			return false;
+		});
+		form.on('submit(formSubmitSaveBtn)', function (data) {
+			data.field.status = 2;
+			funcRealSubmit(data);
+			return false;
+		});
+		function funcRealSubmit(data){
+			layer.load(2);
+			
+			// 获取成员列表！
+			var strArrMemberName = xs.getValue('name');
+			var strMemberNames = "";
+			for(var j = 0; j < strArrMemberName.length; j++){
+				strMemberNames = strMemberNames == "" ? strArrMemberName[j] : strMemberNames + " | " + strArrMemberName[j];
+			}
+			data.field.members = strMemberNames; // 需要用竖线隔开！
+			data.field.memberIds = xs.getValue('valueStr'); // 继续维持逗号分隔！
+			
+			// 提交！
+			var url = editData && editData.id ? 'projects/edit' : 'projects/add';
+			admin.req(url, JSON.stringify(data.field), function(res){
+				layer.msg(res.message, {icon: 1, time: 1000}, function () {
+					admin.putLayerData('formOk', true, '#addOrUpdateForm');
+					admin.closeDialog('#addOrUpdateForm');
+				});
+			}, 'post');
+			return false;
+		}
+	});
+</script>
+</body>
+</html>

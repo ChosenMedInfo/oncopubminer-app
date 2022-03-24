@@ -1,0 +1,33 @@
+[
+  {
+    "_id":"disease",
+    "name":"Cancer/Disease",
+    "order":1
+  },
+  {
+    "_id":"gene",
+    "name":"Gene",
+    "order":2
+  },
+  {
+    "_id":"mutation",
+    "name":"Alteration",
+    "order":3
+  },
+  {
+    "_id":"chemical",
+    "name":"Drug/Chemical",
+    "order":4
+  },
+  
+  {
+    "_id":"clinsig",
+    "name":"Clinical Significance",
+    "order":5
+  },
+  {
+    "_id":"evidirt",
+    "name":"Evidence Direction",
+    "order":6
+  }
+]

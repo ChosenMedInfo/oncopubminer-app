@@ -1,0 +1,308 @@
+<style>
+.layui-table-tool{
+	display: none;
+}
+</style>
+
+<!-- 正文开始 -->
+<div class="layui-fluid">
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<!-- 表格工具栏 -->
+			<form class="layui-form toolbar" id="idFormPub">
+				<div class="layui-form-item">
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pmid" class="layui-input" placeholder="PubMed ID"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pmcid" class="layui-input" placeholder="PMC ID"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pubTitle" class="layui-input" placeholder="Title"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pubAuthors" class="layui-input" placeholder="Authors"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pubJournal" class="layui-input" placeholder="Journal Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<button class="layui-btn icon-btn" lay-filter="tableSearchPub" lay-submit>
+								<i class="layui-icon">&#xe615;</i>Search
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<!-- 数据表格 -->
+			<table id="dataTablePub" lay-filter="dataTablePub"></table>
+			<!-- 接收前端数据 -->
+			<form id="projectInfoForm" lay-filter="projectInfoForm" class="layui-form model-form">
+				<input id="idProject" name="id" type="hidden"/>
+				<input id="idProjectName" name="projectName" type="hidden"/>
+				<input id="idProjectFormId" name="formId" type="hidden"/>
+				<input id="idProjectLibraryId" name="libraryId" type="hidden"/>
+				<input id="idProjectLibraryName" name="libraryName" type="hidden"/>
+				<input id="idProjectMemberIds" name="memberIds" type="hidden"/>
+				<input id="idProjectMemberNames" name="members" type="hidden"/>
+				<input id="idProjectGroupName" name="groupName" type="hidden"/>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script>
+	var currentUser;
+	layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var table = layui.table;
+		var tableX = layui.tableX;
+		var admin = layui.admin;
+		var form = layui.form;
+		var notice = layui.notice;
+		var xnUtil = layui.xnUtil;
+		
+		// 获取当前登录用户！
+		currentUser = getCurrentLoginUser();
+		
+		// 数据回显！
+		var editData = admin.getLayerData('#projectInfoForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('projectInfoForm', editData);
+		}
+		
+		// 表格字段！
+		var objArrCols = [
+			{field: 'pmid', title: 'PubID', align: 'center', sort: false, width: 110, minWidth: 110, templet: function (d) {
+				var thisHtml = '<a href="https://pubmed.ncbi.nlm.nih.gov/' + d.pmid + '/" target="_blank">' + d.pmid + ' <i class="bx bx-link"></i></a>';
+				if(d.pmcid && d.pmcid != "") thisHtml += ' <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/' + d.pmcid + '/" target="_blank">' + d.pmcid + ' <i class="bx bx-link"></i></a>';
+				return thisHtml;
+			}},
+			{field: 'pubTitle', title: 'Title', sort: false, templet: function (d) {
+				return !d.pubTitle || d.pubTitle == "" ? "-" : d.pubTitle;
+			}},
+			{field: 'pubJournal', title: 'Journal', sort: false, width: 120, minWidth: 120, templet: function (d) {
+				return !d.pubJournal || d.pubJournal == "" ? "-" : d.pubJournal;
+			}},
+			{field: 'memberStatus', title: 'Progress', align: 'center', sort: false},
+			{field: 'status', title: 'Operate', align: 'center', width: 200, minWidth: 200}
+		];
+		if(editData.groupName == "commonGroup"){
+			objArrCols = [
+				{field: 'pmid', title: 'PubID', align: 'center', sort: false, width: 110, minWidth: 110, templet: function (d) {
+					var thisHtml = '<a href="https://pubmed.ncbi.nlm.nih.gov/' + d.pmid + '/" target="_blank">' + d.pmid + ' <i class="bx bx-link"></i></a>';
+					if(d.pmcid && d.pmcid != "") thisHtml += ' <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/' + d.pmcid + '/" target="_blank">' + d.pmcid + ' <i class="bx bx-link"></i></a>';
+					return thisHtml;
+				}},
+				{field: 'pubTitle', title: 'Title', sort: false, templet: function (d) {
+					return !d.pubTitle || d.pubTitle == "" ? "-" : d.pubTitle;
+				}},
+				{field: 'pubJournal', title: 'Journal', sort: false, width: 120, minWidth: 120, templet: function (d) {
+					return !d.pubJournal || d.pubJournal == "" ? "-" : d.pubJournal;
+				}},
+				//{field: 'memberStatus', title: 'Progress', align: 'center', sort: false},
+				{field: 'status', title: 'Operate', align: 'center', width: 200, minWidth: 200}
+			];
+		}
+		
+		/* 渲染表格 */
+		var insTb = tableX.render({
+			elem: '#dataTablePub',
+			url: '/librariesPublications/page',
+			page: true,
+			toolbar: ['<p>',
+				'</p>'].join(''),
+			defaultToolbar: [],
+			cellMinWidth: 100,
+			where: {
+				libraryId: $("#idProjectLibraryId").val()
+			},
+			cols: [ objArrCols ],
+			done: function(res, curr, count) {
+				xnUtil.tableDone(insTb, res, curr, count);
+				res.data.forEach(function (item, index) {
+					var thisId = "idPubDatasetIndex" + index;
+					if(editData.groupName != "commonGroup"){
+						if(currentUser.accountType == "1"){
+							// 管理员的情况下，需要获取所有用户的提交情况！
+							var strArrMemberId   = $("#idProjectMemberIds").val().split(",");
+							var strArrMemberName = $("#idProjectMemberNames").val().split(" | ");
+							var strProgress = "";
+							for(var k = 0; k < strArrMemberId.length; k++){
+								var thisProPubStatusId = $("#idProject").val() + "|" + $("#idProjectLibraryId").val() + "|" + $("#idProjectFormId").val() + "|" + item.pmid + "|" + strArrMemberId[k];
+								$.ajax({
+									type: "get",
+									url: "/projectPubStatus/getStatus",
+									async: false,
+									contentType: "application/json; charset=utf-8",
+									data: {id: thisProPubStatusId, projectId: $("#idProject").val(), date: new Date()},
+									dataType: "json",
+									success: function (result) {
+										if(result != null){
+											var thisReaderStatus = '<span class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue"><i class="layui-icon">&#xe612;</i>' + strArrMemberName[k] + ' (Reading)</span>';
+											if(result.data == '1'){
+												thisReaderStatus = '<span class="layui-btn layui-btn-primary layui-btn-xs layui-border-green"><i class="layui-icon">&#xe612;</i>' + strArrMemberName[k] + ' (Done)</span>';
+											}
+											strProgress = strProgress == "" ? thisReaderStatus : strProgress + " " + thisReaderStatus;
+										}
+									}
+								});
+							}
+							// 接着获取自己的提交情况！
+							var thisProPubStatusId = $("#idProject").val() + "|" + $("#idProjectLibraryId").val() + "|" + $("#idProjectFormId").val() + "|" + item.pmid + "|" + currentUser.id;
+							$.ajax({
+								type: "get",
+								url: "/projectPubStatus/getStatus",
+								async: false,
+								contentType: "application/json; charset=utf-8",
+								data: {id: thisProPubStatusId, projectId: $("#idProject").val(), date: new Date()},
+								dataType: "json",
+								success: function (result) {
+									if(result != null){
+										if(result.data == "1"){
+											strProgress += ' <span class="layui-btn layui-btn-primary layui-btn-xs layui-border-green"><i class="layui-icon">&#xe612;</i>Self (Done)</span>';
+											$('div[lay-id="dataTablePub"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="dataset" id="' + thisId + '"><i class="layui-icon">&#xe67d;</i>Data Set</a>');
+										}else{
+											strProgress += ' <span class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue"><i class="layui-icon">&#xe612;</i>Self (Reading)</span>';
+											$('div[lay-id="dataTablePub"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-xs" lay-event="review"><i class="layui-icon">&#xe705;</i>Review</a> <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="dataset" id="' + thisId + '"><i class="layui-icon">&#xe67d;</i>Data Set</a>');
+										}
+									}
+								}
+							});
+							$('div[lay-id="dataTablePub"]').find('tr[data-index="' + index + '"] td[data-field="memberStatus"] div').html(strProgress);
+						}else if(currentUser.accountType == "2"){
+							// 非管理员的情况下，需要获取自己的提交情况！
+							var strProgress = "-";
+							var thisProPubStatusId = $("#idProject").val() + "|" + $("#idProjectLibraryId").val() + "|" + $("#idProjectFormId").val() + "|" + item.pmid + "|" + currentUser.id;
+							$.ajax({
+								type: "get",
+								url: "/projectPubStatus/getStatus",
+								async: false,
+								contentType: "application/json; charset=utf-8",
+								data: {id: thisProPubStatusId, projectId: $("#idProject").val(), date: new Date()},
+								dataType: "json",
+								success: function (result) {
+									if(result != null){
+										if(result.data == "1"){
+											strProgress = '<span class="layui-btn layui-btn-primary layui-btn-xs layui-border-green"><i class="layui-icon">&#xe612;</i>Self (Done)</span>';
+											$('div[lay-id="dataTablePub"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="dataset" id="' + thisId + '"><i class="layui-icon">&#xe67d;</i>Data Set</a>');
+										}else{
+											strProgress = '<span class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue"><i class="layui-icon">&#xe612;</i>Self (Reading)</span>';
+											$('div[lay-id="dataTablePub"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-xs" lay-event="read"><i class="layui-icon">&#xe705;</i>Read</a> <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="dataset" id="' + thisId + '"><i class="layui-icon">&#xe67d;</i>Data Set</a>');
+										}
+									}
+								}
+							});
+							$('div[lay-id="dataTablePub"]').find('tr[data-index="' + index + '"] td[data-field="memberStatus"] div').html(strProgress);
+						}else{
+							$('div[lay-id="dataTablePub"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('-');
+						}
+					}else{
+						$('div[lay-id="dataTablePub"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-xs" lay-event="view"><i class="layui-icon">&#xe705;</i>View</a> <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="dataset" id="' + thisId + '"><i class="layui-icon">&#xe67d;</i>Data Set</a>');
+					}
+					
+					
+					// 获取Dataset数量！
+					$.ajax({
+						type: "get",
+						url: "/formsItemsData/getBatchCount",
+						async: true,
+						contentType: "application/json; charset=utf-8",
+						data: {projectId: $("#idProject").val(), pmid: item.pmid, date: new Date()},
+						dataType: "json",
+						success: function (res) {
+							if(res == 0){ // 没有数据的情况下，不允许下载了！
+								$("#" + thisId).replaceWith('<span class="layui-btn layui-btn-primary layui-btn-xs" lay-event="nodata" id="' + thisId + '"><i class="layui-icon">&#xe67d;</i>Data Set (0)</span>');
+							}else{ // 有数据的情况下，显示数字并允许下载！
+								$("#" + thisId).append(" (" + res + ")");
+							}
+						}
+					});
+				});
+			}
+		});
+
+		/* 表格搜索 */
+		form.on('submit(tableSearchPub)', function (data) {
+			insTb.reload({where: data.field, page: {curr: 1}});
+			return false;
+		});
+		
+		/* 表格排序事件 */
+		table.on('sort(dataTablePub)', function(obj){
+			table.reload('dataTablePub', {
+				initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+				where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+					sortBy: obj.field, // 排序字段！
+					orderBy: obj.type // 排序方式！
+				}
+			});
+		});
+
+		/* 表格工具条点击事件 */
+		table.on('tool(dataTablePub)', function (obj) {
+			/* 阅读 */
+			if (obj.event === 'read') {
+				window.open(
+					"./lrDetails?pi=" + $("#idProject").val() + 
+					"&pn=" + $("#idProjectName").val() + 
+					"&fi=" + $("#idProjectFormId").val() + 
+					"&li=" + $("#idProjectLibraryId").val() + 
+					"&ln=" + $("#idProjectLibraryName").val() + 
+					"&mis=" + $("#idProjectMemberIds").val() + 
+					"&t=0" +
+					"&pid=" + obj.data.pmid +
+					"&pcid=" + obj.data.pmcid
+				);
+			}
+			/* 审核 */
+			if (obj.event === 'review') {
+				window.open(
+					"./lrDetails?pi=" + $("#idProject").val() + 
+					"&pn=" + $("#idProjectName").val() + 
+					"&fi=" + $("#idProjectFormId").val() + 
+					"&li=" + $("#idProjectLibraryId").val() + 
+					"&ln=" + $("#idProjectLibraryName").val() + 
+					"&mis=" + $("#idProjectMemberIds").val() + 
+					"&t=1" +
+					"&pid=" + obj.data.pmid +
+					"&pcid=" + obj.data.pmcid
+				);
+			}
+			/* 查看 */
+			if (obj.event === 'view') {
+				window.open(
+					"./lrDetails?pi=" + $("#idProject").val() + 
+					"&pn=" + $("#idProjectName").val() + 
+					"&fi=" + $("#idProjectFormId").val() + 
+					"&li=" + $("#idProjectLibraryId").val() + 
+					"&ln=" + $("#idProjectLibraryName").val() + 
+					"&mis=" + $("#idProjectMemberIds").val() + 
+					"&t=2" +
+					"&pid=" + obj.data.pmid +
+					"&pcid=" + obj.data.pmcid
+				);
+			}
+			/* 数据导出 */
+			if (obj.event === 'dataset') {
+				location.href = "/formsItemsData/exportData?projectId=" + $("#idProject").val() + "&formId=" + $("#idProjectFormId").val() + "&pmid=" + obj.data.pmid;
+			}
+			if (obj.event === 'nodata') {
+				layer.msg("No data available!");
+			}
+		});
+
+	});
+</script>

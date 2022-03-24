@@ -1,0 +1,59 @@
+<form id="addOrUpdateForm" lay-filter="addOrUpdateForm" class="layui-form model-form">
+
+	<input name="id" type="hidden"/>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">状态（字典 0已提交）</label>
+		<div class="layui-input-block">
+			<input name="status" class="layui-input" placeholder="请输入状态（字典 0已提交）" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">创建者名称</label>
+		<div class="layui-input-block">
+			<input name="createUserName" class="layui-input" placeholder="请输入创建者名称" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">更新者名称</label>
+		<div class="layui-input-block">
+			<input name="updateUserName" class="layui-input" placeholder="请输入更新者名称" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item text-right">
+		<button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">取消</button>
+		<button class="layui-btn" lay-filter="formSubmitBtn" lay-submit>保存</button>
+	</div>
+</form>
+
+<script>
+	layui.use(['layer', 'form', 'admin', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+
+		// 数据回显！
+		var editData = admin.getLayerData('#addOrUpdateForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('addOrUpdateForm', editData);
+		}
+
+		/**
+		 * @func 表单提交事件
+		 */
+		form.on('submit(formSubmitBtn)', function (data) {
+			layer.load(2);
+			var url = editData.id ? 'projectPubStatus/edit' : 'projectPubStatus/add';
+			admin.req(url, JSON.stringify(data.field), function(res){
+				layer.msg(res.message, {icon: 1, time: 1000}, function () {
+					admin.putLayerData('formOk', true, '#addOrUpdateForm');
+					admin.closeDialog('#addOrUpdateForm');
+				});
+			}, 'post');
+			return false;
+		});
+	});
+</script>
+</body>
+</html>

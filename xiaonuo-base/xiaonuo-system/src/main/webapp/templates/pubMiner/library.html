@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Library</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<style type="text/css">
+	.layui-tab-title .layui-this { /* 用于覆盖底部的横线 */
+		background-color: white;
+	}
+	.layui-tab-content{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#idDivPublications .layui-table-tool{
+		display: none;
+	}
+	#idDivPublications .about-lists .content-item {
+		padding: 40px;
+		border: none;
+		margin: 0px;
+	}
+	.content-item .layui-table-cell, /* 二级文献表和文献tab表 */
+	#idDivPublications .layui-table-cell {
+		line-height: 20px;
+		padding: 0 10px;
+	}
+	</style>
+	
+</head>
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary" class="active"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="classHero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/images/carousel/1.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Collections & Publications</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Collections & Publications</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Collections & Publications</h2>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+		
+		<!-- ======= About Lists Section ======= -->
+		<section class="about-lists" id="idDivContent">
+			<div class="container">
+				
+				<div class="layui-tab">
+					<ul class="layui-tab-title">
+						<li class="layui-this"><i class='bx bx-collection'></i> Collection-Oriented</li>
+						<li><i class='bx bx-receipt'></i> Publication-Oriented</li>
+					</ul>
+					<div class="layui-tab-content">
+						<div class="layui-tab-item layui-show" id="idDivCollections">
+							
+							<!-- 表格工具栏 -->
+							<form class="layui-form toolbar searchFormForTable">
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<input name="libraryName" class="layui-input" placeholder="Collection Name"/>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<input name="libraryDesc" class="layui-input" placeholder="Collection Desc"/>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<input name="kwsRemote" class="layui-input" placeholder="Remote Searching Keywords"/>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<input name="kwsLocal" class="layui-input" placeholder="Local Searching Keywords"/>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<button class="layui-btn icon-btn" lay-filter="tableSearch" lay-submit>
+											<i class="layui-icon">&#xe615;</i>Search
+										</button>
+									</div>
+								</div>
+							</form>
+							<!-- 数据表格 -->
+							<table id="dataTable" lay-filter="dataTable"></table>
+							
+						</div>
+						<div class="layui-tab-item" id="idDivPublications">
+							
+							<!-- 表格工具栏 -->
+							<form class="layui-form toolbar searchFormForTable">
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<input name="pmid" class="layui-input" placeholder="PubMed ID"/>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<input name="pubTitle" class="layui-input" placeholder="Title"/>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<input name="pubAuthors" class="layui-input" placeholder="Authors"/>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<input name="pubJournal" class="layui-input" placeholder="Journal"/>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<button class="layui-btn icon-btn" lay-filter="tableSearchPub" lay-submit>
+											<i class="layui-icon">&#xe615;</i>Search
+										</button>
+									</div>
+								</div>
+							</form>
+							<!-- 数据表格 -->
+							<table id="dataTablePub" lay-filter="dataTablePub"></table>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- End About Lists Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer"></footer><!-- End Footer -->
+
+	<a href="javascript:;" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+	
+	<!-- LayUI JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/module/xmSelect.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<!-- 表格操作列 -->
+	<script type="text/html" id="tableBarPub">
+		<a href="javascript:;" lay-event="deletePub"><i class="layui-icon">&#xe640;</i></a>
+	</script>
+	
+	<script>
+	
+		var currentUser, insTb, insTbPub, layer, admin;
+		var strHtmlIconSearch = '<i class="bx bx-search-alt"></i> ';
+		layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil', 'element'], function () {
+			var $ = layui.jquery;
+			layer = layui.layer;
+			var table = layui.table;
+			var tableX = layui.tableX;
+			admin = layui.admin;
+			var form = layui.form;
+			var notice = layui.notice;
+			var xnUtil = layui.xnUtil;
+			var element = layui.element;
+			
+			// 获取当前登录用户！
+			var arrToolBars = ['<p>',
+				'<button lay-event="add" class="layui-btn layui-btn-sm icon-btn"><i class="layui-icon">&#xe654;</i>Add</button>&nbsp;',
+				'</p>'];
+			currentUser = getCurrentLoginUser();
+			if(currentUser == null || currentUser.accountType != "1"){
+				arrToolBars = [];
+			}
+			
+			//设置核心版块的最小高度！
+			$("#idDivContent").css("min-height", getClientHeight()-191);
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			/* 渲染表格 */
+			insTb = tableX.render({
+				elem: '#dataTable',
+				url: '/libraries/page',
+				page: true,
+				limits: [10,20,30],
+				loading: true,
+				toolbar: arrToolBars.join(''),
+				defaultToolbar: [],
+				cellMinWidth: 100,
+				cols: [
+					[
+						{sort: false, align: 'center', width: 50, minWidth: 50, templet: function (d) {
+							return '<a class="addAndFoldRowTable" lay-event="addRowTable"><i class="bx bx-chevrons-right"></i></a>';
+						}},
+						{field: 'groupName', title: 'Type', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+							var strContent = "<i class='bx bxs-lock-alt' ></i> Private";
+							if(d.groupName == 'commonGroup') strContent = "<i class='bx bx-lock-open-alt'></i> Public";
+							return strContent;
+						}},
+						{field: 'libraryName', title: 'Collection Name', sort: true, width: 240},
+						{field: 'libraryDesc', title: 'Collection Desc', sort: false},
+						{field: 'status', title: 'Status', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+							var strContent = "<i class='bx bx-shield' ></i> Active";
+							if(d.status == '2') strContent = "<i class='bx bx-shield-quarter'></i> Locked";
+							return strContent;
+						}},
+						//{field: 'kwsRemote', title: 'Remote Searching Keywords', align: 'center', sort: false, templet: function (d) {
+						//	var strContent = "";
+						//	if(d.kwsRemote) {
+						//		var strArr = d.kwsRemote.split("\n");
+						//		for(var i = 0; i < strArr.length; i++){
+						//			strContent += ' <span class="keywordSpan" onclick="funcPubSearching(this, ' + d.id + ', 1)">' + strArr[i] + '</span> ';
+						//		}
+						//	}
+						//	return strContent;
+						//}},
+						//{field: 'kwsLocal', title: 'Local Searching Keywords', align: 'center', sort: false, templet: function (d) {
+						//	var strContent = "";
+						//	if(d.kwsLocal) {
+						//		var strArr = d.kwsLocal.split("\n");
+						//		for(var i = 0; i < strArr.length; i++){
+						//			strContent += ' <span class="keywordSpan" onclick="funcPubSearching(this, ' + d.id + ', 0)">' + strArr[i] + '</span> ';
+						//		}
+						//	}
+						//	return strContent;
+						//}},
+						//{field: 'createTime', title: 'Create Time', sort: true, hide: true, align: 'center', width: 170, templet: function (d) {
+						//	var strContent = d.createTime + " (UTC+8)";
+						//	return strContent;
+						//}},
+						//{field: 'status', title: 'Operate', toolbar: '#tableBar', align: 'center', width: 240, minWidth: 240}
+					]
+				],
+				done: function(res, curr, count) {
+					xnUtil.tableDone(insTb, res, curr, count);
+					// 权限判定：未登录或者非组管理员，不显示工具行！
+					if(currentUser == null || currentUser.accountType != "1"){
+						$(".layui-table-tool").each(function(){
+							$(this.remove());
+						});
+					}
+				}
+			});
+			insTbPub = tableX.render({
+				elem: '#dataTablePub',
+				url: '/publicationsView/pubPage',
+				page: true,
+				limits: [10,20,30],
+				loading: true,
+				defaultToolbar: [],
+				cellMinWidth: 100,
+				cols: [
+					[
+						{sort: false, align: 'center', width: 50, minWidth: 50, templet: function (d) {
+							return '<a class="addAndFoldRowTable" lay-event="addRowTable"><i class="bx bx-chevrons-right"></i></a>';
+						}},
+						{field: 'pmid', title: 'PubID(s)', align: 'center', sort: true, width: 120, minWidth: 120, templet: function (d) {
+							let strHtml = '<a href="https://pubmed.ncbi.nlm.nih.gov/' + d.pmid + '/" target="_blank">' + d.pmid + ' <i class="bx bx-link"></i></a>';
+							if(d.pmcid && d.pmcid != ""){
+								strHtml += '<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + d.pmcid + '/" target="_blank">PMC' + d.pmcid + ' <i class="bx bx-link"></i></a>';
+							}
+							return strHtml;
+						}},
+						{field: 'pubTitle', title: 'Title', sort: true, templet: function (d) {
+							return !d.pubTitle || d.pubTitle == "" ? "-" : d.pubTitle;
+						}},
+						{field: 'pubAuthors', title: 'Authors', sort: true, templet: function (d) {
+							return !d.pubAuthors || d.pubAuthors == "" ? "-" : d.pubAuthors;
+						}},
+						{field: 'pubJournal', title: 'Journal', sort: true, width: 135, minWidth: 135, templet: function (d) {
+							return !d.pubJournal || d.pubJournal == "" ? "-" : d.pubJournal;
+						}},
+						{field: 'pubYear', title: 'Year', align: 'center', sort: true, width: 80, minWidth: 80, templet: function (d) {
+							return !d.pubYear || d.pubYear == "" ? "-" : d.pubYear;
+						}},
+						{field: 'pubIf2020', title: 'IF2020', align: 'center', sort: true, width: 85, minWidth: 85, templet: function (d) {
+							return !d.pubIf2020 || d.pubIf2020 == "" ? "-" : d.pubIf2020;
+						}},
+						{title: 'View', align: 'center', width: 60, minWidth: 60, templet: function (d) {
+							return '<a href="/lrDetails?pid=' + d.pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i></a>';
+						}}
+					]
+				],
+				done: function(res, curr, count) {
+					xnUtil.tableDone(insTbPub, res, curr, count);
+				}
+			});
+		
+			/* 表格搜索 */
+			form.on('submit(tableSearch)', function (data) {
+				insTb.reload({where: data.field, page: {curr: 1}});
+				return false;
+			});
+			form.on('submit(tableSearchPub)', function (data) {
+				insTbPub.reload({where: data.field, page: {curr: 1}});
+				return false;
+			});
+			
+			/* 表格排序事件 */
+			table.on('sort(dataTable)', function(obj){
+				table.reload('dataTable', {
+					initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+					where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+						sortBy: obj.field, // 排序字段！
+						orderBy: obj.type // 排序方式！
+					}
+				});
+			});
+			table.on('sort(dataTablePub)', function(obj){
+				table.reload('dataTablePub', {
+					initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+					where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+						sortBy: obj.field, // 排序字段！
+						orderBy: obj.type // 排序方式！
+					}
+				});
+			});
+		
+			/* 表格工具条点击事件 */
+			table.on('tool(dataTable)', function (obj) {
+				/* 查看更多 */
+				var tr = $(this).parents('tr');
+				var trIndex = tr.data('index');
+				if(obj.event === 'fold') {
+					$(this).attr('lay-event', 'addRowTable').html('<i class="bx bx-chevrons-right"></i>');
+					tr.next().remove();
+				}
+				if (obj.event === 'addRowTable') {
+					$(this).attr('lay-event', 'fold').html('<i class="bx bx-chevrons-down"></i>');
+					// 关键词代码处理！
+					var strContentRemote = "", strContentLocal = "";
+					if(obj.data.kwsRemote) {
+						var strArr = obj.data.kwsRemote.split("\n");
+						for(var i = 0; i < strArr.length; i++){
+							let thisHtml = '<a href="javascript:;" class="keywordSpan" onclick="funcPubSearching(this, ' + obj.data.id + ', 1)">' + strHtmlIconSearch + strArr[i] + '</a>';
+							strContentRemote = strContentRemote == "" ? thisHtml : strContentRemote + "<br>" + thisHtml;
+						}
+					}else{
+						strContentRemote = "<i>No Remote Searching Keyword(s) Available</i>";
+					}
+					if(obj.data.kwsLocal) {
+						var strArr = obj.data.kwsLocal.split("\n");
+						for(var i = 0; i < strArr.length; i++){
+							let thisHtml = '<a href="javascript:;" class="keywordSpan" onclick="funcPubSearching(this, ' + obj.data.id + ', 0)">' + strHtmlIconSearch + strArr[i] + '</a>';
+							strContentLocal = strContentLocal == "" ? thisHtml : strContentLocal + "<br>" + thisHtml;
+						}
+					}else{
+						strContentLocal = "<i>No Local Searching Keyword(s) Available</i>";
+					}
+					// 构建html！
+					var _html = [
+						'<tr class="table-item">',
+						'	<td colspan="' + tr.find('td').length + '" style="padding: 6px 12px;">',
+						'		<section class="about-lists">',
+						'			<div class="container" style="margin-left: 0; margin-right: 0;">',
+						'				<div class="row no-gutters">',
+						'					<div class="col-lg-4 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bx-collection"></i> Collection Name</h4>',
+						'						<p>' + obj.data.libraryName + '</p>',
+						'					</div>',
+						'					<div class="col-lg-5 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bx-collection"></i> Collection Description</h4>',
+						'						<p>' + obj.data.libraryDesc + '</p>',
+						'					</div>',
+						'					<div class="col-lg-3 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bxs-time-five" ></i> Create Time</h4>',
+						'						<p>' + obj.data.createTime + ' (UTC+8)</p>',
+						'					</div>',
+						'					<div class="col-lg-5 content-item" data-aos="fade-up" data-aos-delay="50">',
+						'						<h4><i class="bx bxs-key"></i> Remote Searching Keyword(s)</h4>',
+						'						<p>' + strContentRemote + '</p>',
+						'					</div>',
+						'					<div class="col-lg-7 content-item" data-aos="fade-up" data-aos-delay="50">',
+						'						<h4><i class="bx bxs-key"></i> Local Searching Keyword(s)</h4>',
+						'						<p>' + strContentLocal + '</p>',
+						'					</div>',
+						'					<div class="col-lg-4 content-item" data-aos="fade-up" data-aos-delay="100">',
+						'						<h4><i class="bx bx-receipt"></i> Publications</h4>',
+						'						<p><a href="javascript:;" id="idPublicationToggle' + obj.data.id + '">0</a></p>',
+						'					</div>',
+						'					<div class="col-lg-4 content-item" data-aos="fade-up" data-aos-delay="100">',
+						'						<h4><i class="bx bx-grid-alt"></i> Projects</h4>',
+						'						<p><a href="javascript:;" id="idProjectToggle' + obj.data.id + '">0</a></p>',
+						'					</div>',
+						'					<div class="col-lg-4 content-item" data-aos="fade-up" data-aos-delay="100">',
+						'						<h4><i class="bx bx-wrench"></i> Operations</h4>',
+						'						<p id="idOperations' + obj.data.id + '"><i>No Operation Available</i></p>',
+						'					</div>',
+						'					<div class="col-lg-12 content-item" data-aos="fade-up" data-aos-delay="150" id="idDivPublicationTable' + obj.data.id + '" style="display: none; padding: 0 5px 10px 0;">',
+						'						<form class="layui-form toolbar searchFormForTable">',
+						'							<div class="layui-form-item">',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 120px;">',
+						'										<input name="pmid" class="layui-input pubForm" placeholder="PubMed ID"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 120px;">',
+						'										<input name="pmcid" class="layui-input pubForm" placeholder="PMC ID"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 220px;">',
+						'										<input name="pubTitle" class="layui-input pubForm" placeholder="Title"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 120px;">',
+						'										<input name="pubAuthors" class="layui-input pubForm" placeholder="Authors"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 120px;">',
+						'										<input name="pubJournal" class="layui-input pubForm" placeholder="Journal Name"/>',
+						'									</div>',
+						'								</div>',
+						//'								<div class="layui-inline">',
+						//'									<div class="layui-input-inline" style="width: 90px;">',
+						//'										<input name="pubIf2020" class="layui-input pubForm" placeholder="IF2020"/>',
+						//'									</div>',
+						//'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 90px;">',
+						'										<input name="pubYear" class="layui-input pubForm" placeholder="Year"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<button class="layui-btn icon-btn" lay-filter="tableSearchPub' + obj.data.id + '" lay-submit>',
+						'										<i class="layui-icon">&#xe615;</i>Search',
+						'									</button>',
+						'								</div>',
+						'							</div>',
+						'						</form>',
+						'						<table id="idPublicationTable' + obj.data.id + '" lay-filter="idPublicationTable' + obj.data.id + '"></table>',
+						'					</div>',
+						'					<div class="col-lg-12 content-item" data-aos="fade-up" data-aos-delay="150" id="idDivProjectTable' + obj.data.id + '" style="display: none; padding: 0 5px 10px 0;">',
+						'						<form class="layui-form toolbar searchFormForTable">',
+						'							<div class="layui-form-item">',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 190px;">',
+						'										<input name="projectName" class="layui-input" placeholder="Project Name"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 190px;">',
+						'										<input name="projectDesc" class="layui-input" placeholder="Project Desc"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 190px;">',
+						'										<input name="formName" class="layui-input" placeholder="Form Name"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 190px;">',
+						'										<input name="members" class="layui-input" placeholder="Member Name"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<button class="layui-btn icon-btn" lay-filter="tableSearchProject' + obj.data.id + '" lay-submit>',
+						'										<i class="layui-icon">&#xe615;</i>Search',
+						'									</button>',
+						'								</div>',
+						'							</div>',
+						'						</form>',
+						'						<table id="idProjectTable' + obj.data.id + '" lay-filter="idProjectTable' + obj.data.id + '"></table>',
+						'					</div>',
+						'				</div>',
+						'			</div>',
+						'		</section>',
+						'	</td>',
+						'</tr>'
+					];
+					tr.after(_html.join('\n'));
+					
+					if(obj.data.groupName == currentUser.accountGroup){ // 本组的Collection！
+						// 判断是否允许删除！
+						$.ajax({
+							type: "post",
+							url: "/projects/checkDelLibrary",
+							dataType: "json",
+							async: true,
+							data: JSON.stringify({id: obj.data.id}),
+							contentType: "application/json; charset=utf-8",
+							success: function(result){
+								if(obj.data.status == 2){
+									if(result.data == "CBD"){
+										$('#idOperations' + obj.data.id).html('<a href="javascript:;" onclick="funcDelete(\'' + obj.data.id + '\')"><i class="bx bx-trash"></i> Delete</a>');
+									}
+								}else{
+									if(currentUser.accountType != "1"){
+										// 啥也不干！
+									}else{
+										$('#idOperations' + obj.data.id).html('<a href="javascript:;" onclick="funcLock(' + JSON.stringify(obj).replace(/"/g, '&quot;') + ')"><i class="layui-icon">&#xe6b1;</i> Lock</a> | <a href="javascript:;" onclick="showAddOrUpdateModel(' + JSON.stringify(obj).replace(/"/g, '&quot;') + ')"><i class="layui-icon">&#xe642;</i> Edit</a>');
+										if(result.data == "CBD"){
+											$('#idOperations' + obj.data.id).append(' | <a href="javascript:;" onclick="funcDelete(\'' + obj.data.id + '\')"><i class="bx bx-trash"></i> Delete</a>');
+										}
+									}
+								}
+							}
+						});
+						
+					}else{ // 非本组的Collection，只能查看其中的文献！
+						// 啥也不干！
+					}
+					
+					// 文献数量链接点击效果！
+					$('#idPublicationToggle' + obj.data.id).click(function(){
+						$('#idDivPublicationTable' + obj.data.id).toggle();
+						if($('#idDivPublicationTable' + obj.data.id).css("display") === "none"){
+							$('#idPublicationToggle' + obj.data.id).html($('#idPublicationToggle' + obj.data.id).html().replace('<i class="bx bx-minus"></i>', '<i class="bx bx-plus"></i>'));
+						}else{
+							$('#idPublicationToggle' + obj.data.id).html($('#idPublicationToggle' + obj.data.id).html().replace('<i class="bx bx-plus"></i>', '<i class="bx bx-minus"></i>'));
+						}
+						
+						// 对项目数量链接点击修改为关闭效果！
+						$('#idDivProjectTable' + obj.data.id).hide();
+						$('#idProjectToggle' + obj.data.id).html($('#idProjectToggle' + obj.data.id).html().replace('<i class="bx bx-minus"></i>', '<i class="bx bx-plus"></i>'));
+					});
+					
+					// 项目数量链接点击效果！
+					$('#idProjectToggle' + obj.data.id).click(function(){
+						$('#idDivProjectTable' + obj.data.id).toggle();
+						if($('#idDivProjectTable' + obj.data.id).css("display") === "none"){
+							$('#idProjectToggle' + obj.data.id).html($('#idProjectToggle' + obj.data.id).html().replace('<i class="bx bx-minus"></i>', '<i class="bx bx-plus"></i>'));
+						}else{
+							$('#idProjectToggle' + obj.data.id).html($('#idProjectToggle' + obj.data.id).html().replace('<i class="bx bx-plus"></i>', '<i class="bx bx-minus"></i>'));
+						}
+						
+						// 对文献数量链接点击修改为关闭效果！
+						$('#idDivPublicationTable' + obj.data.id).hide();
+						$('#idPublicationToggle' + obj.data.id).html($('#idPublicationToggle' + obj.data.id).html().replace('<i class="bx bx-minus"></i>', '<i class="bx bx-plus"></i>'));
+					});
+					
+					// 文献列表表格渲染！
+					var objArrCols = [
+						{field: 'pmid', title: 'PubID(s)', align: 'center', sort: true, width: 120, minWidth: 120, templet: function (d) {
+							let strHtml = '<a href="https://pubmed.ncbi.nlm.nih.gov/' + d.pmid + '/" target="_blank">' + d.pmid + ' <i class="bx bx-link"></i></a>';
+							if(d.pmcid && d.pmcid != ""){
+								strHtml += '<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + d.pmcid + '/" target="_blank">PMC' + d.pmcid + ' <i class="bx bx-link"></i></a>';
+							}
+							return strHtml;
+						}},
+						//{field: 'pmcid', title: 'PMCID', align: 'center', sort: false, width: 135, minWidth: 135, templet: function (d) {
+						//	return !d.pmcid || d.pmcid == "" ? "-" : '<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/' + d.pmcid + '/" target="_blank">' + d.pmcid + ' <i class="bx bx-link"></i></a>';
+						//}},
+						{field: 'pubTitle', title: 'Title', sort: true, templet: function (d) {
+							return !d.pubTitle || d.pubTitle == "" ? "-" : d.pubTitle;
+						}},
+						{field: 'pubAuthors', title: 'Authors', sort: true, templet: function (d) {
+							return !d.pubAuthors || d.pubAuthors == "" ? "-" : d.pubAuthors;
+						}},
+						{field: 'pubJournal', title: 'Journal', sort: true, width: 150, minWidth: 150, templet: function (d) {
+							return !d.pubJournal || d.pubJournal == "" ? "-" : d.pubJournal;
+						}},
+						{field: 'pubYear', title: 'Year', align: 'center', sort: true, width: 70, minWidth: 70, templet: function (d) {
+							return !d.pubYear || d.pubYear == "" ? "-" : d.pubYear;
+						}},
+						{field: 'pubIf2020', title: 'IF2020', align: 'center', sort: true, width: 85, minWidth: 85, templet: function (d) {
+							return !d.pubIf2020 || d.pubIf2020 == "" ? "-" : d.pubIf2020;
+						}},
+						{title: 'View', align: 'center', width: 60, minWidth: 60, templet: function (d) {
+							return '<a href="/lrDetails?pid=' + d.pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i></a>';
+						}}
+					];
+					if(obj.data.groupName != "commonGroup") objArrCols.push({title: 'Remove', toolbar: '#tableBarPub', align: 'center', width: 80, minWidth: 80});
+					
+					// 项目列表表格渲染！
+					var objArrColsProject = [
+						{field: 'groupName', title: 'Type', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+							var strContent = "<i class='bx bxs-lock-alt' ></i> Private";
+							if(d.groupName == 'commonGroup') strContent = "<i class='bx bx-lock-open-alt'></i> Public";
+							return strContent;
+						}},
+						{field: 'projectName', title: 'Project Name', sort: true},
+						{field: 'projectDesc', title: 'Project Desc', sort: false},
+						{field: 'formName', title: 'Form Name', sort: true},
+						{field: 'dataset', title: 'Data Set', align: 'center', sort: false, width: 100}
+					];
+					
+					// 文献表格渲染！
+					var insTbPublication = table.render({
+						elem: '#idPublicationTable' + obj.data.id,
+						url: '/librariesPublications/page',
+						page: true,
+						limits: [5,10,15],
+						limit: 5,
+						loading: true,
+						where: {
+							libraryId: obj.data.id
+						},
+						cols: [ objArrCols ],
+						done: function(res, curr, count) {
+							$('#idPublicationToggle' + obj.data.id).html(count + ' <i class="bx bx-plus"></i>'); // 更新文献数量！
+							xnUtil.tableDone(insTbPublication, res, curr, count);
+						}
+					});
+					
+					// 项目表格渲染！
+					var insTbProject = table.render({
+						elem: '#idProjectTable' + obj.data.id,
+						url: '/projects/page',
+						page: true,
+						limits: [10,20,30],
+						loading: true,
+						where: {
+							libraryId: obj.data.id
+						},
+						cols: [ objArrColsProject ],
+						done: function(res, curr, count) {
+							$('#idProjectToggle' + obj.data.id).html(count + ' <i class="bx bx-plus"></i>'); // 更新文献数量！
+							xnUtil.tableDone(insTbProject, res, curr, count);
+							
+							res.data.forEach(function (item, index) {
+								$('div[lay-id="idProjectTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="dataset"] div').html('<a href="javascript:;" id="idDownload' + item.id + '"><i class="bx bx-grid"></i></a>');
+								
+								// 获取Dataset数量！
+								$.ajax({
+									type: "get",
+									url: "/formsItemsData/getBatchCount",
+									async: true,
+									contentType: "application/json; charset=utf-8",
+									data: {projectId: item.id, date: new Date()},
+									dataType: "json",
+									success: function (res) {
+										if(res == 0){ // 没有数据的情况下，不允许下载了！
+											$("#idDownload" + item.id).replaceWith('<i style="color: #aaaaaa;">No Data Available</i>');
+										}else{ // 有数据的情况下，显示数字并允许下载！
+											
+											var datasetUrl = "/formsItemsData/exportData?projectId=" + item.id + "&formId=" + obj.data.id;
+											//$("#idDownload" + item.id).replaceWith('<a href="' + datasetUrl + '" target="_blank">' + res + ' <i class="bx bx-cloud-download"></i></a></p>');
+											
+											// 2021-11-30（V0008-01.00.05-09）：变更为弹窗展示！
+											$("#idDownload" + item.id).html(res + ' <i class="bx bx-grid"></i>');
+											$("#idDownload" + item.id).after('<br><a href="' + datasetUrl + '" target="_blank">' + res + ' <i class="bx bx-cloud-download"></i></a></p>'); // 直接下载链接，以应对数据量较大导致弹窗内表格加载缓慢的问题！
+											$("#idDownload" + item.id).click(function(){
+												var layDataViewerIndex = admin.open({
+													title: '<i class="bx bx-grid"></i> Data Viewer',
+													url: 'lrDataViewer',
+													area: ['100%', '100%'],
+													offset: '0', // 距离顶部位置！
+													scrollbar: false, // 弹窗打开后，禁用原页面的浏览器滚动条，只显示弹窗的滚动条！
+													data: { data: {projectId: item.id, formId: obj.data.id} },	 // 传递数据到表单页面
+													end: function () {
+														// 2021-11-30（V0008-01.00.05-09）：关掉弹窗后暂时啥也不干！
+													},
+													success: function (layero, dIndex) {
+														// 弹窗超出范围不出现滚动条
+														//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+														//$(layero).find('[lay-submit]').focus();
+													}
+												});
+											});
+											
+										}
+									}
+								});
+								
+							});
+							
+						}
+					});
+					
+					/* 表格搜索 */
+					form.on('submit(tableSearchPub' + obj.data.id + ')', function (dataPublicationSearch) {
+						insTbPublication.reload({where: dataPublicationSearch.field, page: {curr: 1}});
+						return false;
+					});
+					form.on('submit(tableSearchProject' + obj.data.id + ')', function (dataProjectSearch) {
+						insTbProject.reload({where: dataProjectSearch.field, page: {curr: 1}});
+						return false;
+					});
+					
+					/* 表格排序事件 */
+					table.on('sort(idPublicationTable' + obj.data.id + ')', function(pubObj){
+						table.reload('idPublicationTable' + obj.data.id, {
+							initSort: pubObj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+							where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+								sortBy: pubObj.field, // 排序字段！
+								orderBy: pubObj.type // 排序方式！
+							}
+						});
+					});
+					table.on('sort(idProjectTable' + obj.data.id + ')', function(projectObj){
+						table.reload('idProjectTable' + obj.data.id, {
+							initSort: projectObj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+							where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+								sortBy: projectObj.field, // 排序字段！
+								orderBy: projectObj.type // 排序方式！
+							}
+						});
+					});
+					
+					/* 表格工具条点击事件 */
+					table.on('tool(idPublicationTable' + obj.data.id + ')', function (pubObj) {
+						/* 删除 */
+						if (pubObj.event === 'deletePub') {
+							layer.confirm('Are you sure you want to remove this publication from the collection?', {
+								skin: 'layui-layer-admin',
+								shade: .1,
+								btn: ['Yes', 'Cancel'],
+								title: 'Confirm'
+							}, function (index) {
+								layer.close(layer.index);
+								var indexRemove = layer.load(3, {shade: [0.3, '#393D49']});
+								admin.req('librariesPublications/delete', JSON.stringify([{'id': pubObj.data.id}]), function(res){
+									layer.close(indexRemove);
+									layer.msg(res.message, {icon: 1, time: 1000}, function () {
+										insTbPublication.reload();
+									});
+								}, 'post');
+							});
+						}
+					});
+					
+				}
+			});
+			table.on('tool(dataTablePub)', function (obj) {
+				/* 查看更多 */
+				var tr = $(this).parents('tr');
+				var trIndex = tr.data('index');
+				if(obj.event === 'fold') {
+					$(this).attr('lay-event', 'addRowTable').html('<i class="bx bx-chevrons-right"></i>');
+					tr.next().remove();
+				}
+				if (obj.event === 'addRowTable') {
+					$(this).attr('lay-event', 'fold').html('<i class="bx bx-chevrons-down"></i>');
+					// 构建html！
+					var _html = [
+						'<tr class="table-item">',
+						'	<td colspan="' + tr.find('td').length + '" style="padding: 6px 12px;">',
+						'		<section class="about-lists" style="padding: 0 0 10px 0;">',
+						'			<div class="container" style="margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0;">',
+						'				<div class="row no-gutters">',
+						'					<div class="col-lg-12 content-item" data-aos="fade-up" id="idDivCollectionTable' + obj.data.pmid + '" style="padding: 0 5px 0 0;">',
+						'						<form class="layui-form toolbar searchFormForTable">',
+						'							<div class="layui-form-item">',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline">',
+						'										<input name="libraryName" class="layui-input" placeholder="Collection Name"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline">',
+						'										<input name="libraryDesc" class="layui-input" placeholder="Collection Desc"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline">',
+						'										<input name="kwsRemote" class="layui-input" placeholder="Remote Searching Keywords"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline">',
+						'										<input name="kwsLocal" class="layui-input" placeholder="Local Searching Keywords"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<button class="layui-btn icon-btn" lay-filter="tableSearchCollection' + obj.data.pmid + '" lay-submit>',
+						'										<i class="layui-icon">&#xe615;</i>Search',
+						'									</button>',
+						'								</div>',
+						'							</div>',
+						'						</form>',
+						'						<table id="idCollectionTable' + obj.data.pmid + '" lay-filter="idCollectionTable' + obj.data.pmid + '"></table>',
+						'					</div>',
+						'				</div>',
+						'			</div>',
+						'		</section>',
+						'	</td>',
+						'</tr>'
+					];
+					tr.after(_html.join('\n'));
+					
+					// 文献表格渲染！
+					let insTbCollection = table.render({
+						elem: '#idCollectionTable' + obj.data.pmid,
+						url: '/libraries/page',
+						page: true,
+						limits: [10,20,30],
+						loading: true,
+						where: {
+							updateUserName: obj.data.libraryIds // 存放到一个不用的字段中进行参数传递检索！
+						},
+						cols: [
+							[
+								{field: 'groupName', title: 'Type', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+									var strContent = "<i class='bx bxs-lock-alt' ></i> Private";
+									if(d.groupName == 'commonGroup') strContent = "<i class='bx bx-lock-open-alt'></i> Public";
+									return strContent;
+								}},
+								{field: 'libraryName', title: 'Collection Name', sort: true, width: 240},
+								{field: 'libraryDesc', title: 'Collection Desc', sort: false},
+								{field: 'kwsRemote', title: 'Remote Searching Keywords', align: 'center', sort: false, templet: function (d) {
+									var strContent = "";
+									if(d.kwsRemote) {
+										var strArr = d.kwsRemote.split("\n");
+										for(var i = 0; i < strArr.length; i++){
+											strContent += '<a href="javascript:;" class="keywordSpan" onclick="funcPubSearching(this, ' + d.id + ', 1)">' + strArr[i] + '</a><br>';
+										}
+									}
+									return strContent;
+								}},
+								{field: 'kwsLocal', title: 'Local Searching Keywords', align: 'center', sort: false, templet: function (d) {
+									var strContent = "";
+									if(d.kwsLocal) {
+										var strArr = d.kwsLocal.split("\n");
+										for(var i = 0; i < strArr.length; i++){
+											strContent += '<a href="javascript:;" class="keywordSpan" onclick="funcPubSearching(this, ' + d.id + ', 0)">' + strArr[i] + '</a><br>';
+										}
+									}
+									return strContent;
+								}},
+								{field: 'createTime', title: 'Create Time', sort: true, hide: true, align: 'center', width: 170, templet: function (d) {
+									var strContent = d.createTime + " (UTC+8)";
+									return strContent;
+								}},
+								{field: 'status', title: 'Status', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+									var strContent = "<i class='bx bx-shield' ></i> Active";
+									if(d.status == '2') strContent = "<i class='bx bx-shield-quarter'></i> Locked";
+									return strContent;
+								}}
+							]
+						],
+						done: function(res, curr, count) {
+							xnUtil.tableDone(insTbCollection, res, curr, count);
+						}
+					});
+					
+					/* 表格搜索 */
+					form.on('submit(tableSearchCollection' + obj.data.pmid + ')', function (dataCollectionSearch) {
+						insTbCollection.reload({where: dataCollectionSearch.field, page: {curr: 1}});
+						return false;
+					});
+					
+					/* 表格排序事件 */
+					table.on('sort(idCollectionTable' + obj.data.pmid + ')', function(collectionObj){
+						table.reload('idCollectionTable' + obj.data.pmid, {
+							initSort: collectionObj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+							where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+								sortBy: collectionObj.field, // 排序字段！
+								orderBy: collectionObj.type // 排序方式！
+							}
+						});
+					});
+					
+				}
+			});
+		
+			/* 表格头工具栏点击事件 */
+			table.on('toolbar(dataTable)', function (obj) {
+				if (obj.event === 'add') { // 添加
+					showAddOrUpdateModel();
+				}
+			});
+		
+		});
+		
+		// 显示表单弹窗！
+		function showAddOrUpdateModel(thisObj) {
+			var layIndex = admin.open({
+				title: (thisObj && thisObj.data && thisObj.data.id ? '<i class="layui-icon">&#xe642;</i> Edit' : '<i class="layui-icon">&#xe654;</i> Add') + ' Collection',
+				url: 'lrLibraryForm',
+				area: '800px',
+				offset: '100px', // 距离顶部位置！
+				data: { data: thisObj == null ? {} : thisObj.data },	 // 传递数据到表单页面
+				end: function () {
+					var layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) {  // 判断表单操作成功标识
+						insTb.reload();  // 成功刷新表格
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+		
+		// 封存！
+		function funcLock(thisObj){
+			layer.confirm('Are you sure to lock this collection?', {
+				icon: 3,
+				btn: ['Yes','Cancel'],
+				title: 'Confirm'
+			}, function (index) {
+				layui.jquery.ajax({
+					type: "get",
+					url: "/libraries/seal",
+					timeout: 60000, // 超时时间设置，单位毫秒！
+					data: {id: thisObj.data.id},
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function (res) {
+						layer.msg(res.message);
+						insTb.reload(); // 成功刷新表格
+					}
+				});
+				layer.close(index);
+			});
+		}
+		
+		// 删除！
+		function funcDelete(thisObjId){
+			layer.confirm('Are you sure to delete this collection?', {
+				skin: 'layui-layer-admin',
+				shade: .1,
+				btn: ['Yes', 'Cancel'],
+				title: 'Confirm'
+			}, function () {
+				admin.req('libraries/delete', JSON.stringify([{'id': thisObjId}]), function(res){
+					layer.msg(res.data, {icon: 1, time: 1000}, function () {
+						insTb.reload();
+					});
+				}, 'post');
+			});
+		}
+		
+		// 关键词文献检索！
+		function funcPubSearching(othis, id, intMode){
+			
+			// 设置关键词！
+			localStorage.setItem('paramKw', $(othis).html().replace(strHtmlIconSearch, ''));
+			localStorage.setItem('paramMd', intMode == 0 ? 'local' : 'remote'); // 0local, 1remote！
+			
+			// 打开检索页面！
+			window.open("/lrSearch");
+			
+		}
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Members</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<!-- Page Specific CSS Files -->
+	<link rel="stylesheet" th:href="@{/assets/module/hjf-ptc/css/style.css}" media="all">
+	<link rel="stylesheet" th:href="@{/assets/module/hjf-ptc/css/fontawesome-all.min.css}" media="all">
+	
+	<style type="text/css">
+	/* 检索框 */
+	.lrSearch-search-parent {
+		padding: 0 0 10px 0 !important;
+		z-index: 10; /* 大于下方块的，但是要小于导航条的 */
+		border-bottom: 1px #F5F5F5 solid;
+	}
+	.lrSearch-search .layui-form > .layui-form-item {
+		position: relative;
+	}
+	.lrSearch-search .layui-form-select { /* 下拉框 */
+		width: 135px;
+	}
+	.lrSearch-search .layui-form-select .layui-input { /* 下拉框 */
+		height: 40px !important;
+		line-height: 40px;
+		border-radius: 6px 0px 0px 6px !important;
+		border-right: 1px #F5F5F5 solid;
+	}
+	.lrSearch-search .layui-input-icon-group > .layui-icon {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 20px;
+		color: #909399;
+		position: absolute;
+		left: 135px;
+		top: 0;
+		text-align: center;
+		z-index: 10000;
+	}
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input {
+		height: 40px;
+		line-height: 40px;
+		border-left: none;
+		border-right: none;
+		border-radius: 0px !important;
+		position: absolute;
+		top: 0;
+		left: 135px;
+		width: calc( 100% - 235px );
+	}
+	.lrSearch-search #idLitKeyword {
+		padding-left: 44px;
+	}
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input:hover,
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input:focus,
+	.lrSearch-search .layui-form-select .layui-input:hover,
+	.lrSearch-search .layui-form-select .layui-input:focus {
+		border-color: #e6e6e6 !important;
+	}
+	.lrSearch-search #idSubmit{
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 0px 6px 6px 0px !important;
+		border-left: 1px #F5F5F5 solid;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 14px !important;
+		background-color: #0299CC;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.lrSearch-search #idSubmit:hover{
+		background-color: #0299CC !important;
+	}
+	
+	#team .layui-form .layui-input {
+		height: 40px;
+		line-height: 40px;
+		border: 1px #F5F5F5 solid !important;
+		border-radius: 6px 0 0 6px !important;
+		width: calc( 100% - 120px );
+		margin-right: 0;
+	}
+	#team .layui-form > .layui-form-item > .layui-input:hover,
+	#team .layui-form > .layui-form-item > .layui-input:focus {
+		border: 1px #F5F5F5 solid;
+	}
+	#team #idSubmit{
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 0px 6px 6px 0px !important;
+		border: none;
+		font-size: 14px !important;
+		background-color: #0299CC;
+		margin-left: -5px;
+		margin-right: 0;
+	}
+	#team #idSubmit:hover{
+		background-color: #0299CC !important;
+	}
+	</style>
+	
+</head>
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="index.html"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/lrIndex">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li><a href="/lrLibrary">Library</a></li>
+					<li class="active"><a href="/lrMembers">Members</a></li>
+					<li><a href="/lrForms">Forms</a></li>
+					<li><a href="/lrProjects">Projects</a></li>
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li class="drop-down"><a href="/login">Sign In</a>
+						<ul>
+							<li><a href="/other/updatePasswordHtml">Modify</a></li>
+							<li><a href="/logout">Sign Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="classHero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/module/index/imgs/slide-1.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Team Members</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/module/index/imgs/slide-2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Team Members</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/module/index/imgs/slide-3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Team Members</h2>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+
+		<!-- ======= Our Team Section ======= -->
+		<section id="team" class="team">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-12 lrSearch-search-parent" data-aos="fade-up">
+						<div class="lrSearch-search">
+							<form class="layui-form">
+								<div class="layui-form-item layui-input-icon-group">
+									<i class="layui-icon layui-icon-search"></i>
+									<select id="idSearchingMode" name="searchingMode">
+										<option value="local">Local Mode</option>
+										<option value="remote">Remote Mode</option>
+									</select>
+									<input class="layui-input" id="idLitKeyword" name="litKeyword" placeholder="Search Literatures Here" autocomplete="off" lay-verType="tips"/>
+									<button class="layui-btn icon-btn" id="idSubmit" lay-submit><i class="layui-icon">&#xe615;</i>Search</button>
+									
+									<input type="hidden" id="idNumPerPage" value="10"/>
+									<input type="hidden" id="idMatchingType" value="0"/>
+									<input type="hidden" id="idDatasetType" value="cancer"/>
+									<input type="hidden" id="idInputPubResultShowPage" value="0" />
+									<input type="hidden" id="idInputPubResultShowCount" value="0" />
+									<input type="hidden" id="idInputPubResultTotalCount" value="0" />
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+						<div class="member">
+							<div class="pic"><img th:src="@{/assets/images/teamMember.jpg}" class="img-fluid" alt=""></div>
+							<div class="member-info">
+								<h4>Walter White</h4>
+								<span>Team Member</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+						<div class="member">
+							<div class="pic"><img th:src="@{/assets/images/teamMember.jpg}" class="img-fluid" alt=""></div>
+							<div class="member-info">
+								<h4>Sarah Jhonson</h4>
+								<span>Team Member</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+						<div class="member">
+							<div class="pic"><img th:src="@{/assets/images/teamMember.jpg}" class="img-fluid" alt=""></div>
+							<div class="member-info">
+								<h4>William Anderson</h4>
+								<span>Team Member</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+						<div class="member">
+							<div class="pic"><img th:src="@{/assets/images/teamMember.jpg}" class="img-fluid" alt=""></div>
+							<div class="member-info">
+								<h4>Amanda Jepson</h4>
+								<span>Team Member</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+						<a href="javascript:;">
+							<div class="member">
+								<div class="pic"><img th:src="@{/assets/images/addMember.jpg}" class="img-fluid" alt=""></div>
+								<div class="member-info">
+									<h4>Add New Member</h4>
+									<span>Team Member</span>
+								</div>
+							 </div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- End Our Team Section -->
+
+		<!-- ======= Frequently Asked Questions Section ======= -->
+		<section id="faq" class="faq section-bg">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Frequently Asked Questions</h2>
+				</div>
+
+				<div class="row	d-flex align-items-stretch">
+
+					<div class="col-lg-6 faq-item" data-aos="fade-up">
+						<h4>What does a knowledge curation team do?</h4>
+						<p>
+							Read articles and extract knowledge data from it.
+						</p>
+					</div>
+
+					<div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
+						<h4>How can I create a new team?</h4>
+						<p>
+							Registering a user account will automatically create a user group with the same name.
+						</p>
+					</div>
+
+					<div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="200">
+						<h4>How to create a team member?</h4>
+						<p>
+							Just click the Add button above, improve the information and submit it to complete the addition of new team members.
+						</p>
+					</div>
+
+					<div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="300">
+						<h4>Can team member accounts be deleted?</h4>
+						<p>
+							Once a team member account is created, it cannot be deleted.
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Frequently Asked Questions Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 footer-info">
+						<h3>OncoPubMiner</h3>
+						<p>
+							A108 Adam Street <br>
+							NY 535022, USA<br><br>
+							<strong>Phone:</strong> +1 5589 55488 55<br>
+							<strong>Email:</strong> info@example.com<br>
+						</p>
+						<div class="social-links mt-3">
+							<a href="javascript:;" class="twitter"><i class="bx bxl-twitter"></i></a>
+							<a href="javascript:;" class="facebook"><i class="bx bxl-facebook"></i></a>
+							<a href="javascript:;" class="instagram"><i class="bx bxl-instagram"></i></a>
+							<a href="javascript:;" class="google-plus"><i class="bx bxl-skype"></i></a>
+							<a href="javascript:;" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-6 footer-links">
+						<h4>Useful Links</h4>
+						<ul>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Home</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">About us</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Services</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Terms of service</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Privacy policy</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Our Services</h4>
+						<ul>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Web Design</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Web Development</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Product Management</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Marketing</a></li>
+							<li><i class="bx bx-chevron-right"></i> <a href="javascript:;">Graphic Design</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-4 col-md-6 footer-newsletter">
+						<h4>Our Newsletter</h4>
+						<p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+						<form action="javascript:;" method="post">
+							<input type="email" name="email"><input type="submit" value="Subscribe">
+						</form>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="copyright">
+				&copy; Copyright <strong><span>OncoPubMiner</span></strong>. All Rights Reserved
+			</div>
+		</div>
+	</footer><!-- End Footer -->
+
+	<a href="javascript:;" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+
+</body>
+
+</html>

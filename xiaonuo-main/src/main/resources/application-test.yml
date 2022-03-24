@@ -1,0 +1,21 @@
+server:
+  port: 6674 # 测试环境端口！
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/XXXXXX?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=GMT%2b8&nullCatalogMeansCurrent=true
+    username: XXXXXX
+    password: XXXXXX
+    max-active: 20
+    max-pool-prepared-statement-per-connection-size: 20
+  data:
+    mongodb:
+      uri: mongodb://localhost:3307/XXXXXX
+
+currentsystem:
+  rootpath: /work/share/appfiles/
+
+oncopubminer:
+  api-url: https://oncopubapibeta.chosenmedinfo.com/
+  api-param-id: id?q=

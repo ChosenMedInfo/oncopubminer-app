@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Forms</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<style type="text/css">
+	.classItemsSpan i{
+		color: #428bca !important;
+	}
+	.classPreviewItems .dataBtnGroup { /* 弹窗中也要使用，不加“.lrForms” */
+		float: right;
+	}
+	.classPreviewItems .layui-form-item {
+		margin-bottom: 10px;
+	}
+	.classPreviewItems .layui-form-label {
+		width: 180px;
+		padding: 2px 10px 0 0;
+	}
+	.classPreviewItems .layui-input-block,
+	.classDivAddFormItem .layui-input-block {
+		margin-left: 180px;
+	}
+	.classPreviewItems .layui-form-checkbox,
+	.classPreviewItems .layui-form-radio {
+		margin-right: 15px;
+	}
+	.classPreviewItems .layui-form-checkbox i {
+		height: 24px;
+		margin-top: 1px;
+		line-height: 1;
+	}
+	.classPreviewItems .layui-form-checkbox span {
+		color: white;
+	}
+	.classPreviewItems .formItemTips {
+		font-style: italic;
+	}
+	.classDivAddFormItem{
+		display: none; /* 默认隐藏添加按钮 */
+	}
+	
+	/* 2021-12-13：解决下拉菜单超过浏览器范围时不能显示全的问题 */
+	.classPreviewItems .layui-form-select dl {
+		position: unset;
+	}
+	.classPreviewItems .layui-form-select .layui-edge {
+		top: 14px;
+	}
+	</style>
+	
+</head>
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms" class="active"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="classHero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/images/carousel/1.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Data Forms</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Data Forms</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Data Forms</h2>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+
+		<!-- ======= About Lists Section ======= -->
+		<section class="about-lists" id="idDivContent">
+			<div class="container">
+
+				<!-- 表格工具栏 -->
+				<form class="layui-form toolbar searchFormForTable">
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="formName" class="layui-input" placeholder="Form Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="formDesc" class="layui-input" placeholder="Form Desc"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<button class="layui-btn icon-btn" lay-filter="tableSearch" lay-submit>
+								<i class="layui-icon">&#xe615;</i>Search
+							</button>
+						</div>
+					</div>
+				</form>
+				
+				<!-- 数据表格 -->
+				<table id="dataTable" lay-filter="dataTable"></table>
+
+			</div>
+		</section><!-- End About Lists Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer"></footer><!-- End Footer -->
+
+	<a href="javascript:;" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+	
+	<!-- LayUI JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/module/xmSelect.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<!-- 表格操作列 -->
+	<script type="text/html" id="tableBarPub">
+		<a href="javascript:;" lay-event="deletePub"><i class="layui-icon">&#xe640;</i></a>
+	</script>
+	
+	<script>
+		var currentUser, insTb, layer, admin, xnUtil, form;
+		layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil'], function () {
+			var $ = layui.jquery;
+			layer = layui.layer;
+			var table = layui.table;
+			var tableX = layui.tableX;
+			admin = layui.admin;
+			form = layui.form;
+			var notice = layui.notice;
+			xnUtil = layui.xnUtil;
+			
+			// 缓存字典数据！
+			xnUtil.cacheDictData();
+			
+			// 获取当前登录用户！
+			var arrToolBars = ['<p>',
+				'<button lay-event="add" class="layui-btn layui-btn-sm icon-btn"><i class="layui-icon">&#xe654;</i>Add</button>&nbsp;',
+				'</p>'];
+			currentUser = getCurrentLoginUser();
+			if(currentUser == null || currentUser.accountType != "1"){
+				arrToolBars = [];
+			}
+			
+			//设置核心版块的最小高度！
+			$("#idDivContent").css("min-height", getClientHeight()-191);
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			/* 渲染表格 */
+			insTb = tableX.render({
+				elem: '#dataTable',
+				url: '/forms/page',
+				page: true,
+				limits: [10,20,30],
+				toolbar: arrToolBars.join(''),
+				defaultToolbar: [],
+				cellMinWidth: 100,
+				cols: [
+					[
+						{sort: false, align: 'center', width: 50, minWidth: 50, templet: function (d) {
+							return '<a class="addAndFoldRowTable" lay-event="addRowTable"><i class="bx bx-chevrons-right"></i></a>';
+						}},
+						{field: 'groupName', title: 'Type', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+							var strContent = "<i class='bx bxs-lock-alt' ></i> Private";
+							if(d.groupName == 'commonGroup') strContent = "<i class='bx bx-lock-open-alt'></i> Public";
+							return strContent;
+						}},
+						{field: 'formName', title: 'Form Name', sort: true},
+						{field: 'formDesc', title: 'Form Desc', sort: false},
+						{field: 'status', title: 'Status', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+							var strContent = "<i class='bx bx-shield' ></i> Active";
+							if(d.status == '2') strContent = "<i class='bx bx-shield-quarter'></i> Locked";
+							return strContent;
+						}}
+					]
+				],
+				done: function(res, curr, count) {
+					xnUtil.tableDone(insTb, res, curr, count);
+					// 权限判定：未登录或者非组管理员，不显示工具行！
+					if(currentUser == null || currentUser.accountType != "1"){
+						$(".layui-table-tool").each(function(){
+							$(this.remove());
+						});
+					}
+				}
+			});
+		
+			/* 表格搜索 */
+			form.on('submit(tableSearch)', function (data) {
+				insTb.reload({where: data.field, page: {curr: 1}});
+				return false;
+			});
+			
+			/* 表格排序事件 */
+			table.on('sort(dataTable)', function(obj){
+				table.reload('dataTable', {
+					initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+					where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+						sortBy: obj.field, // 排序字段！
+						orderBy: obj.type // 排序方式！
+					}
+				});
+			});
+		
+			/* 表格工具条点击事件 */
+			table.on('tool(dataTable)', function (obj) {
+				/* 查看更多 */
+				var tr = $(this).parents('tr');
+				var trIndex = tr.data('index');
+				if(obj.event === 'fold') {
+					$(this).attr('lay-event', 'addRowTable').html('<i class="bx bx-chevrons-right"></i>');
+					tr.next().remove();
+				}
+				if (obj.event === 'addRowTable') {
+					$(this).attr('lay-event', 'fold').html('<i class="bx bx-chevrons-down"></i>');
+					// 构建html！
+					var _html = [
+						'<tr class="table-item">',
+						'	<td colspan="' + tr.find('td').length + '" style="padding: 6px 12px;">',
+						'		<section class="about-lists">',
+						'			<div class="container" style="margin-left: 0; margin-right: 0;">',
+						'				<div class="row no-gutters">',
+						'					<div class="col-lg-4 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bxs-customize"></i> Form Name</h4>',
+						'						<p>' + obj.data.formName + '</p>',
+						'					</div>',
+						'					<div class="col-lg-5 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bxs-customize"></i> Form Description</h4>',
+						'						<p>' + obj.data.formDesc + '</p>',
+						'					</div>',
+						'					<div class="col-lg-3 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bxs-time-five" ></i> Create Time</h4>',
+						'						<p>' + obj.data.createTime + ' (UTC+8)</p>',
+						'					</div>',
+						'					<div class="col-lg-6 content-item" data-aos="fade-up" data-aos-delay="50">',
+						'						<h4><i class="bx bx-wrench"></i> Operations</h4>',
+						'						<p id="idOperations' + obj.data.id + '"><i>No Operation Available</i></p>',
+						'					</div>',
+						'					<div class="col-lg-6 content-item" data-aos="fade-up" data-aos-delay="50">',
+						'						<h4><i class="bx bx-grid-alt"></i> Projects</h4>',
+						'						<p><a href="javascript:;" id="idProjectToggle' + obj.data.id + '">0</a></p>',
+						'					</div>',
+						'					<div class="col-lg-12 content-item" data-aos="fade-up" data-aos-delay="100" id="idDivFormDetail' + obj.data.id + '" style="display: none;">',
+						'						<h4><i class="bx bxs-customize"></i> Form Items</h4>',
+						'						<form class="layui-form searchFormForTable">',
+						'							<div id="idPreviewItems' + obj.data.id + '" class="classPreviewItems"></div>',
+						'							<div class="layui-form-item classDivAddFormItem" id="idDivAddFormItem' + obj.data.id + '">',
+						'								<label class="layui-form-label"></label>',
+						'								<div class="layui-input-block">',
+						//'									<a href="javascript:;" onclick="addItem(\'' + obj.data.id + '\')"><i class="bx bx-plus"></i> Add Item</button>',
+						//'									<a href="javascript:;" onclick="addItem(\'' + obj.data.id + '\')"><i class="bx bx-plus"></i> Add Item</a>', // 2021-11-30（V0008-01.00.05-10）：牛逼了，我的哥！！！
+						'									<a href="javascript:;" onclick="addItem(\'' + obj.data.id + '\', \'' + obj.data.status + '\')"><i class="bx bx-plus"></i> Add Item</a>', // 2021-12-10（V0015-01.00.12-05）：带上状态，用于添加之后表项操作按钮的显示！！！
+						'								</div>',
+						'							</div>',
+						'						</form>',
+						'					</div>',
+						'					<div class="col-lg-12 content-item" data-aos="fade-up" data-aos-delay="100" id="idDivProjectTable' + obj.data.id + '" style="display: none; padding: 0 5px 0 0;">',
+						'						<form class="layui-form toolbar searchFormForTable">',
+						'							<div class="layui-form-item">',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 190px;">',
+						'										<input name="projectName" class="layui-input" placeholder="Project Name"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 190px;">',
+						'										<input name="projectDesc" class="layui-input" placeholder="Project Desc"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 190px;">',
+						'										<input name="formName" class="layui-input" placeholder="Form Name"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 190px;">',
+						'										<input name="members" class="layui-input" placeholder="Member Name"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<button class="layui-btn icon-btn" lay-filter="tableSearchProject' + obj.data.id + '" lay-submit>',
+						'										<i class="layui-icon">&#xe615;</i>Search',
+						'									</button>',
+						'								</div>',
+						'							</div>',
+						'						</form>',
+						'						<table id="idProjectTable' + obj.data.id + '" lay-filter="idProjectTable' + obj.data.id + '"></table>',
+						'					</div>',
+						'				</div>',
+						'			</div>',
+						'		</section>',
+						'	</td>',
+						'</tr>'
+					];
+					tr.after(_html.join('\n'));
+					
+					// 操作链接！
+					if(obj.data.groupName == currentUser.accountGroup){ // 本组的Form！
+						if(obj.data.status == 2){
+							$('#idOperations' + obj.data.id).html('<a href="javascript:;" onclick="funcViewOrModify(\'' + obj.data.id + '\',' + obj.data.status + ')"><i class="bx bxs-customize"></i> View Items <span class="classItemsSpan"><i class="bx bx-plus"></i></span></a> | <a href="javascript:;" onclick="funcCopy(\'' + obj.data.id + '\')"><i class="bx bx-copy-alt"></i> Copy</a><span id="idDel' + obj.data.id + '"> | <a href="javascript:;" onclick="funcDelete(\'' + obj.data.id + '\')"><i class="bx bx-trash"></i> Delete</a></span>');
+						}else{
+							if(currentUser.accountType != "1"){
+								// 啥也不干！
+							}else{
+								$('#idOperations' + obj.data.id).html('<a href="javascript:;" onclick="funcViewOrModify(\'' + obj.data.id + '\',' + obj.data.status + ')"><i class="bx bxs-customize"></i> Modify Items <span class="classItemsSpan"><i class="bx bx-plus"></i></span></a> | <a href="javascript:;" onclick="funcLock(' + JSON.stringify(obj).replace(/"/g, '&quot;') + ')"><i class="layui-icon">&#xe6b1;</i> Lock</a> | <a href="javascript:;" onclick="showAddOrUpdateModel(' + JSON.stringify(obj).replace(/"/g, '&quot;') + ')"><i class="layui-icon">&#xe642;</i> Edit</a><span id="idDel' + obj.data.id + '"> | <a href="javascript:;" onclick="funcDelete(\'' + obj.data.id + '\')"><i class="bx bx-trash"></i> Delete</a></span>');
+							}
+						}
+					
+						// 判断是否允许删除！
+						$.ajax({
+							type: "post",
+							url: "/projects/checkDelForm",
+							dataType: "json",
+							async: true,
+							data: JSON.stringify({id: obj.data.id}),
+							contentType: "application/json; charset=utf-8",
+							success: function(result){
+								if(result.data == "CBD"){
+									$("#idDel" + obj.data.id).show();
+								}else if(result.data == "CNBD"){
+									$("#idDel" + obj.data.id).remove();
+								}
+							}
+						});
+					
+					}else{ // 非本组的Form，啥也干不了！
+						//$('#idOperations' + obj.data.id).html('<a href="javascript:;" onclick="funcCopy(\'' + obj.data.id + '\')"><i class="bx bx-copy-alt"></i> Copy</a>');
+						$('#idOperations' + obj.data.id).html('<a href="javascript:;" onclick="funcViewOrModify(\'' + obj.data.id + '\',' + obj.data.status + ')"><i class="bx bxs-customize"></i> View Items <span class="classItemsSpan"><i class="bx bx-plus"></i></span></a> | ' + '<a href="javascript:;" onclick="funcCopy(\'' + obj.data.id + '\')"><i class="bx bx-copy-alt"></i> Copy</a>'); // 2021-12-03（V0011-01.00.08-12）：公共的表单也要允许预览！
+					}
+					
+					// 项目数量链接点击效果！
+					$('#idProjectToggle' + obj.data.id).click(function(){
+						$('#idDivProjectTable' + obj.data.id).toggle();
+						if($('#idDivProjectTable' + obj.data.id).css("display") === "none"){
+							$('#idProjectToggle' + obj.data.id).html($('#idProjectToggle' + obj.data.id).html().replace('<i class="bx bx-minus"></i>', '<i class="bx bx-plus"></i>'));
+						}else{
+							$('#idProjectToggle' + obj.data.id).html($('#idProjectToggle' + obj.data.id).html().replace('<i class="bx bx-plus"></i>', '<i class="bx bx-minus"></i>'));
+						}
+					});
+					
+					// 项目列表表格渲染！
+					var objArrColsProject = [
+						{field: 'groupName', title: 'Type', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+							var strContent = "<i class='bx bxs-lock-alt' ></i> Private";
+							if(d.groupName == 'commonGroup') strContent = "<i class='bx bx-lock-open-alt'></i> Public";
+							return strContent;
+						}},
+						{field: 'projectName', title: 'Project Name', sort: true},
+						{field: 'projectDesc', title: 'Project Desc', sort: false},
+						{field: 'libraryName', title: 'Collection Name', sort: true},
+						{field: 'dataset', title: 'Data Set', align: 'center', sort: false, width: 100}
+					];
+					
+					// 项目表格渲染！
+					let insTbProject = table.render({
+						elem: '#idProjectTable' + obj.data.id,
+						url: '/projects/page',
+						page: true,
+						limits: [10,20,30],
+						where: {
+							formId: obj.data.id
+						},
+						cols: [ objArrColsProject ],
+						done: function(res, curr, count) {
+							$('#idProjectToggle' + obj.data.id).html(count + ' <i class="bx bx-plus"></i>'); // 更新文献数量！
+							xnUtil.tableDone(insTb, res, curr, count);
+							res.data.forEach(function (item, index) {
+								$('div[lay-id="idProjectTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="dataset"] div').html('<a href="javascript:;" id="idDownload' + item.id + '"><i class="bx bx-grid"></i></a>');
+								
+								// 获取Dataset数量！
+								$.ajax({
+									type: "get",
+									url: "/formsItemsData/getBatchCount",
+									async: true,
+									contentType: "application/json; charset=utf-8",
+									data: {projectId: item.id, date: new Date()},
+									dataType: "json",
+									success: function (res) {
+										if(res == 0){ // 没有数据的情况下，不允许下载了！
+											$("#idDownload" + item.id).replaceWith('<i style="color: #aaaaaa;">No Data Available</i>');
+										}else{ // 有数据的情况下，显示数字并允许下载！
+											
+											var datasetUrl = "/formsItemsData/exportData?projectId=" + item.id + "&formId=" + obj.data.id;
+											//$("#idDownload" + item.id).replaceWith('<a href="' + datasetUrl + '" target="_blank">' + res + ' <i class="bx bx-cloud-download"></i></a></p>');
+											
+											// 2021-11-30（V0008-01.00.05-09）：变更为弹窗展示！
+											$("#idDownload" + item.id).html(res + ' <i class="bx bx-grid"></i>');
+											$("#idDownload" + item.id).after('<br><a href="' + datasetUrl + '" target="_blank">' + res + ' <i class="bx bx-cloud-download"></i></a></p>'); // 直接下载链接，以应对数据量较大导致弹窗内表格加载缓慢的问题！
+											$("#idDownload" + item.id).click(function(){
+												var layDataViewerIndex = admin.open({
+													title: '<i class="bx bx-grid"></i> Data Viewer',
+													url: 'lrDataViewer',
+													area: ['100%', '100%'],
+													offset: '0', // 距离顶部位置！
+													scrollbar: false, // 弹窗打开后，禁用原页面的浏览器滚动条，只显示弹窗的滚动条！
+													data: { data: {projectId: item.id, formId: obj.data.id} },	 // 传递数据到表单页面
+													end: function () {
+														// 2021-11-30（V0008-01.00.05-09）：关掉弹窗后暂时啥也不干！
+													},
+													success: function (layero, dIndex) {
+														// 弹窗超出范围不出现滚动条
+														//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+														//$(layero).find('[lay-submit]').focus();
+													}
+												});
+											});
+											
+										}
+									}
+								});
+								
+							});
+						}
+					});
+					
+					/* 表格搜索 */
+					form.on('submit(tableSearchProject' + obj.data.id + ')', function (dataProjectSearch) {
+						insTbProject.reload({where: dataProjectSearch.field, page: {curr: 1}});
+						return false;
+					});
+					
+					/* 表格排序事件 */
+					table.on('sort(idProjectTable' + obj.data.id + ')', function(projectObj){
+						table.reload('idProjectTable' + obj.data.id, {
+							initSort: projectObj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+							where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+								sortBy: projectObj.field, // 排序字段！
+								orderBy: projectObj.type // 排序方式！
+							}
+						});
+					});
+					
+				}
+			});
+		
+			/* 表格头工具栏点击事件 */
+			table.on('toolbar(dataTable)', function (obj) {
+				if (obj.event === 'add') { // 添加
+					showAddOrUpdateModel();
+				}
+			});
+		
+		});
+		
+		// 显示表单弹窗！
+		function showAddOrUpdateModel(thisObj) {
+			var layIndex = admin.open({
+				title: (thisObj && thisObj.data && thisObj.data.id ? '<i class="layui-icon">&#xe642;</i> Edit' : '<i class="layui-icon">&#xe654;</i> Add') + ' Data Collection Form',
+				url: '/forms/form',
+				area: '800px',
+				offset: '100px', // 距离顶部位置！
+				data: { data: thisObj == null ? {} : thisObj.data }, // 传递数据到表单页面
+				end: function () {
+					var layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) { // 判断表单操作成功标识
+						location.reload();
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					//$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+		
+		// 封存！
+		function funcLock(thisObj){
+			layer.confirm('Are you sure to lock this data form?', {
+				icon: 3,
+				btn: ['Yes','Cancel'],
+				title: 'Confirm'
+			}, function (index) {
+				layui.jquery.ajax({
+					type: "get",
+					url: "/forms/seal",
+					timeout: 60000, // 超时时间设置，单位毫秒！
+					data: {id: thisObj.data.id},
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function (res) {
+						layer.msg(res.message);
+						insTb.reload(); // 成功刷新表格
+					}
+				});
+				layer.close(index);
+			});
+		}
+		
+		// 删除！
+		function funcDelete(thisObjId){
+			layer.confirm('Are you sure to delete this data form?', {
+				icon: 3,
+				btn: ['Yes', 'Cancel'],
+				title: 'Confirm'
+			}, function () {
+				admin.req('forms/delete', JSON.stringify([{'id': thisObjId}]), function(res){
+					layer.msg(res.message, {icon: 1, time: 1000}, function () {
+						insTb.reload();
+					});
+				}, 'post');
+			});
+		}
+		
+		// 拷贝！
+		function funcCopy(thisObjId){
+			layer.confirm('Are you sure to copy this form?', {
+				icon: 3,
+				btn: ['Yes','Cancel'],
+				title: 'Confirm'
+			}, function (index) {
+				layer.close(index);
+				var indexLoading = layer.load(3, {shade: [0.3, '#393D49']}); // 然后添加加载背景！
+				layui.jquery.ajax({
+					type: "post",
+					url: "/forms/copy",
+					timeout: 60000, // 超时时间设置，单位毫秒！
+					data: JSON.stringify({id: thisObjId}),
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function (res) {
+						layer.close(indexLoading);
+						location.reload();
+					}
+				});
+			});
+		}
+		
+		// 查看或修改！
+		function funcViewOrModify(thisObjId, thisObjStatus){
+			if($("#idDivFormDetail" + thisObjId).css("display") == "none"){
+				if(thisObjStatus == 0) $("#idDivAddFormItem" + thisObjId).show(); // 正常状态下，显示添加item链接！
+				funcGetFormsItemsList(thisObjId, thisObjStatus);
+				$(".classItemsSpan").html('<i class="bx bx-minus"></i>');
+			}else{
+				$(".classItemsSpan").html('<i class="bx bx-plus"></i>');
+			}
+			$("#idDivFormDetail" + thisObjId).toggle();
+		}
+		
+		// 获取表单项列表：预览！
+		function funcGetFormsItemsList(thisObjId, thisObjStatus){
+			var indexLoading = layer.load(3, {shade: [0.3, '#393D49']}); // 然后添加加载背景！
+			$.ajax({
+				type: "post",
+				url: "/formsItems/list",
+				timeout: 60000, // 超时时间设置，单位毫秒！
+				async: false,
+				data: JSON.stringify({id: thisObjId}),
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: function (res) {
+					layer.close(indexLoading);
+					if(res.data != null && res.data.length != 0){
+						var $idPreviewItems = $('#idPreviewItems' + thisObjId);
+						$idPreviewItems.empty(); // 清空表单！
+						// 遍历表单项，渲染成html代码！
+						for(var i = 0; i < res.data.length; i++){
+							var id = res.data[i].id,
+							itemName = res.data[i].itemName,
+							itemType = xnUtil.rendDataTableDict(res.data[i].itemType, 'lr_item_type'),
+							itemDefault = res.data[i].itemDefault,
+							itemMaxLength = res.data[i].itemMaxLength,
+							itemMaxCount = res.data[i].itemMaxCount,
+							itemRequired = res.data[i].itemRequired,
+							itemTips = res.data[i].itemTips,
+							itemSort = res.data[i].itemSort,
+							itemOptionType = res.data[i].itemOptionType,
+							itemOptions = res.data[i].formsItemOptionsList;
+							
+							//表单元素公共头
+							var itemNode = '<div class="layui-form-item">' + '<label class="layui-form-label item-label" id="item_' + id + '">' + (itemRequired == 1 ? '<span style="pointer-events: none;color: red">* </span>' : '') + itemName + ' (' + itemSort + ')</label>';
+							// 这里需要判断权限！
+							itemNode += '<div class ="dataBtnGroup" style="height: 38px;line-height: 38px">';
+							if(thisObjStatus != null && thisObjStatus == "0"){ // 只有未被删除及未被封存的表项才显示操作按钮！
+								itemNode += 
+									'<i class ="layui-icon layui-icon-edit editBtn" style="font-size: 18px; cursor: pointer;" ' +
+									//'onclick="editItem(\'' + thisObjId + '\', \'' + id + '\')"></i> ' +
+									'onclick="editItem(\'' + thisObjId + '\', \'' + id + '\', \'' + thisObjStatus + '\')"></i> ' + // 2021-12-15（V0018-01.01.02-09）：加上状态参数！
+									'<i class ="layui-icon layui-icon-close delBtn" style="font-size: 18px; cursor: pointer;" ' +
+									'onclick="delItem(\'' + thisObjId + '\', \'' + id + '\')"></i> ';
+							}
+							itemNode += '</div>';
+							itemNode += '<div class="layui-input-block item-block" style="margin-right: 50px">';
+						   
+							//分情况添加内容
+							switch (itemType) {
+								case 'text':
+									itemNode += '<input type="text"' + ' placeholder="please enter..."' + (itemMaxLength > 0 ? (' maxlength="' + itemMaxLength + '"') : '') + ' class="layui-input" value="' + itemDefault + '">';
+									break;
+								case 'radio':
+									if (itemOptions != null) {
+										for (var j = 0; j < itemOptions.length; j++) {
+											// 这里必须有name不然会无法选中且会报错
+											//itemNode += '<input type="radio" name="' + thisObjId + '-' + id + '" title="' + itemOptions[j].optionValue + '"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '>';
+											itemNode += '<input type="radio"' + (itemRequired == 1 ? '' : ' lay-filter="radioCanBeRemoveChecked"') +' name="' + thisObjId + '-' + id + '" title="' + itemOptions[j].optionValue + '"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '>'; // 2021-12-15（V0018-01.01.02-11）：radio非必选的情况下，需要允许removeChecked！
+										}
+									}
+									break;
+								case 'checkbox':
+									if (itemOptions != null) {
+										for (var j = 0; j < itemOptions.length; j++) {
+											//itemNode += '<input type="checkbox"' + (itemMaxCount > 0 ? (' maxCount="'+ itemMaxCount + '"') : '') + ' title="' + itemOptions[j].optionValue + '"' + ' lay-filter="maxCountChecked"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '>';
+											itemNode += '<input type="checkbox"' + (itemMaxCount > 0 ? (' maxCount="'+ itemMaxCount + '"') : '') + ' title="' + itemOptions[j].optionValue + '" value="' + itemOptions[j].optionValue + '"' + ' lay-filter="maxCountChecked"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '' +  (itemRequired == 1 ? 'lay-verify="required" required' : '') + '>'; // 2021-12-15（V0018-01.01.02-13）：bug修复：checkbox的值都是on，而不是该有的选项值！
+										}
+									}
+									break;
+								case 'select':
+									itemNode += '<select>' + (itemRequired === 1 ? '' : '<option value="">please select</option>');
+									if (itemOptionType == 1 && itemOptions != null) { // Customize!
+										for (var j = 0; j < itemOptions.length; j++) {
+											itemNode += '<option value="' + itemOptions[j].id + '"' + (itemDefault != '' ? (itemOptions[j].optionValue == itemDefault ? ' selected' : '') : (j == 0 && itemRequired == 1 ? ' selected' : '')) + '>' + itemOptions[j].optionValue + '</option>';
+										}
+									}else if(itemOptionType > 1){
+										var xmData = funcFromItemOptionType2XmData(itemOptionType, "OncoPubMiner"); // 癌种、药物、基因、变异等列表！
+										for(var j = 0; j < xmData.length; j++){
+											itemNode += '<option value="' + xmData[j].value + '"' + (itemDefault != '' ? (xmData[j].value == itemDefault ? ' selected' : '') : (j == 0 && itemRequired == 1 ? ' selected' : '')) + '>' + xmData[j].name + '</option>';
+										}
+									}
+									itemNode += '</select>'
+									break;
+								case 'textarea':
+									itemNode += '<textarea placeholder="please enter..." class="layui-textarea"' + (itemMaxLength > 0 ? (' maxlength="'+ itemMaxLength + '"') : '') + '>' + itemDefault + '</textarea>';
+									break;
+								case 'switch':
+									itemNode += '<input type="checkbox" lay-skin="switch" lay-text="ON|OFF">';
+									break;
+								case 'xmselect':
+									itemNode += '<div id="xm-' + id + '" class="xm-select-style"></div>';
+									break;
+							}
+							// 根据是否设置了Tips，确定是否显示该部分代码！
+							if(itemTips && itemTips != ""){
+								itemNode += '<p class="formItemTips"><b>Tips:</b> ' + itemTips + '</p>';
+							}
+							// 补上最后的关闭标签！
+							itemNode += '</div></div>';
+							// 添加表单项节点！
+							$idPreviewItems.append(itemNode);
+							// 重新渲染表单！
+							form.render();
+							
+							// 2021-12-15（V0018-01.01.02-11）：radio非必选的情况下，需要允许removeChecked！
+							form.on('radio(radioCanBeRemoveChecked)', function (data) {
+								
+								let bolWasChecked = $(this).attr("wasChecked");
+								let strRadioName = $(this).attr("name");
+								
+								// 同名radio全部清除“wasChecked”属性！
+								$("input[name='" + strRadioName + "']").each(function(){
+									$(this).removeAttr("wasChecked");
+								});
+								
+								// 执行选中/取消选中操作！
+								if(bolWasChecked){ // 已选中的情况下，取消选中！
+									//console.log("1");
+									$(this).prop('checked', false);
+								}else{ // 没有选中的情况下，执行选中！
+									//console.log("2");
+									$(this).attr("wasChecked", true);
+									$(this).prop('checked', true);
+								}
+								
+								// 重新渲染全部radio！
+								form.render("radio");
+								
+							});
+							
+							// 渲染多选下拉框
+							if(itemType === 'xmselect'){
+								let xmSelectRenderObj = funcGenerateXmSelectRenderObj('xm-' + id, thisObjId + '-' + id, itemRequired === 1 ? 'required' : '', itemMaxCount, itemOptionType);
+								let xs = xmSelect.render(xmSelectRenderObj);
+								let xmData = [];
+								if(itemOptionType == 1 && itemOptions != null){ // Customize!
+									for(let k = 0; k < itemOptions.length; ++k){
+										if ($.inArray(itemOptions[k].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) !== -1) {
+											xmData.push({name: itemOptions[k].optionValue, value: itemOptions[k].optionValue, selected: true});
+										} else {
+											xmData.push({name: itemOptions[k].optionValue, value: itemOptions[k].optionValue});
+										}
+									}
+								}else {
+									xmData = funcFromItemOptionType2XmData(itemOptionType, "OncoPubMiner"); // 癌种、药物、基因、变异等列表！
+								}
+								// 更新列表！
+								xs.update({
+									data: xmData
+								});
+							}
+							
+						}
+						
+						// 监听多选框！
+						layui.use('form', function () {
+							let form = layui.form;
+							form.on('checkbox(maxCountChecked)', function(data){
+								let $elem = $(data.elem)
+								let max = $elem.attr('maxCount')
+								if(max != null){
+									if ($elem.siblings("input:checked").length >= max){
+										$elem.next().attr("class","layui-unselect layui-form-checkbox");
+										$elem.prop("checked",false);
+										layer.tips('max.' + max + ' choices', $elem.parent().siblings(), {
+											tips: [1, "#ff691b"],
+											time: 2000,
+										});
+									}
+								}
+							});
+						});
+					}
+				}
+			});
+		}
+		
+		// 添加表单项！
+		//function addItem(formId) {
+		function addItem(formId, formStatus) { // 2021-12-10（V0015-01.00.12-05）：带上状态，用于添加之后表项操作按钮的显示！！！
+			var layIndex = admin.open({
+				title: '<i class="layui-icon">&#xe63c;</i> Customize Form Item',
+				url: '/formsItems/form',
+				area: '600px',
+				offset: '20px', // 定义top坐标！
+				data: { data: {formId: formId} }, // 传递数据到表单页面
+				end: function () {
+					var layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) { // 判断表单操作成功标识
+						//funcGetFormsItemsList(formId);
+						funcGetFormsItemsList(formId, formStatus); // 2021-12-10（V0015-01.00.12-05）：带上状态，用于添加之后表项操作按钮的显示！！！
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+		
+		// 编辑表单项！
+		//function editItem(formId, itemId) {
+		function editItem(formId, itemId, formStatus) { // 2021-12-15（V0018-01.01.02-09）：加上状态参数！
+			data = {id: itemId, formId: formId};
+			var layIndex = admin.open({
+				title: '<i class="layui-icon">&#xe63c;</i> Customize Form Item',
+				url: '/formsItems/form',
+				area: '800px',
+				offset: '20px', // 定义top坐标！
+				data: { data: data }, // 传递数据到表单页面
+				end: function () {
+					var layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) { // 判断表单操作成功标识
+						//funcGetFormsItemsList(formId); // 成功刷新表格
+						funcGetFormsItemsList(formId, formStatus); // 2021-12-15（V0018-01.01.02-09）：加上状态参数！
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					//$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+		
+		// 删除表单项！
+		function delItem(formId, itemId) {
+			layer.confirm('Are you sure to delete this item?', {
+				icon: 3,
+				btn: ['Yes','No'],
+				title: 'Confirm'
+			}, function (index) {
+				layui.jquery.ajax({
+					type: "post",
+					url: "/formsItems/delete",
+					timeout: 60000, // 超时时间设置，单位毫秒！
+					data: JSON.stringify([{id: itemId}]),
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function (res) {
+						layer.msg(res.message);
+						if(res.success){
+							location.reload();
+						}
+					}
+				});
+				layer.close(index);
+			});
+		}
+		
+	</script>
+
+</body>
+
+</html>

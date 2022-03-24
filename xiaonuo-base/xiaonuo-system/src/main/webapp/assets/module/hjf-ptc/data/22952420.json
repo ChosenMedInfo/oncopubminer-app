@@ -1,0 +1,871 @@
+{
+  "code": 200, 
+  "data": {
+    "annotations": [], 
+    "id": "22952420", 
+    "infons": {}, 
+    "passages": [
+      {
+        "annotations": [
+          {
+            "id": "4", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 10
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "5", 
+            "infons": {
+              "NCBI Homologene": "68464", 
+              "identifier": "3320", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 5, 
+                "offset": 56
+              }
+            ], 
+            "text": "HSP90"
+          }
+        ], 
+        "infons": {
+          "article-id_pmc": "PMC3431175", 
+          "article_id_doi": "10.1593/neo.12986", 
+          "article_id_pmc": "3431175", 
+          "article_id_pmid": "22952420", 
+          "authors": "Ahsan A, Ramanand SG, Whitehead C, Hiniker SM, Rehemtulla A, Pratt WB, Jolly S, Gouveia C, Truong K, Van Waes C, Ray D, Lawrence TS, Nyati MK", 
+          "if2020": 5.696, 
+          "journal": "Neoplasia; 2012 Aug; 14(8) 670-7", 
+          "journal_name": "Neoplasia", 
+          "type": "title", 
+          "year": "2012"
+        }, 
+        "offset": 0, 
+        "relations": [], 
+        "sentences": [], 
+        "text": "Wild-type EGFR is stabilized by direct interaction with HSP90 in cancer cells and tumors."
+      }, 
+      {
+        "annotations": [
+          {
+            "id": "38", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 32, 
+                "offset": 94
+              }
+            ], 
+            "text": "epidermal growth factor receptor"
+          }, 
+          {
+            "id": "39", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 128
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "42", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 361
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "43", 
+            "infons": {
+              "NCBI Homologene": "68464", 
+              "identifier": "3320", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 21, 
+                "offset": 447
+              }
+            ], 
+            "text": "Heat shock protein 90"
+          }, 
+          {
+            "id": "44", 
+            "infons": {
+              "NCBI Homologene": "68464", 
+              "identifier": "3320", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 5, 
+                "offset": 470
+              }
+            ], 
+            "text": "HSP90"
+          }, 
+          {
+            "id": "45", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 506
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "46", 
+            "infons": {
+              "NCBI Homologene": "3273", 
+              "identifier": "2064", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 5, 
+                "offset": 515
+              }
+            ], 
+            "text": "ErbB2"
+          }, 
+          {
+            "id": "48", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 569
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "49", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 654
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "50", 
+            "infons": {
+              "NCBI Homologene": "68464", 
+              "identifier": "3320", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 5, 
+                "offset": 674
+              }
+            ], 
+            "text": "HSP90"
+          }, 
+          {
+            "id": "51", 
+            "infons": {
+              "NCBI Homologene": "3273", 
+              "identifier": "2064", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 5, 
+                "offset": 695
+              }
+            ], 
+            "text": "ErbB2"
+          }, 
+          {
+            "id": "52", 
+            "infons": {
+              "NCBI Homologene": "68464", 
+              "identifier": "3320", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 5, 
+                "offset": 715
+              }
+            ], 
+            "text": "HSP90"
+          }, 
+          {
+            "id": "53", 
+            "infons": {
+              "identifier": "MESH:C001277", 
+              "type": "Chemical"
+            }, 
+            "locations": [
+              {
+                "length": 12, 
+                "offset": 732
+              }
+            ], 
+            "text": "geldanamycin"
+          }, 
+          {
+            "id": "54", 
+            "infons": {
+              "identifier": "MESH:C001277", 
+              "type": "Chemical"
+            }, 
+            "locations": [
+              {
+                "length": 2, 
+                "offset": 746
+              }
+            ], 
+            "text": "GA"
+          }, 
+          {
+            "id": "55", 
+            "infons": {
+              "identifier": "MESH:C552103", 
+              "type": "Chemical"
+            }, 
+            "locations": [
+              {
+                "length": 7, 
+                "offset": 754
+              }
+            ], 
+            "text": "AT13387"
+          }, 
+          {
+            "id": "56", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 785
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "58", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 897
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "59", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "13649", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 906
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "62", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 1105
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "63", 
+            "infons": {
+              "NCBI Homologene": "68464", 
+              "identifier": "3320", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 5, 
+                "offset": 1133
+              }
+            ], 
+            "text": "HSP90"
+          }, 
+          {
+            "id": "64", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 1254
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+          {
+            "id": "66", 
+            "infons": {
+              "NCBI Homologene": "68464", 
+              "identifier": "3320", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 5, 
+                "offset": 1358
+              }
+            ], 
+            "text": "HSP90"
+          }, 
+          {
+            "id": "67", 
+            "infons": {
+              "NCBI Homologene": "74545", 
+              "identifier": "1956", 
+              "type": "Gene"
+            }, 
+            "locations": [
+              {
+                "length": 4, 
+                "offset": 1387
+              }
+            ], 
+            "text": "EGFR"
+          }, 
+              {
+                "id": "68", 
+                "infons": {
+                  "identifier": "Supports", 
+                  "type": "clinsig"
+                }, 
+                "locations": [
+                  {
+                    "length": 9, 
+                    "offset": 1392
+                  }
+                ], 
+                "text": "chaperone"
+              }
+        ], 
+        "infons": {
+          "type": "abstract"
+        }, 
+        "offset": 90, 
+        "relations": [], 
+        "sentences": [
+          {
+            "annotations": [
+              {
+                "id": "2", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 32, 
+                    "offset": 94
+                  }
+                ], 
+                "text": "epidermal growth factor receptor"
+              }, 
+              {
+                "id": "3", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 128
+                  }
+                ], 
+                "text": "EGFR"
+              }
+            ], 
+            "infons": {}, 
+            "offset": 90, 
+            "relations": [], 
+            "text": "The epidermal growth factor receptor (EGFR) has been targeted for inhibition using tyrosine kinase inhibitors and monoclonal antibodies, with improvement in outcome in subsets of patients with head and neck, lung, and colorectal carcinomas."
+          }, 
+          {
+            "annotations": [
+              {
+                "id": "4", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 361
+                  }
+                ], 
+                "text": "EGFR"
+              }
+            ], 
+            "infons": {}, 
+            "offset": 331, 
+            "relations": [], 
+            "text": "We have previously found that EGFR stability plays a key role in cell survival after chemotherapy and radiotherapy."
+          }, 
+          {
+            "annotations": [
+              {
+                "id": "5", 
+                "infons": {
+                  "NCBI Homologene": "68464", 
+                  "identifier": "3320", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 21, 
+                    "offset": 447
+                  }
+                ], 
+                "text": "Heat shock protein 90"
+              }, 
+              {
+                "id": "6", 
+                "infons": {
+                  "NCBI Homologene": "68464", 
+                  "identifier": "3320", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 5, 
+                    "offset": 470
+                  }
+                ], 
+                "text": "HSP90"
+              }, 
+              {
+                "id": "7", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 506
+                  }
+                ], 
+                "text": "EGFR"
+              }, 
+              {
+                "id": "8", 
+                "infons": {
+                  "NCBI Homologene": "3273", 
+                  "identifier": "2064", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 5, 
+                    "offset": 515
+                  }
+                ], 
+                "text": "ErbB2"
+              }, 
+              {
+                "id": "9", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 569
+                  }
+                ], 
+                "text": "EGFR"
+              }
+            ], 
+            "infons": {}, 
+            "offset": 447, 
+            "relations": [], 
+            "text": "Heat shock protein 90 (HSP90) is known to stabilize mutant EGFR and ErbB2, but its role in cancers with wild-type (WT) WT-EGFR is unclear."
+          }, 
+          {
+            "annotations": [
+              {
+                "id": "10", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 654
+                  }
+                ], 
+                "text": "EGFR"
+              }, 
+              {
+                "id": "11", 
+                "infons": {
+                  "NCBI Homologene": "68464", 
+                  "identifier": "3320", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 5, 
+                    "offset": 674
+                  }
+                ], 
+                "text": "HSP90"
+              }, 
+              {
+                "id": "12", 
+                "infons": {
+                  "NCBI Homologene": "3273", 
+                  "identifier": "2064", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 5, 
+                    "offset": 695
+                  }
+                ], 
+                "text": "ErbB2"
+              }
+            ], 
+            "infons": {}, 
+            "offset": 586, 
+            "relations": [], 
+            "text": "In this report, we demonstrate that fully mature, membrane-bound WT-EGFR interacts with HSP90 independent of ErbB2."
+          }, 
+          {
+            "annotations": [
+              {
+                "id": "13", 
+                "infons": {
+                  "NCBI Homologene": "68464", 
+                  "identifier": "3320", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 5, 
+                    "offset": 715
+                  }
+                ], 
+                "text": "HSP90"
+              }, 
+              {
+                "id": "14", 
+                "infons": {
+                  "identifier": "MESH:C001277", 
+                  "type": "Chemical"
+                }, 
+                "locations": [
+                  {
+                    "length": 12, 
+                    "offset": 732
+                  }
+                ], 
+                "text": "geldanamycin"
+              }, 
+              {
+                "id": "15", 
+                "infons": {
+                  "identifier": "MESH:C001277", 
+                  "type": "Chemical"
+                }, 
+                "locations": [
+                  {
+                    "length": 2, 
+                    "offset": 746
+                  }
+                ], 
+                "text": "GA"
+              }, 
+              {
+                "id": "16", 
+                "infons": {
+                  "identifier": "MESH:C552103", 
+                  "type": "Chemical"
+                }, 
+                "locations": [
+                  {
+                    "length": 7, 
+                    "offset": 754
+                  }
+                ], 
+                "text": "AT13387"
+              }, 
+              {
+                "id": "17", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 785
+                  }
+                ], 
+                "text": "EGFR"
+              }, 
+              {
+                "id": "18", 
+                "infons": {
+                  "Identifier": "Does not support", 
+                  "type": "Evidence Direction"
+                }, 
+                "locations": [
+                  {
+                    "length": 8, 
+                    "offset": 898
+                  }
+                ], 
+                "text": "decrease"
+              }
+            ], 
+            "infons": {}, 
+            "offset": 702, 
+            "relations": [], 
+            "text": "Further, the HSP90 inhibitors geldanamycin (GA) and AT13387 cause a decrease in WT-EGFR in cultured head and neck cancer cells."
+          }, 
+          {
+            "annotations": [
+              {
+                "id": "19", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "13649", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 897
+                  }
+                ], 
+                "text": "EGFR"
+              }, 
+              {
+                "id": "20", 
+                "infons": {
+                  "Identifier": "Does not support", 
+                  "type": "Evidence Direction"
+                }, 
+                "locations": [
+                  {
+                    "length": 8, 
+                    "offset": 908
+                  }
+                ], 
+                "text": "decrease"
+              }
+            ], 
+            "infons": {}, 
+            "offset": 830, 
+            "relations": [], 
+            "text": "This decrease results from a significantly reduced half-life of WT-EGFR."
+          }, 
+          {
+            "annotations": [], 
+            "infons": {}, 
+            "offset": 903, 
+            "relations": [], 
+            "text": "WT-EGFR was also lost in head and neck xenograft specimens after treatment with AT13387 under conditions that inhibited tumor growth and prolonged survival of the mice."
+          }, 
+          {
+            "annotations": [
+              {
+                "id": "21", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 1105
+                  }
+                ], 
+                "text": "EGFR"
+              }, 
+              {
+                "id": "22", 
+                "infons": {
+                  "NCBI Homologene": "68464", 
+                  "identifier": "3320", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 5, 
+                    "offset": 1133
+                  }
+                ], 
+                "text": "HSP90"
+              }, 
+              {
+                "id": "23", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 1254
+                  }
+                ], 
+                "text": "EGFR"
+              }
+            ], 
+            "infons": {}, 
+            "offset": 1072, 
+            "relations": [], 
+            "text": "Our findings demonstrate that WT-EGFR is a client protein of HSP90 and that their interaction is critical for maintaining both the stability of the receptor as well as the growth of EGFR-dependent cancers."
+          }, 
+          {
+            "annotations": [
+              {
+                "id": "24", 
+                "infons": {
+                  "NCBI Homologene": "68464", 
+                  "identifier": "3320", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 5, 
+                    "offset": 1358
+                  }
+                ], 
+                "text": "HSP90"
+              }, 
+              {
+                "id": "25", 
+                "infons": {
+                  "NCBI Homologene": "74545", 
+                  "identifier": "1956", 
+                  "type": "Gene"
+                }, 
+                "locations": [
+                  {
+                    "length": 4, 
+                    "offset": 1387
+                  }
+                ], 
+                "text": "EGFR"
+              }, 
+              {
+                "id": "26", 
+                "infons": {
+                  "identifier": "Supports", 
+                  "type": "clinsig"
+                }, 
+                "locations": [
+                  {
+                    "length": 9, 
+                    "offset": 1392
+                  }
+                ], 
+                "text": "chaperone"
+              }
+            ], 
+            "infons": {}, 
+            "offset": 1278, 
+            "relations": [], 
+            "text": "Furthermore, these findings support the search for specific agents that disrupt HSP90's ability to act as an EGFR chaperone."
+          }
+        ], 
+        "text": "The epidermal growth factor receptor (EGFR) has been targeted for inhibition using tyrosine kinase inhibitors and monoclonal antibodies, with improvement in outcome in subsets of patients with head and neck, lung, and colorectal carcinomas. We have previously found that EGFR stability plays a key role in cell survival after chemotherapy and radiotherapy. Heat shock protein 90 (HSP90) is known to stabilize mutant EGFR and ErbB2, but its role in cancers with wild-type (WT) WT-EGFR is unclear. In this report, we demonstrate that fully mature, membrane-bound WT-EGFR interacts with HSP90 independent of ErbB2. Further, the HSP90 inhibitors geldanamycin (GA) and AT13387 cause a decrease in WT-EGFR in cultured head and neck cancer cells. This decrease results from a significantly reduced half-life of WT-EGFR. WT-EGFR was also lost in head and neck xenograft specimens after treatment with AT13387 under conditions that inhibited tumor growth and prolonged survival of the mice. Our findings demonstrate that WT-EGFR is a client protein of HSP90 and that their interaction is critical for maintaining both the stability of the receptor as well as the growth of EGFR-dependent cancers. Furthermore, these findings support the search for specific agents that disrupt HSP90's ability to act as an EGFR chaperone."
+      }
+    ], 
+    "relations": []
+  }, 
+  "msg": "Request success", 
+  "success": true
+}

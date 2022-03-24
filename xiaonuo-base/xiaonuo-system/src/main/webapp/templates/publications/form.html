@@ -1,0 +1,125 @@
+<form id="addOrUpdateForm" lay-filter="addOrUpdateForm" class="layui-form model-form">
+
+	<input name="id" type="hidden"/>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">状态（字典 0正常 1删除 2封存）</label>
+		<div class="layui-input-block">
+			<input name="status" class="layui-input" placeholder="请输入状态（字典 0正常 1删除 2封存）" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">创建者名称</label>
+		<div class="layui-input-block">
+			<input name="createUserName" class="layui-input" placeholder="请输入创建者名称" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">更新者名称</label>
+		<div class="layui-input-block">
+			<input name="updateUserName" class="layui-input" placeholder="请输入更新者名称" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">用户组id</label>
+		<div class="layui-input-block">
+			<input name="groupId" class="layui-input" placeholder="请输入用户组id" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">用户组名称</label>
+		<div class="layui-input-block">
+			<input name="groupName" class="layui-input" placeholder="请输入用户组名称" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">PMID</label>
+		<div class="layui-input-block">
+			<input name="pmid" class="layui-input" placeholder="请输入PMID" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">PMCID</label>
+		<div class="layui-input-block">
+			<input name="pmcid" class="layui-input" placeholder="请输入PMCID" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">DOI</label>
+		<div class="layui-input-block">
+			<input name="doi" class="layui-input" placeholder="请输入DOI" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">文献标题</label>
+		<div class="layui-input-block">
+			<input name="pubTitle" class="layui-input" placeholder="请输入文献标题" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">文献作者</label>
+		<div class="layui-input-block">
+			<input name="pubAuthors" class="layui-input" placeholder="请输入文献作者" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">期刊名称</label>
+		<div class="layui-input-block">
+			<input name="pubJournal" class="layui-input" placeholder="请输入期刊名称" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">发表年份</label>
+		<div class="layui-input-block">
+			<input name="pubYear" class="layui-input" placeholder="请输入发表年份" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">2020年度影响因子</label>
+		<div class="layui-input-block">
+			<input name="pubIf2020" class="layui-input" placeholder="请输入2020年度影响因子" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">文献引用方式</label>
+		<div class="layui-input-block">
+			<input name="pubCitation" class="layui-input" placeholder="请输入文献引用方式" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item text-right">
+		<button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">取消</button>
+		<button class="layui-btn" lay-filter="formSubmitBtn" lay-submit>保存</button>
+	</div>
+</form>
+
+<script>
+	layui.use(['layer', 'form', 'admin', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+
+		// 数据回显！
+		var editData = admin.getLayerData('#addOrUpdateForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('addOrUpdateForm', editData);
+		}
+
+		/**
+		 * @func 表单提交事件
+		 */
+		form.on('submit(formSubmitBtn)', function (data) {
+			layer.load(2);
+			var url = editData.id ? 'publications/edit' : 'publications/add';
+			admin.req(url, JSON.stringify(data.field), function(res){
+				layer.msg(res.message, {icon: 1, time: 1000}, function () {
+					admin.putLayerData('formOk', true, '#addOrUpdateForm');
+					admin.closeDialog('#addOrUpdateForm');
+				});
+			}, 'post');
+			return false;
+		});
+	});
+</script>
+</body>
+</html>

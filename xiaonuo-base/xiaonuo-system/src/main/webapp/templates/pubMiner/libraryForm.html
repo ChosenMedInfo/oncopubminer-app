@@ -1,0 +1,64 @@
+<form id="addOrUpdateForm" lay-filter="addOrUpdateForm" class="layui-form model-form popupForm">
+	<input name="id" type="hidden"/>
+	<div class="layui-form-item">
+		<label class="layui-form-label layui-form-required">Collection Name</label>
+		<div class="layui-input-block">
+			<input id="idLibraryName" name="libraryName" class="layui-input" placeholder="Please input collection name" lay-verType="tips" lay-verify="required" required/>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">Collection Desc</label>
+		<div class="layui-input-block">
+			<textarea name="libraryDesc" class="layui-textarea" placeholder="Please input collection desc" lay-verType="tips"></textarea>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">Keywords Remote</label>
+		<div class="layui-input-block">
+			<textarea name="kwsRemote" class="layui-textarea" placeholder="Please input remote searching keywords" lay-verType="tips"></textarea>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">Keywords Local</label>
+		<div class="layui-input-block">
+			<textarea name="kwsLocal" class="layui-textarea" placeholder="Please input local searching keywords" lay-verType="tips"></textarea>
+		</div>
+	</div>
+	<div class="layui-form-item text-right">
+		<button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">Cancel</button>
+		<button class="layui-btn" lay-filter="formSubmitBtn" lay-submit>Submit</button>
+	</div>
+</form>
+
+<script>
+	layui.use(['layer', 'form', 'admin', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+
+		// 数据回显！
+		var editData = admin.getLayerData('#addOrUpdateForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('addOrUpdateForm', editData);
+		}
+		
+		/**
+		 * @func 表单提交事件
+		 */
+		form.on('submit(formSubmitBtn)', function (data) {
+			layer.load(2);
+			var url = editData && editData.id ? 'libraries/edit' : 'libraries/add';
+			admin.req(url, JSON.stringify(data.field), function(res){
+				layer.msg(res.message, {icon: 1, time: 1000}, function () {
+					admin.putLayerData('formOk', true, '#addOrUpdateForm');
+					admin.closeDialog('#addOrUpdateForm');
+				});
+			}, 'post');
+			return false;
+		});
+	});
+</script>
+</body>
+</html>

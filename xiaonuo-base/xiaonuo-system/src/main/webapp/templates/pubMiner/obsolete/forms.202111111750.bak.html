@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Forms</title>
+	<link rel="stylesheet" th:href="@{/assets/libs/layui/css/layui.css}"/>
+	<link rel="stylesheet" th:href="@{/assets/module/admin.css}"/>
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		/* Global */
+		.lrForms{
+			width: 1200px;
+			margin: 20px auto 70px;
+			text-align: left;
+			font-size: 14px;
+			line-height: 30px;
+		}
+		
+		/* Forms */
+		.lrForms .layui-fluid {
+			padding: 0px 0px 15px;
+		}
+		.lrForms .layui-card-body {
+			padding: 0px;
+		}
+		
+		
+		/* Preview */
+		.lrForms .layui-elem-field {
+			margin: 20px 0;
+			padding: 20px 0;
+		}
+		.lrForms .layui-elem-field legend {
+			font-weight: bold;
+			font-size: 14px;
+		}
+		.lrForms #idFormPreview{
+			display: none;
+		}
+		.lrForms #idFormId{
+			display: none;
+		}
+		.dataBtnGroup { /* 弹窗中也要使用，不加“.lrForms” */
+			float: right;
+		}
+		.lrForms .layui-form-label {
+			width: 200px !important;
+		}
+		.lrForms .layui-input-block {
+			margin-left: 230px !important;
+		}
+		.lrForms #idPreviewItems {
+			font-size: 14px;
+		}
+		
+	</style>
+</head>
+<body>
+
+<!-- 正文开始 -->
+<div class="lrForms">
+	
+	<!-- Title -->
+	<div class="page-title">OncoPubMiner - Data Collection Forms</div>
+	<hr>
+	
+	<div class="layui-fluid">
+		<div class="layui-card">
+			<div class="layui-card-body">
+				<!-- 表格工具栏 -->
+				<form class="layui-form toolbar">
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="formName" class="layui-input" placeholder="Form Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="formDesc" class="layui-input" placeholder="Form Desc"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<button class="layui-btn icon-btn" lay-filter="tableSearch" lay-submit>
+								<i class="layui-icon">&#xe615;</i>Search
+							</button>
+						</div>
+					</div>
+				</form>
+				<!-- 数据表格 -->
+				<table id="dataTable" lay-filter="dataTable"></table>
+				
+				<!-- 预览区 -->
+				<div id="idFormPreview">
+					<fieldset class="layui-elem-field">
+						<input type="hidden" id="idFormId">
+						<input type="hidden" id="idFormStatus">
+						<legend>
+							<span id="idSpanModifyOrView">Modify</span> Form: <span id="idFormName"></span>
+						</legend>
+						<div class="layui-field-box">
+							<form class="layui-form">
+								<div id="idPreviewItems">
+									
+								</div>
+								<div class="layui-form-item" id="idDivAddFormItem">
+									<label class="layui-form-label"></label>
+									<div class="layui-input-block">
+										<button class="layui-btn layui-btn-sm icon-btn" id="idAddFormItem" type="button"><i class="layui-icon">&#xe654;</i>Add Item</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!-- Footer -->
+<div class="lr-footer">
+	Copyright © 2021 Oncology Precision Text-Mining Team. Contact Us: quanxu@chosenmedtech.com.
+</div>
+
+<!-- 表格操作列 -->
+<script type="text/html" id="tableBar"></script>
+
+<!-- js部分 -->
+<script th:src="@{/assets/libs/layui/layui.js}"></script>
+<script th:src="@{/assets/module/xmSelect.js}"></script>
+<script th:src="@{/assets/js/common.js}"></script>
+<script>
+	var $, admin, xnUtil, form;
+	layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil'], function () {
+		$ = layui.jquery;
+		var layer = layui.layer;
+		var table = layui.table;
+		var tableX = layui.tableX;
+		admin = layui.admin;
+		form = layui.form;
+		var notice = layui.notice;
+		xnUtil = layui.xnUtil;
+		
+		/* 参数清空 */
+		$("#idClearBtn").click(function(){
+			$("form")[0].reset();
+			layui.form.render();
+		});
+		
+		/* 渲染表格 */
+		var insTb = tableX.render({
+			elem: '#dataTable',
+			url: '/forms/page',
+			page: true,
+			toolbar: ['<p>',
+				'<button lay-event="add" class="layui-btn layui-btn-sm icon-btn"><i class="layui-icon">&#xe654;</i>Add</button>&nbsp;',
+				'</p>'].join(''),
+			cellMinWidth: 100,
+			defaultToolbar: ['filter'],
+			cols: [
+				[
+					{field: 'groupName', title: 'Type', sort: true, align: 'center', width: 88, minWidth: 88, templet: function (d) {
+						var strContent = '<img src="/assets/images/private.png" class="groupType">';
+						if(d.groupName == 'commonGroup') strContent = '<img src="/assets/images/public.png" class="groupType">';
+						return strContent;
+					}},
+					{field: 'formName', title: 'Name', sort: true},
+					{field: 'formDesc', title: 'Description', sort: false},
+					{field: 'createTime', title: 'Create Time', sort: true, hide: true, align: 'center', width: 170, templet: function (d) {
+						var strContent = d.createTime + " (UTC+8)";
+						return strContent;
+					}},
+					{field: 'status', title: 'Operation', toolbar: '#tableBar', align: 'center', width: 220}
+				]
+			],
+			done: function(res, curr, count) {
+				xnUtil.tableDone(insTb, res, curr, count);
+				res.data.forEach(function (item, index) {
+					if(item.status == 2){
+						$('div[lay-id="dataTable"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="view"><i class="layui-icon">&#xe663;</i>View</a> <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="copy"><i class="layui-icon">&#xe630;</i>Copy</a>');
+					}else if(item.status == 0){
+						$('div[lay-id="dataTable"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="modify"><i class="layui-icon">&#xe620;</i>Modify</a> <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="seal"><i class="layui-icon">&#xe6b1;</i>Seal</a> <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit"><i class="layui-icon">&#xe642;</i></a> <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon">&#xe640;</i></a>');
+					}
+				});
+			}
+		});
+	
+		/* 表格搜索 */
+		form.on('submit(tableSearch)', function (data) {
+			insTb.reload({where: data.field, page: {curr: 1}});
+			return false;
+		});
+	
+		/* 表格工具条点击事件 */
+		table.on('tool(dataTable)', function (obj) {
+			/* 删除 */
+			if (obj.event === 'delete') {
+				layer.confirm('Are you sure you want to operate on this data?', {
+					skin: 'layui-layer-admin',
+					shade: .1,
+					btn: ['Yes', 'Cancel'],
+					title: 'Confirm'
+				}, function () {
+					admin.req('forms/delete', JSON.stringify([{'id': obj.data.id}]), function(res){
+						location.reload();
+					}, 'post');
+				});
+			}
+			/* 编辑 */
+			if (obj.event === 'edit') {
+				showAddOrUpdateModel(obj.data);
+			}
+			/* 调整 */
+			if (obj.event === 'modify' || obj.event === 'view') {
+				// 定义变量！
+				var bgColorWhite = "#FFFFFF";
+				var bgColorGrey  = "#F5F7F9";
+				var thisTr = $(this).parent().parent().parent();
+				// 先判断预览模块是否已经显示！
+				if($("#idFormPreview").css("display") != "none"){
+					// 显示的情况下，看当前id跟显示的id是否不一致：不一致则需要直接显示当前！
+					if($("#idFormId").val() != obj.data.id){
+						// 先清除所有tr的背景颜色！
+						for(var i = 0; i < thisTr.parent().children().length; i++){
+							thisTr.parent().children(i).css("background-color", bgColorWhite);
+						}
+						// 然后隐藏模块！
+						$("#idFormPreview").hide();
+					}
+				}
+				// 执行处理！
+				dataCollectionFormModify(obj.data);
+				// 根据是否选中，调整当前表单数据行的背景颜色！
+				var thisTrBgColor = bgColorGrey;
+				if($("#idFormPreview").css("display") == "none") {
+					thisTrBgColor = bgColorWhite;
+				}else{
+					if(obj.data.id != $("#idFormId").val()){
+						
+					}
+				}
+				thisTr.css("background-color", thisTrBgColor);
+			}
+			/* 封存 */
+			if (obj.event === 'seal') {
+				layer.confirm('Are you sure to seal this form?', {
+					icon: 3,
+					btn: ['Yes','Cancel'],
+					title: 'Confirm'
+				}, function (index) {
+					layui.jquery.ajax({
+						type: "get",
+						url: "/forms/seal",
+						timeout: 60000, // 超时时间设置，单位毫秒！
+						data: {id: obj.data.id},
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function (res) {
+							location.reload();
+						}
+					});
+					layer.close(index);
+				});
+			}
+			/* 拷贝 */
+			if (obj.event === 'copy') {
+				layer.confirm('Are you sure to copy this form?', {
+					icon: 3,
+					btn: ['Yes','Cancel'],
+					title: 'Confirm'
+				}, function (index) {
+					layer.close(index);
+					var indexLoading = layer.load(3, {shade: [0.3, '#393D49']}); // 然后添加加载背景！
+					layui.jquery.ajax({
+						type: "post",
+						url: "/forms/copy",
+						timeout: 60000, // 超时时间设置，单位毫秒！
+						data: JSON.stringify({id: obj.data.id}),
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function (res) {
+							layer.close(indexLoading);
+							location.reload();
+						}
+					});
+				});
+			}
+		});
+	
+		/* 表格头工具栏点击事件 */
+		table.on('toolbar(dataTable)', function (obj) {
+			/* 编辑 */
+			if (obj.event === 'add') {
+				showAddOrUpdateModel();
+			}
+		});
+		
+		// 监听表单添加按钮！
+		$("#idAddFormItem").click(function(){
+			data = {formId: $("#idFormId").val()};
+			var layIndex = admin.open({
+				title: '<i class="layui-icon">&#xe63c;</i> Customize Form Item',
+				url: '/formsItems/form',
+				area: '600px',
+				offset: '20px', // 定义top坐标！
+				data: { data: data }, // 传递数据到表单页面
+				end: function () {
+					var layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) { // 判断表单操作成功标识
+						funcGetFormsItemsList();
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+		});
+	
+		// 显示表单弹窗
+		function showAddOrUpdateModel(data) {
+			var layIndex = admin.open({
+				title: (data ? '<i class="layui-icon">&#xe642;</i> Edit' : '<i class="layui-icon">&#xe654;</i> Add') + ' Data Collection Form',
+				url: '/forms/form',
+				area: '800px',
+				offset: '20px', // 定义top坐标！
+				data: { data: data }, // 传递数据到表单页面
+				end: function () {
+					var layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) { // 判断表单操作成功标识
+						location.reload();
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					//$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+		
+		// 调整表单项！
+		function dataCollectionFormModify(data){
+			if(data.status != 0){
+				$("#idDivAddFormItem").hide();
+				$("#idSpanModifyOrView").html('<i class="layui-icon">&#xe653;</i> View');
+			}else{
+				$("#idDivAddFormItem").show();
+				$("#idSpanModifyOrView").html('<i class="layui-icon">&#xe620;</i> Modify');
+			}
+			$("#idFormId").val(data.id);
+			$("#idFormStatus").val(data.status);
+			$("#idFormName").html(data.formName);
+			$('#idPreviewItems').empty(); // 清空表单！
+			// 显示模块！
+			$("#idFormPreview").toggle();
+			
+			// 获取列表！
+			if($("#idFormPreview").css("display") == "block"){
+				funcGetFormsItemsList();
+			}
+			
+		}
+		
+	});
+	
+	// 编辑表单项！
+	function editItem(id) {
+		data = {id: id, formId: $("#idFormId").val()};
+		var layIndex = admin.open({
+			title: '<i class="layui-icon">&#xe63c;</i> Customize Form Item',
+			url: '/formsItems/form',
+			area: '800px',
+			offset: '20px', // 定义top坐标！
+			data: { data: data }, // 传递数据到表单页面
+			end: function () {
+				var layerData = admin.getLayerData(layIndex, 'formOk');
+				if (layerData) { // 判断表单操作成功标识
+					funcGetFormsItemsList(); // 成功刷新表格
+				}
+			},
+			success: function (layero, dIndex) {
+				// 弹窗超出范围不出现滚动条
+				//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+				//$(layero).find('[lay-submit]').focus();
+			}
+		});
+	}
+	
+	// 删除表单项！
+	function delItem(id) {
+		layer.confirm('Are you sure to delete this item?', {
+			icon: 3,
+			btn: ['Yes','No'],
+			title: 'Confirm'
+		}, function (index) {
+			layui.jquery.ajax({
+				type: "post",
+				url: "/formsItems/delete",
+				timeout: 60000, // 超时时间设置，单位毫秒！
+				data: JSON.stringify([{id: id}]),
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: function (res) {
+					layer.msg(res.message);
+					if(res.success){
+						location.reload();
+					}
+				}
+			});
+			layer.close(index);
+		});
+	}
+	
+	// 获取表单项列表！
+	function funcGetFormsItemsList(){
+		var currentFormId     = $("#idFormId").val();
+		var currentFormStatus = $("#idFormStatus").val();
+		$.ajax({
+			type: "post",
+			url: "/formsItems/list",
+			timeout: 60000, // 超时时间设置，单位毫秒！
+			async: false,
+			data: JSON.stringify({id: currentFormId}),
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function (res) {
+				if(res.data != null && res.data.length != 0){
+					var $idPreviewItems = $('#idPreviewItems');
+					$idPreviewItems.empty(); // 清空表单！
+					// 遍历表单项，渲染成html代码！
+					for(var i = 0; i < res.data.length; i++){
+						var id = res.data[i].id,
+						itemName = res.data[i].itemName,
+						itemType = xnUtil.rendDataTableDict(res.data[i].itemType, 'lr_item_type'),
+						itemDefault = res.data[i].itemDefault,
+						itemMaxLength = res.data[i].itemMaxLength,
+						itemMaxCount = res.data[i].itemMaxCount,
+						itemRequired = res.data[i].itemRequired,
+						itemTips = res.data[i].itemTips,
+						itemSort = res.data[i].itemSort,
+						itemOptionType = res.data[i].itemOptionType,
+						itemOptions = res.data[i].formsItemOptionsList;
+						
+						//表单元素公共头
+						var itemNode = '<div class="layui-form-item">' + '<label class="layui-form-label item-label" id="item_' + id + '">' + (itemRequired == 1 ? '<span style="pointer-events: none;color: red">* </span>' : '') + itemName + ' (' + itemSort + ')</label>';
+						// 这里需要判断权限！
+						itemNode += '<div class ="dataBtnGroup" style="height: 38px;line-height: 38px">';
+						if(currentFormStatus == "0"){ // 只有未被删除及未被封存的表项才显示操作按钮！
+							itemNode += 
+								'<i class ="layui-icon layui-icon-edit editBtn" style="font-size: 22px; cursor: pointer;" ' +
+								'onclick="editItem(\'' + id + '\')"></i> ' +
+								'<i class ="layui-icon layui-icon-close delBtn" style="font-size: 22px; cursor: pointer;" ' +
+								'onclick="delItem(\'' + id + '\')"></i> ';
+						}
+						itemNode += '</div>';
+						itemNode += '<div class="layui-input-block item-block" style="margin-right: 50px">';
+					   
+						//分情况添加内容
+						switch (itemType) {
+							case 'text':
+								itemNode += '<input type="text"' + ' placeholder="please enter..."' + (itemMaxLength > 0 ? (' maxlength="' + itemMaxLength + '"') : '') + ' class="layui-input" value="' + itemDefault + '">';
+								break;
+							case 'radio':
+								if (itemOptions != null) {
+									for (var j = 0; j < itemOptions.length; j++) {
+										// 这里必须有name不然会无法选中且会报错
+										itemNode += '<input type="radio" name="' + currentFormId + '-' + id + '" title="' + itemOptions[j].optionValue + '"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '>';
+									}
+								}
+								break;
+							case 'checkbox':
+								if (itemOptions != null) {
+									for (var j = 0; j < itemOptions.length; j++) {
+										itemNode += '<input type="checkbox"' + (itemMaxCount > 0 ? (' maxCount="'+ itemMaxCount + '"') : '') + ' title="' + itemOptions[j].optionValue + '"' + ' lay-filter="maxCountChecked"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '>';
+									}
+								}
+								break;
+							case 'select':
+								itemNode += '<select>' + (itemRequired === 1 ? '' : '<option value="">please select</option>');
+								if (itemOptionType == 1 && itemOptions != null) { // Customize!
+									for (var j = 0; j < itemOptions.length; j++) {
+										itemNode += '<option value="' + itemOptions[j].id + '"' + (itemDefault != '' ? (itemOptions[j].optionValue == itemDefault ? ' selected' : '') : (j == 0 && itemRequired == 1 ? ' selected' : '')) + '>' + itemOptions[j].optionValue + '</option>';
+									}
+								}else if(itemOptionType > 1){
+									var xmData = funcFromItemOptionType2XmData(itemOptionType, "OncoPubMiner"); // 癌种、药物、基因、变异等列表！
+									for(var j = 0; j < xmData.length; j++){
+										itemNode += '<option value="' + xmData[j].value + '"' + (itemDefault != '' ? (xmData[j].value == itemDefault ? ' selected' : '') : (j == 0 && itemRequired == 1 ? ' selected' : '')) + '>' + xmData[j].name + '</option>';
+									}
+								}
+								itemNode += '</select>'
+								break;
+							case 'textarea':
+								itemNode += '<textarea placeholder="please enter..." class="layui-textarea"' + (itemMaxLength > 0 ? (' maxlength="'+ itemMaxLength + '"') : '') + '>' + itemDefault + '</textarea>';
+								break;
+							case 'switch':
+								itemNode += '<input type="checkbox" lay-skin="switch" lay-text="ON|OFF">';
+								break;
+							case 'xmselect':
+								itemNode += '<div id="xm-' + id + '" class="xm-select-style"></div>';
+								break;
+						}
+						// 根据是否设置了Tips，确定是否显示该部分代码！
+						if(itemTips && itemTips != ""){
+							itemNode += '<p class="formItemTips"><b>Tips:</b> ' + itemTips + '</p>';
+						}
+						// 补上最后的关闭标签！
+						itemNode += '</div></div>';
+						// 添加表单项节点！
+						$idPreviewItems.append(itemNode);
+						// 重新渲染表单！
+						form.render();
+						// 渲染多选下拉框
+						if(itemType === 'xmselect'){
+							let xmSelectRenderObj = funcGenerateXmSelectRenderObj('xm-' + id, currentFormId + '-' + id, itemRequired === 1 ? 'required' : '', itemMaxCount, itemOptionType);
+							let xs = xmSelect.render(xmSelectRenderObj);
+							let xmData = [];
+							if(itemOptionType == 1 && itemOptions != null){ // Customize!
+								for(let k = 0; k < itemOptions.length; ++k){
+									if ($.inArray(itemOptions[k].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) !== -1) {
+										xmData.push({name: itemOptions[k].optionValue, value: itemOptions[k].optionValue, selected: true});
+									} else {
+										xmData.push({name: itemOptions[k].optionValue, value: itemOptions[k].optionValue});
+									}
+								}
+							}else {
+								xmData = funcFromItemOptionType2XmData(itemOptionType, "OncoPubMiner"); // 癌种、药物、基因、变异等列表！
+							}
+							// 更新列表！
+							xs.update({
+								data: xmData
+							});
+						}
+						
+					}
+					
+					// 监听多选框！
+					layui.use('form', function () {
+						let form = layui.form;
+						form.on('checkbox(maxCountChecked)', function(data){
+							let $elem = $(data.elem)
+							let max = $elem.attr('maxCount')
+							if(max != null){
+								if ($elem.siblings("input:checked").length >= max){
+									$elem.next().attr("class","layui-unselect layui-form-checkbox");
+									$elem.prop("checked",false);
+									layer.tips('max.' + max + ' choices', $elem.parent().siblings(), {
+										tips: [1, "#ff691b"],
+										time: 2000,
+									});
+								}
+							}
+						});
+					});
+				}
+			}
+		});
+	}
+	
+</script>
+</body>
+</html>

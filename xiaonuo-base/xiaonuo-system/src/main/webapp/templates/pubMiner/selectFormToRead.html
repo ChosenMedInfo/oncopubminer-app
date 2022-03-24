@@ -1,0 +1,115 @@
+<style>
+#idXmSelectFormId xm-select > .xm-label .xm-label-block {
+	padding: 2px 10px !important;
+}
+#addOrUpdateForm button{
+	font-weight: normal;
+}
+</style>
+
+<form id="addOrUpdateForm" lay-filter="addOrUpdateForm" class="layui-form model-form popupForm">
+	<div class="layui-col-md12">
+		<input name="pmid" id="idPmid" type="hidden"/>
+		<!--
+		<div class="layui-form-item">
+			<div class="layui-input-block" style="margin-left: 30px;">
+				<select name="formId" id="idSelectFormId" placeholder="Please select data form">
+					<option value="NONE">Read without data collection form</option>
+				</select>
+			</div>
+		</div>
+		-->
+		<div class="layui-form-item">
+			<div class="layui-input-block" style="margin-left: 30px;">
+				<div id="idXmSelectFormId" class="xm-select-style"></div>
+			</div>
+		</div>
+	</div>
+	<div class="layui-col-md12" style="margin-bottom: 20px;">
+		<div class="layui-form-item text-right">
+			<button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">Cancel</button>
+			<button class="layui-btn" lay-filter="formSubmitBtn" lay-submit>Select</button>
+		</div>
+	</div>
+</form>
+
+<script>
+	var currentUser;
+	layui.use(['layer', 'form', 'admin', 'table', 'tableX', 'xnUtil', 'xmSelect', 'laydate'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var table = layui.table;
+		var tableX = layui.tableX;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+		var xmSelect = layui.xmSelect;
+		var laydate = layui.laydate;
+		
+		// 获取数据！
+		var editData = admin.getLayerData('#addOrUpdateForm').data;
+		
+		// 多选下拉菜单！
+		let xmSelectRenderObj = funcGenerateXmSelectRenderObj('idXmSelectFormId', "xmSelectFormId", 'required', 1, 7);
+		let xs = xmSelect.render(xmSelectRenderObj);
+		let xmData = [];
+		
+		// 获取表单列表！
+		$.ajax({
+			type: "get",
+			url: "/forms/list",
+			async: false,
+			data: {date: new Date()},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function (result) {
+				if(result == null || result.data == null || result.data.length == 0){
+					// do nothing!
+				}else{
+					xmData.push({name: "<i class='layui-icon layui-icon-circle'></i>&nbsp;&nbsp;Read without data collection form", value: "NONE"}); // 空的！
+					for(var i = 0; i < result.data.length; i++){
+						//if(editData != null && editData.formId != null && editData.formId == result.data[i].id){
+						//	$("#idSelectFormId").append('<option value="' + result.data[i].id + '" selected="selected">' + result.data[i].formName + '</option>');
+						//}else{
+						//	$("#idSelectFormId").append('<option value="' + result.data[i].id + '">' + result.data[i].formName + '</option>');
+						//}
+						let strHtmlIcon = "<i class='layui-icon layui-icon-radio'></i>&nbsp;&nbsp;";
+						if(result.data[i].groupName == 'commonGroup') {
+							strHtmlIcon = "<i class='layui-icon layui-icon-share'></i>&nbsp;&nbsp;";
+						}
+						xmData.push({name: strHtmlIcon + result.data[i].formName, value: result.data[i].id});
+					}
+				}
+				form.render();
+				xs.update({
+					data: xmData,
+					on: function(data){
+						let thisArr = data.arr;
+						if(thisArr.length == 1) {
+							// 删除各种可能的图标：以免在选中后的选框中渲染不出来图标样式！
+							data.arr[0].name = data.arr[0].name.replace("<i class='layui-icon layui-icon-radio'></i>&nbsp;&nbsp;", "");
+							data.arr[0].name = data.arr[0].name.replace("<i class='layui-icon layui-icon-share'></i>&nbsp;&nbsp;", "");
+							data.arr[0].name = data.arr[0].name.replace("<i class='layui-icon layui-icon-circle'></i>&nbsp;&nbsp;", "");
+						}
+					}
+				});
+			}
+		});
+		
+		// 提交事件！
+		form.on('submit(formSubmitBtn)', function (data) {
+			let thisFormSelect = xs.getValue('valueStr');
+			window.open(
+				//"./lrDetails?fi=" + data.field.formId + 
+				"./lrDetails?fi=" + thisFormSelect + // 由select改xmSelect！
+				"&pid=" + editData.pmid +
+				"&t=0"
+			);
+			// 关闭当前弹窗！
+			admin.putLayerData('formOk', true, '#addOrUpdateForm');
+			admin.closeDialog('#addOrUpdateForm');
+			return false;
+		});
+
+	});
+</script>

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - About</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<style type="text/css">
+	/* 帮助部分 - 左侧 */
+	.lrHelp-left{
+		padding: 10px 20px 20px 0 !important;
+		width: 285px !important;
+	}
+	.leftFixed{
+		position: fixed;
+		top: 80px;
+	}
+	.lrHelp-left .demo-tree-top-logo {
+		padding: 15px 10px;
+		border: 1px solid #ddd;
+		border-bottom: 1px solid #eee;
+		border-radius: 5px 5px 0 0;
+		width: 285px;
+	}
+	.lrHelp-left .demo-tree {
+		margin: 0 20px 10px 0;
+	}
+	.lrHelp-left .demo-tree-box {
+		width: 285px;
+		padding: 10px 10px 20px 10px;
+		border: 1px solid #ddd;
+		border-top: none;
+		border-radius: 0 0 5px 5px;
+		overflow: auto;
+		background-color: white;
+	}
+	.lrHelp-left .layui-tree-entry {
+		height: 30px;
+	}
+	.lrHelp-left .layui-tree-icon {
+		height: 16px;
+		width: 14px;
+		border-radius: 2px;
+	}
+	
+	/* 帮助部分 - 右侧 */
+	#idPubUpdatesSearchForm{
+		display: block;
+	}
+	.lrHelp-right{
+		padding: 10px 0 !important;
+		font-size: 12px;
+		width: calc( 100% - 305px ) !important;
+		margin-left: 15px;
+		margin-right: 5px;
+	}
+	.leftFixedRight{
+		width: 100%;
+		margin-left: 300px;
+	}
+	.lrHelp-right .aboutImages {
+		max-width: 100%;
+		border: 1px solid #EFEFEF;
+		border-radius: 10px;
+		margin: 10px 0;
+	}
+	.lrHelp-right .layui-colla-title {
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+	.lrHelp-right .layui-colla-title-inner {
+		font-weight: normal;
+		font-style: italic;
+		font-size: 12px;
+	}
+	
+	/* 帮助部分 - 右侧 - 团队成员 */
+	.lrHelp-right .team {
+		background: #fff;
+		padding: 30px 0 0 0;
+	}
+	
+	/* 帮助部分 - 右侧 - Latest Updates */
+	.lrHelp-right .layui-timeline-item {
+		padding-bottom: 5px;
+	}
+	.lrHelp-right .layui-text h3 {
+		font-size: 12px;
+		font-style: italic;
+		margin-bottom: 0;
+	}
+	.lrHelp-right .layui-text {
+		font-size: 12px;
+	}
+	
+	/* 小屏时展示 */
+	@media all and (max-width:888px) {
+		.lrHelp-left{
+			display: none !important;
+		}
+		.lrHelp-right{
+			width: calc( 100% - 40px ) !important;
+			margin-left: 20px !important;
+			margin-right: 20px !important;
+		}
+		#idPubUpdatesSearchForm{
+			display: none;
+		}
+	}
+	</style>
+	
+</head>
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li class="active"><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="classHero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/images/carousel/1.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">About OncoPubMiner</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">About OncoPubMiner</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">About OncoPubMiner</h2>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+		
+		<!-- ======= Our Team Section ======= -->
+		<section id="idDivContent">
+			<div class="container">
+				<div class="section-title" style="padding-bottom: 10px !important;">
+					<h2>Known More About OncoPubMiner</h2>
+				</div>
+				<div class="row">
+					<div class="lrHelp-left" data-aos="fade-up" id="idDivLeft">
+						<div class="demo-tree-top-logo"><img src="/assets/images/logo.v3.png" width="100%"></div>
+						<div id="test1" class="demo-tree demo-tree-box"></div>
+					</div>
+					<div class="lrHelp-right" data-aos="fade-up" id="idDivRight" data-aos-delay="100">
+						<div class="layui-collapse" id="idDivCollapse"></div>
+					</div>
+				</div>
+			</div>
+		</section><!-- End Our Team Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer"></footer><!-- End Footer -->
+
+	<a href="javascript:;" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<!-- Page Specific JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+	<script type="text/javascript">
+		
+		var $, admin, util, xnUtil, form, formX, element, currentUser, table, tableX, insTbPubUpdates;
+		var thisMao = getQueryVariable("m");
+		let dataTutorial = [
+			{
+				title: 'Introduction',
+				id: 'A01',
+				spread: true,
+				content:
+					'<div data-aos="fade-up">' +
+					'	<img class="aboutImages" src="/assets/images/workflow.v6.jpg"><br>' + 
+					'	' + strHtmlStartNewParagraph + 'Structured knowledge bases obtained through manual extraction from studies are critical in the fields of biomedical research, and especially for application in precision oncology. With the rapid development of molecular oncology research, the number of publications in this field has increased exponentially. Efficiently extract knowledge from these publications is crucial for the prompt application of these findings in further studies and clinical practices.<br>' +
+					'	' + strHtmlStartNewParagraph + 'The great majority of efforts have been made to mine data from free texts with dictionary lookup or natural language processing (NLP)-based approaches. Even though efficiency and accuracy of automated information extraction are constantly improving, it only solves part of the problem in knowledge mining. Efficient literature search and reasonable data structure are the prerequisites for knowledge distillation, collaborative data extraction and information review are extremely essential to ensure the quality of data.<br>' +
+					'	' + strHtmlStartNewParagraph + 'To achieve high-quality structural conversion of plain text, we developed the OncoPubMiner platform (https://oncopubminer.chosenmedinfo.com). Basic functions such as data structure definition, team and project management, and core functions such as biomedical entity recognition, articles retrieval accompanied by online reading are artistically integrated, which compose a free one-stop publication data mining platform. Upon keyword input, the users can obtain standardized and structured knowledge data after operations conducted by the platform.<br>' +
+					'	' + strHtmlStartNewParagraph + 'Though the entity tagging focus on precision oncology, the form customization service makes OncoPubMiner a state-of-art platform for both practitioners in oncology and many other related fields. For instance, biologists can explore the interrelationships among genes, and drug researchers can dig out the drug-drug and drug-gene interactions. In short, researchers involved in the acquisition of literature knowledge data may take advantage of the highly integrated system.' +
+					'</div>'
+			},
+			{
+				title: 'FAQs',
+				id: 'A02',
+				spread: true,
+				content: 
+					'<div class="layui-collapse" lay-filter="test" data-aos="fade-up">' +
+					'	<div class="layui-colla-item">' +
+					'		<h2 class="layui-colla-title layui-colla-title-inner">What is OncoPubMiner?</h2>' +
+					'		<div class="layui-colla-content layui-show">' +
+					'			<p class="briefDesc"></p>' +
+					'		</div>' +
+					'	</div>' +
+					'	<div class="layui-colla-item">' +
+					'		<h2 class="layui-colla-title layui-colla-title-inner">What is the biggest feature of OncoPubMiner compared with existing softwares?</h2>' +
+					'		<div class="layui-colla-content layui-show">' +
+					'			<p>' + strHtmlStartNewParagraph + 'The one-stop service. From keyword input to structured data export, all operations can be completed online.</p>' +
+					'		</div>' +
+					'	</div>' +
+					'</div>'
+			},
+			{
+				title: 'Publication Updates',
+				id: 'A03',
+				spread: true,
+				content: 
+					'<a name="pubUpdates"></a>' +
+					'<div style="margin-top: 10px; margin-bottom: 10px;">' +
+					'	<form class="layui-form toolbar" id="idPubUpdatesSearchForm">' +
+					'		<div class="layui-form-item">' +
+					'			<div class="layui-inline">' +
+					'				<div class="layui-input-inline" style="width: 90px;">' +
+					'					<input name="pub_date" class="layui-input pubForm" placeholder="Date"/>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="layui-inline">' +
+					'				<div class="layui-input-inline" style="width: 90px;">' +
+					'					<input name="pub_type" class="layui-input pubForm" placeholder="New/Update"/>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="layui-inline">' +
+					'				<div class="layui-input-inline" style="width: 90px;">' +
+					'					<input name="pub_id" class="layui-input pubForm" placeholder="PMID/PMCID"/>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="layui-inline">' +
+					'				<div class="layui-input-inline" style="width: 120px;">' +
+					'					<input name="pub_title" class="layui-input pubForm" placeholder="Title"/>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="layui-inline">' +
+					'				<div class="layui-input-inline" style="width: 120px;">' +
+					'					<input name="pub_authors" class="layui-input pubForm" placeholder="Authors"/>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="layui-inline">' +
+					'				<div class="layui-input-inline" style="width: 120px;">' +
+					'					<input name="pub_journal" class="layui-input pubForm" placeholder="Journal Name"/>' +
+					'				</div>' +
+					'			</div>' +
+					//'			<div class="layui-inline">' +
+					//'				<div class="layui-input-inline" style="width: 90px;">' +
+					//'					<input name="pub_year" class="layui-input pubForm" placeholder="Year"/>' +
+					//'				</div>' +
+					//'			</div>' +
+					'			<div class="layui-inline">' +
+					'				<button class="layui-btn icon-btn" lay-filter="tableSearchPubUpdates" lay-submit>' +
+					'					<i class="layui-icon">&#xe615;</i>Search' +
+					'				</button>' +
+					'			</div>' +
+					'		</div>' +
+					'	</form>' +
+					'	<table id="idDataTablePubUpdates" lay-filter="dataTablePubUpdates"></table>' + 
+					'</div>'
+			},
+			{
+				title: 'OncoPubMiner Updates',
+				id: 'A04',
+				spread: true,
+				content: 
+					'<ul class="layui-timeline" data-aos="fade-up" style="padding-top: 10px;">' +
+					'	<li class="layui-timeline-item">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<h3 class="layui-timeline-title currentVersion">-</h3>' +
+					'			<p>' +
+					'				Current version of OncoPubMiner.' +
+					'			</p>' +
+					'		</div>' +
+					'	</li>' +
+					'	<li class="layui-timeline-item">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<h3 class="layui-timeline-title">Mar 16, 2022</h3>' +
+					'			<p>' +
+					'				Display of visitor traffic and other functionalities have been added (OncoPubMiner v01.02.05, API v1.0.4).' +
+					'			</p>' +
+					'		</div>' +
+					'	</li>' +
+					'	<li class="layui-timeline-item">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<h3 class="layui-timeline-title">Feb 14, 2022</h3>' +
+					'			<p>' +
+					'				Guest account mode online (OncoPubMiner v01.02.04, API v1.0.3).' +
+					'			</p>' +
+					'		</div>' +
+					'	</li>' +
+					'	<li class="layui-timeline-item">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<h3 class="layui-timeline-title">Dec 29, 2021</h3>' +
+					'			<p>' +
+					'				Publication daily update summary table is <a href="/lrAbout?m=A03">online</a> (OncoPubMiner v01.01.06, API v1.0.3).' +
+					'			</p>' +
+					'		</div>' +
+					'	</li>' +
+					'	<li class="layui-timeline-item">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<h3 class="layui-timeline-title">Nov 20, 2021</h3>' +
+					'			<p>' +
+					'				OncoPubMiner API is <a href="' + strApiDocument + '" target="_blank">online</a> for external service (OncoPubMiner v01.01.00, API v1.0.0).' +
+					'			</p>' +
+					'		</div>' +
+					'	</li>' +
+					'	<li class="layui-timeline-item">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<h3 class="layui-timeline-title">Aug 16, 2021</h3>' +
+					'			<p>' +
+					'				1.0 release (OncoPubMiner v01.00.00, a platform for oncology publication mining).' +
+					'			</p>' +
+					'		</div>' +
+					'	</li>' +
+					'	<li class="layui-timeline-item">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<h3 class="layui-timeline-title">Aug 2, 2021</h3>' +
+					'			<p>' +
+					'				Beta version release for public test.' +
+					'			</p>' +
+					'		</div>' +
+					'	</li>' +
+					'	<li class="layui-timeline-item">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<h3 class="layui-timeline-title">Jun 30, 2021</h3>' +
+					'			<p>' +
+					'				Alpha version release for intra group test.' +
+					'			</p>' +
+					'		</div>' +
+					'	</li>' +
+					'	<li class="layui-timeline-item" style="padding-bottom: 0;">' +
+					'		<i class="layui-icon layui-timeline-axis"></i>' +
+					'		<div class="layui-timeline-content layui-text">' +
+					'			<div class="layui-timeline-title">...</div>' +
+					'		</div>' +
+					'	</li>' +
+					'</ul>'
+			},
+			{
+				title: 'Statistics',
+				id: 'A05',
+				spread: true,
+				content: 
+					'<table class="layui-table" style="margin-bottom: 0;" lay-size="sm" data-aos="fade-up">' +
+					'	<colgroup>' +
+					'		<col width="180">' +
+					'		<col width="120">' +
+					'		<col>' +
+					'	</colgroup>' +
+					'	<thead>' +
+					'		<tr>' +
+					'			<th>Statistical item</th>' +
+					'			<th>Statistical value</th>' +
+					'			<th>Description</th>' +
+					'		</tr> ' +
+					'	</thead>' +
+					'	<tbody>' +
+					'		<tr>' +
+					'			<td># of Abstracts</td>' +
+					'			<td id="idStatAbstracts"></td>' +
+					'			<td>Total number of PubMed abstracts parsed to BioC format.</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td># of Full Texts</td>' +
+					'			<td id="idStatFullTexts"></td>' +
+					'			<td>Total number of PubMed Central (PMC) open access articles parsed to BioC format.</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td># of Entity-Publication Pairs</td>' +
+					'			<td id="idStatEntityPubPairs"></td>' +
+					'			<td>Total number of deduplicated entity-publication pairs discovered in the process of named entity recognition (NER).</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td># of Curation Teams</td>' +
+					'			<td id="idStatTeams"></td>' +
+					'			<td>Total number of registered & guest account in the platform.</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td># of Publication Collections</td>' +
+					'			<td id="idStatCollections"></td>' +
+					'			<td>Total number of publication collections created in the platform.</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td># of Data Collection Forms</td>' +
+					'			<td id="idStatForms"></td>' +
+					'			<td>Total number of data collection forms created in the platform.</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td># of Curation Projects</td>' +
+					'			<td id="idStatProjects"></td>' +
+					'			<td>Total number of curation project created in the platform.</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td># of Curated Datasets</td>' +
+					'			<td id="idStatDatasets"></td>' +
+					'			<td>Total number of curated datasets in the platform.</td>' +
+					'		</tr>' +
+					'	</tbody>' +
+					'</table>' + 
+					'<p style="font-size: 10px; font-style: italic;">* The above are real-time statistics. If the number is displayed as 0, it means that the statistics interface may be abnormal.</p>'
+			},
+			{
+				title: 'Browser Compatibility',
+				id: 'A06',
+				spread: true,
+				content: 
+					'<table class="layui-table" style="margin-bottom: 10px;" lay-size="sm" data-aos="fade-up">' +
+					'	<colgroup>' +
+					'		<col width="180">' +
+					'		<col>' +
+					'		<col>' +
+					'		<col>' +
+					'		<col>' +
+					'		<col>' +
+					'	</colgroup>' +
+					'	<thead>' +
+					'		<tr>' +
+					'			<th>OS</th>' +
+					'			<th>Version</th>' +
+					'			<th>Chrome</th>' +
+					'			<th>Firefox</th>' +
+					'			<th>Microsoft Edge</th>' +
+					'			<th>Safari</th>' +
+					'		</tr> ' +
+					'	</thead>' +
+					'	<tbody>' +
+					'		<tr>' +
+					'			<td>Linux</td>' +
+					'			<td>Ubuntu 20.04.3</td>' +
+					'			<td>96.0.4664.45</td>' +
+					'			<td>91.0</td>' +
+					'			<td>N/A</td>' +
+					'			<td>N/A</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td>MacOS</td>' +
+					'			<td>macOS Monterey 12.0.1(21A559)</td>' +
+					'			<td>96.0.4664.93</td>' +
+					'			<td>89.0.2</td>' +
+					'			<td>N/A</td>' +
+					'			<td>15.1 (17612.2.9.1.20)</td>' +
+					'		</tr>' +
+					'		<tr>' +
+					'			<td>Windows</td>' +
+					'			<td>10</td>' +
+					'			<td>96.0.4664.45</td>' +
+					'			<td>94.0.2</td>' +
+					'			<td>96.0.1054.34</td>' +
+					'			<td>N/A</td>' +
+					'		</tr>' +
+					'	</tbody>' +
+					'</table>'
+			},
+			{
+				title: 'Team',
+				id: 'A07',
+				spread: true,
+				content: 
+					'<section class="team">' +
+					'	<div class="container">' +
+					'		<div class="row">' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Quan Xu</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="50">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Yueyue Liu</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Dawei Sun</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="150">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Jifang Hu</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Xiaohong Duan</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="250">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Niuben Song</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Jiale Zhou</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="350">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Junyan Su</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Siyao Liu</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="450">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Fan Chen</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Zhongjia Guo</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="550">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Hexiang Li</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Qiming Zhou</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'			<div class="col-xl-3 col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="650">' +
+					'				<div class="member">' +
+					'					<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+					'					<div class="member-info">' +
+					'						<h4>Beifang Niu</h4>' +
+					'						<span>OncoPubMiner Member</span>' +
+					'					</div>' +
+					'				</div>' +
+					'			</div>' +
+					'		</div>' +
+					'	</div>' +
+					'</section>'
+			},
+			{
+				title: 'Cite Us',
+				id: 'A08',
+				spread: true,
+				content: 
+					'<blockquote class="layui-elem-quote" style="margin-top: 10px;" data-aos="fade-up">' +
+					'	Quan Xu<sup>†</sup>, Yueyue Liu<sup>†</sup>, Dawei Sun<sup>†</sup>, Jifang Hu, XiaohongDuan, Niuben Song, Jiale Zhou, Junyan Su, Siyao Liu, Fan Chen, Zhongjia Guo, Hexiang Li, Qiming Zhou<sup>*</sup> and Beifang Niu<sup>*</sup>, OncoPubMiner: A platform for oncology publication mining (Under review).<br><br>' +
+					'	<p style="font-size: 10px; font-style: italic;"><sup>†</sup> These authors contributed equally to this work.<br><sup>*</sup>Corresponding authors.</p>' +
+					'</blockquote> '
+			},
+			{
+				title: 'Contact Us',
+				id: 'A09',
+				spread: true,
+				content: 
+					'<blockquote class="layui-elem-quote" style="margin-top: 10px;" data-aos="fade-up">' +
+					'	<b>Email:</b> medinfoservice(at)chosenmedtech.com<br>' +
+					'	<b>Phone:</b> +86-010-56380035, +86-010-59544150<br>' +
+					'	<b>Address:</b> C3-1, Jinghai Industrial Park, Beijing 100176, China' +
+					'	<p style="font-size: 10px; font-style: italic;">* If you have any questions about OncoPubMiner, please feel free to contact us.</p>' +
+					'</blockquote>'
+			},
+			{
+				title: 'Related Resources',
+				id: 'A10',
+				spread: true,
+				content: 
+					'<blockquote class="layui-elem-quote" style="margin-top: 10px;" data-aos="fade-up">' +
+					'	<b><i>1. Databases</i></b><br>' +
+					'	<b>PubMed:</b> <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">https://pubmed.ncbi.nlm.nih.gov</a><br>' +
+					'	<b>PMC:</b> PubMed Central, <a href="https://www.ncbi.nlm.nih.gov/pmc" target="_blank">https://www.ncbi.nlm.nih.gov/pmc</a><br>' +
+					'	<b>CIViC:</b> Clinical Interpretation of Variants in Cancer, <a href="https://civicdb.org/home" target="_blank">https://civicdb.org/home</a><br>' +
+					'	<b>HGNC:</b> The resource for approved human gene nomenclature, <a href="https://www.genenames.org" target="_blank">https://www.genenames.org</a><br>' +
+					'	<b>PubChem:</b> <a href="https://pubchem.ncbi.nlm.nih.gov" target="_blank">https://pubchem.ncbi.nlm.nih.gov</a><br>' +
+					'	<b>Disease Ontology:</b> <a href="https://disease-ontology.org" target="_blank">https://disease-ontology.org</a><br>' +
+					'	<b>MeSH:</b> Medical Subject Headings, <a href="https://www.ncbi.nlm.nih.gov/mesh" target="_blank">https://www.ncbi.nlm.nih.gov/mesh</a><br>' +
+					
+					'	<br>' +
+					'	<b><i>2. Data format & Text-mining tools</i></b><br>' +
+					'	<b>BioC:</b> A Minimalist Approach to Interoperability for Biomedical Text Processing, <a href="http://bioc.sourceforge.net" target="_blank">http://bioc.sourceforge.net</a><br>' +
+					'	<b>NLTK:</b> Natural Language Toolkit, <a href="https://www.nltk.org" target="_blank">https://www.nltk.org</a><br>' +
+					'	<b>tmVar:</b> <a href="https://www.ncbi.nlm.nih.gov/bionlp/Tools/tmvar" target="_blank">https://www.ncbi.nlm.nih.gov/bionlp/Tools/tmvar</a><br>' +
+					'	<b>GNormPlus:</b> <a href="https://www.ncbi.nlm.nih.gov/bionlp/Tools/gnormplus" target="_blank">https://www.ncbi.nlm.nih.gov/bionlp/Tools/gnormplus</a><br>' +
+					'	<b>DNorm:</b> <a href="https://www.ncbi.nlm.nih.gov/bionlp/Tools/dnorm" target="_blank">https://www.ncbi.nlm.nih.gov/bionlp/Tools/dnorm</a><br>' +
+					'	<b>tmChem:</b> <a href="https://www.ncbi.nlm.nih.gov/bionlp/Tools/tmchem" target="_blank">https://www.ncbi.nlm.nih.gov/bionlp/Tools/tmchem</a><br>' +
+					
+					'	<br>' +
+					'	<span style="font-size: 10px; font-style: italic;">* Resources are presented in no particular order.</span>' +
+					'</blockquote> '
+			}
+		];
+		
+		// 右侧内容生成！
+		for(let k = 0; k < dataTutorial.length; k++){
+			funcObj2Html(dataTutorial[k]); // 添加当前对象本身！
+			
+			if(dataTutorial[k].children && dataTutorial[k].children.length > 0){
+				for(let t = 0; t < dataTutorial[k].children.length; t++){
+					funcObj2Html( dataTutorial[k].children[t]); // 一级子节点！
+					
+					if(dataTutorial[k].children[t].children && dataTutorial[k].children[t].children.length > 0){
+						for(let m = 0; m < dataTutorial[k].children[t].children.length; m++){
+							funcObj2Html( dataTutorial[k].children[t].children[m]); // 二级子节点！
+							
+							if(dataTutorial[k].children[t].children[m].children && dataTutorial[k].children[t].children[m].children.length > 0){
+								for(let n = 0; n < dataTutorial[k].children[t].children[m].children.length; n++){
+									funcObj2Html( dataTutorial[k].children[t].children[m].children[n]); // 三级子节点！
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		function funcObj2Html(thisObj){
+			var thisHtml = 
+				'	<div class="layui-colla-item" id="' + thisObj.id + '">' +
+				//'		<h2 class="layui-colla-title">(' + thisObj.id + ') ' + thisObj.title + '</h2>' +
+				'		<h2 class="layui-colla-title">' + thisObj.title + '</h2>' +
+				'		<div class="layui-colla-content' + (thisObj.spread ? ' layui-show' : '') + '">' +
+				'			<p>' + thisObj.content + '</p>' +
+				'		</div>' +
+				'	</div>';
+			$("#idDivCollapse").append(thisHtml);
+		}
+		
+		/* 获取URL中的参数 */
+		function getQueryVariable(variable){
+			var query = window.location.search.substring(1);
+			query = decodeURIComponent(query); // 2021-09-22：解码！
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){ return pair[1] == "undefined" || pair[1] == "" ? null : pair[1]; }
+			}
+			return(false);
+		}
+		
+		// LayUI渲染！
+		layui.use(['admin', 'util', 'xnUtil', 'form', 'formX', 'element', 'tree', 'table', 'tableX'], function () {
+			$ = layui.jquery;
+			admin = layui.admin;
+			util = layui.util;
+			xnUtil = layui.xnUtil;
+			form = layui.form;
+			formX = layui.formX;
+			element = layui.element;
+			tree = layui.tree;
+			table = layui.table;
+			tableX = layui.tableX;
+			
+			// 获取当前登录用户！
+			currentUser = getCurrentLoginUser();
+			
+			//设置核心版块的最小高度！
+			$("#idDivContent").css("min-height", getClientHeight()-191);
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			// 左侧快速链接！
+			if(thisMao) {
+				setTimeout(function(){
+					topMao(thisMao); // 2021-12-29（V0022-01.01.06-10）：通过url快速跳转！
+				},1000); // 延迟一秒后再跳，以尽量确保页面中的图片和动态表格加载完成了！
+			}
+			tree.render({
+				elem: '#test1'
+				,data: dataTutorial
+				,click: function(obj){
+					topMao(obj.data.id);
+				}
+			});
+			
+			// 右侧标题点击事件监听！
+			element.on('collapse(helpContent)', function(data){
+				layer.msg('展开状态：'+ data.show);
+			});
+			
+			// 监听页面滚动！
+			funcListenScroll();
+			$(window).scroll(function(event){
+				funcListenScroll();
+			});
+			
+			// 加载系统简要描述信息（同common.js）！
+			$(".briefDesc").html(strHtmlStartNewParagraph + strPlatformBriefDesc);
+			
+			//
+			/* 渲染表格 */
+			insTbPubUpdates = tableX.render({
+				elem: '#idDataTablePubUpdates',
+				url: strApiPubUpdates,
+				page: true,
+				limits: [10,20,30],
+				loading: true,
+				defaultToolbar: [],
+				cellMinWidth: 100,
+				cols: [
+					[
+						{field: 'pub_date', title: 'Newly Updated Publications', sort: false, templet: function (d) {
+							var strHtml = 
+								'<span class="layui-badge ' + (d.pub_type === 'New' ? 'layui-bg-blue' : 'layui-bg-orange') + '">' + d.pub_type + '</span>&nbsp;&nbsp;' +
+								'<b>[' + d.pub_date + ']</b>&nbsp;&nbsp;' + 
+								//'<a href="' + strApiIdSearching + d.pub_id + '" target="_blank">' + d.pub_id + ' <i class="bx bx-code-alt" title="BioC-JSON"></i></a>' + '<br>' +
+								//'<i><b>TITLE:</b></i>&nbsp;' + d.pub_title + '<br>' +
+								'<b>' + d.pub_title + '</b><br>' +
+								'<i><b>AUTHORS:</b></i>&nbsp;' + d.pub_authors.replace(/\|/g, ', ') + '<br>' +
+								'<i><b>PMID:</b></i>&nbsp;' + d.pub_id + ',&nbsp;&nbsp;&nbsp;&nbsp;' +
+								'<i><b>JOURNAL:</b></i>&nbsp;' + d.pub_journal;
+							
+							return strHtml;
+						}}
+						//{field: 'pub_type', title: 'Type', width: 80, sort: true, align: 'center'},
+						//{field: 'pub_id', title: 'ID', width: 121, sort: true, align: 'center', templet: function (d) {
+						//	return '<a href="' + strApiIdSearching + d.pub_id + '" target="_blank">' + d.pub_id + ' <i class="bx bx-code-alt" title="BioC-JSON"></i></a>';
+						//}},
+						//{field: 'pub_title', title: 'Title', sort: true},
+						//{field: 'pub_authors', title: 'Authors', sort: true},
+						//{field: 'pub_journal', title: 'Journal', width: 100, sort: true},
+						//{field: 'pub_year', title: 'Year', sort: true}
+					]
+				],
+				done: function(res, curr, count) {
+					console.log(res);
+					xnUtil.tableDone(insTbPubUpdates, res, curr, count);
+					// 不显示工具行！
+					$(".layui-table-tool").each(function(){
+						$(this.remove());
+					});
+				}
+			});
+		
+			/* 表格搜索 */
+			form.on('submit(tableSearchPubUpdates)', function (data) {
+				insTbPubUpdates.reload({where: data.field, page: {curr: 1}});
+				return false;
+			});
+			
+			/* 表格排序事件 */
+			table.on('sort(dataTablePubUpdates)', function(obj){
+				table.reload('dataTablePubUpdates', {
+					initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+					where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+						sortBy: obj.field, // 排序字段！
+						orderBy: obj.type // 排序方式！
+					}
+				});
+			});
+			
+		});
+		
+	</script>
+
+</body>
+
+</html>

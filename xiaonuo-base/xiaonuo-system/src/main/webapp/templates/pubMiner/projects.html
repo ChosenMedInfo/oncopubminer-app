@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Projects</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<style type="text/css">
+	#hero,
+	#hero hero-container,
+	#hero .carousel-item,
+	#heroCarousel,
+	#heroCarousel .carousel-inner{
+		height: 120px;
+	}
+	#hero h2 {
+		margin-bottom: 5px;
+	}
+	</style>
+
+</head>
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects" class="active"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="classHero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/images/carousel/1.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Curation Projects</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Curation Projects</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Curation Projects</h2>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+
+		<!-- ======= About Lists Section ======= -->
+		<section class="about-lists" id="idDivContent">
+			<div class="container">
+
+				<!-- 表格工具栏 -->
+				<form class="layui-form toolbar searchFormForTable">
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="projectName" class="layui-input" placeholder="Project Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="projectDesc" class="layui-input" placeholder="Project Desc"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="formName" class="layui-input" placeholder="Form Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="libraryName" class="layui-input" placeholder="Collection Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="members" class="layui-input" placeholder="Member Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<button class="layui-btn icon-btn" lay-filter="tableSearch" lay-submit>
+								<i class="layui-icon">&#xe615;</i>Search
+							</button>
+						</div>
+					</div>
+				</form>
+				
+				<!-- 数据表格 -->
+				<table id="dataTable" lay-filter="dataTable"></table>
+
+			</div>
+		</section><!-- End About Lists Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer"></footer><!-- End Footer -->
+
+	<a href="javascript:;" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+	
+	<!-- LayUI JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/module/xmSelect.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<script>
+		var currentUser, admin, $, layer, insTb;
+		layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil'], function () {
+			$ = layui.jquery;
+			layer = layui.layer;
+			var table = layui.table;
+			var tableX = layui.tableX;
+			admin = layui.admin;
+			var form = layui.form;
+			var notice = layui.notice;
+			var xnUtil = layui.xnUtil;
+			
+			// 获取当前登录用户！
+			var arrToolBars = ['<p>',
+				'<button lay-event="add" class="layui-btn layui-btn-sm icon-btn"><i class="layui-icon">&#xe654;</i>Add</button>&nbsp;',
+				'</p>'];
+			currentUser = getCurrentLoginUser();
+			if(currentUser == null || currentUser.accountType != "1"){
+				arrToolBars = [];
+			}
+			
+			//设置核心版块的最小高度！
+			$("#idDivContent").css("min-height", getClientHeight()-191);
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			/* 渲染表格 */
+			insTb = tableX.render({
+				elem: '#dataTable',
+				url: '/projects/page',
+				page: true,
+				limits: [10,20,30],
+				loading: true,
+				toolbar: arrToolBars.join(''),
+				defaultToolbar: [],
+				cellMinWidth: 100,
+				cols: [
+					[
+						{sort: false, align: 'center', width: 50, minWidth: 50, templet: function (d) {
+							return '<a class="addAndFoldRowTable" lay-event="addRowTable"><i class="bx bx-chevrons-right"></i></a>';
+						}},
+						{field: 'groupName', title: 'Type', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+							var strContent = "<i class='bx bxs-lock-alt' ></i> Private";
+							if(d.groupName == 'commonGroup') strContent = "<i class='bx bx-lock-open-alt'></i> Public";
+							return strContent;
+						}},
+						{field: 'projectName', title: 'Project Name', sort: true, width: 240},
+						{field: 'projectDesc', title: 'Project Desc', sort: false},
+						{field: 'status', title: 'Status', sort: true, align: 'center', width: 100, minWidth: 100, templet: function (d) {
+							var strContent = "<i class='bx bx-shield' ></i> Active";
+							if(d.status == '2') strContent = "<i class='bx bx-shield-quarter'></i> Locked";
+							return strContent;
+						}}
+						//{field: 'formName', title: 'Form Name', sort: true, width: 160},
+						//{field: 'libraryName', title: 'Collection Name', sort: true, width: 160},
+						//{field: 'members', title: 'Members', align: 'center', sort: false, width: 160, templet: function (d) {
+						//	var strMembers = "";
+						//	if(d.groupName == "commonGroup"){
+						//		strMembers = "-";
+						//	}else{
+						//		var strArrMembers = d.members.split(" | ");
+						//		for(var i = 0; i < strArrMembers.length; i++){
+						//			var strThisMember = '<span class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue"><i class="layui-icon">&#xe612;</i>' + strArrMembers[i] + '</span>';
+						//			strMembers = strMembers == "" ? strThisMember : strMembers + " " + strThisMember;
+						//		}
+						//	}
+						//	return strMembers;
+						//}},
+						//{field: 'createTime', title: 'Create Time', sort: true, hide: true, align: 'center', width: 170, templet: function (d) {
+						//	var strContent = d.createTime + " (UTC+8)";
+						//	return strContent;
+						//}},
+						//{field: 'status', title: 'Operate', align: 'center', width: 150, minWidth: 150}
+					]
+				],
+				done: function(res, curr, count) {
+					xnUtil.tableDone(insTb, res, curr, count);
+					// 权限判定：未登录或者非组管理员，不显示工具行！
+					if(currentUser == null || currentUser.accountType != "1"){
+						$(".layui-table-tool").each(function(){
+							$(this.remove());
+						});
+					}
+				}
+			});
+		
+			/* 表格搜索 */
+			form.on('submit(tableSearch)', function (data) {
+				insTb.reload({where: data.field, page: {curr: 1}});
+				return false;
+			});
+			
+			/* 表格排序事件 */
+			table.on('sort(dataTable)', function(obj){
+				table.reload('dataTable', {
+					initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+					where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+						sortBy: obj.field, // 排序字段！
+						orderBy: obj.type // 排序方式！
+					}
+				});
+			});
+		
+			/* 表格工具条点击事件 */
+			table.on('tool(dataTable)', function (obj) {
+				/* 删除 */
+				if (obj.event === 'delete') {
+					layer.confirm('Are you sure you want to operate on this data?', {
+						skin: 'layui-layer-admin',
+						shade: .1,
+						btn: ['Yes', 'Cancel'],
+						title: 'Confirm'
+					}, function () {
+						admin.req('projects/delete', JSON.stringify([{'id': obj.data.id}]), function(res){
+							layer.msg(res.message, {icon: 1, time: 1000}, function () {
+								insTb.reload();
+							});
+						}, 'post');
+					});
+				}
+				/* 编辑 */
+				if (obj.event === 'edit') {
+					showAddOrUpdateModel(obj.data);
+				}
+				/* 数据集 */
+				var datasetUrl = "/formsItemsData/exportData?projectId=" + obj.data.id + "&formId=" + obj.data.formId;
+				if (obj.event === 'dataset') {
+					window.open(datasetUrl);
+				}
+				if (obj.event === 'nodata') {
+					layer.msg("No data available!");
+				}
+				/* 查看更多 */
+				var tr = $(this).parents('tr');
+				var trIndex = tr.data('index');
+				if(obj.event === 'fold') {
+					$(this).attr('lay-event', 'addRowTable').html('<i class="bx bx-chevrons-right"></i>');
+					tr.next().remove();
+				}
+				if (obj.event === 'addRowTable') {
+					$(this).attr('lay-event', 'fold').html('<i class="bx bx-chevrons-down"></i>');
+					var _html_members = "";
+					if(obj.data.groupName == "commonGroup"){
+						_html_members = "<i>Public project, no team member involved!</i>";
+					}else{
+						var strArrMembers = obj.data.members.split(" | ");
+						for(var i = 0; i < strArrMembers.length; i++){
+							var strThisMember = "<i class='bx bxs-user'></i> " + strArrMembers[i] + '';
+							_html_members = _html_members == "" ? strThisMember : _html_members + " | " + strThisMember;
+						}
+					}
+					var _html = [
+						'<tr class="table-item">',
+						'	<td colspan="' + tr.find('td').length + '" style="padding: 6px 12px;">',
+						'		<section class="about-lists">',
+						'			<div class="container" style="margin-left: 0; margin-right: 0;">',
+						'				<div class="row no-gutters">',
+						'					<div class="col-lg-4 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bx-grid-alt"></i> Project Name</h4>',
+						'						<p>' + obj.data.projectName + '</p>',
+						'					</div>',
+						'					<div class="col-lg-5 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bx-grid-alt"></i> Project Description</h4>',
+						'						<p>' + obj.data.projectDesc + '</p>',
+						'					</div>',
+						'					<div class="col-lg-3 content-item" data-aos="fade-up">',
+						'						<h4><i class="bx bxs-time-five" ></i> Create Time</h4>',
+						'						<p>' + obj.data.createTime + ' (UTC+8)</p>',
+						'					</div>',
+						'					<div class="col-lg-5 content-item" data-aos="fade-up" data-aos-delay="50">',
+						'						<h4><i class="bx bxs-collection"></i> Collection Name</h4>',
+						'						<p>' + obj.data.libraryName + '</p>',
+						'					</div>',
+						'					<div class="col-lg-7 content-item" data-aos="fade-up" data-aos-delay="50">',
+						'						<h4><i class="bx bxs-customize"></i> Data Form Name</h4>',
+						'						<p>' + obj.data.formName + '</p>',
+						'					</div>',
+						'					<div class="col-lg-6 content-item" data-aos="fade-up" data-aos-delay="100">',
+						'						<h4><i class="bx bxs-group"></i> Team Members</h4>',
+						'						<p>' + _html_members + '</p>',
+						'					</div>',
+						'					<div class="col-lg-2 content-item" data-aos="fade-up" data-aos-delay="100">',
+						'						<h4><i class="bx bx-receipt"></i> Publications</h4>',
+						'						<p><a href="javascript:;" id="idPublicationToggle' + obj.data.id + '">0</a></p>',
+						'					</div>',
+						'					<div class="col-lg-2 content-item" data-aos="fade-up" data-aos-delay="100">',
+						'						<h4><i class="bx bx-dna"></i> Data Set</h4>',
+						'						<p><a href="javascript:;" id="idDatasetCount' + obj.data.id + '">0</a></p>',
+						'					</div>',
+						'					<div class="col-lg-2 content-item" data-aos="fade-up" data-aos-delay="100">',
+						'						<h4><i class="bx bx-wrench"></i> Operations</h4>',
+						'						<p id="idOperations' + obj.data.id + '"><i>No Operation Available</i></p>',
+						'					</div>',
+						'					<div class="col-lg-12 content-item" data-aos="fade-up" data-aos-delay="150" id="idDivPublicationTable' + obj.data.id + '" style="display: none; padding: 0 5px 0 0;">',
+						'						<form class="layui-form toolbar searchFormForTable">',
+						'							<div class="layui-form-item">',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 150px;">',
+						'										<input name="pmid" class="layui-input" placeholder="PubMed ID"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 250px;">',
+						'										<input name="pubTitle" class="layui-input" placeholder="Title"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<div class="layui-input-inline" style="width: 150px;">',
+						'										<input name="pubJournal" class="layui-input" placeholder="Journal Name"/>',
+						'									</div>',
+						'								</div>',
+						'								<div class="layui-inline">',
+						'									<button class="layui-btn icon-btn" lay-filter="tableSearchPub' + obj.data.id + '" lay-submit>',
+						'										<i class="layui-icon">&#xe615;</i>Search',
+						'									</button>',
+						'								</div>',
+						'							</div>',
+						'						</form>',
+						'						<table id="idPublicationTable' + obj.data.id + '" lay-filter="idPublicationTable' + obj.data.id + '"></table>',
+						'					</div>',
+						'				</div>',
+						'			</div>',
+						'		</section>',
+						'	</td>',
+						'</tr>'
+					];
+					tr.after(_html.join('\n'));
+					
+					// 操作链接！
+					if(obj.data.groupName == currentUser.accountGroup){ // 本组的Form！
+						if(obj.data.status == 2){
+							if(currentUser.accountType == "1"){ // 组管理员！
+								$('#idOperations' + obj.data.id).html('<a href="javascript:;" onclick="funcDelete(\'' + obj.data.id + '\')"><i class="bx bx-trash"></i> Delete</a>');
+							}
+						}else{
+							if(currentUser.accountType != "1"){
+								// 啥也不干！
+							}else{
+								$('#idOperations' + obj.data.id).html('<a href="javascript:;" onclick="funcLock(' + JSON.stringify(obj).replace(/"/g, '&quot;') + ')"><i class="layui-icon">&#xe6b1;</i> Lock</a> | <a href="javascript:;" onclick="showAddOrUpdateModel(' + JSON.stringify(obj).replace(/"/g, '&quot;') + ')"><i class="layui-icon">&#xe642;</i> Edit</a> | <a href="javascript:;" onclick="funcDelete(\'' + obj.data.id + '\')"><i class="bx bx-trash"></i> Delete</a>');
+							}
+						}
+					}else{ // 非本组的Form，啥也干不了！
+						// 啥也不干！
+					}
+					
+					// 获取Dataset数量！
+					$.ajax({
+						type: "get",
+						url: "/formsItemsData/getBatchCount",
+						async: true,
+						contentType: "application/json; charset=utf-8",
+						data: {projectId: obj.data.id, date: new Date()},
+						dataType: "json",
+						success: function (res) {
+							if(res == 0){ // 没有数据的情况下，不允许下载了！
+								$("#idDatasetCount" + obj.data.id).replaceWith('<i>No Data Available!</i>');
+							}else{ // 有数据的情况下，显示数字并允许下载！
+								
+								//$("#idDatasetCount" + obj.data.id).replaceWith('<a href="' + datasetUrl + '" target="_blank" id="idDatasetCount' + obj.data.id + '">' + res + ' <i class="bx bx-grid"></i></a></p>');
+							
+								// 2021-11-30（V0008-01.00.05-09）：变更为弹窗展示！
+								$("#idDatasetCount" + obj.data.id).html(res + ' <i class="bx bx-grid"></i>');
+								$("#idDatasetCount" + obj.data.id).after(' | <a href="' + datasetUrl + '" target="_blank" id="idDatasetCount' + obj.data.id + '">' + res + ' <i class="bx bx-cloud-download"></i></a></p>'); // 直接下载链接，以应对数据量较大导致弹窗内表格加载缓慢的问题！
+								$("#idDatasetCount" + obj.data.id).click(function(){
+									var layDataViewerIndex = admin.open({
+										title: '<i class="bx bx-grid"></i> Data Viewer',
+										url: 'lrDataViewer',
+										area: ['100%', '100%'],
+										offset: '0', // 距离顶部位置！
+										scrollbar: false, // 弹窗打开后，禁用原页面的浏览器滚动条，只显示弹窗的滚动条！
+										data: { data: {projectId: obj.data.id, formId: obj.data.formId} },	 // 传递数据到表单页面
+										end: function () {
+											// 2021-11-30（V0008-01.00.05-09）：关掉弹窗后暂时啥也不干！
+										},
+										success: function (layero, dIndex) {
+											// 弹窗超出范围不出现滚动条
+											//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+											//$(layero).find('[lay-submit]').focus();
+										}
+									});
+								});
+							
+							}
+						}
+					});
+					
+					// 文献数量链接点击效果！
+					$('#idPublicationToggle' + obj.data.id).click(function(){
+						$('#idDivPublicationTable' + obj.data.id).toggle();
+						if($('#idDivPublicationTable' + obj.data.id).css("display") == "none"){
+							$('#idPublicationToggle' + obj.data.id).html($('#idPublicationToggle' + obj.data.id).html().replace('<i class="bx bx-minus"></i>', '<i class="bx bx-plus"></i>'));
+						}else{
+							$('#idPublicationToggle' + obj.data.id).html($('#idPublicationToggle' + obj.data.id).html().replace('<i class="bx bx-plus"></i>', '<i class="bx bx-minus"></i>'));
+						}
+					});
+					
+					// 文献列表表格渲染！
+					var objArrCols = [
+						{field: 'pmid', title: 'PubID(s)', align: 'center', sort: true, width: 120, minWidth: 120, templet: function (d) {
+							var thisHtml = '<a href="https://pubmed.ncbi.nlm.nih.gov/' + d.pmid + '/" target="_blank">' + d.pmid + ' <i class="bx bx-link"></i></a>';
+							if(d.pmcid && d.pmcid != "") thisHtml += '<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + d.pmcid + '/" target="_blank">PMC' + d.pmcid + ' <i class="bx bx-link"></i></a>';
+							return thisHtml;
+						}},
+						{field: 'pubTitle', title: 'Title', sort: true, templet: function (d) {
+							return !d.pubTitle || d.pubTitle == "" ? "-" : d.pubTitle;
+						}},
+						{field: 'pubJournal', title: 'Journal', sort: true, templet: function (d) {
+							return !d.pubJournal || d.pubJournal == "" ? "-" : d.pubJournal;
+						}},
+						{field: 'pubYear', title: 'Year', align: 'center', sort: true, width: 75, minWidth: 75, templet: function (d) {
+							return !d.pubYear || d.pubYear == "" ? "-" : d.pubYear;
+						}},
+						{field: 'pubIf2020', title: 'IF2020', align: 'center', sort: true, width: 85, minWidth: 85, templet: function (d) {
+							return !d.pubIf2020 || d.pubIf2020 == "" ? "-" : d.pubIf2020;
+						}},
+						{field: 'memberStatus', title: 'Progress', align: 'center', sort: false},
+						{field: 'status', title: 'Operate', align: 'center', width: 190, minWidth: 190}
+					];
+					if(obj.data.groupName == "commonGroup"){
+						objArrCols = [
+							{field: 'pmid', title: 'PubID', align: 'center', sort: true, width: 120, minWidth: 120, templet: function (d) {
+								var thisHtml = '<a href="https://pubmed.ncbi.nlm.nih.gov/' + d.pmid + '/" target="_blank">' + d.pmid + ' <i class="bx bx-link"></i></a>';
+								if(d.pmcid && d.pmcid != "") thisHtml += '<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + d.pmcid + '/" target="_blank">PMC' + d.pmcid + ' <i class="bx bx-link"></i></a>';
+								return thisHtml;
+							}},
+							{field: 'pubTitle', title: 'Title', sort: true, templet: function (d) {
+								return !d.pubTitle || d.pubTitle == "" ? "-" : d.pubTitle;
+							}},
+							{field: 'pubJournal', title: 'Journal', sort: true, width: 120, minWidth: 120, templet: function (d) {
+								return !d.pubJournal || d.pubJournal == "" ? "-" : d.pubJournal;
+							}},
+							{field: 'pubYear', title: 'Year', align: 'center', sort: true, width: 75, minWidth: 75, templet: function (d) {
+								return !d.pubYear || d.pubYear == "" ? "-" : d.pubYear;
+							}},
+							{field: 'pubIf2020', title: 'IF2020', align: 'center', sort: true, width: 85, minWidth: 85, templet: function (d) {
+								return !d.pubIf2020 || d.pubIf2020 == "" ? "-" : d.pubIf2020;
+							}},
+							//{field: 'memberStatus', title: 'Progress', align: 'center', sort: false},
+							{field: 'status', title: 'Operate', align: 'center', width: 170, minWidth: 170}
+						];
+					}
+					let insTbPub = table.render({
+						elem: '#idPublicationTable' + obj.data.id,
+						url: '/librariesPublications/page',
+						page: true,
+						limits: [10,20,30],
+						loading: true,
+						where: {
+							libraryId: obj.data.libraryId
+						},
+						cols: [ objArrCols ],
+						done: function(res, curr, count) {
+							$('#idPublicationToggle' + obj.data.id).html(count + ' <i class="bx bx-plus"></i>'); // 更新文献数量！
+							xnUtil.tableDone(insTb, res, curr, count);
+							res.data.forEach(function (item, index) {
+								//var thisId = "idPubDatasetIndex" + index;
+								var thisId = "idPubDatasetIndex" + index + "-" + obj.data.libraryId + "-" + item.pmid; // 2021-12-01（V0009-01.00.06-10）：尝试解决部分“Data Set”后面没有带上数字的问题！
+								if(obj.data.groupName != "commonGroup"){
+									if(currentUser.accountType == "1"){
+										// 管理员的情况下，需要获取所有用户的提交情况！
+										var strArrMemberId   = obj.data.memberIds.split(",");
+										var strArrMemberName = obj.data.members.split(" | ");
+										var strProgress = "";
+										var bolCheckMembersDone = true; // 2021-12-15（V0018-01.01.02-07）：成员标注未全部完成，不允许启动review！
+										for(var k = 0; k < strArrMemberId.length; k++){
+											var thisProPubStatusId = obj.data.id + "|" + obj.data.libraryId + "|" + obj.data.formId + "|" + item.pmid + "|" + strArrMemberId[k];
+											$.ajax({
+												type: "get",
+												url: "/projectPubStatus/getStatus",
+												async: false,
+												contentType: "application/json; charset=utf-8",
+												data: {id: thisProPubStatusId, projectId: obj.data.id, date: new Date()},
+												dataType: "json",
+												success: function (result) {
+													if(result != null){
+														var thisReaderStatus = '<span style="color: green;"><i class="bx bxs-user"></i> ' + strArrMemberName[k] + ' (Done)</span>';
+														if(result.data !== '1'){
+															thisReaderStatus = '<span style="color: #428bca;"><i class="bx bxs-user"></i> ' + strArrMemberName[k] + ' (Reading)</span>';
+															bolCheckMembersDone = false; // 2021-12-15（V0018-01.01.02-07）：有一个没有完成，那就是没有完成！
+														}
+														strProgress = strProgress == "" ? thisReaderStatus : strProgress + "<br>" + thisReaderStatus;
+													}
+												}
+											});
+										}
+										// 接着获取自己的提交情况！
+										var thisProPubStatusId = obj.data.id + "|" + obj.data.libraryId + "|" + obj.data.formId + "|" + item.pmid + "|" + currentUser.id;
+										$.ajax({
+											type: "get",
+											url: "/projectPubStatus/getStatus",
+											async: false,
+											contentType: "application/json; charset=utf-8",
+											data: {id: thisProPubStatusId, projectId: obj.data.id, date: new Date()},
+											dataType: "json",
+											success: function (result) {
+												if(result != null){
+													if(result.data == "1"){
+														strProgress += '<br><span style="color: green;"><i class="bx bxs-user"></i> Self (Done)</span>';
+														//$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>');
+														$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="/lrDetails?pid=' + item.pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i> View</a><br>' + '<a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>'); // 2021-12-29（V0022-01.01.06-07）：加上直接阅读的功能！
+													}else{
+														if(bolCheckMembersDone){
+															//$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="javascript:;" lay-event="reviewPub"><i class="layui-icon">&#xe705;</i> Review</a><br><a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>');
+															$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="/lrDetails?pid=' + item.pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i> View</a><br>' + '<a href="javascript:;" lay-event="reviewPub"><i class="layui-icon">&#xe705;</i> Review</a><br><a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>'); // 2021-12-29（V0022-01.01.06-07）：加上直接阅读的功能！
+															strProgress += '<br><span style="color: #428bca;"><i class="bx bxs-user"></i> Self (Reviewing)</span>';
+														}else{ // 2021-12-15（V0018-01.01.02-07）：成员未全部完成标注，不允许启动Review！
+															strProgress += '<br><i style="color: #aaaaaa;"><i class="bx bxs-user"></i> Self (Inactivated)</i>';
+															//$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<i style="color: #aaaaaa;"><i class="layui-icon">&#xe705;</i> Review</i><br><a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>');
+															$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="/lrDetails?pid=' + item.pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i> View</a><br>' + '<i style="color: #aaaaaa;"><i class="layui-icon">&#xe705;</i> Review</i><br><a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>'); // 2021-12-29（V0022-01.01.06-07）：加上直接阅读的功能！
+														}
+													}
+												}
+											}
+										});
+										$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="memberStatus"] div').html(strProgress);
+									}else if(currentUser.accountType == "2"){
+										
+										// 2021-12-14（V0018-01.01.02-06）：非管理员的情况下，需要判断是否参与该项目！
+										if(obj.data.memberIds.indexOf(currentUser.id) > -1){
+											
+											// 非管理员的情况下，需要获取自己的提交情况！
+											var strProgress = "-";
+											var thisProPubStatusId = obj.data.id + "|" + obj.data.libraryId + "|" + obj.data.formId + "|" + item.pmid + "|" + currentUser.id;
+											$.ajax({
+												type: "get",
+												url: "/projectPubStatus/getStatus",
+												async: false,
+												contentType: "application/json; charset=utf-8",
+												data: {id: thisProPubStatusId, projectId: obj.data.id, date: new Date()},
+												dataType: "json",
+												success: function (result) {
+													if(result != null){
+														if(result.data == "1"){
+															strProgress = '<span style="color: green;"><i class="bx bxs-user"></i> Self (Done)</span>';
+															//$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>');
+															$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="/lrDetails?pid=' + item.pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i> View</a><br>' + '<a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>'); // 2021-12-29（V0022-01.01.06-07）：加上直接阅读的功能！
+														}else{
+															strProgress = '<span style="color: #428bca;"><i class="bx bxs-user"></i> Self (Reading)</span>';
+															//$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="javascript:;" lay-event="readPub"><i class="layui-icon">&#xe705;</i> Read</a><br><a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>');
+															$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="/lrDetails?pid=' + item.pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i> View</a><br>' + '<a href="javascript:;" lay-event="readPub"><i class="layui-icon">&#xe705;</i> Read</a><br><a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>'); // 2021-12-29（V0022-01.01.06-07）：加上直接阅读的功能！
+														}
+													}
+												}
+											});
+											$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="memberStatus"] div').html(strProgress);
+											
+										}else{
+											let strThisTipsNotInProject = '<i style="color: #aaaaaa;">You are not involved in the project!</a>';
+											$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html(strThisTipsNotInProject);
+											$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="memberStatus"] div').html(strThisTipsNotInProject);
+										}
+										
+									}else{
+										$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('-');
+									}
+									
+									// 2021-11-25：未锁定的项目也不允许阅读！
+									if(obj.data.status != 2){
+										$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="memberStatus"] div').html('<i style="color: #aaaaaa;">Please lock the project first!</i>');
+										$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<i style="color: #aaaaaa;">Please lock the project first!</i>');
+									}
+								}else{
+									$('div[lay-id="idPublicationTable' + obj.data.id + '"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a href="javascript:;" lay-event="viewPub"><i class="layui-icon">&#xe705;</i> View</a><br><a href="javascript:;" lay-event="datasetPub" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set</a>');
+								}
+								
+								// 获取Dataset数量！
+								$.ajax({
+									type: "get",
+									url: "/formsItemsData/getBatchCount",
+									async: true,
+									contentType: "application/json; charset=utf-8",
+									data: {projectId: obj.data.id, pmid: item.pmid, date: new Date()},
+									dataType: "json",
+									success: function (res) {
+										if(res == 0){ // 没有数据的情况下，不允许下载了！
+											//$("#" + thisId).replaceWith('<a href="javascript:;" lay-event="nodata" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set (0)</a>');
+											$("#" + thisId).replaceWith('<a href="/lrDetails?pid=' + item.pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i> View</a><br>' + '<a href="javascript:;" lay-event="nodata" id="' + thisId + '"><i class="bx bx-grid"></i> Data Set (0)</a>'); // 2021-12-29（V0022-01.01.06-07）：加上直接阅读的功能！
+										}else{ // 有数据的情况下，显示数字并允许下载！
+											$("#" + thisId).append(" (" + res + ")");
+										}
+									}
+								});
+							});
+						}
+					});
+					/* 表格搜索 */
+					form.on('submit(tableSearchPub' + obj.data.id + ')', function (dataPubSearch) {
+						insTbPub.reload({where: dataPubSearch.field, page: {curr: 1}});
+						return false;
+					});
+					/* 表格排序事件 */
+					table.on('sort(idPublicationTable' + obj.data.id + ')', function(pubObj){
+						table.reload('idPublicationTable' + obj.data.id, {
+							initSort: pubObj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+							where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+								sortBy: pubObj.field, // 排序字段！
+								orderBy: pubObj.type // 排序方式！
+							}
+						});
+					});
+					/* 表格工具条点击事件 */
+					table.on('tool(idPublicationTable' + obj.data.id + ')', function (pubObj) {
+						/* 数据集 */
+						if (pubObj.event === 'datasetPub') {
+							
+							//var datasetUrlPub = "/formsItemsData/exportData?projectId=" + obj.data.id + "&formId=" + obj.data.formId + "&pmid=" + pubObj.data.pmid;
+							//window.open(datasetUrlPub);
+							
+							// 2021-11-30（V0008-01.00.05-09）：变更为弹窗展示！
+							var layDataViewerIndex = admin.open({
+								title: '<i class="bx bx-grid"></i> Data Viewer',
+								url: 'lrDataViewer',
+								area: ['100%', '100%'],
+								offset: '0', // 距离顶部位置！
+								scrollbar: false, // 弹窗打开后，禁用原页面的浏览器滚动条，只显示弹窗的滚动条！
+								data: { data: {projectId: obj.data.id, formId: obj.data.formId, pmid: pubObj.data.pmid} },	 // 传递数据到表单页面
+								end: function () {
+									// 2021-11-30（V0008-01.00.05-09）：关掉弹窗后暂时啥也不干！
+								},
+								success: function (layero, dIndex) {
+									// 弹窗超出范围不出现滚动条
+									//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+									//$(layero).find('[lay-submit]').focus();
+								}
+							});
+							
+						}
+						/* 阅读 */
+						if (pubObj.event === 'readPub') {
+							window.open(
+								"./lrDetails?pi=" + obj.data.id + 
+								"&pn=" + obj.data.projectName + 
+								"&fi=" + obj.data.formId + 
+								"&li=" + obj.data.libraryId + 
+								"&ln=" + obj.data.libraryName + 
+								"&mis=" + obj.data.memberIds + 
+								"&t=0" +
+								"&pid=" + pubObj.data.pmid +
+								"&pcid=" + pubObj.data.pmcid
+							);
+						}
+						/* 审核 */
+						if (pubObj.event === 'reviewPub') {
+							window.open(
+								"./lrDetails?pi=" + obj.data.id + 
+								"&pn=" + obj.data.projectName + 
+								"&fi=" + obj.data.formId + 
+								"&li=" + obj.data.libraryId + 
+								"&ln=" + obj.data.libraryName + 
+								"&mis=" + obj.data.memberIds + 
+								"&t=1" +
+								"&pid=" + pubObj.data.pmid +
+								"&pcid=" + pubObj.data.pmcid
+							);
+						}
+						/* 查看 */
+						if (pubObj.event === 'viewPub') {
+							window.open(
+								"./lrDetails?pi=" + obj.data.id + 
+								"&pn=" + obj.data.projectName + 
+								"&fi=" + obj.data.formId + 
+								"&li=" + obj.data.libraryId + 
+								"&ln=" + obj.data.libraryName + 
+								"&mis=" + obj.data.memberIds + 
+								"&t=2" +
+								"&pid=" + pubObj.data.pmid +
+								"&pcid=" + pubObj.data.pmcid
+							);
+						}
+					});
+				}
+			});
+		
+			/* 表格头工具栏点击事件 */
+			table.on('toolbar(dataTable)', function (obj) {
+				if (obj.event === 'add') { // 添加
+					showAddOrUpdateModel();
+				}
+			});
+			
+		});
+		
+		// 显示表单弹窗
+		function showAddOrUpdateModel(data) {
+			data = data == null ? {} : data;
+			var layIndex = admin.open({
+				title: (data && data.data && data.data.id ? '<i class="layui-icon">&#xe642;</i> Edit' : '<i class="layui-icon">&#xe654;</i> Add') + ' Project',
+				url: 'lrProjectForm',
+				area: '800px',
+				offset: '100px', // 距离顶部位置！
+				data: { data: data.data }, // 传递数据到表单页面
+				end: function () {
+					insTb.reload(); // 只要关闭弹窗就刷新表格！
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+		
+		// 封存！
+		function funcLock(thisObj){
+			layer.confirm('Are you sure to lock this collection?', {
+				icon: 3,
+				btn: ['Yes','Cancel'],
+				title: 'Confirm'
+			}, function (index) {
+				layui.jquery.ajax({
+					type: "post",
+					url: "/projects/seal",
+					timeout: 60000, // 超时时间设置，单位毫秒！
+					data: JSON.stringify({id: thisObj.data.id}),
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function (res) {
+						layer.msg(res.message);
+						insTb.reload(); // 成功刷新表格
+					}
+				});
+				layer.close(index);
+			});
+		}
+		
+		// 删除！
+		function funcDelete(thisObjId){
+			var confirmIndex = layer.confirm('Are you sure to delete this project?', {
+				skin: 'layui-layer-admin',
+				shade: .1,
+				btn: ['Yes', 'Cancel'],
+				title: 'Confirm'
+			}, function () {
+				layer.close(confirmIndex);
+				admin.req('projects/delete', JSON.stringify([{'id': thisObjId}]), function(res){
+					if(res.code == 500){
+						layer.msg(res.message);
+					}else{
+						insTb.reload();
+					}
+				}, 'post');
+			});
+		}
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<div class="layui-fluid">
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<!-- 数据表格 -->
+			<table id="dataTable" lay-filter="dataTable"></table>
+		</div>
+	</div>
+</div>
+
+<form id="commentsIndexForm" lay-filter="commentsIndexForm" class="layui-form model-form">
+	<input name="pmid" type="hidden"/>
+</form>
+
+<script>
+	layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var table = layui.table;
+		var tableX = layui.tableX;
+		var admin = layui.admin;
+		var form = layui.form;
+		var notice = layui.notice;
+		var xnUtil = layui.xnUtil;
+		
+		// 数据回显！
+		var editData = admin.getLayerData('#commentsIndexForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('commentsIndexForm', editData);
+		}
+
+		/* 渲染表格 */
+		var insTbComments = tableX.render({
+			elem: '#dataTable',
+			url: '/funcComments/page',
+			page: true,
+			toolbar: ['<p>',
+				'<button lay-event="add" class="layui-btn layui-btn-sm icon-btn"><i class="layui-icon">&#xe654;</i>Add Comment</button>&nbsp;',
+				'</p>'].join(''),
+			defaultToolbar: [],
+			cellMinWidth: 100,
+			where: {
+				pmid: editData.pmid
+			},
+			cols: [
+				[
+					{field: 'pmid', title: 'PMID', sort: false, hide: true},
+					{field: 'comments', title: 'Comment Content', sort: false},
+					{field: 'createTime', title: 'Comment Time', align: 'center', sort: false, width: 180, minWidth: 180, templet: function (d) {
+						var strContent = d.createTime + " (UTC+8)";
+						return strContent;
+					}}
+				]
+			],
+			done: function(res, curr, count) {
+				xnUtil.tableDone(insTbComments, res, curr, count);
+			}
+		});
+
+		/* 表格排序事件 */
+		table.on('sort(dataTable)', function(obj){
+			table.reload('dataTable', {
+				initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+				where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+					sortBy: obj.field, // 排序字段！
+					orderBy: obj.type // 排序方式！
+				}
+			});
+		});
+
+		/* 表格头工具栏点击事件 */
+		table.on('toolbar(dataTable)', function (obj) {
+			if (obj.event === 'add') { // 添加
+				showAddOrUpdateModel();
+			}
+		});
+
+		// 显示表单弹窗
+		function showAddOrUpdateModel() {
+			var data = {pmid: editData.pmid};
+			var layIndex = admin.open({
+				title: 'Comment',
+				url: '/funcComments/form',
+				area: '600px',
+				offset: '20px', // 定义top坐标！
+				data: { data: data }, // 传递数据到表单页面
+				end: function () {
+					var layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) { // 判断表单操作成功标识
+						insTbComments.reload(); // 成功刷新表格
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+	});
+</script>

@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Search</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<!-- Page Specific CSS Files -->
+	<link rel="stylesheet" th:href="@{/assets/module/hjf-ptc/css/style.css}" media="all">
+	<link rel="stylesheet" th:href="@{/assets/module/hjf-ptc/css/fontawesome-all.min.css}" media="all">
+	
+	<style type="text/css">
+	/* 检索框 */
+	.lrSearch-search-parent {
+		padding: 0 0 10px 0 !important;
+		z-index: 10; /* 大于下方块的，但是要小于导航条的 */
+		border-bottom: 1px #F5F5F5 solid;
+	}
+	.lrSearch-search .layui-form > .layui-form-item {
+		position: relative;
+	}
+	.lrSearch-search .layui-form-select { /* 下拉框 */
+		width: 135px;
+	}
+	.lrSearch-search .layui-form-select .layui-input { /* 下拉框 */
+		height: 40px !important;
+		line-height: 40px;
+		border-radius: 6px 0px 0px 6px !important;
+		border-right: 1px #F5F5F5 solid;
+	}
+	.lrSearch-search .layui-input-icon-group > .layui-icon {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 20px;
+		color: #909399;
+		position: absolute;
+		left: 135px;
+		top: 0;
+		text-align: center;
+		z-index: 10000;
+	}
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input {
+		height: 40px;
+		line-height: 40px;
+		border-left: none;
+		border-right: none;
+		border-radius: 0px !important;
+		position: absolute;
+		top: 0;
+		left: 135px;
+		width: calc( 100% - 235px );
+	}
+	.lrSearch-search #idLitKeyword {
+		padding-left: 44px;
+	}
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input:hover,
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input:focus,
+	.lrSearch-search .layui-form-select .layui-input:hover,
+	.lrSearch-search .layui-form-select .layui-input:focus {
+		border-color: #e6e6e6 !important;
+	}
+	.lrSearch-search #idSubmit{
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 0px 6px 6px 0px !important;
+		border-left: 1px #F5F5F5 solid;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 14px !important;
+		background-color: #0299CC;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.lrSearch-search #idSubmit:hover{
+		background-color: #0299CC !important;
+	}
+	
+	/* 检索示例 */
+	.lrSearch-examples{
+		font-size: 12px;
+		margin: 8px 0 5px 2px;
+		width: calc( 100% - 2px );
+		font-style: italic;
+	}
+	.lrSearch-examples span{
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	
+	/* 检索信息展示 */
+	.lrSearch-info {
+		font-size: 12px;
+		margin: 0 5px 10px 0;
+	}
+	.lrSearch-info .card-title{
+		min-width: 100px;
+		text-align: justify;
+		line-height: 24px;
+		margin-top: 5px;
+	}
+	.lrSearch-info .concept {
+		/*float: left;*/
+		margin-right: 10px;
+		padding-left: 5px;
+		background-color: #fff;
+		line-height: 22px;
+	}
+	.lrSearch-info .concepts-menu {
+		margin: 0;
+	}
+	.lrSearch-info hr {
+		height: 1px;
+		border: none;
+		background-color: #E6E6E6;
+		margin: 10px 0 8px 0;
+	}
+	
+	/* 检索结果 - 左侧 */
+	.lrSearch-result-left{
+		padding: 10px 20px 20px 0 !important;
+		width: 270px !important;
+	}
+	.lrSearch-result-left #summary .side-table-content1 {
+		font-size: 11px;
+		background-color: #fff;
+		line-height: 12px;
+	}
+	.lrSearch-result-left #summary .annotations-table-view {
+		overflow: auto;
+		height: auto;
+		border-top: 0px;
+		padding-top: 15px;
+		margin-left: 5px;
+	}
+	.lrSearch-result-left #idSideTableContent {
+		overflow: auto;
+		height: calc( 100% - 0px );
+		
+		/* 隐藏滚动条 */
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE 10+ */
+	}
+	.lrSearch-result-left #idSideTableContent::-webkit-scrollbar { 
+		width: 0 !important;
+		display: none; /* Chrome Safari */
+	}
+	.lrSearch-result-left #filterText {
+		width: 100%;
+		background-color: transparent;
+		border-left: none;
+		border-right: none;
+		border-top: none;
+		border-bottom: 1px solid #E6E6E6;
+		padding: 0 15px 5px 4px;
+		font-size: 12px;
+		line-height: 18px;
+		margin: 0;
+	}
+	.lrSearch-result-left .fa-times {
+		width: 12px;
+		height: 12px;
+		line-height: 12px;
+		font-size: 12px;
+		color: #E4E6E7;
+		position: absolute;
+		right: 5px;
+		top: 12px;
+		text-align: center;
+		z-index: 10000;
+		display: none;
+	}
+	.lrSearch-result-left #idGroupControls,
+	.lrSearch-result-left #idSortControls {
+		float: left;
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid #E6E6E6;
+		padding: 5px 2px;
+		font-size: 12px;
+		line-height: 22px;
+		color: #444;
+		margin: 0;
+	}
+	.lrSearch-result-left #idGroupControls{
+		width: 53%;
+	}
+	.lrSearch-result-left #idSortControls{
+		width: 47%;
+	}
+	.lrSearch-result-left .annType{
+		text-align: right;
+	}
+	.lrSearch-result-left #summary .row .col {
+		float: left;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 .75rem;
+		min-height: 1px;
+	}
+	.lrSearch-result-left #summary .card {
+		position: absolute;
+		z-index: 999;
+		margin-top: 0;
+		background-color: #fff;
+	}
+	.lrSearch-result-left #summary .row::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	/* 检索结果 - 右侧 */
+	.lrSearch-result-right{
+		padding: 20px 0 !important;
+		font-size: 12px;
+		width: calc( 100% - 270px ) !important;
+	}
+	.lrSearch-result-right #idDivNoResult{
+		width: 100%;
+		margin-top: 50px;
+		text-align: center;
+	}
+	.lrSearch-result-right #idDivLoading{
+		width: 100%;
+		margin-top: 0;
+		text-align: center;
+	}
+	.lrSearch-result-right #idDivNoResult p{
+		color: #DBDBDB;
+	}
+	.lrSearch-result-right .idResultInfoP{
+		display: none;
+		margin: 0 0 10px 40px;
+		width: calc( 100% - 40px );
+		font-style: italic;
+	}
+	.lrSearch-result-right .idResultInfoP2{
+		margin: 20px 0 10px 40px !important;
+		text-align: right;
+	}
+	.lrSearch-result-right .idResultInfoType1{
+		margin: 0;
+		width: 100%;
+		font-style: italic;
+	}
+	.lrSearch-result-right .result-num{
+		width: 40px !important;
+		vertical-align: top !important;
+		line-height: 22px; /* 因为这里字体跟标题相差了4px，需要通过line-height调整高度 */
+	}
+	.lrSearch-result-right .result-title{
+		font-size: 16px !important;
+		color: #663399 !important;
+	}
+	.lrSearch-result-right .nocontent{
+		font-size: 16px !important;
+		color: grey !important;
+		font-style: italic !important;
+	}
+	.lrSearch-result-right .result-journal,
+	.lrSearch-result-right .result-pmid{
+		font-size: 14px !important;
+		color: #0071bc !important;
+	}
+	.lrSearch-result-right .result-abstract{
+		text-align: justify !important;
+		line-height: 20px !important;
+	}
+	.lrSearch-result-right .lookmoretop{
+		overflow : hidden;  
+		text-overflow: ellipsis;  
+		display: -webkit-box;  
+		-webkit-line-clamp: 3;  
+		-webkit-box-orient: vertical;
+		/*height: 60px;*/ /* 这个不能设置，否则当内容不足3行的时候也会显示这么高 */ 
+	}
+	.lrSearch-result-right .subItems{
+		color: #0299CC;
+	}
+	.lrSearch-result-right .loadingGif{
+		width: 20px;
+		margin-top: -4px;
+	}
+	.lrSearch-result-right #idBtnShowMore {
+		background-color: #0299CC;
+		border-color: #0299CC;
+		height: 40px;
+		color: white;
+		margin-top: 10px;
+		margin-left: 46px;
+		width: calc( 100% - 46px );
+	}
+	.lrSearch-result-right .layui-badge {
+		height: 20px;
+		line-height: 18px;
+	}
+	.lrSearch-result-right .layui-badge-rim {
+		height: 20px;
+		line-height: 16px;
+	}
+	.lrSearch-result-right .pubLevel {
+		cursor: pointer;
+	}
+	.lrSearch-result-right .refCitedbySimiliar {
+		background-color: #8f65c6 !important;
+	}
+	
+	/* 文献相关文献列表部分 */
+	.lrSearch-result-right .classRelatedItems{
+		border: #1d9cd6 dashed 1px;
+		background-color: #FDFBFF;
+		border-radius: 6px;
+	}
+	.lrSearch-result-right .classRelatedItems .result-functions{
+		margin-bottom: 10px;
+	}
+	.lrSearch-result-right .classRelatedItemsForR::before,
+	.lrSearch-result-right .classRelatedItemsForR::after,
+	.lrSearch-result-right .classRelatedItemsForC::before,
+	.lrSearch-result-right .classRelatedItemsForC::after,
+	.lrSearch-result-right .classRelatedItemsForS::before,
+	.lrSearch-result-right .classRelatedItemsForS::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 12px dashed transparent;
+		border-bottom-color: #1d9cd6;
+		left: 20px;
+		top: -24px;
+	}
+	.lrSearch-result-right .classRelatedItemsForR::after,
+	.lrSearch-result-right .classRelatedItemsForC::after,
+	.lrSearch-result-right .classRelatedItemsForS::after {
+		border-bottom-color: #FDFBFF; /* 同classRelatedItems */
+		top: -23px;
+	}
+	
+	/* 标准实体确认部分 */
+	.lrSearch-result-right .console-app-group {
+		padding: 16px;
+		border-radius: 4px;
+		text-align: center;
+		background-color: #fff;
+		cursor: pointer;
+		display: block;
+		overflow: auto;
+		height: 136px;
+		border: 1px solid #e1bee7;
+		
+		/* 隐藏滚动条 */
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE 10+ */
+	}
+	.lrSearch-result-right .disease .console-app-group,
+	.lrSearch-result-right .cancer .console-app-group {
+		border: 1px solid #ffe0b2;
+	}
+	.lrSearch-result-right .chemical .console-app-group,
+	.lrSearch-result-right .drug .console-app-group {
+		border: 1px solid #c8e6c9;
+	}
+	.lrSearch-result-right .console-app-group:hover {
+		box-shadow: 0 0 15px rgba(0, 0, 0, .08);
+	}
+	.lrSearch-result-right .console-app-group .console-app-icon {
+		width: 32px;
+		height: 32px;
+		line-height: 32px;
+		margin-bottom: 6px;
+		display: inline-block;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		font-size: 32px;
+		color: #673ab7;
+	}
+	.lrSearch-result-right .console-app-group .console-app-id {
+		font-weight: bold;
+		line-height: 24px;
+		color: #673ab7;
+	}
+	.lrSearch-result-right .console-app-group .console-app-name {
+		font-weight: normal;
+		line-height: 20px;
+		color: #673ab7;
+	}
+	.lrSearch-result-right .console-app-group .console-app-syn {
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 14px;
+		margin-top: 10px;
+	}
+	.lrSearch-result-right .disease .console-app-group .console-app-icon,
+	.lrSearch-result-right .disease .console-app-group .console-app-id,
+	.lrSearch-result-right .disease .console-app-group .console-app-name,
+	.lrSearch-result-right .cancer .console-app-group .console-app-icon,
+	.lrSearch-result-right .cancer .console-app-group .console-app-id,
+	.lrSearch-result-right .cancer .console-app-group .console-app-name {
+		color: #ff9800;
+	}
+	.lrSearch-result-right .chemical .console-app-group .console-app-icon,
+	.lrSearch-result-right .chemical .console-app-group .console-app-id,
+	.lrSearch-result-right .chemical .console-app-group .console-app-name,
+	.lrSearch-result-right .drug .console-app-group .console-app-icon,
+	.lrSearch-result-right .drug .console-app-group .console-app-id,
+	.lrSearch-result-right .drug .console-app-group .console-app-name {
+		color: #4caf50;
+	}
+	
+	/* 小屏时检索结果展示 */
+	@media all and (max-width:888px) {
+		.lrSearch-result-left{
+			display: none;
+		}
+		.lrSearch-result-right{
+			width: 100% !important;
+		}
+		
+		/* 检索框 */
+		.lrSearch-search .layui-form-select { /* 下拉框 */
+			width: 100px;
+		}
+		.lrSearch-search .layui-input-icon-group > .layui-icon {
+			display: none;
+		}
+		.lrSearch-search .layui-form > .layui-form-item > .layui-input {
+			left: 100px;
+			width: calc( 100% - 166px );
+		}
+		.lrSearch-search #idLitKeyword {
+			padding-left: 8px;
+		}
+		.lrSearch-search #idSubmit{
+			width: 66px;
+		}
+	}
+	
+	/* 功能按钮上间距设置，确保换行后不黏在一起 */
+	.result-functions span{
+		margin-top: 4px;
+	}
+	
+	.layui-laypage-btn {
+		color: #666;
+		font-weight: normal;
+		margin-left: 0px !important;
+	}
+	
+	</style>
+
+</head>
+<body class="show-chemical show-gene show-disease show-mutation show-clinsig show-evidirt">
+
+	<!-- Loading -->
+	<div id="opmLoading"><img src="/assets/images/loading3.gif"></div>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li><a href="/">Home</a></li>
+					<li class="active"><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="classHero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/images/carousel/1.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Publication Search</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Publication Search</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Publication Search</h2>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+
+		<!-- ======= About Lists Section ======= -->
+		<section style="padding-top: 20px;" id="idDivContent">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-lg-12 content-item lrSearch-search-parent" data-aos="fade-up">
+						<div class="lrSearch-search">
+							<form class="layui-form">
+								<div class="layui-form-item layui-input-icon-group">
+									<i class="layui-icon layui-icon-search"></i>
+									<select id="idSearchingMode" name="searchingMode" lay-filter="filterSearchingMode">
+										<option value="local">Local Mode</option>
+										<option value="remote">Remote Mode</option>
+									</select>
+									<input class="layui-input" id="idLitKeyword" name="litKeyword" placeholder="Search Literatures Here" autocomplete="off" lay-verType="tips"/>
+									<button class="layui-btn icon-btn" id="idSubmit" lay-submit><i class="layui-icon">&#xe615;</i></button>
+									
+									<input type="hidden" id="idNumPerPage" value="10"/>
+									<input type="hidden" id="idNumRelatedItems" value="10"/>
+									<input type="hidden" id="idMatchingType" value="0"/>
+									<input type="hidden" id="idDatasetType" value="cancer"/>
+									<input type="hidden" id="idInputPubResultShowPage" value="0" />
+									<input type="hidden" id="idInputPubResultShowCount" value="0" />
+									<input type="hidden" id="idInputPubResultTotalCount" value="0" />
+								</div>
+							</form>
+						</div>
+						<div class="lrSearch-examples">
+							<b>Examples:</b> 
+							<span id="idExample1" title="Local Mode Entity-based Matching">EGFR</span> , 
+							<span id="idExample2" title="Local Mode Entity-based Matching">@GE@1956</span> , 
+							<span id="idExample3" title="Local Mode Mention-based Matching">Osimertinib</span> , 
+							<span id="idExample4" title="Remote Mode Searching">EGFR AND Lung Cancer[TITLE]</span> , 
+							<span id="idExample7" title="Local And Searching">EGFR AND Lung Cancer</span> , 
+							<!--
+							<span id="idExample5" title="Search by PMIDs">25361966 26166372 28529076 32714913 32770988</span> , 
+							-->
+							<span id="idExample5" title="Search by PMIDs">31566309 25923550 15728811 28501140</span> , 
+							<span id="idExample6" title="Search by PMCIDs">PMC4109288</span>
+						</div>
+					</div>
+
+					<div class="content-item lrSearch-result-left" data-aos="fade-up" data-aos-delay="100">
+						
+						<div class="lrSearch-info">
+							<div id="idHideWhenRemoteMode">
+								<div class="card-title"><i class='bx bx-search-alt'></i> Local Mode Matching: </div>
+								<div class="concept-switch concept" onclick="matchingType_toggle('0')"><span class="far icon" id="idMatchingTypeIcon0"></span> Entity-based Matching</div>
+								<div class="concept-switch concept" onclick="matchingType_toggle('1')"><span class="far icon" id="idMatchingTypeIcon1"></span> Mention-based Matching</div>
+								<div style="clear: both;"></div>
+								<div class="card-title"><i class='bx bx-search-alt'></i> Publication Type: </div>
+								<div class="concept-switch concept" onclick="datasetType_toggle('cancer')"><span class="far icon" id="idDatasetTypeIconCancer"></span> Cancer Related</div>
+								<div class="concept-switch concept" onclick="datasetType_toggle('all')"><span class="far icon" id="idDatasetTypeIconAll"></span> All Publications</div>
+								<div style="clear: both;"></div>
+							</div>
+							<div class="card-title"><i class='bx bx-search-alt'></i> Count Per Page: </div>
+							<div class="concept-switch concept" onclick="numPerPage_toggle(10)"><span class="far icon" id="idNumPerPageIcon10"></span> Show 10 / page</div>
+							<div class="concept-switch concept" onclick="numPerPage_toggle(20)"><span class="far icon" id="idNumPerPageIcon20"></span> Show 20 / page</div>
+							<div class="concept-switch concept" onclick="numPerPage_toggle(30)"><span class="far icon" id="idNumPerPageIcon30"></span> Show 30 / page</div>
+							<!--
+							<div class="concept-switch concept" onclick="numPerPage_toggle(50)"><span class="far icon" id="idNumPerPageIcon50"></span> 50 / page</div>
+							<div class="concept-switch concept" onclick="numPerPage_toggle(100)"><span class="far icon" id="idNumPerPageIcon100"></span> 100 / page</div>
+							-->
+							<div style="clear: both;"></div>
+							<div class="card-title"><i class='bx bx-link'></i> Count Related: </div>
+							<div class="concept-switch concept" onclick="numRelatedItems_toggle(10)"><span class="far icon" id="idNumRelatedItemsIcon10"></span> Show 10 related publications</div>
+							<div class="concept-switch concept" onclick="numRelatedItems_toggle(20)"><span class="far icon" id="idNumRelatedItemsIcon20"></span> Show 20 related publications</div>
+							<div class="concept-switch concept" onclick="numRelatedItems_toggle(30)"><span class="far icon" id="idNumRelatedItemsIcon30"></span> Show 30 related publications</div>
+							<div class="concept-switch concept" onclick="numRelatedItems_toggle(0)"><span class="far icon" id="idNumRelatedItemsIcon0"></span> Show all related publications</div>
+							<div style="clear: both;"></div><hr>
+							<div class="concepts-menu animated zoomIn" id="idDivBioConcepts">
+								<div class="card-title"><i class='bx bxs-grid' ></i> BioConcepts: </div>
+							</div>
+							<div style="clear: both;"></div>
+						</div>
+						
+						<!-- 检索结果中识别出的实体分类列表 -->
+						<div id="summary" class="summaryInSearch">
+							<div class="side-table-content1 animated zoomIn show-true" id="idSideTableContent">
+								<div class="sidebar-controls">
+									<div class="row" style="margin: 0px;">
+										<div style="padding-left: 0px; width: 100%;">
+											<input id="filterText" type="text" placeholder="Search bioconcepts..." class="annotations-filter">
+											<i onclick="clearFilter()" class="fa fa-times"></i>
+										</div>
+									</div>
+									<div class="row" style="margin: 0px;">
+										<div style="padding-left: 0px; width: 100%;">
+											<select id="idGroupControls" name="groupControls">
+												<option value="0">Group by: type</option>
+												<option value="1">Group by: section</option>
+												<option value="2">Group by: none</option>
+											</select>
+											<select id="idSortControls" name="sortControls">
+												<option value="0">Sort by: freq</option>
+												<option value="1">Sort by: offset</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="annotations-table-view">
+									<i class='ann-name'>No matched bioconcept!</i><br><br>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="content-item lrSearch-result-right" data-aos="fade-up" data-aos-delay="200">
+						
+						<p class="idResultInfoP">Search result: total count: <span class="idResultInfoTotalSpan">0</span>, displayed count: <span class="idResultInfoCountSpan">0</span>, displayed <span class="idResultInfoPageSpan">page: page 1</span>.</p>
+						
+						<div id="idDivSearchingResults" class="layui-col-space15 full-view">
+							
+							<div id="idDivNoResult">
+								<svg t="1636793952975" class="icon" viewBox="0 0 1576 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7988" width="200" height="200"><path d="M1260.533 834.866h-134.81l9.387-15.697c6.31-11.08 9.388-23.7 9.388-37.088V168.82c0-19.698-7.849-37.858-21.237-52.016-13.389-13.388-32.318-21.237-52.016-21.237H567.093c-19.698 0-37.857 7.849-52.015 21.237-14.158 14.158-21.237 32.318-21.237 52.016v32.317h-73.253c-19.698 0-37.858 7.849-52.016 21.238-14.158 14.158-22.006 32.317-22.006 52.015v612.338c0 12.62 3.078 25.238 9.387 37.088l9.388 15.697H251.92c-5.54 0-10.31 4.77-10.31 10.31 0 2.31 0.77 5.541 3.232 7.08 1.539 1.539 4.77 3.078 7.079 3.078h533.545l54.324 54.324c5.54 5.54 14.158 9.387 22.006 9.387 7.849 0 16.62-3.078 22.007-9.387 10.31-10.311 11.85-26.008 4.77-38.627l-9.387-16.62h129.27c5.54 0 10.31-4.771 10.31-10.311s-4.77-10.311-10.31-10.311h-30.01l9.388-15.697c6.31-11.08 9.388-23.7 9.388-37.088v-32.318h263.156c5.54 0 10.31-4.77 10.31-10.31 0.154-4.156-4.616-8.157-10.156-8.157z m-283.624 52.016c0 29.086-23.7 52.785-52.785 52.785h-70.945l-73.252-74.022c-7.849-7.849-19.699-11.08-30.01-7.849l-6.309 1.54-30.778-30.78 5.54-7.078c42.628-57.556 33.856-138.657-19.699-186.056-53.554-47.245-135.579-44.167-186.055 7.079-50.477 50.476-52.786 132.347-6.31 186.825 46.475 53.555 127.73 63.096 184.363 20.468l7.08-5.54 30.778 30.778-1.54 6.31c-3.077 11.08 0 22.93 7.85 30.778l29.085 29.086H419.665c-29.086 0-52.786-23.7-52.786-52.785V273.775c0-28.317 22.93-52.016 51.247-52.016h507.537c28.316 0 51.246 23.7 51.246 52.016v613.107z m-286.086-65.404c-22.93 22.93-52.016 33.856-82.025 33.856s-59.094-11.08-82.024-33.856c-21.853-21.7-34.01-51.247-33.857-82.025 0-30.779 11.85-60.634 33.857-82.025 22.006-22.006 51.246-33.856 82.024-33.856s59.864 11.85 82.025 33.856c22.007 22.007 33.856 51.246 33.856 82.025s-11.85 60.018-33.856 82.025z m433.36-40.166c0.001 29.085-23.698 52.785-52.784 52.785h-74.022V274.544c0-19.698-7.849-37.857-21.238-52.016-13.388-13.388-32.317-21.237-52.015-21.237H514.308v-31.548c0-29.085 23.7-52.785 52.785-52.785h504.46c29.085 0 52.785 23.7 52.785 52.785v611.569zM167.436 940.436H41.397c-5.54 0-10.31 4.771-10.31 10.311 0 3.078 0.769 5.54 3.077 7.08 1.539 1.538 4.77 3.077 7.08 3.077H167.28c5.54 0 10.31-4.77 10.31-10.31s-3.846-10.158-10.156-10.158z m0 0" p-id="7989" fill="#dbdbdb"></path><path d="M482.76 327.33h230.993c5.54 0 10.31-4.772 10.31-10.312s-4.77-10.31-10.31-10.31H482.76c-5.54 0-10.31 4.77-10.31 10.31 0 2.309 0.77 5.54 3.078 7.08 1.692 2.462 4.77 3.231 7.232 3.231z m336.563 85.102H482.76c-5.54 0-10.31 4.77-10.31 10.31 0 3.078 0.77 5.54 3.078 7.08 1.538 1.538 4.77 3.077 7.079 3.077h336.562c5.54 0 10.311-4.77 10.311-10.31 0-5.387-4.77-10.157-10.157-10.157z m-189.288 105.57H482.607c-5.54 0-10.311 4.77-10.311 10.31 0 3.078 0.77 5.54 3.078 7.08 1.539 1.539 4.77 3.077 7.079 3.077h147.429c5.54 0 10.31-4.77 10.31-10.31s-4.616-10.157-10.157-10.157zM157.278 707.905h21.237c5.54 0 10.311 4.77 10.311 10.31s-4.77 10.312-10.31 10.312h-21.238v21.237c0 5.54-4.77 10.31-10.31 10.31-3.079 0-5.54-0.769-7.08-3.077-2.308-1.54-3.078-4.771-3.078-7.08V728.68h-21.39c-5.54 0-10.311-4.77-10.311-10.31s4.77-10.311 10.31-10.311h21.237v-21.237c0-5.54 4.771-10.311 10.311-10.311s10.311 4.77 10.311 10.31v21.084z m1387.032-85.102v-21.238c0-3.231-0.77-5.54-3.078-7.079-2.308-1.539-4.77-3.078-7.079-3.078-5.54 0-10.31 4.771-10.31 10.311v21.237h-21.238c-3.077 0-5.54 0.77-7.079 3.232-1.539 2.309-3.231 4.77-3.231 7.08 0 5.54 4.77 10.31 10.31 10.31h21.238v21.237c0 5.54 4.77 10.31 10.31 10.31s10.311-4.77 10.311-10.31V643.27h21.237c5.54 0 10.311-4.77 10.311-10.31s-4.77-10.311-10.31-10.311h-21.392zM267.62 47.553h31.548c8.618 0 15.697 7.079 15.697 15.697s-7.08 15.697-15.697 15.697h-31.548v31.548c0 8.618-7.08 15.697-15.697 15.697-4.001 0-7.849-1.54-11.08-4.77-3.078-2.31-4.771-6.31-4.771-11.081V79.1h-31.548c-4.001 0-7.849-1.54-11.08-4.771-3.078-2.308-4.77-6.31-4.77-11.08 0-8.618 7.078-15.697 15.696-15.697h31.548V16.005c0-8.618 7.08-15.697 15.697-15.697s15.697 7.079 15.697 15.697v31.548zM62.634 274.544c-22.93 0-43.397 11.85-54.324 31.548-11.08 19.698-11.08 44.167 0 63.096 11.08 19.698 32.318 31.548 54.324 31.548 34.626 0 63.096-28.316 63.096-63.096s-28.47-63.096-63.096-63.096z m27.547 79.562c-5.54 9.388-15.697 15.697-27.547 15.697-17.39 0-31.548-14.158-31.548-31.548s14.158-31.547 31.548-31.547c11.08 0 21.237 6.31 27.547 15.697 5.54 9.695 5.54 21.39 0 31.701z m1275.306-205.754c-22.93 0-43.397 11.85-54.324 31.548-11.08 19.698-11.08 44.167 0 63.096 11.08 19.698 32.318 31.548 54.324 31.548 34.626 0 63.096-28.316 63.096-63.096-0.154-34.626-27.7-63.096-63.096-63.096z m27.547 78.793c-5.54 9.388-15.697 15.697-27.547 15.697-17.39 0-31.548-14.158-31.548-31.548s14.158-31.548 31.548-31.548c11.08 0 22.007 6.31 27.547 15.697 5.54 9.696 5.54 22.315 0 31.702z m0 0" p-id="7990" fill="#dbdbdb"></path></svg>
+								<p>Try adjusting your search or filter to find<br>what you're looking for.</p>
+							</div>
+							
+						</div>
+						
+						<p class="idResultInfoP idResultInfoP2">Search result: total count: <span class="idResultInfoTotalSpan">0</span>, displayed count: <span class="idResultInfoCountSpan">0</span>, displayed <span class="idResultInfoPageSpan">page: page 1</span>.</p>
+						
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End About Lists Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer"></footer><!-- End Footer -->
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+	
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<!-- Page Specific JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/module/hjf-ptc/js/jquery-3.6.0.min.js}"></script>
+	<script th:src="@{/assets/module/hjf-ptc/js/vendor.min.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+	
+	<script>
+		
+		var strDefaultPubResultHtml = $("#idDivSearchingResults").html(); // 初始化的内容！
+		var strShowMoreButtonHtml   = '<button type="button" class="layui-btn layui-btn-sm layui-btn-fluid layui-btn-primary" id="idBtnShowMore">Show More</button>';
+		var allConcepts = getAllConcepts(); // 获取全部概念类别！
+		var allPassages = []; // 当页加载的全部passages：用于左侧实体统计！
+		scrollToNodeHeight = 20; // 适用于search页面的高度！
+		var $, admin, util, xnUtil, form, formX, element, laypage, currentUser;
+		var objStoreLoadedRelatedItems = {}; // 2021-12-08（V0012-01.00.09-07）：新增：用于存储已经加载过的文献的关联文献！
+		
+		var paramKw = getQueryVariable('paramKw');
+		var paramMd = getQueryVariable('paramMd');
+		var paramEM = getQueryVariable('paramEM'); // 2021-11-12：本地检索模式：0Entity-based 1Mention-based！
+		var paramRe = getQueryVariable('paramRe'); // 2021-12-08：关联文献显示前10条或者显示全部！
+		var paramDt = getQueryVariable('paramDt'); // 2021-10-31：数据集类型：癌症或全部！
+		var paramLi = getQueryVariable('paramLi'); // 2021-10-31：每页条数！
+		var paramPa = getQueryVariable('paramPa'); // 2022-03-17：页码！
+		var totalCount = 0;
+		var paramRestart = ""; // 2022-03-18（V0029-01.02.06-10）：用于解决远程检索时提示“No BioC Available”的问题！
+		
+		layui.use(['admin', 'util', 'xnUtil', 'form', 'formX', 'element', 'laypage'], function () {
+			$ = layui.jquery;
+			admin = layui.admin;
+			util = layui.util;
+			xnUtil = layui.xnUtil;
+			form = layui.form;
+			formX = layui.formX;
+			element = layui.element;
+			laypage = layui.laypage;
+			
+			$("#loading").show();//显示loading
+	        setTimeout("$('#loading').hide();", 5000);//隐藏loading
+			
+			// 获取当前登录用户！
+			currentUser = getCurrentLoginUser();
+			
+			//设置核心版块的最小高度！
+			$("#idDivContent").css("min-height", getClientHeight()-191);
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			// 2022-03-17（V0029-01.02.06-09）：根据URL参数执行检索！
+			funcFromParamsToSearch();
+			function funcFromParamsToSearch(){
+				
+				paramMd = paramMd == null || paramMd == "" ? "local" : paramMd; // 默认local模式！
+				paramEM = paramEM == null || paramEM == "" ? "0" : paramEM; // 默认的本地检索模式：0Entity-based！只有paramMd为local的情况才有效！
+				paramRe = paramRe == null || paramRe == "" ? "10" : paramRe; // 默认10条！
+				paramDt = paramDt == null || paramDt == "" ? "cancer" : paramDt; // 默认癌症：cancer和all都是小写！
+				paramLi = paramLi == null || paramLi == "" ? "10" : paramLi; // 默认10条！
+				paramPa = paramPa == null || paramPa == "" ? "0" : paramPa; // 默认从0页开始！
+				$("#idSearchingMode").val(paramMd);
+				$("#idMatchingType").val(paramEM);
+				$("#idNumPerPage").val(paramLi);
+				$("#idNumRelatedItems").val(paramRe); // 2021-12-08：关联文献默认显示条数！
+				$("#idDatasetType").val(paramDt);
+				$("#idInputPubResultShowPage").val(0);
+				$("#idNumPerPageIcon" + $("#idNumPerPage").val()).parent().click(); // 当前条数的回显！
+				$("#idNumRelatedItemsIcon" + $("#idNumRelatedItems").val()).parent().click(); // 当前条数的回显！
+				$("#idDatasetTypeIcon" + paramDt.replace(paramDt[0], paramDt[0].toUpperCase())).parent().click(); // 当前数据集类型的回显！
+				$("#idMatchingTypeIcon" + paramEM).parent().click(); // 当前数据集类型的回显！
+				form.render(); // 确保下拉菜单更新！
+				if(paramKw != null && paramKw != ""){
+					$("#idLitKeyword").val(paramKw);
+					funcInitiateSearching(0);
+				}
+				
+			}
+			
+			// 2021-12-29（V0022-01.01.06-06）：监听检索模式变更！
+			funcCheckMode(paramMd); // 页面初始化后的检索模式！
+			form.on('select(filterSearchingMode)', function(data){
+				funcCheckMode(data.value);
+			});
+			function funcCheckMode(strMode){
+				//console.log(strMode);
+				if(strMode === "remote") {
+					$("#idHideWhenRemoteMode").hide();
+				}else{
+					$("#idHideWhenRemoteMode").show();
+				}
+			}
+			
+			// 监听文本框提交事件！
+			$("#idLitKeyword").keydown(function (e) {
+				if (e.which == 13) {
+					funcInitiateSearchingRefresh();
+					return false; // 经测试，这个不能少，否则可能导致页面刷新：至于为啥，目前还不清楚！
+				}
+			});
+			
+			// 监听按钮点击事件！
+			$("#idSubmit").click(function () {
+				funcInitiateSearchingRefresh();
+				return false; // 经测试，这个不能少，否则可能导致页面刷新：至于为啥，目前还不清楚！
+			});
+			
+			// 监听各种示例点击事件！
+			$("#idExample1").click(function(){
+				window.location.href = '/lrSearch?paramKw=' + $("#idExample1").html() + 
+					'&paramMd=' + 'local' +
+					'&paramEM=' + '0' +
+					'&paramRe=' + '10' +
+					'&paramDt=' + 'cancer' +
+					'&paramLi=' + '10';
+			});
+			$("#idExample2").click(function(){
+				window.location.href = '/lrSearch?paramKw=' + $("#idExample2").html() + 
+					'&paramMd=' + 'local' +
+					'&paramEM=' + '0' +
+					'&paramRe=' + '10' +
+					'&paramDt=' + 'cancer' +
+					'&paramLi=' + '10';
+			});
+			$("#idExample3").click(function(){
+				window.location.href = '/lrSearch?paramKw=' + $("#idExample3").html() + 
+					'&paramMd=' + 'local' +
+					'&paramEM=' + '1' +
+					'&paramRe=' + '10' +
+					'&paramDt=' + 'cancer' +
+					'&paramLi=' + '10';
+			});
+			$("#idExample4").click(function(){
+				window.location.href = '/lrSearch?paramKw=' + $("#idExample4").html() + 
+					'&paramMd=' + 'remote' +
+					'&paramEM=' + '1' +
+					'&paramRe=' + '10' +
+					'&paramDt=' + 'all' +
+					'&paramLi=' + '10';
+			});
+			$("#idExample5").click(function(){
+				window.location.href = '/lrSearch?paramKw=' + $("#idExample5").html() + 
+					'&paramMd=' + 'local' +
+					'&paramEM=' + '0' +
+					'&paramRe=' + '10' +
+					'&paramDt=' + 'all' +
+					'&paramLi=' + '10';
+			});
+			$("#idExample6").click(function(){
+				window.location.href = '/lrSearch?paramKw=' + $("#idExample6").html() + 
+					'&paramMd=' + 'local' +
+					'&paramEM=' + '0' +
+					'&paramRe=' + '10' +
+					'&paramDt=' + 'all' +
+					'&paramLi=' + '10';
+			});
+			$("#idExample7").click(function(){
+				window.location.href = '/lrSearch?paramKw=' + $("#idExample7").html() + 
+					'&paramMd=' + 'local' +
+					'&paramEM=' + '1' +
+					'&paramRe=' + '10' +
+					'&paramDt=' + 'all' +
+					'&paramLi=' + '10';
+			});
+			
+			// 点击执行检索（非后续页面的检索）：真正检索前的预处理！
+			function funcInitiateSearching(){
+				allPassages = [];
+				loadSummaryConcepts(allPassages);
+				$("#idInputPubResultShowPage").val(0); // 页码归0！
+				paramRestart = ""; // 2022-03-18（V0029-01.02.06-10）：清空restart！
+				funcRealSearching();
+			}
+			function funcInitiateSearchingRefresh(){
+				paramKw = $("#idLitKeyword").val().trim();
+				paramMd = $("#idSearchingMode").val();
+				paramEM = $("#idMatchingType").val();
+				paramRe = $("#idNumRelatedItems").val();
+				paramDt = $("#idDatasetType").val();
+				paramLi = $("#idNumPerPage").val();
+				paramPa = $("#idInputPubResultShowPage").val();
+				window.location.href = '/lrSearch?paramKw=' + paramKw + 
+					'&paramMd=' + paramMd +
+					'&paramEM=' + paramEM +
+					'&paramRe=' + paramRe +
+					'&paramDt=' + paramDt +
+					'&paramLi=' + paramLi;
+			}
+			
+			// 真正执行检索的函数！
+			function funcRealSearching(){
+				
+				// 2021-12-08：每次执行检索时，隐藏可能已经展示了的检索提示信息！
+				$(".idResultInfoP").hide();
+				
+				// 2021-12-08：每次执行检索时，需要先清空已经存储的关联文献，避免不同批次检索结果相同序号的关联文献错乱！
+				objStoreLoadedRelatedItems = {};
+				
+				// 获取参数！
+				let strKw   = $("#idLitKeyword").val().trim(); // 关键词！
+				let strMode = $("#idSearchingMode").val(); // 检索模式！
+				let strEM   = $("#idMatchingType").val(); // 本地检索模式：EntityBased或MentionBased！
+				let intPage = Number($("#idInputPubResultShowPage").val()) + 1; // 检索页码！
+				
+				// 检索关键词判断！
+				if(strKw == null || strKw == ""){
+					paramKw = strKw;
+					layer.msg("Please input keyword!");
+					$("#idLitKeyword").focus();
+					return false;
+				}else if(strKw.length < 2){
+					layer.msg("Keyword should not less than 2 characters, please have a check!");
+					return false;
+				}
+				
+				// 检索第一页的情况下清空已有检索段落！
+				if(intPage === 1){
+					allPassages = [];
+					loadSummaryConcepts(allPassages);
+				}
+				
+				// 构建检索URL！
+				let strUrlBase = strMode == "local" ? (strEM == 0 ? strApiKwSearching : strApiKwQuery) : strApiKwSearching; // 只有本地MentionBased才选择strApiKwQuery，其他都选择strApiKwSearching！
+				let thisUrl	= strUrlBase + strKw + "&m=" + strMode + "&p=" + intPage + "&l=" + $("#idNumPerPage").val() + "&t=" + $("#idDatasetType").val();
+				// 2022-03-18（V0029-01.02.06-10）：用于解决远程检索时提示“No BioC Available”的问题！
+				if(paramRestart != null && paramRestart != "") thisUrl += "&restart=" + paramRestart;
+				
+				// 执行检索！
+				if(intPage === 1) {
+					$("#idDivSearchingResults").html('<div id="idDivLoading" class="animated zoomIn"><img src="/assets/images/loading2.gif" width="300"></div>'); // loading！
+				}
+				$("#opmLoading").show();
+				$.ajax({
+					type: "get",
+					url: thisUrl,
+					dataType: "json",
+					timeout: 6000000, // 超时时间设置，单位毫秒！
+					async: true,
+					success: function(result){
+						$("#opmLoading").hide();
+						
+						// 更新检索结果总数量！
+						totalCount = result.count;
+						
+						// 特殊检索结果情况的处理！
+						if(!result.success || result.data == null){
+							layer.msg("Searching failure...");
+							return false;
+						}
+						
+						// 2022-03-18（V0029-01.02.06-10）：用于解决远程检索时提示“No BioC Available”的问题！
+						paramRestart = result.restart != null ? result.restart : "";
+						
+						// 数量和页码！
+						let intAlreadyShowPubResultCount = result.type == 1 || intPage == 1 ? 0 : Number($("#idInputPubResultShowCount").val());
+						let intShowCount = intAlreadyShowPubResultCount + result.data.length; // 计算本次检索之后的文献数量！
+						$("#idInputPubResultShowCount").val(intShowCount); // 更新当前显示的数量！
+						$("#idInputPubResultShowPage").val(result.type == 1 ? 0 : intPage); // 更新当前显示的页码！
+						$("#idInputPubResultTotalCount").val(result.type == 1 ? 0 : result.count); // 更新符合检索条件的文献数量！
+						
+						// 结果数量为0的特殊处理！
+						if(result.data.length === 0){
+							$(".idResultInfoP").hide(); // 检索信息提示需要继续隐藏！
+							$("#idDivSearchingResults").html(strDefaultPubResultHtml); // 检索结果为空的显示！
+							return false;
+						}
+						
+						// 分类处理！
+						if(result.type === 1){ // 2021-10-29：返回的是标准实体！
+							
+							let thisStandardItemConfirmHtml = "<p class='idResultInfoType1'>Did you means to search any of the following items?</p>"
+							for(let k = 0; k < result.data.length; k++){
+								
+								// 预处理！
+								let thisSynonyms = result.data[k].synonyms == null ? "" : result.data[k].synonyms.replace(/^\|/g, "").replace(/\|$/g, "").replace(/\|/g, " | ").replace(new RegExp($("#idLitKeyword").val(), 'ig'), '<i style="color: red;">' + $("#idLitKeyword").val() + '</i>');
+								let thisEntryId = "";
+								let thisLabel = result.data[k].label.toLowerCase();
+								if(thisLabel == "disease"){
+									thisEntryId = "@CA@" + result.data[k].identifier;
+								}else if(thisLabel == "gene"){
+									thisEntryId = "@GE@" + result.data[k].identifier;
+								}else if(thisLabel == "chemical"){
+									thisEntryId = "@DR@" + result.data[k].identifier;
+								}
+								
+								// 生成HTML！
+								let strThisEntry = 
+									'<div class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg3 layui-col-xl2 ' + thisLabel + '" id="idDivOutConsoleAppId' + k + '">' +
+									'	<div class="console-app-group">' +
+									'		<i class="console-app-icon layui-icon layui-icon-search"></i>' +
+									'		<div class="console-app-id" id="idConsoleAppId' + k + '">' + thisEntryId + '</div>' +
+									'		<div class="console-app-name">' + result.data[k].symbol + '</div>' +
+									'		<div class="console-app-syn">' + thisSynonyms + '</div>' +
+									'	</div>' +
+									'</div>';
+								thisStandardItemConfirmHtml += strThisEntry;
+								
+							}
+							
+							// 更新检索结果div！
+							$("#idDivSearchingResults").html(thisStandardItemConfirmHtml);
+							
+							// 监听点击检索事件：监听必须在元素添加到DOM之后才能有效！
+							for(let k = 0; k < result.data.length; k++){
+								$("#idDivOutConsoleAppId" + k).click(function (e) {
+									$("#idSearchingMode").val("local");
+									$("#idLitKeyword").val($('#idConsoleAppId' + k).html());
+									paramRestart = ""; // 2022-03-18（V0029-01.02.06-10）：清空restart！
+									funcRealSearching();
+									return false;
+								});
+							}
+							
+							// 检索结果信息描述！
+							$(".idResultInfoCountSpan").html(0);
+							$(".idResultInfoPageSpan").html('page: page 1');
+							$(".idResultInfoP").hide();
+							
+						}else{
+							
+							// 查看更多按钮！
+							let strShowMoreBtnHtml = "";
+							if(result.next != null && result.page != null && result.next == result.page + 1) {
+								strShowMoreBtnHtml = strShowMoreButtonHtml;
+							}
+							
+							// 遍历显示！
+							let allCurrentSearchingPubHtml = "";
+							for(let i = 0; i < result.data.length; i++){
+								
+								let bolCheckNoContent = result.data[i].nocontent != null && result.data[i].nocontent == true; // 2021-11-08：判断是否是没有BioC的文献！
+								if(bolCheckNoContent) continue; // 2022-03-17：没有BioC的，直接跳过不显示了！
+								
+								let thisPubNo = intAlreadyShowPubResultCount + i + 1;
+								let thisPubHtml = 
+									'<div class="layui-col-xs12 animated zoomIn" id="idDivPubSearchingItem' + thisPubNo + '">' +
+									'	<table>' +
+									'		<tr>';
+								if(currentUser == null){
+									thisPubHtml +=
+									'			<td class="result-num">' + thisPubNo + '</td>';
+								}else{
+									thisPubHtml +=
+									'			<td class="result-num"><input type="checkbox" ' + (bolCheckNoContent ? 'disabled = "disabled" ' : '') + ' name="addBatchPubCheckBox" value="' + result.data[i].id + '|' + thisPubNo + '" /> &nbsp;' + thisPubNo + '</td>';
+								}
+								
+								// 2021-11-08：判断是否是没有BioC的文献！
+								if(bolCheckNoContent){ // 没有BioC的情况，单独处理！
+									
+									thisPubHtml +=
+									'			<td>' +
+									'				<p class="result-title nocontent">PMID:' + result.data[i].id + '<a href="https://pubmed.ncbi.nlm.nih.gov/' + result.data[i].id + '/" target="_blank" title="Go to PubMed"><i class="bx bx-link"></i></a> [No BioC available]</p>' +
+									'			</td>' +
+									'		</tr>' +
+									'	</table>' +
+									'</div>';
+									allCurrentSearchingPubHtml += thisPubHtml;
+									
+								}else{ // 有BioC的情况处理！
+									
+									// 2021-10-27：按照单句中出现的实体类别数量的最大值进行标星！
+									let thisStarsMaxNum = 0;
+									let thisStarsHtml = "";
+									for(let p = 0; p < result.data[i].passages.length; p++){
+										let thisPassage = result.data[i].passages[p];
+										let annotationsArr;
+										if(thisPassage.sentences.length == 0){
+											let thisNum = countStarsNum(thisPassage.annotations);
+											thisStarsMaxNum = thisNum > thisStarsMaxNum ? thisNum : thisStarsMaxNum;
+										}else{
+											for(let s = 0; s < thisPassage.sentences.length; s++){
+												let thisNum = countStarsNum(thisPassage.sentences[s].annotations);
+												thisStarsMaxNum = thisNum > thisStarsMaxNum ? thisNum : thisStarsMaxNum;
+											}
+										}
+									}
+									thisStarsHtml = funcGenerateStarsHtmlFromCount(thisStarsMaxNum);
+									
+									// 2021-10-22：单独拼接摘要！
+									let thisPubObj = result.data[i].passages[0].infons; // 当前文献对象！
+									let thisPubObjAbstract = "";
+									let checkAbstractPassages = 0;
+									allPassages.push(result.data[i].passages[0]); // 收录标题相关的passage！
+									for(let a = 1; a < result.data[i].passages.length; a++){
+										let thisPassageObj = result.data[i].passages[a];
+										if(funcJudgeAbstract(thisPassageObj)){
+											allPassages.push(thisPassageObj); // 收录当前摘要相关的passage！
+											//let thisAnnotatedText = getTextHtml(thisPassageObj, true, thisPubObj.article_id_pmid, thisPubObj.article_id_pmc);
+											let thisAnnotatedText = "";
+											if(thisPassageObj.sentences.length == 0){
+												thisAnnotatedText = getTextHtml(thisPassageObj, true, thisPubObj.article_id_pmid, thisPubObj.article_id_pmc);
+											}else{
+												for(let s = 0; s < thisPassageObj.sentences.length; s++){
+													let thisSentenceHtml = getTextHtml(thisPassageObj.sentences[s], true, thisPubObj.article_id_pmid, thisPubObj.article_id_pmc);
+													//console.log("+++: " + thisSentenceHtml);
+													thisAnnotatedText = thisAnnotatedText == "" ? thisSentenceHtml : thisAnnotatedText + " " + thisSentenceHtml;
+												}
+											}
+											let thisPassageObjText = thisPassageObj.infons.type.indexOf("abstract_title") > -1 ? "<b><i>" + thisAnnotatedText + "</i></b>" : thisAnnotatedText;
+											thisPubObjAbstract = thisPubObjAbstract == "" ? thisPassageObjText : thisPubObjAbstract + "<br>" + thisPassageObjText;
+											checkAbstractPassages = 1; // 更新！
+										}else if(checkAbstractPassages == 1){
+											break; // 说明abstract已经经过了，后面可以不处理了！
+										}
+									}
+									
+									thisPubHtml +=
+										'			<td>' +
+										
+										//'				<p class="result-title">' + thisPubObj.title + '</p>' +
+										//'				<p class="result-title">' + result.data[i].passages[0].text + " " + thisStarsHtml + '</p>' +
+										'				<p class="result-title">' + getTitleHtml(result.data[i].passages[0], true, thisPubObj.article_id_pmid, thisPubObj.article_id_pmc) + (thisPubObj.hasPMC && thisPubObj.hasPMC == true ? ' <i class="bx bx-file" title="With full-text BioC"></i>' : '') + (thisPubObj.hasAnnotation && thisPubObj.hasAnnotation == 1 ? ' <i class="bx bx-purchase-tag-alt" title="BioC tagged"></i>' : '') + ' <a href="/lrDetails?pid=' + thisPubObj.article_id_pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i></a></p>' +
+										
+										'				<p class="result-authors">' + thisPubObj.authors + '</p>' +
+										
+										//'				<p class="result-journal">' + thisPubObj.citation + ' <a href="https://pubmed.ncbi.nlm.nih.gov/' + thisPubObj.pmid + '/" target="_blank">PMID:' + thisPubObj.pmid + ' <i class="bx bx-link"></i></a>' + (thisPubObj.pmcid != null && thisPubObj.pmcid != '' ? ', <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/' + thisPubObj.pmcid + '/" target="_blank">' + thisPubObj.pmcid + ' <i class="bx bx-link"></i></a>' : '') + '</p>' +
+										'				<p class="result-journal">' + thisPubObj.journal + ', PMID:' + thisPubObj.article_id_pmid + '<a href="https://pubmed.ncbi.nlm.nih.gov/' + thisPubObj.article_id_pmid + '/" target="_blank" title="Go to PubMed"><i class="bx bx-link"></i></a>' + (thisPubObj.article_id_pmc != null && thisPubObj.article_id_pmc != '' ? ', PMC' + thisPubObj.article_id_pmc + '<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + thisPubObj.article_id_pmc + '/" target="_blank" title="Go to PMC"><i class="bx bx-link"></i></a>' : '') + '</p>' +
+										
+										//'				<p class="result-abstract lookmoretop"><span style="cursor:pointer;" onclick="funcShowMoreOrHide(this)">' + thisPubObj.abstract + '</a></p>' +
+										'				<p class="result-abstract lookmoretop" id="idPAbstract' + thisPubNo + '">' + thisPubObjAbstract + '</p>' +
+										
+										'				<p class="result-functions">' +
+										'					<a href="javascript:;" onclick="funcSingleUserModeRead(\'' + thisPubObj.article_id_pmid + '\')"><span class="layui-badge layui-bg-blue"><i class="layui-icon layui-icon-read"></i> Read</span></a>';
+									
+									// AddPub2Library！
+									if(currentUser != null && currentUser.accountType == "1"){
+										thisPubHtml +=
+										'					<a href="javascript:;" onclick="funcAddPub2Library(' + JSON.stringify(thisPubObj).replace(/"/g, '&quot;') + ', \'' + thisPubNo + '\')"><span class="layui-badge layui-bg-orange"><i class="layui-icon layui-icon-add-1"></i> Add</span></a>';
+									}
+										
+									// Cited By & Similar & Reference!
+									//let thisIdReference = 'idReferenceFor' + thisPubNo; // 2021-11-16新增！
+									//let thisIdCitedBy   = 'idCitedByFor' + thisPubNo;
+									//let thisIdSimilar   = 'idSimilarFor' + thisPubNo;
+									//thisPubHtml += 
+										//'					<span id="' + thisIdReference + '"></span>' +
+										//'					<span id="' + thisIdCitedBy + '"></span>' +
+										//'					<span id="' + thisIdSimilar + '"></span>';
+									
+									// Similar!
+									//$.ajax({
+									//	type: "get",
+									//	url: strApiSiSearching + thisPubObj.article_id_pmid,
+									//	//url: strApiKwSearching + "25361966 26166372 28529076 32714913 32770988", // 2021-11-16测试！
+									//	async: true,
+									//	contentType: "application/json; charset=utf-8",
+									//	dataType: "json",
+									//	success: function (res) {
+									//		if(res != null && res.data != null && res.data.length > 0){
+									//			$("#" + thisIdSimilar).html('<a href="javascript:;" onclick="funcAddRelatedAfterItem(\'' + thisPubNo + '\', \'S\', ' + JSON.stringify(res.data).replace(/"/g, '&quot;') + ')"><span class="layui-badge layui-bg-orange refCitedbySimiliar"><i class="bx bx-link"></i>Similar</span></a>');
+									//		}
+									//	}
+									//});
+									// 2021-12-08（V0012-01.00.09-07）：变更为如下！
+									thisPubHtml += ' <a href="javascript:;" onclick="funcAddRelatedAfterItemSimilar(\'' + thisPubNo + '\', \'' + thisPubObj.article_id_pmid + '\')"><span class="layui-badge layui-bg-orange refCitedbySimiliar"><i class="bx bx-link"></i>Similar</span></a>';
+									
+									// Reference!
+									//$.ajax({
+									//	type: "get",
+									//	url: strApiReSearching + thisPubObj.article_id_pmid,
+									//	//url: strApiKwSearching + "25361966 26166372 28529076 32714913 32770988", // 2021-11-16测试！
+									//	async: true,
+									//	contentType: "application/json; charset=utf-8",
+									//	dataType: "json",
+									//	success: function (res) {
+									//		if(res != null && res.data != null && res.data.length > 0){
+									//			//console.log(thisIdReference);
+									//			$("#" + thisIdReference).html('<a href="javascript:;" onclick="funcAddRelatedAfterItem(\'' + thisPubNo + '\', \'R\', ' + JSON.stringify(res.data).replace(/"/g, '&quot;') + ')"><span class="layui-badge layui-bg-orange refCitedbySimiliar"><i class="bx bx-link"></i>Ref</span></a>');
+									//		}
+									//	}
+									//});
+									// 2021-12-08（V0012-01.00.09-07）：变更为如下！
+									if(thisPubObj.refNums != null && thisPubObj.refNums > 0){
+										thisPubHtml += ' <a href="javascript:;" onclick="funcAddRelatedAfterItemRef(\'' + thisPubNo + '\', \'' + thisPubObj.article_id_pmid + '\')"><span class="layui-badge layui-bg-orange refCitedbySimiliar"><i class="bx bx-link"></i>Ref (' + thisPubObj.refNums + ')</span></a>';
+									}
+									
+									// Cited By!
+									//$.ajax({
+									//	type: "get",
+									//	url: strApiCbSearching + thisPubObj.article_id_pmid,
+									//	//url: strApiKwSearching + "25361966 26166372 28529076 32714913 32770988", // 2021-11-16测试！
+									//	async: true,
+									//	contentType: "application/json; charset=utf-8",
+									//	dataType: "json",
+									//	success: function (res) {
+									//		if(res != null && res.data != null && res.data.length > 0){
+									//			$("#" + thisIdCitedBy).html('<a href="javascript:;" onclick="funcAddRelatedAfterItem(\'' + thisPubNo + '\', \'C\', ' + JSON.stringify(res.data).replace(/"/g, '&quot;') + ')"><span class="layui-badge layui-bg-orange refCitedbySimiliar"><i class="bx bx-link"></i>Cited by</span></a>');
+									//		}
+									//	}
+									//});
+									// 2021-12-08（V0012-01.00.09-07）：变更为如下！
+									if(thisPubObj.citedNums != null && thisPubObj.citedNums > 0){
+										thisPubHtml += ' <a href="javascript:;" onclick="funcAddRelatedAfterItemCitedBy(\'' + thisPubNo + '\', \'' + thisPubObj.article_id_pmid + '\')"><span class="layui-badge layui-bg-orange refCitedbySimiliar"><i class="bx bx-link"></i>Cited By (' + thisPubObj.citedNums + ')</span></a>';
+									}
+									
+									// 统一加上影响因子！
+									thisPubHtml +=
+										'					' + (thisPubObj.if2020 !== null && thisPubObj.if2020 !== '' ? ' <span class="layui-badge-rim"><i class="layui-icon layui-icon-fire"></i> ' + 'IF2020: ' + thisPubObj.if2020 + '</span>' : '');
+									
+									if(currentUser != null){
+										thisPubHtml +=
+										'					<span class="layui-badge-rim"><i class="layui-icon layui-icon-list"></i> Collections: <span id="loadingCollections-' + thisPubNo + '"><img src="/assets/images/loading.gif" class="loadingGif"></span></span>' +
+										'					<a href="javascript:;" onclick="funcStarPub(' + JSON.stringify(thisPubObj).replace(/"/g, '&quot;') + ', \'' + thisPubNo + '\')"><span class="layui-badge-rim"><span id="loadingStarred1-' + thisPubNo + '"><i class="layui-icon layui-icon-star"></i></span> Star: <span id="loadingStarred2-' + thisPubNo + '"><img src="/assets/images/loading.gif" class="loadingGif"></span></span></a>' +
+										'					<a href="javascript:;" onclick="funcCommentPub(' + JSON.stringify(thisPubObj).replace(/"/g, '&quot;') + ', \'' + thisPubNo + '\')"><span class="layui-badge-rim"><i class="layui-icon layui-icon-dialogue"></i> Comments: <span id="loadingComments-' + thisPubNo + '"><img src="/assets/images/loading.gif" class="loadingGif"></span></span></a>';
+									}
+									
+									// HSL！
+									thisPubHtml +=
+										'					<span class="layui-badge layui-bg-gray">HSL: <span class="pubLevel" onclick="funcScreenPubStars(this)">' + thisStarsHtml + '</span></span>';
+										
+									// 摘要内容的显示隐藏！
+									if(thisPubObjAbstract !== ''){
+										thisPubHtml +=
+										'					<a href="javascript:;" onclick="funcShowMoreOrHide(\'idPAbstract' + thisPubNo + '\', this)"><span class="layui-badge layui-bg-gray"><i class="layui-icon layui-icon-addition"></i> Abstract</span></a>';
+									}
+									
+									thisPubHtml +=
+										'				</p>' +
+										'			</td>' +
+										'		</tr>' +
+										'	</table>' +
+										'</div>';
+									allCurrentSearchingPubHtml += thisPubHtml;
+									
+									// 去后台数据库的文献表中查询：如果不存在就插入，存在的话就返回统计数字并替换！
+									if(currentUser != null){
+										funcLoadingStarred(thisPubNo, thisPubObj.article_id_pmid);
+										funcLoadingCollections(thisPubNo, thisPubObj.article_id_pmid);
+										funcLoadingComments(thisPubNo, thisPubObj.article_id_pmid);
+									}
+									
+								}
+								
+							}
+							
+							// 检索结果显示！
+							let strIdDivSearchingResults = "idDivSearchingResults";
+							allCurrentSearchingPubHtml += strShowMoreBtnHtml;
+							if($("#" + strIdDivSearchingResults).html() === strDefaultPubResultHtml){
+								$("#" + strIdDivSearchingResults).html(allCurrentSearchingPubHtml);
+							}else if(intPage == 1){
+								$("#" + strIdDivSearchingResults).html(allCurrentSearchingPubHtml);
+							}else{
+								$("#idBtnShowMore").remove();
+								$("#" + strIdDivSearchingResults).append(allCurrentSearchingPubHtml);
+							}
+							
+							// 检索结果信息描述！
+							$(".idResultInfoTotalSpan").html($("#idInputPubResultTotalCount").val());
+							$(".idResultInfoCountSpan").html($("#idInputPubResultShowCount").val());
+							if($("#idInputPubResultShowPage").val() == 1){
+								$(".idResultInfoPageSpan").html('page: page 1');
+							}else{
+								$(".idResultInfoPageSpan").html('pages: page 1 ~ page ' + $("#idInputPubResultShowPage").val());
+							}
+							if($("#idInputPubResultShowCount").val() == 0){
+								$(".idResultInfoP").hide();
+							}else{
+								$(".idResultInfoP").show();
+							}
+							
+							// 监听显示更多按钮的点击事件！
+							$("#idBtnShowMore").click(function (e) {
+								funcRealSearching();
+								return false;
+							});
+							
+							// 实体点击效果！
+							funcEntityClick();
+							
+							// 左侧实体分组显示！
+							$("#idGroupControls").on("change",function(){
+								loadSummaryConcepts(allPassages);
+							});
+							
+							// 左侧实体分组后的排序！
+							$("#idSortControls").on("change",function(){
+								loadSummaryConcepts(allPassages);
+							});
+							
+							// 过滤实体！
+							$('#filterText').bind('input propertychange', function () {
+								initSearch(allPassages);
+							});
+							$('#filterText').change(function () {
+								initSearch(allPassages);
+							});
+							
+							// 加载所有概念！
+							loadSummaryConcepts(allPassages);
+							
+							// 左侧实体列表处理完毕之后，显示相应div！
+							$('#summary').show();
+								
+						}
+						
+						return false;
+					}
+				});
+				return false;
+			}
+			
+			// 固定块！
+			if(currentUser != null && currentUser.accountType == "1"){
+				util.fixbar({
+					bar1: '&#xe654;',
+					bar2: '&#xe756;',
+					top: true,
+					bgcolor: '#0299CC',
+					css: { right: 15, bottom: 15 },
+					showHeight:100,
+					click: function (type) {
+						if (type === 'bar1') { // 批量添加文献！
+							let strPmids   = "";
+							let strArrPubInfos = [];
+							$('input[name="addBatchPubCheckBox"]:checked').each(function(){
+								strArrPubInfos.push($(this).val());
+								let strArrThisValue = $(this).val().split("|");
+								strPmids = strPmids == "" ? strArrThisValue[0] : strPmids + "," + strArrThisValue[0];
+							});
+							if(strPmids == ""){
+								layer.msg("Please select the publication you want to add..");
+								return false;
+							}else{
+								let layIndex = admin.open({
+									title: '<i class="layui-icon">&#xe654;</i> Add Publications: "' + strPmids + '" Into Library',
+									url: 'lrAddIntoLibrary',
+									area: '800px',
+									offset: '100px', // 距离顶部位置！
+									data: { data: {strPmids: strPmids} }, // 传递数据到表单页面
+									end: function () {
+										let layerData = admin.getLayerData(layIndex, 'formOk');
+										if (layerData) { // 判断表单操作成功标识
+											// 更新Collections数量！
+											for(let i = 0; i < strArrPubInfos.length; i++){
+												let strArrThisValue = strArrPubInfos[i].split("|");
+												funcLoadingCollections(strArrThisValue[1], strArrThisValue[0]);
+											}
+										}
+									},
+									success: function (layero, dIndex) {
+										// 弹窗超出范围不出现滚动条
+										$(layero).children('.layui-layer-content').css('overflow', 'visible');
+										$(layero).find('[lay-submit]').focus();
+									}
+								});
+								return false;
+							}
+						}
+						if (type === 'bar2') {
+							window.open("/lrAbout?m=A03");
+						}
+						if (type === 'top') {
+							$('.layui-body').animate({
+								scrollTop: 0
+							}, 200);
+						}
+					}
+				});
+			}else{
+				util.fixbar({
+					bar2: '&#xe756;',
+					top: true,
+					bgcolor: '#0299CC',
+					css: { right: 15, bottom: 15 },
+					showHeight:100,
+					click: function (type) {
+						if (type === 'bar2') {
+							window.open("/lrAbout?m=A03");
+						}
+						if (type === 'top') {
+							$('.layui-body').animate({
+								scrollTop: 0
+							}, 200);
+						}
+					}
+				});
+			}
+			
+		});
+		
+		// 添加文献相关的文献！
+		function funcBeforeAddRelatedAfterItem(intItemId, strType){ // 2021-12-08（V0012-01.00.09-07）：新增：添加节点之前的判断与处理！
+			let thisPubNoRoot = intItemId + strType;
+			let relatedItemsType = 'classRelatedItemsFor' + strType;
+			let relatedItemsSymbol = relatedItemsType + intItemId;
+			// 判断当前文献的相关文献是否已经显示了！
+			let checkReturn = false;
+			let nextDivObj = $("#idDivPubSearchingItem" + intItemId).next();
+			if(nextDivObj != null && nextDivObj.hasClass(relatedItemsSymbol)) checkReturn = true;
+			if(nextDivObj != null && nextDivObj.hasClass("classRelatedItems")){
+				nextDivObj.remove(); // 对于是管理文献的模块，先清除掉！
+				if(checkReturn) return false; // 然后根据是否是同一类型的关联（相似或者引用）来判断是否还要进行后续的显示！
+			}
+			return true;
+		}
+		function funcAddRelatedAfterItemRef(intItemId, thisPmid){ // 2021-12-08（V0012-01.00.09-07）：新增！
+			if(funcBeforeAddRelatedAfterItem(intItemId, 'R')) {
+				let thisObjKey = 'R' + intItemId;
+				if(objStoreLoadedRelatedItems[thisObjKey] != null){
+					funcAddRelatedAfterItem(intItemId, 'R', objStoreLoadedRelatedItems[thisObjKey]);
+				}else{
+					$("#opmLoading").show();
+					$.ajax({
+						type: "get",
+						url: strApiReSearching + thisPmid + "&l=" + $("#idNumRelatedItems").val(),
+						async: true,
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function (res) {
+							$("#opmLoading").hide();
+							if(res != null && res.data != null && res.data.length > 0){
+								funcAddRelatedAfterItem(intItemId, 'R', res.data);
+								objStoreLoadedRelatedItems[thisObjKey] = res.data;
+							}else if(res != null && res.data != null && res.data.length == 0){
+								layer.msg("No Data!");
+							}else{
+								layer.msg("Something wrong!");
+							}
+						}
+					});
+				}
+			}
+		}
+		function funcAddRelatedAfterItemCitedBy(intItemId, thisPmid){ // 2021-12-08（V0012-01.00.09-07）：新增！
+			if(funcBeforeAddRelatedAfterItem(intItemId, 'C')) {
+				let thisObjKey = 'C' + intItemId;
+				if(objStoreLoadedRelatedItems[thisObjKey] != null){
+					funcAddRelatedAfterItem(intItemId, 'C', objStoreLoadedRelatedItems[thisObjKey]);
+				}else{
+					$("#opmLoading").show();
+					$.ajax({
+						type: "get",
+						url: strApiCbSearching + thisPmid + "&l=" + $("#idNumRelatedItems").val(),
+						async: true,
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function (res) {
+							$("#opmLoading").hide();
+							if(res != null && res.data != null && res.data.length > 0){
+								funcAddRelatedAfterItem(intItemId, 'C', res.data);
+								objStoreLoadedRelatedItems[thisObjKey] = res.data;
+							}else if(res != null && res.data != null && res.data.length == 0){
+								layer.msg("No Data!");
+							}else{
+								layer.msg("Something wrong!");
+							}
+						}
+					});
+				}
+			}
+		}
+		function funcAddRelatedAfterItemSimilar(intItemId, thisPmid){ // 2021-12-08（V0012-01.00.09-07）：新增！
+			if(funcBeforeAddRelatedAfterItem(intItemId, 'S')) {
+				let thisObjKey = 'S' + intItemId;
+				if(objStoreLoadedRelatedItems[thisObjKey] != null){
+					funcAddRelatedAfterItem(intItemId, 'S', objStoreLoadedRelatedItems[thisObjKey]);
+				}else{
+					$("#opmLoading").show();
+					$.ajax({
+						type: "get",
+						url: strApiSiSearching + thisPmid + "&l=" + $("#idNumRelatedItems").val(),
+						async: true, // 这里必须为true，否则上面“$("#opmLoading").show()”不起效！
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function (res) {
+							$("#opmLoading").hide();
+							if(res != null && res.data != null && res.data.length > 0){
+								funcAddRelatedAfterItem(intItemId, 'S', res.data);
+								objStoreLoadedRelatedItems[thisObjKey] = res.data;
+							}else if(res != null && res.data != null && res.data.length == 0){
+								layer.msg("No Data!");
+							}else{
+								layer.msg("Something wrong!");
+							}
+						}
+					});
+				}
+			}
+		}
+		function funcAddRelatedAfterItem(intItemId, strType, arrObj){
+			
+			let thisPubNoRoot = intItemId + strType;
+			let relatedItemsType = 'classRelatedItemsFor' + strType;
+			let relatedItemsSymbol = relatedItemsType + intItemId;
+			
+			// 2021-12-08（V0012-01.00.09-07）：如下几行代码抽提到“funcBeforeAddRelatedAfterItem()”中了，这里就不需要了！
+			//// 判断当前文献的相关文献是否已经显示了！
+			//let checkReturn = false;
+			//let nextDivObj = $("#idDivPubSearchingItem" + intItemId).next();
+			//if(nextDivObj != null && nextDivObj.hasClass(relatedItemsSymbol)) checkReturn = true;
+			//if(nextDivObj != null && nextDivObj.hasClass("classRelatedItems")){
+			//	nextDivObj.remove(); // 对于是管理文献的模块，先清除掉！
+			//	if(checkReturn) return false; // 然后根据是否是同一类型的关联（相似或者引用）来判断是否还要进行后续的显示！
+			//}
+			
+			// 没有显示的情况下，继续后续的操作：显示该div！
+			let itemRelatedHtml = '<div class="layui-col-xs12 animated zoomIn classRelatedItems ' + relatedItemsType + ' ' + relatedItemsSymbol + '">';
+			let thisNoForI = 0;
+			for(let i = 0; i < arrObj.length; i++){
+				
+				// 2021-11-22（V0005-01.00.02-05）：解决可能存在的nocontent的问题！
+				if(arrObj[i].passages == null || arrObj[i].passages.length == 0){
+					continue;
+				}
+				thisNoForI++; // 2021-11-22（V0005-01.00.02-05）：确保数字连贯！
+				
+				//let thisPubNo  = thisPubNoRoot + ( i + 1 );
+				let thisPubNo  = thisPubNoRoot + thisNoForI; // 2021-11-22（V0005-01.00.02-05）：确保数字连贯！
+				let thisPubObj = arrObj[i].passages[0].infons;
+				
+				// 2021-10-27：按照单句中出现的实体类别数量的最大值进行标星！
+				let thisStarsMaxNum = 0;
+				let thisStarsHtml = "";
+				for(let p = 0; p < arrObj[i].passages.length; p++){
+					let thisPassage = arrObj[i].passages[p];
+					let annotationsArr;
+					if(thisPassage.sentences.length == 0){
+						let thisNum = countStarsNum(thisPassage.annotations);
+						thisStarsMaxNum = thisNum > thisStarsMaxNum ? thisNum : thisStarsMaxNum;
+					}else{
+						for(let s = 0; s < thisPassage.sentences.length; s++){
+							let thisNum = countStarsNum(thisPassage.sentences[s].annotations);
+							thisStarsMaxNum = thisNum > thisStarsMaxNum ? thisNum : thisStarsMaxNum;
+						}
+					}
+				}
+				thisStarsHtml = funcGenerateStarsHtmlFromCount(thisStarsMaxNum);
+				
+				// 2021-10-22：单独拼接摘要！
+				let thisPubObjAbstract = "";
+				let checkAbstractPassages = 0;
+				for(let a = 1; a < arrObj[i].passages.length; a++){
+					let thisPassageObj = arrObj[i].passages[a];
+					if(funcJudgeAbstract(thisPassageObj)){
+						//let thisAnnotatedText = getTextHtml(thisPassageObj, true, thisPubObj.article_id_pmid, thisPubObj.article_id_pmc);
+						let thisAnnotatedText = "";
+						if(thisPassageObj.sentences.length == 0){
+							thisAnnotatedText = getTextHtml(thisPassageObj, true, thisPubObj.article_id_pmid, thisPubObj.article_id_pmc);
+						}else{
+							for(let s = 0; s < thisPassageObj.sentences.length; s++){
+								let thisSentenceHtml = getTextHtml(thisPassageObj.sentences[s], true, thisPubObj.article_id_pmid, thisPubObj.article_id_pmc);
+								//console.log("+++: " + thisSentenceHtml);
+								thisAnnotatedText = thisAnnotatedText == "" ? thisSentenceHtml : thisAnnotatedText + " " + thisSentenceHtml;
+							}
+						}
+						let thisPassageObjText = thisPassageObj.infons.type.indexOf("abstract_title") > -1 ? "<b><i>" + thisAnnotatedText + "</i></b>" : thisAnnotatedText;
+						thisPubObjAbstract = thisPubObjAbstract == "" ? thisPassageObjText : thisPubObjAbstract + "<br>" + thisPassageObjText;
+						checkAbstractPassages = 1; // 更新！
+					}else if(checkAbstractPassages == 1){
+						break; // 说明abstract已经经过了，后面可以不处理了！
+					}
+				}
+				
+				itemRelatedHtml += 
+					'<div class="layui-col-xs12" id="idDivRelatedItems' + thisPubNo + '">' +
+					'	<table>' +
+					'		<tr>';
+				if(currentUser == null){
+					itemRelatedHtml +=
+					'			<td class="result-num"><i class="subItems">' + strType + thisNoForI + '</i></td>';
+				}else{
+					itemRelatedHtml +=
+					'			<td class="result-num"><input type="checkbox" name="addBatchPubCheckBox" value="' + thisPubObj.article_id_pmid + '|' + thisPubNo + '" /> <i class="subItems">' + strType + thisNoForI + '</i></td>';
+				}
+				itemRelatedHtml +=
+					'			<td>' +
+					'				<p class="result-title">' + getTitleHtml(arrObj[i].passages[0], true, thisPubObj.article_id_pmid, thisPubObj.article_id_pmc) + (thisPubObj.hasPMC && thisPubObj.hasPMC == true ? ' <i class="bx bx-file" title="With full-text BioC"></i>' : '') + (thisPubObj.hasAnnotation && thisPubObj.hasAnnotation == 1 ? ' <i class="bx bx-purchase-tag-alt" title="BioC tagged"></i>' : '') + ' <a href="/lrDetails?pid=' + thisPubObj.article_id_pmid + '" target="_blank"><i class="bx bx-expand" title="Click the title to see details"></i></a></p>' +
+					'				<p class="result-authors">' + thisPubObj.authors + '</p>' +
+					'				<p class="result-journal">' + thisPubObj.journal + ' PMID:' + thisPubObj.article_id_pmid + '<a href="https://pubmed.ncbi.nlm.nih.gov/' + thisPubObj.article_id_pmid + '/" target="_blank" title="Go to PubMed"><i class="bx bx-link"></i></a>' + (thisPubObj.article_id_pmc != null && thisPubObj.article_id_pmc != '' ? ', PMC' + thisPubObj.article_id_pmc + '<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + thisPubObj.article_id_pmc + '/" target="_blank" title="Go to PMC"><i class="bx bx-link"></i></a>' : '') + '</p>' +
+					'				<p class="result-abstract lookmoretop" id="idPAbstract' + thisPubNo + '">' + thisPubObjAbstract + '</p>';
+				itemRelatedHtml +=
+					'				<p class="result-functions">' +
+					'					<a href="javascript:;" onclick="funcSingleUserModeRead(\'' + thisPubObj.article_id_pmid + '\')"><span class="layui-badge layui-bg-blue"><i class="layui-icon layui-icon-read"></i> Read</span></a>';
+					
+				// 添加到文库！
+				if(currentUser != null && currentUser.accountType == "1"){
+					itemRelatedHtml +=
+					'					<a href="javascript:;" onclick="funcAddPub2Library(' + JSON.stringify(thisPubObj).replace(/"/g, '&quot;') + ', \'' + thisPubNo + '\')"><span class="layui-badge layui-bg-orange"><i class="layui-icon layui-icon-add-1"></i> Add</span></a>';
+				}
+				
+				// 统一加上影响因子！
+				itemRelatedHtml +=
+					'					' + (thisPubObj.if2020 !== null && thisPubObj.if2020 !== '' ? ' <span class="layui-badge-rim"><i class="layui-icon layui-icon-fire"></i> ' + 'IF2020: ' + thisPubObj.if2020 + '</span>' : '');
+				
+				// 星标、备注等与账号相关的！
+				if(currentUser != null){
+					itemRelatedHtml +=
+					'					<span class="layui-badge-rim"><i class="layui-icon layui-icon-list"></i> Collections: <span id="loadingCollections-' + thisPubNo + '"><img src="/assets/images/loading.gif" class="loadingGif"></span></span>' +
+					'					<a href="javascript:;" onclick="funcStarPub(' + JSON.stringify(thisPubObj).replace(/"/g, '&quot;') + ', \'' + thisPubNo + '\')"><span class="layui-badge-rim"><span id="loadingStarred1-' + thisPubNo + '"><i class="layui-icon layui-icon-star"></i></span> Star: <span id="loadingStarred2-' + thisPubNo + '"><img src="/assets/images/loading.gif" class="loadingGif"></span></span></a>' +
+					'					<a href="javascript:;" onclick="funcCommentPub(' + JSON.stringify(thisPubObj).replace(/"/g, '&quot;') + ', \'' + thisPubNo + '\')"><span class="layui-badge-rim"><i class="layui-icon layui-icon-dialogue"></i> Comments: <span id="loadingComments-' + thisPubNo + '"><img src="/assets/images/loading.gif" class="loadingGif"></span></span></a>';
+				}
+				
+				// HSL！
+				itemRelatedHtml +=
+					'					<span class="layui-badge layui-bg-gray">HSL: <span class="pubLevel" onclick="funcScreenPubStars(this)">' + thisStarsHtml + '</span></span>';
+					
+				// 摘要内容的显示隐藏！
+				if(thisPubObjAbstract !== ''){
+					itemRelatedHtml +=
+					'					<a href="javascript:;" onclick="funcShowMoreOrHide(\'idPAbstract' + thisPubNo + '\', this)"><span class="layui-badge layui-bg-gray"><i class="layui-icon layui-icon-addition"></i> Abstract</span></a>';
+				}
+				
+				itemRelatedHtml +=
+					'				</p>' +
+					'			</td>' +
+					'		</tr>' +
+					'	</table>' +
+					'</div>';
+				
+				// 去后台数据库的文献表中查询：如果不存在就插入，存在的话就返回统计数字并替换！
+				if(currentUser != null){
+					funcLoadingStarred(thisPubNo, thisPubObj.article_id_pmid);
+					funcLoadingCollections(thisPubNo, thisPubObj.article_id_pmid);
+					funcLoadingComments(thisPubNo, thisPubObj.article_id_pmid);
+				}
+			}
+			if(arrObj.length > 0){
+				itemRelatedHtml += '</div>';
+			}else{
+				itemRelatedHtml = '';
+			}
+			$("#idDivPubSearchingItem" + intItemId).after(itemRelatedHtml);
+			
+			// 实体点击效果！
+			funcEntityClick();
+		}
+		
+		// 文献星标等级筛选！
+		function funcScreenPubStars(othis){
+			let bolCheckHide = false;
+			// 先遍历一轮，看看是否存在已隐藏的文献！
+			$(".pubLevel").each(function(){
+				if($(this).parent().parent().parent().parent().parent().parent().parent().is(':hidden')){ bolCheckHide = true; }
+			});
+			// 再遍历一轮：根据前面的结果，确定这里是显示全部文献，还是只显示与当前文献相同等级的文献！
+			$(".pubLevel").each(function(){
+				if(bolCheckHide){
+					$(this).parent().parent().parent().parent().parent().parent().parent().show(); // 显示全部文献！
+					funcShowOrHideNoContent(true);
+				}else{
+					if($(this).html() != $(othis).html()){
+						$(this).parent().parent().parent().parent().parent().parent().parent().hide(); // 隐藏与当前文献等级不同的文献：即只显示相同等级的文献！
+					}
+					funcShowOrHideNoContent(false);
+				}
+			});
+		}
+		function funcShowOrHideNoContent(bolShow){
+			$(".nocontent").each(function(){
+				if(bolShow){
+					$(this).parent().parent().parent().parent().parent().show(); // 显示全部nocontent文献！
+				}else{
+					$(this).parent().parent().parent().parent().parent().hide(); // 隐藏全部nocontent文献！
+				}
+			});
+		}
+		
+		// 摘要文本的显示或隐藏！
+		function funcShowMoreOrHide(thisId, othis){
+			if($("#" + thisId).hasClass("lookmoretop")){
+				$("#" + thisId).removeClass("lookmoretop");
+				$(othis).html('<span class="layui-badge layui-bg-gray"><i class="layui-icon layui-icon-subtraction"></i> Abstract</span>');
+			}else{
+				$("#" + thisId).addClass("lookmoretop");
+				$(othis).html('<span class="layui-badge layui-bg-gray"><i class="layui-icon layui-icon-addition"></i> Abstract</span>');
+			}
+		}
+		
+		// 更新各个文献被Starred的数量！
+		function funcLoadingStarred(numPub, intPmid){
+			$.ajax({
+				type: "post",
+				url: "/funcSuggest/detail",
+				dataType: "json",
+				async: true,
+				data: JSON.stringify({pmid: intPmid}),
+				contentType: "application/json; charset=utf-8",
+				success: function(result){
+					if(result.data){
+						let thisData = result.data.split(",");
+						if(thisData[0] == "1"){
+							$("#loadingStarred1-" + numPub).html('<i class="layui-icon layui-icon-star-fill"></i>');
+						}else{
+							$("#loadingStarred1-" + numPub).html('<i class="layui-icon layui-icon-star"></i>');
+						}
+						$("#loadingStarred2-" + numPub).html(thisData[1]);
+					}else{
+						$("#loadingStarred1-" + numPub).html('');
+						$("#loadingStarred2-" + numPub).html('-');
+					}
+					return false;
+				}
+			});
+			return false;
+		}
+		
+		// 更新各个文献相关的Collections的数量！
+		function funcLoadingCollections(numPub, intPmid){
+			$.ajax({
+				type: "post",
+				url: "/librariesPublications/statCollectionsFromPub",
+				dataType: "json",
+				async: true,
+				data: JSON.stringify({pmid: intPmid}),
+				contentType: "application/json; charset=utf-8",
+				success: function(result){
+					$("#loadingCollections-" + numPub).html(result.data);
+					return false;
+				}
+			});
+			return false;
+		}
+		
+		// 更新各个文献相关的Comments的数量！
+		function funcLoadingComments(numPub, intPmid){
+			$.ajax({
+				type: "post",
+				url: "/funcComments/stat",
+				dataType: "json",
+				async: true,
+				data: JSON.stringify({pmid: intPmid}),
+				contentType: "application/json; charset=utf-8",
+				success: function(result){
+					if(result.data || result.data == 0){
+						$("#loadingComments-" + numPub).html(result.data);
+					}else{
+						$("#loadingComments-" + numPub).html("-");
+					}
+					return false;
+				}
+			});
+			return false;
+		}
+		
+		// 直接阅读文献！
+		function funcSingleUserModeRead(intPmid){
+			let layIndex = admin.open({
+				title: '<i class="layui-icon">&#xe630;</i> Select A Data Collection Form to Read This Publication',
+				url: 'lrSelectFormToRead',
+				area: '800px',
+				offset: '100px', // 距离顶部位置！
+				data: { data: {pmid: intPmid} },	 // 传递数据到表单页面
+				end: function () {
+					let layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) {  // 判断表单操作成功标识
+						// 暂时啥也不干！
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+		
+		// 将文献添加到Library中！
+		function funcAddPub2Library(objPub, numPub){
+			objPub.pmid = objPub.article_id_pmid;
+			objPub.pmcid = objPub.article_id_pmc;
+			let layIndex = admin.open({
+				title: '<i class="layui-icon">&#xe654;</i> Add Publication "' + objPub.article_id_pmid + '" Into Library',
+				url: 'lrAddIntoLibrary',
+				area: '800px',
+				offset: '100px', // 距离顶部位置！
+				data: { data: objPub },	 // 传递数据到表单页面
+				end: function () {
+					let layerData = admin.getLayerData(layIndex, 'formOk');
+					if (layerData) {  // 判断表单操作成功标识
+						// 更新Collections数量！
+						funcLoadingCollections(numPub, objPub.article_id_pmid);
+					}
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+			return false;
+		}
+		
+		// 星标文献！
+		function funcStarPub(objPub, numPub){
+			$.ajax({
+				type: "post",
+				url: "/funcSuggest/add",
+				dataType: "json",
+				async: true,
+				//data: JSON.stringify({pmid: objPub.pmid}),
+				data: JSON.stringify({pmid: objPub.article_id_pmid}),
+				contentType: "application/json; charset=utf-8",
+				success: function(result){
+					if(result.data){
+						let thisData = result.data.split(",");
+						if(thisData[0] == "1"){
+							$("#loadingStarred1-" + numPub).html('<i class="layui-icon layui-icon-star-fill"></i>');
+						}else{
+							$("#loadingStarred1-" + numPub).html('<i class="layui-icon layui-icon-star"></i>');
+						}
+						$("#loadingStarred2-" + numPub).html(thisData[1]);
+					}else{
+						$("#loadingStarred1-" + numPub).html('');
+						$("#loadingStarred2-" + numPub).html('-');
+					}
+					return false;
+				}
+			});
+			return false;
+		}
+		
+		// 查看文献相关备注！
+		function funcCommentPub(objPub, numPub){
+			let layIndex = admin.open({
+				title: 'Publication "PMID' + objPub.article_id_pmid + '" Comments',
+				url: 'funcComments/index',
+				area: '800px',
+				offset: '100px', // 距离顶部位置！
+				data: { data: {pmid: objPub.article_id_pmid} },	 // 传递数据到表单页面
+				end: function () {
+					funcLoadingComments(numPub, objPub.article_id_pmid);
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+			return false;
+		}
+		
+		// 默认检索的数据集类型！
+		function datasetType_toggle(strType){
+			let strOriType = $("#idDatasetType").val();
+			let strIconId = 'idDatasetTypeIcon' + strType.replace(strType[0], strType[0].toUpperCase()); // 'cancer'和'all'首字母转大写！
+			//console.log("datasetType_toggle: " + strType + ", strOriType: " + strOriType);
+			$(".datasetTypeBeforeStyle").each(function(){
+				$(this).remove();
+			});
+			$("#idDatasetType").val(strType); // 设置数据集类型！
+			paramDt = strType;
+			$("#" + strIconId).append('<style class="datasetTypeBeforeStyle">#' + strIconId + '::before{font-weight: 600; content: ""}</style>');
+			if(strOriType != strType) {
+				$("#idInputPubResultShowPage").val(0); // 数据集类型与之前的不一致的情况下，页码从0开始！
+				$("#idSubmit").click(); // 数据集类型与之前的不一致的情况下，重新检索！
+			}
+		}
+		
+		// 本地检索采用的匹配方式！
+		function matchingType_toggle(strType){
+			let strOriType = $("#idMatchingType").val();
+			let strIconId = 'idMatchingTypeIcon' + strType;
+			//console.log("matchingType_toggle: " + strType + ", strOriType: " + strOriType);
+			$(".matchingTypeBeforeStyle").each(function(){
+				$(this).remove();
+			});
+			$("#idMatchingType").val(strType); // 设置数据集类型！
+			paramEM = strType;
+			$("#" + strIconId).append('<style class="matchingTypeBeforeStyle">#' + strIconId + '::before{font-weight: 600; content: ""}</style>');
+			if(strOriType != strType) {
+				$("#idInputPubResultShowPage").val(0); // 匹配方式与之前的不一致的情况下，页码从0开始！
+				$("#idSubmit").click(); // 匹配方式与之前的不一致的情况下，重新检索！
+			}
+		}
+		
+		// 每页显示条数修改！
+		function numPerPage_toggle(num){
+			let oriNum = $("#idNumPerPage").val();
+			//console.log("numPerPage_toggle: " + num + ", oriNum: " + oriNum);
+			$(".numPerPageBeforeStyle").each(function(){
+				$(this).remove();
+			});
+			$("#idNumPerPage").val(num); // 设置页数！
+			paramLi = num;
+			$("#idNumPerPageIcon" + num).append('<style class="numPerPageBeforeStyle">#idNumPerPageIcon' + num + '::before{font-weight: 600; content: ""}</style>');
+			if(oriNum != num) {
+				$("#idInputPubResultShowPage").val(0); // 每页条数与之前的不一致的情况下，页码从0开始！
+				$("#idSubmit").click(); // 每页条数与之前的不一致的情况下，重新检索！
+			}
+		}
+		
+		// 每篇文献关联文献显示条数修改！
+		function numRelatedItems_toggle(num){
+			let oriNum = $("#idNumRelatedItems").val();
+			$(".numRelatedItemsBeforeStyle").each(function(){
+				$(this).remove();
+			});
+			$("#idNumRelatedItems").val(num); // 设置页数！
+			paramRe = num;
+			$("#idNumRelatedItemsIcon" + num).append('<style class="numRelatedItemsBeforeStyle">#idNumRelatedItemsIcon' + num + '::before{font-weight: 600; content: ""}</style>');
+			if(oriNum != num) {
+				objStoreLoadedRelatedItems = {}; // 每页条数与之前的不一致的情况下，清空已缓存的关联文献！
+			}
+		}
+		
+		// 示例检索的共性操作！
+		function funcExampleSearching(){
+			$("#idInputPubResultShowPage").val(0); // 从0开始！
+			form.render(); // 确保下拉菜单更新！
+			$("#idNumPerPageIcon" + $("#idNumPerPage").val()).parent().click(); // 当前条数的回显！
+			$("#idDatasetTypeIcon" + $("#idDatasetType").val().replace($("#idDatasetType").val()[0], $("#idDatasetType").val()[0].toUpperCase())).parent().click(); // 当前数据集类型的回显！
+			$("#idMatchingTypeIcon" + $("#idMatchingType").val()).parent().click(); // 当前数据集类型的回显！
+			$("#idSubmit").click(); // 执行检索！
+		}
+		
+		// ================================================================= //
+		
+		//获取全部概念类别！
+		function getAllConcepts() {
+			let all;
+			$.ajax({
+				url: '/assets/module/hjf-ptc/data/concept_list.json',
+				dataType: 'json',
+				async: false,
+				success: function (concepts) {
+					let extendedConcepts = _.map(concepts, function (o) {
+						o.show = true;
+						o.identifier = o._id; // TODO identifier useless since we have _id in DB
+						return o;
+					});
+					all = _.keyBy(extendedConcepts, function (o) {
+						return o._id;
+					});
+					//console.info("Loaded concept types: " + _.size(all));
+				},
+				error: function () {
+					console.error('Can not load concept types!')
+				}
+			})
+			return all;
+		}
+		
+		// 展示全部概念类别！
+		for (let concept of getOrderedConcepts()) {
+			$('.concepts-menu').append('<div class="concept-switch concept concept-' + concept.identifier + '" onclick="concept_toggle(\'' + concept.identifier + '\')"><span class="far icon"></span> ' + concept.name + '</div>');
+		}
+	
+	</script>
+
+</body>
+
+</html>

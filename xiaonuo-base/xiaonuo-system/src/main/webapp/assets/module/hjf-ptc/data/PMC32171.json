@@ -1,0 +1,4637 @@
+{
+	"source": "ChosenLitReviewer",
+	"date": "",
+	"key": "BioC.key",
+	"infons": {},
+	"documents": [{
+		"_id": "32021303|PMC6982432",
+		"id": "32171",
+		"infons": {},
+		"passages": [{
+			"offset": 0,
+			"infons": {
+				"name_3": "surname:Edagawa;given-names:Masao",
+				"name_2": "surname:Matsuzaki;given-names:Yasunori",
+				"name_1": "surname:Ayabe;given-names:Takanori",
+				"article-id_pmid": "11319942",
+				"name_0": "surname:Tomita;given-names:Masaki",
+				"fpage": "3",
+				"year": "2001",
+				"article-id_pmc": "32171",
+				"article-id_publisher-id": "1471-2407-1-3",
+				"article-id_doi": "10.1186/1471-2407-1-3",
+				"type": "front",
+				"volume": "1",
+				"section_type": "TITLE",
+				"journal": "BMC Cancer; 2001; 13",
+				"journal-title": "BMC Cancer",
+				"name_7": "surname:Onitsuka;given-names:Toshio",
+				"lpage": "3",
+				"name_6": "surname:Hara;given-names:Masaki",
+				"name_5": "surname:Shimizu;given-names:Tetsuya",
+				"name_4": "surname:Maeda;given-names:Masayuki",
+				"authors": "Tomita M, Ayabe T, Matsuzaki Y, Edagawa M, Maeda M, Shimizu T, Hara M, Onitsuka T"
+			},
+			"text": "Expression of nm23-H1 gene product in esophageal squamous cell carcinoma and its association with vessel invasion and survival",
+			"sentences": [],
+			"annotations": [{
+				"id": "1",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 14,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 127,
+			"infons": {
+				"section_type": "ABSTRACT",
+				"type": "abstract_title_1"
+			},
+			"text": "Background",
+			"sentences": [{
+				"offset": 127,
+				"infons": {},
+				"text": "Background",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 138,
+			"infons": {
+				"section_type": "ABSTRACT",
+				"type": "abstract"
+			},
+			"text": "We assessed the nm23-H1 gene product expression and its relationship with lymphatic and blood vessel invasion in patients with esophageal squamous cell carcinoma.",
+			"sentences": [{
+				"offset": 138,
+				"infons": {},
+				"text": "We assessed the nm23-H1 gene product expression and its relationship with lymphatic and blood vessel invasion in patients with esophageal squamous cell carcinoma.",
+				"annotations": [{
+					"id": "3",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 154,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "2",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 154,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 301,
+			"infons": {
+				"section_type": "ABSTRACT",
+				"type": "abstract_title_1"
+			},
+			"text": "Methods",
+			"sentences": [{
+				"offset": 301,
+				"infons": {},
+				"text": "Methods",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 309,
+			"infons": {
+				"section_type": "ABSTRACT",
+				"type": "abstract"
+			},
+			"text": "Formalin-fixed and paraffin-embedded tissue sections from 45 patients who were treated surgically were used in this study. Pathologists graded lymphatic and blood vessel invasion in each of the tissue samples. Expression of nm23-Hl gene product was determined using a specific monoclonal antibody.",
+			"sentences": [{
+				"offset": 309,
+				"infons": {},
+				"text": "Formalin-fixed and paraffin-embedded tissue sections from 45 patients who were treated surgically were used in this study.",
+				"annotations": [{
+					"id": "4",
+					"infons": {
+						"identifier": "MESH:D005557",
+						"type": "Chemical"
+					},
+					"text": "Formalin",
+					"locations": [{
+						"offset": 309,
+						"length": 8
+					}]
+				}, {
+					"id": "5",
+					"infons": {
+						"identifier": "MESH:D010232",
+						"type": "Chemical"
+					},
+					"text": "paraffin",
+					"locations": [{
+						"offset": 328,
+						"length": 8
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 432,
+				"infons": {},
+				"text": "Pathologists graded lymphatic and blood vessel invasion in each of the tissue samples.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 519,
+				"infons": {},
+				"text": "Expression of nm23-Hl gene product was determined using a specific monoclonal antibody.",
+				"annotations": [{
+					"id": "6",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 533,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "3",
+				"infons": {
+					"identifier": "MESH:D005557",
+					"type": "Chemical"
+				},
+				"text": "Formalin",
+				"locations": [{
+					"offset": 309,
+					"length": 8
+				}]
+			}, {
+				"id": "4",
+				"infons": {
+					"identifier": "MESH:D010232",
+					"type": "Chemical"
+				},
+				"text": "paraffin",
+				"locations": [{
+					"offset": 328,
+					"length": 8
+				}]
+			}, {
+				"id": "5",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 533,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 607,
+			"infons": {
+				"section_type": "ABSTRACT",
+				"type": "abstract_title_1"
+			},
+			"text": "Results",
+			"sentences": [{
+				"offset": 607,
+				"infons": {},
+				"text": "Results",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 615,
+			"infons": {
+				"section_type": "ABSTRACT",
+				"type": "abstract"
+			},
+			"text": "Expression of nm23-H1 gene product was present in 17 (37.8%) cases. We found an inverse correlation between nm23-H1 gene product expression and lymphatic vessel invasion, whereas no correlation between nm23-H1 gene product expression and blood vessel invasion. Overall survival rate was not different between nm23-H1 gene product positive and negative patients (p = 0.21). However, reduced expression of nm23-H1 gene product was associated with shorter overall survival in patients with involved lymph nodes (p < 0.05), but not in patients without involved lymph nodes (p = 0.87).",
+			"sentences": [{
+				"offset": 615,
+				"infons": {},
+				"text": "Expression of nm23-H1 gene product was present in 17 (37.8%) cases.",
+				"annotations": [{
+					"id": "7",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 629,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 683,
+				"infons": {},
+				"text": "We found an inverse correlation between nm23-H1 gene product expression and lymphatic vessel invasion, whereas no correlation between nm23-H1 gene product expression and blood vessel invasion.",
+				"annotations": [{
+					"id": "8",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 723,
+						"length": 7
+					}]
+				}, {
+					"id": "9",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 817,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 876,
+				"infons": {},
+				"text": "Overall survival rate was not different between nm23-H1 gene product positive and negative patients (p = 0.21).",
+				"annotations": [{
+					"id": "10",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 924,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 988,
+				"infons": {},
+				"text": "However, reduced expression of nm23-H1 gene product was associated with shorter overall survival in patients with involved lymph nodes (p < 0.05), but not in patients without involved lymph nodes (p = 0.87).",
+				"annotations": [{
+					"id": "11",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 1019,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "6",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 629,
+					"length": 7
+				}]
+			}, {
+				"id": "7",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 723,
+					"length": 7
+				}]
+			}, {
+				"id": "8",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 817,
+					"length": 7
+				}]
+			}, {
+				"id": "9",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 924,
+					"length": 7
+				}]
+			}, {
+				"id": "10",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 1019,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 1196,
+			"infons": {
+				"section_type": "ABSTRACT",
+				"type": "abstract_title_1"
+			},
+			"text": "Conclusions",
+			"sentences": [{
+				"offset": 1196,
+				"infons": {},
+				"text": "Conclusions",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 1208,
+			"infons": {
+				"section_type": "ABSTRACT",
+				"type": "abstract"
+			},
+			"text": "In patients with esophageal squamous cell carcinoma, there appears to be an inverse relationship between nm23-H1 gene product expression and lymphatic vessel invasion. Furthermore, nm23-H1 gene product expression might be a prognostic marker in patients with involved lymph nodes. Our data does not demonstrate any correlation between nm23-H1 gene product expression and blood vessel invasion.",
+			"sentences": [{
+				"offset": 1208,
+				"infons": {},
+				"text": "In patients with esophageal squamous cell carcinoma, there appears to be an inverse relationship between nm23-H1 gene product expression and lymphatic vessel invasion.",
+				"annotations": [{
+					"id": "12",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 1313,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 1376,
+				"infons": {},
+				"text": "Furthermore, nm23-H1 gene product expression might be a prognostic marker in patients with involved lymph nodes.",
+				"annotations": [{
+					"id": "13",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 1389,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 1489,
+				"infons": {},
+				"text": "Our data does not demonstrate any correlation between nm23-H1 gene product expression and blood vessel invasion.",
+				"annotations": [{
+					"id": "14",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 1543,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "11",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 1313,
+					"length": 7
+				}]
+			}, {
+				"id": "12",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 1389,
+					"length": 7
+				}]
+			}, {
+				"id": "13",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 1543,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 1602,
+			"infons": {
+				"section_type": "INTRO",
+				"type": "title_1"
+			},
+			"text": "Background",
+			"sentences": [{
+				"offset": 1602,
+				"infons": {},
+				"text": "Background",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 1613,
+			"infons": {
+				"section_type": "INTRO",
+				"type": "paragraph"
+			},
+			"text": "Expression of nm23-H1 gene product is thought to play a specific biological role in suppressing tumor metastasis. A number of studies of human malignant tumors including breast, gastric, colorectal, hepatocellular, and ovarian carcinomas have demonstrated a correlation between reduced expression of nm23 mRNA or its gene product and increased metastasis, resulting in poorer prognosis. With regard to lung cancer, however, previous studies have shown that nm23 gene product expression is unrelated to patient survival. The reasons for these conflicting results remain unclear. Although very little attention has been given to the role of nm23-H1 gene product in esophageal squamous cell carcinoma, two studies report on the relationship between nm23-H1 expression and patient survival. It is general knowledge that vessel invasion is the first and necessary step at the outset of the metastatic cascade. What remains to be seen, however, is whether nm23-H1 gene product expression is associated with lymphatic or blood vessel invasion in patients with esophageal squamous cell carcinoma. The present study examines this question.",
+			"sentences": [{
+				"offset": 1613,
+				"infons": {},
+				"text": "Expression of nm23-H1 gene product is thought to play a specific biological role in suppressing tumor metastasis.",
+				"annotations": [{
+					"id": "15",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 1627,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 1727,
+				"infons": {},
+				"text": "A number of studies of human malignant tumors including breast, gastric, colorectal, hepatocellular, and ovarian carcinomas have demonstrated a correlation between reduced expression of nm23 mRNA or its gene product and increased metastasis, resulting in poorer prognosis.",
+				"annotations": [{
+					"id": "16",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 1913,
+						"length": 4
+					}]
+				}, {
+					"id": "17",
+					"infons": {
+						"type": "Evidence Direction",
+						"Identifier": "Supports"
+					},
+					"text": "increased",
+					"locations": [{
+						"offset": 2220,
+						"length": 9
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 2000,
+				"infons": {},
+				"text": "With regard to lung cancer, however, previous studies have shown that nm23 gene product expression is unrelated to patient survival.",
+				"annotations": [{
+					"id": "18",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 2070,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 2133,
+				"infons": {},
+				"text": "The reasons for these conflicting results remain unclear.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 2191,
+				"infons": {},
+				"text": "Although very little attention has been given to the role of nm23-H1 gene product in esophageal squamous cell carcinoma, two studies report on the relationship between nm23-H1 expression and patient survival.",
+				"annotations": [{
+					"id": "19",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 2252,
+						"length": 7
+					}]
+				}, {
+					"id": "20",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 2359,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 2400,
+				"infons": {},
+				"text": "It is general knowledge that vessel invasion is the first and necessary step at the outset of the metastatic cascade.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 2518,
+				"infons": {},
+				"text": "What remains to be seen, however, is whether nm23-H1 gene product expression is associated with lymphatic or blood vessel invasion in patients with esophageal squamous cell carcinoma.",
+				"annotations": [{
+					"id": "21",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 2563,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 2702,
+				"infons": {},
+				"text": "The present study examines this question.",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "14",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 1627,
+					"length": 7
+				}]
+			}, {
+				"id": "15",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 1913,
+					"length": 4
+				}]
+			}, {
+				"id": "16",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 2070,
+					"length": 4
+				}]
+			}, {
+				"id": "17",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 2252,
+					"length": 7
+				}]
+			}, {
+				"id": "18",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 2359,
+					"length": 7
+				}]
+			}, {
+				"id": "19",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 2563,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 2744,
+			"infons": {
+				"section_type": "METHODS",
+				"type": "title_1"
+			},
+			"text": "Materials and methods",
+			"sentences": [{
+				"offset": 2744,
+				"infons": {},
+				"text": "Materials and methods",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 2766,
+			"infons": {
+				"section_type": "METHODS",
+				"type": "title_2"
+			},
+			"text": "Patients and tissue samples",
+			"sentences": [{
+				"offset": 2766,
+				"infons": {},
+				"text": "Patients and tissue samples",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 2794,
+			"infons": {
+				"section_type": "METHODS",
+				"type": "paragraph"
+			},
+			"text": "Forty-five randomly selected patients (39 men, 6 women) with primary esophageal squamous cell carcinoma who were treated surgically at Miyazaki Medical College were included in this study. TNM staging was accomplished in all patients. Surgically resected tissue samples previously fixed in formalin and embedded in paraffin were used in this study. Following the Guidelines for the Clinical and Pathologic Studies on Carcinoma of the Esophagus (Japanese Society for Esophageal Diseases, 1999), pathologists graded lymphatic and blood vessel invasion in each of the tissue samples. Briefly, lymphatic vessel invasion was graded according to the following: ly0: none; ly1: mild; ly2: moderate; and ly3: severe. Blood vessel invasion was also graded as follows: v0: none; v1: mild; v2: moderate; and v3: severe.",
+			"sentences": [{
+				"offset": 2794,
+				"infons": {},
+				"text": "Forty-five randomly selected patients (39 men, 6 women) with primary esophageal squamous cell carcinoma who were treated surgically at Miyazaki Medical College were included in this study.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 2983,
+				"infons": {},
+				"text": "TNM staging was accomplished in all patients.",
+				"annotations": [{
+					"id": "22",
+					"infons": {
+						"identifier": "10178",
+						"type": "Gene",
+						"NCBI Homologene": "56542"
+					},
+					"text": "TNM",
+					"locations": [{
+						"offset": 2983,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 3029,
+				"infons": {},
+				"text": "Surgically resected tissue samples previously fixed in formalin and embedded in paraffin were used in this study.",
+				"annotations": [{
+					"id": "23",
+					"infons": {
+						"identifier": "MESH:D005557",
+						"type": "Chemical"
+					},
+					"text": "formalin",
+					"locations": [{
+						"offset": 3084,
+						"length": 8
+					}]
+				}, {
+					"id": "24",
+					"infons": {
+						"identifier": "MESH:D010232",
+						"type": "Chemical"
+					},
+					"text": "paraffin",
+					"locations": [{
+						"offset": 3109,
+						"length": 8
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 3143,
+				"infons": {},
+				"text": "Following the Guidelines for the Clinical and Pathologic Studies on Carcinoma of the Esophagus (Japanese Society for Esophageal Diseases, 1999), pathologists graded lymphatic and blood vessel invasion in each of the tissue samples.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 3375,
+				"infons": {},
+				"text": "Briefly, lymphatic vessel invasion was graded according to the following: ly0: none; ly1: mild; ly2: moderate; and ly3: severe.",
+				"annotations": [{
+					"id": "25",
+					"infons": {
+						"identifier": "-",
+						"type": "Chemical"
+					},
+					"text": "ly0",
+					"locations": [{
+						"offset": 3449,
+						"length": 3
+					}]
+				}, {
+					"id": "26",
+					"infons": {
+						"identifier": "926",
+						"type": "Gene",
+						"NCBI Homologene": "3621"
+					},
+					"text": "ly3",
+					"locations": [{
+						"offset": 3490,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 3503,
+				"infons": {},
+				"text": "Blood vessel invasion was also graded as follows: v0: none; v1: mild; v2: moderate; and v3: severe.",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "20",
+				"infons": {
+					"identifier": "10178",
+					"type": "Gene",
+					"NCBI Homologene": "56542"
+				},
+				"text": "TNM",
+				"locations": [{
+					"offset": 2983,
+					"length": 3
+				}]
+			}, {
+				"id": "21",
+				"infons": {
+					"identifier": "MESH:D005557",
+					"type": "Chemical"
+				},
+				"text": "formalin",
+				"locations": [{
+					"offset": 3084,
+					"length": 8
+				}]
+			}, {
+				"id": "22",
+				"infons": {
+					"identifier": "MESH:D010232",
+					"type": "Chemical"
+				},
+				"text": "paraffin",
+				"locations": [{
+					"offset": 3109,
+					"length": 8
+				}]
+			}, {
+				"id": "23",
+				"infons": {
+					"identifier": "-",
+					"type": "Chemical"
+				},
+				"text": "ly0",
+				"locations": [{
+					"offset": 3449,
+					"length": 3
+				}]
+			}, {
+				"id": "24",
+				"infons": {
+					"identifier": "926",
+					"type": "Gene",
+					"NCBI Homologene": "3621"
+				},
+				"text": "ly3",
+				"locations": [{
+					"offset": 3490,
+					"length": 3
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 3603,
+			"infons": {
+				"section_type": "METHODS",
+				"type": "title_2"
+			},
+			"text": "Immunohistochemical studies",
+			"sentences": [{
+				"offset": 3603,
+				"infons": {},
+				"text": "Immunohistochemical studies",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 3631,
+			"infons": {
+				"section_type": "METHODS",
+				"type": "paragraph"
+			},
+			"text": "The specific monoclonal antibody against nm23-H1 gene product (Novocastra Laboratories, Newcastle, UK) was used to detect gene product expression. Before staining, serial 4 mum-thick sections were deparaffinized in three changes of lemosol and rehydrated through a descending series of ethanol. These sections were then immersed in 0.6% H2O2 in methanol for 20 minutes at room temperature to block endogenous peroxidase activity. After blocking nonspecific protein bindings by an overnight incubation with Block Ace (Dainippon Inc., Osaka, Japan), the sections were incubated with primary antibodies (1:200) at 4 C overnight. Subsequently, sections were incubated with the secondary antiserum (1:500) for 1 hour, followed by an incubation with peroxidase antiperoxidase (PAP) complex for 30 minutes at room temperature. The sections were visualized using a Diaminobenzidine/Metal Concentration (10X) and Stable Peroxide Substrate Buffer (1x) system (Pierce, Rockford, IL, USA). The sections were then washed with water and counterstained with hematoxylin. Immunohistochemical results were assessed semiquantitatively by two authors, taking into account the percentage of nm23-H1 protein positive cancer cells within the maximum cut-surface specimen of the tumor tissue. Patients with greater than 50% of cancer cells staining more intensely than stromal cells were considered positive for nm23-H1 gene product expression.",
+			"sentences": [{
+				"offset": 3631,
+				"infons": {},
+				"text": "The specific monoclonal antibody against nm23-H1 gene product (Novocastra Laboratories, Newcastle, UK) was used to detect gene product expression.",
+				"annotations": [{
+					"id": "27",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 3672,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 3778,
+				"infons": {},
+				"text": "Before staining, serial 4 mum-thick sections were deparaffinized in three changes of lemosol and rehydrated through a descending series of ethanol.",
+				"annotations": [{
+					"id": "28",
+					"infons": {
+						"identifier": "-",
+						"type": "Chemical"
+					},
+					"text": "lemosol",
+					"locations": [{
+						"offset": 3863,
+						"length": 7
+					}]
+				}, {
+					"id": "29",
+					"infons": {
+						"identifier": "MESH:D000431",
+						"type": "Chemical"
+					},
+					"text": "ethanol",
+					"locations": [{
+						"offset": 3917,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 3926,
+				"infons": {},
+				"text": "These sections were then immersed in 0.6% H2O2 in methanol for 20 minutes at room temperature to block endogenous peroxidase activity.",
+				"annotations": [{
+					"id": "30",
+					"infons": {
+						"identifier": "MESH:D006861",
+						"type": "Chemical"
+					},
+					"text": "H2O2",
+					"locations": [{
+						"offset": 3968,
+						"length": 4
+					}]
+				}, {
+					"id": "31",
+					"infons": {
+						"identifier": "MESH:D000432",
+						"type": "Chemical"
+					},
+					"text": "methanol",
+					"locations": [{
+						"offset": 3976,
+						"length": 8
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 4061,
+				"infons": {},
+				"text": "After blocking nonspecific protein bindings by an overnight incubation with Block Ace (Dainippon Inc., Osaka, Japan), the sections were incubated with primary antibodies (1:200) at 4 C overnight.",
+				"annotations": [{
+					"id": "32",
+					"infons": {
+						"identifier": "1636",
+						"type": "Gene",
+						"NCBI Homologene": "37351"
+					},
+					"text": "Ace",
+					"locations": [{
+						"offset": 4143,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 4257,
+				"infons": {},
+				"text": "Subsequently, sections were incubated with the secondary antiserum (1:500) for 1 hour, followed by an incubation with peroxidase antiperoxidase (PAP) complex for 30 minutes at room temperature.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 4451,
+				"infons": {},
+				"text": "The sections were visualized using a Diaminobenzidine/Metal Concentration (10X) and Stable Peroxide Substrate Buffer (1x) system (Pierce, Rockford, IL, USA).",
+				"annotations": [{
+					"id": "33",
+					"infons": {
+						"identifier": "-",
+						"type": "Chemical"
+					},
+					"text": "Diaminobenzidine",
+					"locations": [{
+						"offset": 4488,
+						"length": 16
+					}]
+				}, {
+					"id": "34",
+					"infons": {
+						"identifier": "MESH:D008670",
+						"type": "Chemical"
+					},
+					"text": "Metal",
+					"locations": [{
+						"offset": 4505,
+						"length": 5
+					}]
+				}, {
+					"id": "35",
+					"infons": {
+						"identifier": "MESH:D010545",
+						"type": "Chemical"
+					},
+					"text": "Peroxide",
+					"locations": [{
+						"offset": 4542,
+						"length": 8
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 4609,
+				"infons": {},
+				"text": "The sections were then washed with water and counterstained with hematoxylin.",
+				"annotations": [{
+					"id": "36",
+					"infons": {
+						"identifier": "MESH:D014867",
+						"type": "Chemical"
+					},
+					"text": "water",
+					"locations": [{
+						"offset": 4644,
+						"length": 5
+					}]
+				}, {
+					"id": "37",
+					"infons": {
+						"identifier": "MESH:D006416",
+						"type": "Chemical"
+					},
+					"text": "hematoxylin",
+					"locations": [{
+						"offset": 4674,
+						"length": 11
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 4687,
+				"infons": {},
+				"text": "Immunohistochemical results were assessed semiquantitatively by two authors, taking into account the percentage of nm23-H1 protein positive cancer cells within the maximum cut-surface specimen of the tumor tissue.",
+				"annotations": [{
+					"id": "38",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 4802,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 4901,
+				"infons": {},
+				"text": "Patients with greater than 50% of cancer cells staining more intensely than stromal cells were considered positive for nm23-H1 gene product expression.",
+				"annotations": [{
+					"id": "39",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 5020,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "25",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 3672,
+					"length": 7
+				}]
+			}, {
+				"id": "26",
+				"infons": {
+					"identifier": "-",
+					"type": "Chemical"
+				},
+				"text": "lemosol",
+				"locations": [{
+					"offset": 3863,
+					"length": 7
+				}]
+			}, {
+				"id": "27",
+				"infons": {
+					"identifier": "MESH:D000431",
+					"type": "Chemical"
+				},
+				"text": "ethanol",
+				"locations": [{
+					"offset": 3917,
+					"length": 7
+				}]
+			}, {
+				"id": "28",
+				"infons": {
+					"identifier": "MESH:D006861",
+					"type": "Chemical"
+				},
+				"text": "H2O2",
+				"locations": [{
+					"offset": 3968,
+					"length": 4
+				}]
+			}, {
+				"id": "29",
+				"infons": {
+					"identifier": "MESH:D000432",
+					"type": "Chemical"
+				},
+				"text": "methanol",
+				"locations": [{
+					"offset": 3976,
+					"length": 8
+				}]
+			}, {
+				"id": "30",
+				"infons": {
+					"identifier": "1636",
+					"type": "Gene",
+					"NCBI Homologene": "37351"
+				},
+				"text": "Ace",
+				"locations": [{
+					"offset": 4143,
+					"length": 3
+				}]
+			}, {
+				"id": "31",
+				"infons": {
+					"identifier": "-",
+					"type": "Chemical"
+				},
+				"text": "Diaminobenzidine",
+				"locations": [{
+					"offset": 4488,
+					"length": 16
+				}]
+			}, {
+				"id": "32",
+				"infons": {
+					"identifier": "MESH:D008670",
+					"type": "Chemical"
+				},
+				"text": "Metal",
+				"locations": [{
+					"offset": 4505,
+					"length": 5
+				}]
+			}, {
+				"id": "33",
+				"infons": {
+					"identifier": "MESH:D010545",
+					"type": "Chemical"
+				},
+				"text": "Peroxide",
+				"locations": [{
+					"offset": 4542,
+					"length": 8
+				}]
+			}, {
+				"id": "34",
+				"infons": {
+					"identifier": "MESH:D014867",
+					"type": "Chemical"
+				},
+				"text": "water",
+				"locations": [{
+					"offset": 4644,
+					"length": 5
+				}]
+			}, {
+				"id": "35",
+				"infons": {
+					"identifier": "MESH:D006416",
+					"type": "Chemical"
+				},
+				"text": "hematoxylin",
+				"locations": [{
+					"offset": 4674,
+					"length": 11
+				}]
+			}, {
+				"id": "36",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 4802,
+					"length": 7
+				}]
+			}, {
+				"id": "37",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 5020,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 5053,
+			"infons": {
+				"section_type": "METHODS",
+				"type": "title_2"
+			},
+			"text": "Statistical analysis",
+			"sentences": [{
+				"offset": 5053,
+				"infons": {},
+				"text": "Statistical analysis",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 5074,
+			"infons": {
+				"section_type": "METHODS",
+				"type": "paragraph"
+			},
+			"text": "Data was analyzed using the X2 test with Yates' correlation. Survival curves were plotted according to the Kaplan-Meier method, and the prognostic significance was evaluated by the generalized Wilcoxon test. A p value less than 0.05 was considered significant.",
+			"sentences": [{
+				"offset": 5074,
+				"infons": {},
+				"text": "Data was analyzed using the X2 test with Yates' correlation.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 5135,
+				"infons": {},
+				"text": "Survival curves were plotted according to the Kaplan-Meier method, and the prognostic significance was evaluated by the generalized Wilcoxon test.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 5282,
+				"infons": {},
+				"text": "A p value less than 0.05 was considered significant.",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 5335,
+			"infons": {
+				"section_type": "RESULTS",
+				"type": "title_1"
+			},
+			"text": "Results",
+			"sentences": [{
+				"offset": 5335,
+				"infons": {},
+				"text": "Results",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 5343,
+			"infons": {
+				"section_type": "RESULTS",
+				"type": "paragraph"
+			},
+			"text": "Expression of nm23-H1 gene product was present in 17 (37.8%) cases and appeared diffusely throughout the cytoplasm of the cancer cells (Fig. 1). In the majority of nm23-H1 gene product positive cancers, most of tumor cells contained a homologous cytoplasmic pattern for nm23-H1 gene product. Table 1 shows the relationship between nm23-H1 gene product expression and clinical characteristics. Expression of nm23-H1 gene product was not correlated with these clinical factors. Lymph node metastasis in positive nm23-H1 gene product cases was 9/17 (52.9%); in negative cases, 13/28 (46.4%). There was no significant correlation between nm23-H1 gene product expression and lymph node metastasis.",
+			"sentences": [{
+				"offset": 5343,
+				"infons": {},
+				"text": "Expression of nm23-H1 gene product was present in 17 (37.8%) cases and appeared diffusely throughout the cytoplasm of the cancer cells (Fig.",
+				"annotations": [{
+					"id": "40",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 5357,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 5484,
+				"infons": {},
+				"text": "1).",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 5488,
+				"infons": {},
+				"text": "In the majority of nm23-H1 gene product positive cancers, most of tumor cells contained a homologous cytoplasmic pattern for nm23-H1 gene product.",
+				"annotations": [{
+					"id": "41",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 5507,
+						"length": 7
+					}]
+				}, {
+					"id": "42",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 5613,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 5635,
+				"infons": {},
+				"text": "Table 1 shows the relationship between nm23-H1 gene product expression and clinical characteristics.",
+				"annotations": [{
+					"id": "43",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 5674,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 5736,
+				"infons": {},
+				"text": "Expression of nm23-H1 gene product was not correlated with these clinical factors.",
+				"annotations": [{
+					"id": "44",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 5750,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 5819,
+				"infons": {},
+				"text": "Lymph node metastasis in positive nm23-H1 gene product cases was 9/17 (52.9%); in negative cases, 13/28 (46.4%).",
+				"annotations": [{
+					"id": "45",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 5853,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 5932,
+				"infons": {},
+				"text": "There was no significant correlation between nm23-H1 gene product expression and lymph node metastasis.",
+				"annotations": [{
+					"id": "46",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 5977,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "38",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 5358,
+					"length": 7
+				}]
+			}, {
+				"id": "39",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 5508,
+					"length": 7
+				}]
+			}, {
+				"id": "40",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 5614,
+					"length": 7
+				}]
+			}, {
+				"id": "41",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 5675,
+					"length": 7
+				}]
+			}, {
+				"id": "42",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 5751,
+					"length": 7
+				}]
+			}, {
+				"id": "43",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 5854,
+					"length": 7
+				}]
+			}, {
+				"id": "44",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 5978,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 6036,
+			"infons": {
+				"section_type": "FIG",
+				"file": "1471-2407-1-3-1.jpg",
+				"id": "F1",
+				"type": "fig_caption"
+			},
+			"text": "Positive staining for nm23-H1 gene product in esophageal squamous cell carcinoma (original magnification x 100).",
+			"sentences": [{
+				"offset": 6036,
+				"infons": {},
+				"text": "Positive staining for nm23-H1 gene product in esophageal squamous cell carcinoma (original magnification x 100).",
+				"annotations": [{
+					"id": "47",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 6058,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "45",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 6059,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 6149,
+			"infons": {
+				"section_type": "TABLE",
+				"type": "table"
+			},
+			"text": "NS: not significant",
+			"sentences": [{
+				"offset": 6149,
+				"infons": {},
+				"text": "NS: not significant",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 6169,
+			"infons": {
+				"section_type": "TABLE",
+				"file": "T1.xml",
+				"id": "T1",
+				"type": "table_caption"
+			},
+			"text": "Clinical characteristics",
+			"sentences": [{
+				"offset": 6169,
+				"infons": {},
+				"text": "Clinical characteristics",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 6194,
+			"infons": {
+				"section_type": "TABLE",
+				"id": "T1",
+				"type": "table",
+				"File": "T1.xml"
+			},
+			"text": "  nm23(-) nm23(+) Total p-value Gender     NS  Male 24 15 39   Female 4 2 6  Age     NS  <60 5 7 12   >60 23 10 33  Location     NS  Upper thoracic 5 2 7   Mid thoracic 12 11 23   Lower thoracic 11 4 15  PT     NS  pT1 3 7 10   pT2 5 2 7   pT3 20 8 28   pT4 0 0 0  PN     NS  pN0 15 8 23   pN1 13 9 22  Stage     NS  I 3 6 9   II 14 5 19   III 7 4 11   IV 4 2 6  Differentiation     NS  Well 4 3 7   Moderate 18 10 28   Poor 6 4 10  ",
+			"sentences": [{
+				"offset": 6194,
+				"infons": {},
+				"text": "  nm23(-) nm23(+) Total p-value Gender     NS  Male 24 15 39   Female 4 2 6  Age     NS  <60 5 7 12   >60 23 10 33  Location     NS  Upper thoracic 5 2 7   Mid thoracic 12 11 23   Lower thoracic 11 4 15  PT     NS  pT1 3 7 10   pT2 5 2 7   pT3 20 8 28   pT4 0 0 0  PN     NS  pN0 15 8 23   pN1 13 9 22  Stage     NS  I 3 6 9   II 14 5 19   III 7 4 11   IV 4 2 6  Differentiation     NS  Well 4 3 7   Moderate 18 10 28   Poor 6 4 10",
+				"annotations": [{
+					"id": "48",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 6196,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "46",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 6198,
+					"length": 4
+				}]
+			}, {
+				"id": "47",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 6206,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 6626,
+			"infons": {
+				"section_type": "RESULTS",
+				"type": "paragraph"
+			},
+			"text": "Lymphatic vessel invasion gradings included: 1 ly0, 18 ly1, 24 ly2, and 2 ly3. Since the ly0 and ly3 numbers were low, lymphatic vessel invasion was classified into two groups: ly0+ly1 and ly2+ly3. Lymph node metastasis in the ly0+ly1 and ly2+ly3 groups was 6/19 (31.6%) and 17/26 (65.4%), respectively. These numbers indicate a relationship between lymphatic vessel invasion and lymph node metastasis (p < 0.05).",
+			"sentences": [{
+				"offset": 6626,
+				"infons": {},
+				"text": "Lymphatic vessel invasion gradings included: 1 ly0, 18 ly1, 24 ly2, and 2 ly3.",
+				"annotations": [{
+					"id": "49",
+					"infons": {
+						"identifier": "926",
+						"type": "Gene",
+						"NCBI Homologene": "3621"
+					},
+					"text": "ly3",
+					"locations": [{
+						"offset": 6700,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 6705,
+				"infons": {},
+				"text": "Since the ly0 and ly3 numbers were low, lymphatic vessel invasion was classified into two groups: ly0+ly1 and ly2+ly3.",
+				"annotations": [{
+					"id": "50",
+					"infons": {
+						"identifier": "926",
+						"type": "Gene",
+						"NCBI Homologene": "3621"
+					},
+					"text": "ly3",
+					"locations": [{
+						"offset": 6723,
+						"length": 3
+					}]
+				}, {
+					"id": "51",
+					"infons": {
+						"identifier": "926",
+						"type": "Gene",
+						"NCBI Homologene": "3621"
+					},
+					"text": "ly3",
+					"locations": [{
+						"offset": 6819,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 6824,
+				"infons": {},
+				"text": "Lymph node metastasis in the ly0+ly1 and ly2+ly3 groups was 6/19 (31.6%) and 17/26 (65.4%), respectively.",
+				"annotations": [{
+					"id": "52",
+					"infons": {
+						"identifier": "926",
+						"type": "Gene",
+						"NCBI Homologene": "3621"
+					},
+					"text": "ly3",
+					"locations": [{
+						"offset": 6869,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 6930,
+				"infons": {},
+				"text": "These numbers indicate a relationship between lymphatic vessel invasion and lymph node metastasis (p < 0.05).",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "48",
+				"infons": {
+					"identifier": "926",
+					"type": "Gene",
+					"NCBI Homologene": "3621"
+				},
+				"text": "ly3",
+				"locations": [{
+					"offset": 6704,
+					"length": 3
+				}]
+			}, {
+				"id": "49",
+				"infons": {
+					"identifier": "926",
+					"type": "Gene",
+					"NCBI Homologene": "3621"
+				},
+				"text": "ly3",
+				"locations": [{
+					"offset": 6727,
+					"length": 3
+				}]
+			}, {
+				"id": "50",
+				"infons": {
+					"identifier": "926",
+					"type": "Gene",
+					"NCBI Homologene": "3621"
+				},
+				"text": "ly3",
+				"locations": [{
+					"offset": 6823,
+					"length": 3
+				}]
+			}, {
+				"id": "51",
+				"infons": {
+					"identifier": "926",
+					"type": "Gene",
+					"NCBI Homologene": "3621"
+				},
+				"text": "ly3",
+				"locations": [{
+					"offset": 6873,
+					"length": 3
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 7040,
+			"infons": {
+				"section_type": "RESULTS",
+				"type": "paragraph"
+			},
+			"text": "Table 2 shows the relationship between nm23-H1 gene product expression and lymphatic vessel invasion, and blood vessel invasion. Expression of nm23-H1 gene product in the ly0+ly1 and ly2+ly3 groups was 12/19 (63.2%) and 5/26 (19.2%), respectively, while numbers for the nm23-H1 negative cases were 7/19 (36.8%) and 21/26 (80.8%), respectively, indicating an inverse relationship between nm23-H1 gene product expression and lymphatic vessel invasion (p < 0.01). Blood vessel invasion gradings included 14 v0, 27 v1, 4 v2, and no v3 cases. Of these numbers, expression of nm23-H1 gene product was present in 7 v0, 7 v1, and 3 v2 cases. In nm23-H1 gene product negative patients, there were 7 v0, 20 v1, and 1 v2 cases. As is apparent from these numbers, we found no correlation between nm23-H1 gene product expression and blood vessel invasion.",
+			"sentences": [{
+				"offset": 7040,
+				"infons": {},
+				"text": "Table 2 shows the relationship between nm23-H1 gene product expression and lymphatic vessel invasion, and blood vessel invasion.",
+				"annotations": [{
+					"id": "53",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 7079,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 7169,
+				"infons": {},
+				"text": "Expression of nm23-H1 gene product in the ly0+ly1 and ly2+ly3 groups was 12/19 (63.2%) and 5/26 (19.2%), respectively, while numbers for the nm23-H1 negative cases were 7/19 (36.8%) and 21/26 (80.8%), respectively, indicating an inverse relationship between nm23-H1 gene product expression and lymphatic vessel invasion (p < 0.01).",
+				"annotations": [{
+					"id": "54",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 7183,
+						"length": 7
+					}]
+				}, {
+					"id": "55",
+					"infons": {
+						"identifier": "926",
+						"type": "Gene",
+						"NCBI Homologene": "3621"
+					},
+					"text": "ly3",
+					"locations": [{
+						"offset": 7227,
+						"length": 3
+					}]
+				}, {
+					"id": "56",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 7310,
+						"length": 7
+					}]
+				}, {
+					"id": "57",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 7427,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 7501,
+				"infons": {},
+				"text": "Blood vessel invasion gradings included 14 v0, 27 v1, 4 v2, and no v3 cases.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 7578,
+				"infons": {},
+				"text": "Of these numbers, expression of nm23-H1 gene product was present in 7 v0, 7 v1, and 3 v2 cases.",
+				"annotations": [{
+					"id": "58",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 7610,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 7674,
+				"infons": {},
+				"text": "In nm23-H1 gene product negative patients, there were 7 v0, 20 v1, and 1 v2 cases.",
+				"annotations": [{
+					"id": "59",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 7677,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 7757,
+				"infons": {},
+				"text": "As is apparent from these numbers, we found no correlation between nm23-H1 gene product expression and blood vessel invasion.",
+				"annotations": [{
+					"id": "60",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 7824,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "52",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 7083,
+					"length": 7
+				}]
+			}, {
+				"id": "53",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 7187,
+					"length": 7
+				}]
+			}, {
+				"id": "54",
+				"infons": {
+					"identifier": "926",
+					"type": "Gene",
+					"NCBI Homologene": "3621"
+				},
+				"text": "ly3",
+				"locations": [{
+					"offset": 7231,
+					"length": 3
+				}]
+			}, {
+				"id": "55",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 7314,
+					"length": 7
+				}]
+			}, {
+				"id": "56",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 7431,
+					"length": 7
+				}]
+			}, {
+				"id": "57",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 7614,
+					"length": 7
+				}]
+			}, {
+				"id": "58",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 7681,
+					"length": 4
+				}]
+			}, {
+				"id": "59",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 7828,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 7883,
+			"infons": {
+				"section_type": "TABLE",
+				"type": "table"
+			},
+			"text": "NS: not significant",
+			"sentences": [{
+				"offset": 7883,
+				"infons": {},
+				"text": "NS: not significant",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 7903,
+			"infons": {
+				"section_type": "TABLE",
+				"file": "T2.xml",
+				"id": "T2",
+				"type": "table_caption"
+			},
+			"text": "Relationship between nm23-H1 gene product expression and lymphatic and blood vessel invasion.",
+			"sentences": [{
+				"offset": 7903,
+				"infons": {},
+				"text": "Relationship between nm23-H1 gene product expression and lymphatic and blood vessel invasion.",
+				"annotations": [{
+					"id": "61",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 7924,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "60",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 7928,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 7997,
+			"infons": {
+				"section_type": "TABLE",
+				"id": "T2",
+				"type": "table",
+				"File": "T2.xml"
+			},
+			"text": " nm23-H1 (-) nm23-H1 (+) p-value Lymphatic vessel invasion   p < 0.01  ly0+ly1 7 12   ly2+ly3 21 5  Blood vessel invasion   NS  v0 7 7   v1 20 7   v2 1 3   v3 0 0  ",
+			"sentences": [{
+				"offset": 7997,
+				"infons": {},
+				"text": " nm23-H1 (-) nm23-H1 (+) p-value Lymphatic vessel invasion   p < 0.01  ly0+ly1 7 12   ly2+ly3 21 5  Blood vessel invasion   NS  v0 7 7   v1 20 7   v2 1 3   v3 0 0",
+				"annotations": [{
+					"id": "62",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 7998,
+						"length": 7
+					}]
+				}, {
+					"id": "63",
+					"infons": {
+						"identifier": "926",
+						"type": "Gene",
+						"NCBI Homologene": "3621"
+					},
+					"text": "ly3",
+					"locations": [{
+						"offset": 8087,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "61",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 8002,
+					"length": 7
+				}]
+			}, {
+				"id": "62",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 8014,
+					"length": 7
+				}]
+			}, {
+				"id": "63",
+				"infons": {
+					"identifier": "926",
+					"type": "Gene",
+					"NCBI Homologene": "3621"
+				},
+				"text": "ly3",
+				"locations": [{
+					"offset": 8091,
+					"length": 3
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 8160,
+			"infons": {
+				"section_type": "RESULTS",
+				"type": "paragraph"
+			},
+			"text": "The number of patients who underwent pre- or post-operative radiotherapy in nm23-H1 positive and negative groups was 9/17 (52.9%) and 13/28 (53.6%), respectively, and there was no difference between these groups. In the present series, no correlation between 5-year survival rates and nm23-H1 gene product expression was found (22.9% vs. 23.8%, p = 0.21). However, in patients with involved lymph nodes, 5-year survival rates of nm23-H1 gene product positive and negative group was 16.7% and 7.7%, respectively. As shown Fig. 2, reduced expression of nm23-H1 gene product was associated with shorter overall survival in patients with involved lymph nodes (p < 0.05). In patients without involved lymph nodes, there was no significant difference in patients' survival between these groups (p = 0.87).",
+			"sentences": [{
+				"offset": 8160,
+				"infons": {},
+				"text": "The number of patients who underwent pre- or post-operative radiotherapy in nm23-H1 positive and negative groups was 9/17 (52.9%) and 13/28 (53.6%), respectively, and there was no difference between these groups.",
+				"annotations": [{
+					"id": "64",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 8236,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 8373,
+				"infons": {},
+				"text": "In the present series, no correlation between 5-year survival rates and nm23-H1 gene product expression was found (22.9% vs. 23.8%, p = 0.21).",
+				"annotations": [{
+					"id": "65",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 8445,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 8516,
+				"infons": {},
+				"text": "However, in patients with involved lymph nodes, 5-year survival rates of nm23-H1 gene product positive and negative group was 16.7% and 7.7%, respectively.",
+				"annotations": [{
+					"id": "66",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 8589,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 8672,
+				"infons": {},
+				"text": "As shown Fig.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 8686,
+				"infons": {},
+				"text": "2, reduced expression of nm23-H1 gene product was associated with shorter overall survival in patients with involved lymph nodes (p < 0.05).",
+				"annotations": [{
+					"id": "67",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 8711,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 8827,
+				"infons": {},
+				"text": "In patients without involved lymph nodes, there was no significant difference in patients' survival between these groups (p = 0.87).",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "64",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 8254,
+					"length": 7
+				}]
+			}, {
+				"id": "65",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 8463,
+					"length": 7
+				}]
+			}, {
+				"id": "66",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 8607,
+					"length": 7
+				}]
+			}, {
+				"id": "67",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 8729,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 8960,
+			"infons": {
+				"section_type": "FIG",
+				"file": "1471-2407-1-3-2.jpg",
+				"id": "F2",
+				"type": "fig_caption"
+			},
+			"text": "The survival of patients categorized according to nm23-H1 gene product expression in patients with involved lymph nodes (p = 0.027).",
+			"sentences": [{
+				"offset": 8960,
+				"infons": {},
+				"text": "The survival of patients categorized according to nm23-H1 gene product expression in patients with involved lymph nodes (p = 0.027).",
+				"annotations": [{
+					"id": "68",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 9010,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "68",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 9028,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 9093,
+			"infons": {
+				"section_type": "DISCUSS",
+				"type": "title_1"
+			},
+			"text": "Discussion",
+			"sentences": [{
+				"offset": 9093,
+				"infons": {},
+				"text": "Discussion",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 9104,
+			"infons": {
+				"section_type": "DISCUSS",
+				"type": "paragraph"
+			},
+			"text": "Our study revealed nm23-H1 gene product expression in 17 (37.8%) of 45 patients with esophageal squamous cell carcinoma. Other researchers have reported similar findings in patients with this type of cancer. Patel et al. demonstrated positive nm23 staining in 13 (29%) of 45 patients with T3-4N1M0 esophageal carcinoma, and Iizuka et al. reported positive nm23 staining in 23 (46%) of 50 patients. Two possible explanations for the wide range of percentages in these studies include differences in the specificity of the antibody used or differences in the method for evaluating nm23-H1 gene product staining.",
+			"sentences": [{
+				"offset": 9104,
+				"infons": {},
+				"text": "Our study revealed nm23-H1 gene product expression in 17 (37.8%) of 45 patients with esophageal squamous cell carcinoma.",
+				"annotations": [{
+					"id": "69",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 9123,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 9225,
+				"infons": {},
+				"text": "Other researchers have reported similar findings in patients with this type of cancer.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 9312,
+				"infons": {},
+				"text": "Patel et al.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 9325,
+				"infons": {},
+				"text": "demonstrated positive nm23 staining in 13 (29%) of 45 patients with T3-4N1M0 esophageal carcinoma, and Iizuka et al.",
+				"annotations": [{
+					"id": "70",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 9347,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 9442,
+				"infons": {},
+				"text": "reported positive nm23 staining in 23 (46%) of 50 patients.",
+				"annotations": [{
+					"id": "71",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 9460,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 9502,
+				"infons": {},
+				"text": "Two possible explanations for the wide range of percentages in these studies include differences in the specificity of the antibody used or differences in the method for evaluating nm23-H1 gene product staining.",
+				"annotations": [{
+					"id": "72",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 9683,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "69",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 9141,
+					"length": 7
+				}]
+			}, {
+				"id": "70",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 9365,
+					"length": 4
+				}]
+			}, {
+				"id": "71",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 9478,
+					"length": 4
+				}]
+			}, {
+				"id": "72",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 9701,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 9714,
+			"infons": {
+				"section_type": "DISCUSS",
+				"type": "paragraph"
+			},
+			"text": "Earlier studies have reported a clear correlation between lymphatic vessel invasion and regional lymph node metastases in esophageal squamous cell carcinoma. Our data also suggests an association between lymphatic vessel invasion and lymph node metastasis.",
+			"sentences": [{
+				"offset": 9714,
+				"infons": {},
+				"text": "Earlier studies have reported a clear correlation between lymphatic vessel invasion and regional lymph node metastases in esophageal squamous cell carcinoma.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 9872,
+				"infons": {},
+				"text": "Our data also suggests an association between lymphatic vessel invasion and lymph node metastasis.",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 9971,
+			"infons": {
+				"section_type": "DISCUSS",
+				"type": "paragraph"
+			},
+			"text": "Although in certain other cancers, nm23-H1 gene product expression appears to be related to lymph node metastasis, our study of patients with esophageal squamous cell carcinoma showed no correlation between nm23-H1 gene product expression and lymph node metastasis, findings compatible with those of Iizuka et al.. We did observe, however, an inverse correlation between nm23-H1 gene product expression and lymphatic vessel invasion. These results suggest that expression of nm23-H1 gene product may not have implications for lymph node metastasis but may play a part in local invasion. However, our results and Iizuka et al. also showed that reduced expression of nm23-H1 in esophageal squamous cell carcinoma is associated with a shorter overall survival rate in patients with lymph node involvement, but not in patients without lymph node involvement. Moreover, lymphatic vessel invasion is the first and necessary step at the outset of the metastatic cascade. It has been demonstrated that lymphatic vessel invasion is an independent prognostic factor in esophageal squamous cell carcinoma. Thus, taken together, one must consider the possibility that, in esophageal squamous cell carcinoma, nm23-H1 gene product plays a role in the metastatic process following lymphatic spread. Further studies are required to determine the exact role of nm23-H1 gene product in the lymphatic spread of cancer cells in this type of carcinoma.",
+			"sentences": [{
+				"offset": 9971,
+				"infons": {},
+				"text": "Although in certain other cancers, nm23-H1 gene product expression appears to be related to lymph node metastasis, our study of patients with esophageal squamous cell carcinoma showed no correlation between nm23-H1 gene product expression and lymph node metastasis, findings compatible with those of Iizuka et al.. We did observe, however, an inverse correlation between nm23-H1 gene product expression and lymphatic vessel invasion.",
+				"annotations": [{
+					"id": "73",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 10006,
+						"length": 7
+					}]
+				}, {
+					"id": "74",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 10178,
+						"length": 7
+					}]
+				}, {
+					"id": "75",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 10342,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 10405,
+				"infons": {},
+				"text": "These results suggest that expression of nm23-H1 gene product may not have implications for lymph node metastasis but may play a part in local invasion.",
+				"annotations": [{
+					"id": "76",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 10446,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 10558,
+				"infons": {},
+				"text": "However, our results and Iizuka et al.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 10597,
+				"infons": {},
+				"text": "also showed that reduced expression of nm23-H1 in esophageal squamous cell carcinoma is associated with a shorter overall survival rate in patients with lymph node involvement, but not in patients without lymph node involvement.",
+				"annotations": [{
+					"id": "77",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 10636,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 10826,
+				"infons": {},
+				"text": "Moreover, lymphatic vessel invasion is the first and necessary step at the outset of the metastatic cascade.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 10935,
+				"infons": {},
+				"text": "It has been demonstrated that lymphatic vessel invasion is an independent prognostic factor in esophageal squamous cell carcinoma.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 11066,
+				"infons": {},
+				"text": "Thus, taken together, one must consider the possibility that, in esophageal squamous cell carcinoma, nm23-H1 gene product plays a role in the metastatic process following lymphatic spread.",
+				"annotations": [{
+					"id": "78",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 11167,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 11255,
+				"infons": {},
+				"text": "Further studies are required to determine the exact role of nm23-H1 gene product in the lymphatic spread of cancer cells in this type of carcinoma.",
+				"annotations": [{
+					"id": "79",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 11315,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "73",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 10024,
+					"length": 7
+				}]
+			}, {
+				"id": "74",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 10196,
+					"length": 7
+				}]
+			}, {
+				"id": "75",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 10360,
+					"length": 7
+				}]
+			}, {
+				"id": "76",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 10464,
+					"length": 7
+				}]
+			}, {
+				"id": "77",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 10654,
+					"length": 7
+				}]
+			}, {
+				"id": "78",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 11185,
+					"length": 7
+				}]
+			}, {
+				"id": "79",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 11333,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 11403,
+			"infons": {
+				"section_type": "DISCUSS",
+				"type": "paragraph"
+			},
+			"text": "Furthermore, additional studies are needed to clarify the exact relationship between nm23-H1 gene product expression and blood vessel invasion. Among breast cancer studies, Duenas et al. reported a correlation between nm23-H1 expression and blood vessel invasion, while Royds et al. found no such correlation. In colorectal cancer, Yamaguchi et al. and Royds et al. found no significant correlation between nm23-H1 expression and blood vessel invasion. In gastric cancer, interestingly, Muller et al. reported a positive correlation between nm23-H1 expression and blood vessel invasion. Our present study on esophageal squamous cell carcinoma found no correlation between nm23-H1 gene product expression and blood vessel invasion. To the best of our knowledge, there are no previous studies on the relationship between nm23-H1 expression and distant metastasis in esophageal squamous cell carcinoma although Sarbia et al. demonstrated a clear correlation between blood vessel invasion and distant metastases. Our data suggests that, in esophageal squamous cell carcinoma, nm23-H1 gene product expression may not be associated with distant metastasis.",
+			"sentences": [{
+				"offset": 11403,
+				"infons": {},
+				"text": "Furthermore, additional studies are needed to clarify the exact relationship between nm23-H1 gene product expression and blood vessel invasion.",
+				"annotations": [{
+					"id": "80",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 11488,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 11547,
+				"infons": {},
+				"text": "Among breast cancer studies, Duenas et al.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 11590,
+				"infons": {},
+				"text": "reported a correlation between nm23-H1 expression and blood vessel invasion, while Royds et al.",
+				"annotations": [{
+					"id": "81",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 11621,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 11686,
+				"infons": {},
+				"text": "found no such correlation.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 11713,
+				"infons": {},
+				"text": "In colorectal cancer, Yamaguchi et al.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 11752,
+				"infons": {},
+				"text": "and Royds et al.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 11769,
+				"infons": {},
+				"text": "found no significant correlation between nm23-H1 expression and blood vessel invasion.",
+				"annotations": [{
+					"id": "82",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 11810,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 11856,
+				"infons": {},
+				"text": "In gastric cancer, interestingly, Muller et al.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 11904,
+				"infons": {},
+				"text": "reported a positive correlation between nm23-H1 expression and blood vessel invasion.",
+				"annotations": [{
+					"id": "83",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 11944,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 11990,
+				"infons": {},
+				"text": "Our present study on esophageal squamous cell carcinoma found no correlation between nm23-H1 gene product expression and blood vessel invasion.",
+				"annotations": [{
+					"id": "84",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 12075,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 12134,
+				"infons": {},
+				"text": "To the best of our knowledge, there are no previous studies on the relationship between nm23-H1 expression and distant metastasis in esophageal squamous cell carcinoma although Sarbia et al.",
+				"annotations": [{
+					"id": "85",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 12222,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 12325,
+				"infons": {},
+				"text": "demonstrated a clear correlation between blood vessel invasion and distant metastases.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 12412,
+				"infons": {},
+				"text": "Our data suggests that, in esophageal squamous cell carcinoma, nm23-H1 gene product expression may not be associated with distant metastasis.",
+				"annotations": [{
+					"id": "86",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 12475,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "80",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 11506,
+					"length": 7
+				}]
+			}, {
+				"id": "81",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 11639,
+					"length": 7
+				}]
+			}, {
+				"id": "82",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 11828,
+					"length": 7
+				}]
+			}, {
+				"id": "83",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 11962,
+					"length": 7
+				}]
+			}, {
+				"id": "84",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 12093,
+					"length": 7
+				}]
+			}, {
+				"id": "85",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 12240,
+					"length": 7
+				}]
+			}, {
+				"id": "86",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 12493,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 12554,
+			"infons": {
+				"section_type": "DISCUSS",
+				"type": "paragraph"
+			},
+			"text": "Cohn et al. suggested that, in colorectal cancer, allelic deletion of the nm23-H1 gene has been shown to have possible antimetastatic functions. Although we did not determine allelic deletion in the presence of nm23-H1 gene product expression in our study, the possibility remains that changes in the nm23-H1 locus have an antimetastatic function in esophageal squamous cell carcinoma as well. Metastasis is a cascade of linked sequential steps involving multiple host- tumor interactions. To form a metastatic focus, a tumor cell or group of cells is required to leave the primary tumor, invade local tissues and basement membranes, enter the circulation, avoid host immunological responses, attach to a distant vascular bed, extravasate into the interstitium of the target organ, and colonize to form a second tumor. Further studies are required to clarify the specific role of nm23-H1 gene product in this multi-step metastatic process.",
+			"sentences": [{
+				"offset": 12554,
+				"infons": {},
+				"text": "Cohn et al.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 12566,
+				"infons": {},
+				"text": "suggested that, in colorectal cancer, allelic deletion of the nm23-H1 gene has been shown to have possible antimetastatic functions.",
+				"annotations": [{
+					"id": "87",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 12628,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 12699,
+				"infons": {},
+				"text": "Although we did not determine allelic deletion in the presence of nm23-H1 gene product expression in our study, the possibility remains that changes in the nm23-H1 locus have an antimetastatic function in esophageal squamous cell carcinoma as well.",
+				"annotations": [{
+					"id": "88",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 12765,
+						"length": 7
+					}]
+				}, {
+					"id": "89",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 12855,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 12948,
+				"infons": {},
+				"text": "Metastasis is a cascade of linked sequential steps involving multiple host- tumor interactions.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 13044,
+				"infons": {},
+				"text": "To form a metastatic focus, a tumor cell or group of cells is required to leave the primary tumor, invade local tissues and basement membranes, enter the circulation, avoid host immunological responses, attach to a distant vascular bed, extravasate into the interstitium of the target organ, and colonize to form a second tumor.",
+				"annotations": [{
+					"id": "90",
+					"infons": {
+						"type": "Clinical Significance",
+						"Identifier": "Sensitivity/Response"
+					},
+					"text": "response",
+					"locations": [{
+						"offset": 13565,
+						"length": 8
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 13373,
+				"infons": {},
+				"text": "Further studies are required to clarify the specific role of nm23-H1 gene product in this multi-step metastatic process.",
+				"annotations": [{
+					"id": "91",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 13434,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "87",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 12648,
+					"length": 7
+				}]
+			}, {
+				"id": "88",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 12785,
+					"length": 7
+				}]
+			}, {
+				"id": "89",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 12875,
+					"length": 7
+				}]
+			}, {
+				"id": "90",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 13454,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 13494,
+			"infons": {
+				"section_type": "DISCUSS",
+				"type": "paragraph"
+			},
+			"text": "In conclusion, we found an inverse correlation between nm23-H1 gene product expression and lymphatic vessel invasion but found no correlation between nm23-H1 gene product and blood vessel invasion in patients with esophageal squamous cell carcinoma. Furthermore, nm23-H1 gene product expression might be a prognostic marker in patients with involved lymph nodes.",
+			"sentences": [{
+				"offset": 13494,
+				"infons": {},
+				"text": "In conclusion, we found an inverse correlation between nm23-H1 gene product expression and lymphatic vessel invasion but found no correlation between nm23-H1 gene product and blood vessel invasion in patients with esophageal squamous cell carcinoma.",
+				"annotations": [{
+					"id": "92",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 13549,
+						"length": 7
+					}]
+				}, {
+					"id": "93",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 13644,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 13744,
+				"infons": {},
+				"text": "Furthermore, nm23-H1 gene product expression might be a prognostic marker in patients with involved lymph nodes.",
+				"annotations": [{
+					"id": "94",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 13757,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "91",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 13569,
+					"length": 7
+				}]
+			}, {
+				"id": "92",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 13664,
+					"length": 7
+				}]
+			}, {
+				"id": "93",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 13777,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 13857,
+			"infons": {
+				"section_type": "SUPPL",
+				"type": "title_1"
+			},
+			"text": "Pre-publication history",
+			"sentences": [{
+				"offset": 13857,
+				"infons": {},
+				"text": "Pre-publication history",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 13881,
+			"infons": {
+				"section_type": "SUPPL",
+				"type": "paragraph"
+			},
+			"text": "The pre-publication history for this paper can be accessed here:",
+			"sentences": [{
+				"offset": 13881,
+				"infons": {},
+				"text": "The pre-publication history for this paper can be accessed here:",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 13946,
+			"infons": {
+				"name_3": "surname:Thogeirsson;given-names:UP",
+				"name_2": "surname:Kooper;given-names:L",
+				"name_1": "surname:Bevilacqua;given-names:G",
+				"name_0": "surname:Steeg;given-names:PS",
+				"fpage": "200",
+				"year": "1988",
+				"source": "J NatI Cancer Inst",
+				"type": "ref",
+				"volume": "80",
+				"section_type": "REF",
+				"lpage": "204",
+				"name_6": "surname:Sobel;given-names:ME",
+				"name_5": "surname:Liotta;given-names:LA",
+				"name_4": "surname:Talmadge;given-names:JE"
+			},
+			"text": "Evidence for a novel gene associated with low tumor metastatic potential.",
+			"sentences": [{
+				"offset": 13946,
+				"infons": {},
+				"text": "Evidence for a novel gene associated with low tumor metastatic potential.",
+				"annotations": [{
+					"id": "95",
+					"infons": {
+						"type": "Clinical Significance",
+						"Identifier": "Neomorphic"
+					},
+					"text": "novel",
+					"locations": [{
+						"offset": 14035,
+						"length": 5
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 14020,
+			"infons": {
+				"name_3": "surname:Sandeen;given-names:MA",
+				"name_2": "surname:King;given-names:CR",
+				"name_1": "surname:Flatow;given-names:U",
+				"name_0": "surname:Leone;given-names:A",
+				"fpage": "25",
+				"pub-id_pmid": "2013093",
+				"year": "1991",
+				"source": "Cell",
+				"type": "ref",
+				"volume": "65",
+				"section_type": "REF",
+				"lpage": "35",
+				"name_6": "surname:Steeg;given-names:PS",
+				"name_5": "surname:Liotta;given-names:LA",
+				"name_4": "surname:Margulies;given-names:IMK"
+			},
+			"text": "Reduced tumor incidence, metastatic potential, and cytokine responsiveness of nm23- transfected melanoma cells.",
+			"sentences": [{
+				"offset": 14020,
+				"infons": {},
+				"text": "Reduced tumor incidence, metastatic potential, and cytokine responsiveness of nm23- transfected melanoma cells.",
+				"annotations": [{
+					"id": "96",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 14098,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "94",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 14118,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 14132,
+			"infons": {
+				"name_3": "surname:Steeg;given-names:PS",
+				"volume": "49",
+				"name_2": "surname:Liotta;given-names:LA",
+				"name_1": "surname:Sobel;given-names:ME",
+				"section_type": "REF",
+				"name_0": "surname:Bevilaqua;given-names:D",
+				"fpage": "5185",
+				"pub-id_pmid": "2475243",
+				"year": "1989",
+				"source": "Cancer Res",
+				"type": "ref",
+				"lpage": "5190"
+			},
+			"text": "Association of low nm23 RNA levels in human primary infiltrating ductal breast carcinomas with lymph node involvement and other histopathological indicators of high metastatic potential.",
+			"sentences": [{
+				"offset": 14132,
+				"infons": {},
+				"text": "Association of low nm23 RNA levels in human primary infiltrating ductal breast carcinomas with lymph node involvement and other histopathological indicators of high metastatic potential.",
+				"annotations": [{
+					"id": "97",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 14151,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "95",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 14171,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 14319,
+			"infons": {
+				"name_3": "surname:Westley;given-names:BR",
+				"name_2": "surname:May;given-names:FEB",
+				"name_1": "surname:Henry;given-names:JA",
+				"name_0": "surname:Hennessy;given-names:C",
+				"fpage": "281",
+				"year": "1991",
+				"source": "J NatI Cancer Inst",
+				"type": "ref",
+				"volume": "83",
+				"section_type": "REF",
+				"lpage": "285",
+				"name_5": "surname:Lennard;given-names:TWJ",
+				"name_4": "surname:Angus;given-names:B"
+			},
+			"text": "Expression of the antimetastatic gene nm23 in human breast cancer.",
+			"sentences": [{
+				"offset": 14319,
+				"infons": {},
+				"text": "Expression of the antimetastatic gene nm23 in human breast cancer.",
+				"annotations": [{
+					"id": "98",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 14357,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "96",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 14377,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 14386,
+			"infons": {
+				"name_3": "surname:Mishima;given-names:Y",
+				"name_2": "surname:Takagi;given-names:Y",
+				"name_1": "surname:Sawai;given-names:S",
+				"name_0": "surname:Hirayama;given-names:R",
+				"fpage": "1249",
+				"year": "1991",
+				"source": "J NatI Cancer Inst",
+				"type": "ref",
+				"volume": "83",
+				"section_type": "REF",
+				"name_9": "surname:Hirokawa;given-names:K",
+				"name_8": "surname:Utsunomiya;given-names:M",
+				"name_7": "surname:Kurashima;given-names:C",
+				"lpage": "1250",
+				"name_6": "surname:Esaki;given-names:Y",
+				"name_5": "surname:Shimada;given-names:N",
+				"name_4": "surname:Kimura;given-names:N"
+			},
+			"text": "Positive relationship between expression of anti-metastatic factor (nm23 gene product or nucleotide diphosphate kinase) and good prognosis in human breast cancer.",
+			"sentences": [{
+				"offset": 14386,
+				"infons": {},
+				"text": "Positive relationship between expression of anti-metastatic factor (nm23 gene product or nucleotide diphosphate kinase) and good prognosis in human breast cancer.",
+				"annotations": [{
+					"id": "99",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 14454,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "97",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 14474,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 14549,
+			"infons": {
+				"name_3": "surname:Tahara;given-names:E",
+				"volume": "84",
+				"name_2": "surname:Yokozaki;given-names:H",
+				"name_1": "surname:Yasui;given-names:W",
+				"section_type": "REF",
+				"name_0": "surname:Nakayama;given-names:H",
+				"fpage": "184",
+				"pub-id_pmid": "8096503",
+				"year": "1993",
+				"source": "Jpn J Cancer Res",
+				"type": "ref",
+				"lpage": "190"
+			},
+			"text": "Reduced expression of nm23 is associated with metastasis of human gastric carcinomas.",
+			"sentences": [{
+				"offset": 14549,
+				"infons": {},
+				"text": "Reduced expression of nm23 is associated with metastasis of human gastric carcinomas.",
+				"annotations": [{
+					"id": "100",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 14571,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "98",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 14591,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 14635,
+			"infons": {
+				"name_3": "surname:Gabbert;given-names:HE",
+				"name_2": "surname:Hommel;given-names:G",
+				"name_1": "surname:Schneiders;given-names:A",
+				"name_0": "surname:Muller;given-names:W",
+				"fpage": "2481",
+				"pub-id_doi": "10.1002/(SICI)1097-0142(19981215)83:12<2481::AID-CNCR11>3.0.CO;2-P",
+				"pub-id_pmid": "9874452",
+				"year": "1998",
+				"source": "Cancer",
+				"type": "ref",
+				"volume": "83",
+				"section_type": "REF",
+				"lpage": "2487"
+			},
+			"text": "Expression of nm23 in gastric carcinoma: association with tumor progression and poor prognosis.",
+			"sentences": [{
+				"offset": 14635,
+				"infons": {},
+				"text": "Expression of nm23 in gastric carcinoma: association with tumor progression and poor prognosis.",
+				"annotations": [{
+					"id": "101",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 14649,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "99",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 14669,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 14731,
+			"infons": {
+				"name_3": "surname:Wittekind;given-names:C",
+				"volume": "92",
+				"name_2": "surname:Kockerling;given-names:F",
+				"name_1": "surname:Katalinic;given-names:A",
+				"section_type": "REF",
+				"name_0": "surname:Tannapfel;given-names:A",
+				"fpage": "1182",
+				"pub-id_pmid": "9219795",
+				"year": "1997",
+				"source": "Am J Gastroenterol",
+				"type": "ref",
+				"lpage": "1186"
+			},
+			"text": "The prediction of lymph node metastases in colorectal cancer by expression of the nucleoside diphosphate kinase/nm23-H1 and histopathological variables.",
+			"sentences": [{
+				"offset": 14731,
+				"infons": {},
+				"text": "The prediction of lymph node metastases in colorectal cancer by expression of the nucleoside diphosphate kinase/nm23-H1 and histopathological variables.",
+				"annotations": [{
+					"id": "102",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 14843,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "100",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 14863,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 14884,
+			"infons": {
+				"name_3": "surname:Furukawa;given-names:K",
+				"name_2": "surname:Fushida;given-names:S",
+				"name_1": "surname:Urano;given-names:T",
+				"name_0": "surname:Yamaguchi;given-names:A",
+				"fpage": "1020",
+				"pub-id_pmid": "8217591",
+				"year": "1993",
+				"source": "Br J Cancer",
+				"type": "ref",
+				"volume": "68",
+				"section_type": "REF",
+				"name_8": "surname:Shiku;given-names:H",
+				"name_7": "surname:Nakagawara;given-names:G",
+				"lpage": "1024",
+				"name_6": "surname:Miyazaki;given-names:I",
+				"name_5": "surname:Yonemura;given-names:Y",
+				"name_4": "surname:Nishimura;given-names:G"
+			},
+			"text": "Inverse association of nm23-H1 expression by colorectal cancer with liver metastasis.",
+			"sentences": [{
+				"offset": 14884,
+				"infons": {},
+				"text": "Inverse association of nm23-H1 expression by colorectal cancer with liver metastasis.",
+				"annotations": [{
+					"id": "103",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 14907,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "101",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 14927,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 14970,
+			"infons": {
+				"name_3": "surname:Shima;given-names:M",
+				"name_2": "surname:Nakao;given-names:K",
+				"name_1": "surname:Ohtsuru;given-names:A",
+				"name_0": "surname:Nakayama;given-names:T",
+				"fpage": "1349",
+				"pub-id_pmid": "1322996",
+				"year": "1992",
+				"source": "J Natl Cancer Inst",
+				"type": "ref",
+				"volume": "84",
+				"section_type": "REF",
+				"name_8": "surname:Nagataki;given-names:S",
+				"name_7": "surname:Kimura;given-names:N",
+				"lpage": "1354",
+				"name_6": "surname:Ishii;given-names:N",
+				"name_5": "surname:Watanabe;given-names:K",
+				"name_4": "surname:Nakata;given-names:K"
+			},
+			"text": "Expression in human hepatocellular carcinoma of nucleotide diphosphate kinase, a homologue of the nm23 gene product.",
+			"sentences": [{
+				"offset": 14970,
+				"infons": {},
+				"text": "Expression in human hepatocellular carcinoma of nucleotide diphosphate kinase, a homologue of the nm23 gene product.",
+				"annotations": [{
+					"id": "104",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 15068,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "102",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 15088,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 15087,
+			"infons": {
+				"name_3": "surname:Kodama;given-names:K",
+				"name_2": "surname:Yokouchi;given-names:H",
+				"name_1": "surname:Doi;given-names:O",
+				"name_0": "surname:Higashiyama;given-names:M",
+				"fpage": "33",
+				"year": "1992",
+				"source": "Br J Cancer",
+				"type": "ref",
+				"volume": "66",
+				"section_type": "REF",
+				"lpage": "536",
+				"name_6": "surname:Kimura;given-names:N",
+				"name_5": "surname:Tateishi;given-names:R",
+				"name_4": "surname:Nakamori;given-names:S"
+			},
+			"text": "Immunohistochemical analysis of nm23 gene product/NDP kinase expression in pulmonary adenocarcinoma: lack of prognostic value.",
+			"sentences": [{
+				"offset": 15087,
+				"infons": {},
+				"text": "Immunohistochemical analysis of nm23 gene product/NDP kinase expression in pulmonary adenocarcinoma: lack of prognostic value.",
+				"annotations": [{
+					"id": "105",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 15119,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "103",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 15139,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 15214,
+			"infons": {
+				"name_3": "surname:Mori;given-names:T",
+				"name_2": "surname:Koshiyama;given-names:M",
+				"name_1": "surname:Konishi;given-names:I",
+				"name_0": "surname:Mandai;given-names:M",
+				"fpage": "1825",
+				"pub-id_pmid": "7907945",
+				"year": "1994",
+				"source": "Cancer Res",
+				"type": "ref",
+				"volume": "54",
+				"section_type": "REF",
+				"name_9": "surname:Fukumoto;given-names:M",
+				"name_8": "surname:Hirai;given-names:H",
+				"name_7": "surname:Nomura;given-names:H",
+				"lpage": "1830",
+				"name_6": "surname:Okamura;given-names:H",
+				"name_5": "surname:Tashiro;given-names:H",
+				"name_4": "surname:Arao;given-names:S"
+			},
+			"text": "Expression of metastasis-related nm23-H1 and nm23-H2 genes in ovarian carcinomas: correlation with clinicopathology, EGFR, c-erb-2, and c-erb B-3 genes, and sex steroid receptor expression.",
+			"sentences": [{
+				"offset": 15214,
+				"infons": {},
+				"text": "Expression of metastasis-related nm23-H1 and nm23-H2 genes in ovarian carcinomas: correlation with clinicopathology, EGFR, c-erb-2, and c-erb B-3 genes, and sex steroid receptor expression.",
+				"annotations": [{
+					"id": "106",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 15247,
+						"length": 7
+					}]
+				}, {
+					"id": "107",
+					"infons": {
+						"identifier": "4831",
+						"type": "Gene",
+						"NCBI Homologene": "133879"
+					},
+					"text": "nm23-H2",
+					"locations": [{
+						"offset": 15259,
+						"length": 7
+					}]
+				}, {
+					"id": "108",
+					"infons": {
+						"identifier": "1956",
+						"type": "Gene",
+						"NCBI Homologene": "74545"
+					},
+					"text": "EGFR",
+					"locations": [{
+						"offset": 15331,
+						"length": 4
+					}]
+				}, {
+					"id": "109",
+					"infons": {
+						"identifier": "2065",
+						"type": "Gene",
+						"NCBI Homologene": "20457"
+					},
+					"text": "c-erb B-3",
+					"locations": [{
+						"offset": 15350,
+						"length": 9
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "104",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 15267,
+					"length": 7
+				}]
+			}, {
+				"id": "105",
+				"infons": {
+					"identifier": "4831",
+					"type": "Gene",
+					"NCBI Homologene": "133879"
+				},
+				"text": "nm23-H2",
+				"locations": [{
+					"offset": 15279,
+					"length": 7
+				}]
+			}, {
+				"id": "106",
+				"infons": {
+					"identifier": "1956",
+					"type": "Gene",
+					"NCBI Homologene": "74545"
+				},
+				"text": "EGFR",
+				"locations": [{
+					"offset": 15351,
+					"length": 4
+				}]
+			}, {
+				"id": "107",
+				"infons": {
+					"identifier": "2065",
+					"type": "Gene",
+					"NCBI Homologene": "20457"
+				},
+				"text": "c-erb B-3",
+				"locations": [{
+					"offset": 15370,
+					"length": 9
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 15404,
+			"infons": {
+				"name_3": "surname:Patel;given-names:YV",
+				"name_2": "surname:Chikhlikar;given-names:PR",
+				"name_1": "surname:Bhatavdekar;given-names:JM",
+				"name_0": "surname:Patel;given-names:DD",
+				"fpage": "111",
+				"pub-id_doi": "10.1002/(SICI)1096-9098(199706)65:2<111::AID-JSO7>3.0.CO;2-A",
+				"pub-id_pmid": "9209522",
+				"year": "1997",
+				"source": "J Surg Oncol",
+				"type": "ref",
+				"volume": "65",
+				"section_type": "REF",
+				"name_7": "surname:Balar;given-names:DB",
+				"lpage": "116",
+				"name_6": "surname:Suthar;given-names:TP",
+				"name_5": "surname:Ghosh;given-names:N",
+				"name_4": "surname:Shah;given-names:NG"
+			},
+			"text": "Clinical significance of p53, nm23, and bcl-2 in T3-4N1M0 oesophageal carcinoma: an immunohistocheniical approach.",
+			"sentences": [{
+				"offset": 15404,
+				"infons": {},
+				"text": "Clinical significance of p53, nm23, and bcl-2 in T3-4N1M0 oesophageal carcinoma: an immunohistocheniical approach.",
+				"annotations": [{
+					"id": "110",
+					"infons": {
+						"identifier": "7157",
+						"type": "Gene",
+						"NCBI Homologene": "460"
+					},
+					"text": "p53",
+					"locations": [{
+						"offset": 15429,
+						"length": 3
+					}]
+				}, {
+					"id": "111",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23",
+					"locations": [{
+						"offset": 15434,
+						"length": 4
+					}]
+				}, {
+					"id": "112",
+					"infons": {
+						"identifier": "596",
+						"type": "Gene",
+						"NCBI Homologene": "527"
+					},
+					"text": "bcl-2",
+					"locations": [{
+						"offset": 15444,
+						"length": 5
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "108",
+				"infons": {
+					"identifier": "7157",
+					"type": "Gene",
+					"NCBI Homologene": "460"
+				},
+				"text": "p53",
+				"locations": [{
+					"offset": 15449,
+					"length": 3
+				}]
+			}, {
+				"id": "109",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23",
+				"locations": [{
+					"offset": 15454,
+					"length": 4
+				}]
+			}, {
+				"id": "110",
+				"infons": {
+					"identifier": "596",
+					"type": "Gene",
+					"NCBI Homologene": "527"
+				},
+				"text": "bcl-2",
+				"locations": [{
+					"offset": 15464,
+					"length": 5
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 15519,
+			"infons": {
+				"name_3": "surname:Yosino;given-names:S",
+				"name_2": "surname:Hayashi;given-names:H",
+				"name_1": "surname:Tangoku;given-names:A",
+				"name_0": "surname:Iizuka;given-names:N",
+				"fpage": "139",
+				"pub-id_doi": "10.1016/S0304-3835(98)00387-5",
+				"pub-id_pmid": "10378785",
+				"year": "1999",
+				"source": "Cancer Lett",
+				"type": "ref",
+				"volume": "138",
+				"section_type": "REF",
+				"lpage": "144",
+				"name_6": "surname:Oka;given-names:M",
+				"name_5": "surname:Morioka;given-names:T",
+				"name_4": "surname:Abe;given-names:T"
+			},
+			"text": "The association between nm23-H1 expression and survival in patients with esophageal squamous cell carcinoma.",
+			"sentences": [{
+				"offset": 15519,
+				"infons": {},
+				"text": "The association between nm23-H1 expression and survival in patients with esophageal squamous cell carcinoma.",
+				"annotations": [{
+					"id": "113",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 15543,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "111",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 15563,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 15628,
+			"infons": {
+				"name_1": "surname:Wittekind;given-names:C",
+				"section_type": "REF",
+				"name_0": "surname:Sobin;given-names:LH",
+				"fpage": "54",
+				"year": "1997",
+				"source": "5th edn, Wiley-Liss Inc, New York,",
+				"type": "ref",
+				"lpage": "58"
+			},
+			"text": "UICC International Union Against Cancer. TNM Classification of Management Tumors.",
+			"sentences": [{
+				"offset": 15628,
+				"infons": {},
+				"text": "UICC International Union Against Cancer.",
+				"annotations": [],
+				"relations": []
+			}, {
+				"offset": 15669,
+				"infons": {},
+				"text": "TNM Classification of Management Tumors.",
+				"annotations": [{
+					"id": "114",
+					"infons": {
+						"identifier": "10178",
+						"type": "Gene",
+						"NCBI Homologene": "56542"
+					},
+					"text": "TNM",
+					"locations": [{
+						"offset": 15669,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "112",
+				"infons": {
+					"identifier": "10178",
+					"type": "Gene",
+					"NCBI Homologene": "56542"
+				},
+				"text": "TNM",
+				"locations": [{
+					"offset": 15689,
+					"length": 3
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 15710,
+			"infons": {
+				"name_3": "surname:Horstmann;given-names:O",
+				"name_2": "surname:Borchard;given-names:F",
+				"name_1": "surname:Porschen;given-names:R",
+				"name_0": "surname:Sarbia;given-names:M",
+				"fpage": "333",
+				"pub-id_pmid": "7729944",
+				"year": "1995",
+				"source": "Int J Cancer",
+				"type": "ref",
+				"volume": "61",
+				"section_type": "REF",
+				"lpage": "336",
+				"name_5": "surname:Gabbert;given-names:HE",
+				"name_4": "surname:Willers;given-names:R"
+			},
+			"text": "Incidence and prognostic significance of vascular and neural invasion in squamous cell carcinomas of the esophagus.",
+			"sentences": [{
+				"offset": 15710,
+				"infons": {},
+				"text": "Incidence and prognostic significance of vascular and neural invasion in squamous cell carcinomas of the esophagus.",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 15826,
+			"infons": {
+				"name_3": "surname:Aizawa;given-names:K",
+				"name_2": "surname:Suzuki;given-names:T",
+				"name_1": "surname:Tanaka;given-names:O",
+				"name_0": "surname:Nishimaki;given-names:T",
+				"fpage": "4",
+				"pub-id_pmid": "8004581",
+				"year": "1994",
+				"source": "Cancer",
+				"type": "ref",
+				"volume": "74",
+				"section_type": "REF",
+				"lpage": "11",
+				"name_5": "surname:Muto;given-names:T",
+				"name_4": "surname:Hatakeyama;given-names:K"
+			},
+			"text": "Patterns of lymphatic spread in thoracic esophageal cancer.",
+			"sentences": [{
+				"offset": 15826,
+				"infons": {},
+				"text": "Patterns of lymphatic spread in thoracic esophageal cancer.",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}, {
+			"offset": 15886,
+			"infons": {
+				"name_3": "surname:Giannitelli;given-names:C",
+				"name_2": "surname:Ferrandina;given-names:G",
+				"name_1": "surname:Scambia;given-names:G",
+				"name_0": "surname:Marone;given-names:M",
+				"fpage": "1063",
+				"pub-id_pmid": "8855975",
+				"year": "1996",
+				"source": "Br J Cancer",
+				"type": "ref",
+				"volume": "74",
+				"section_type": "REF",
+				"name_7": "surname:Mancuso;given-names:S",
+				"lpage": "1068",
+				"name_6": "surname:Leone;given-names:A",
+				"name_5": "surname:Iacovella;given-names:S",
+				"name_4": "surname:Benedetti;given-names:P"
+			},
+			"text": "Nm23 expression in endometrial and cervical cancer: inverse correlation with lymph node involvement and myometrial invasion.",
+			"sentences": [{
+				"offset": 15886,
+				"infons": {},
+				"text": "Nm23 expression in endometrial and cervical cancer: inverse correlation with lymph node involvement and myometrial invasion.",
+				"annotations": [{
+					"id": "115",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "Nm23",
+					"locations": [{
+						"offset": 15886,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "113",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "Nm23",
+				"locations": [{
+					"offset": 15906,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 16011,
+			"infons": {
+				"name_3": "surname:Paz;given-names:BJ",
+				"name_2": "surname:Garcia;given-names:MJ",
+				"name_1": "surname:Abad;given-names:HM",
+				"name_0": "surname:Duenas;given-names:GA",
+				"fpage": "137",
+				"pub-id_doi": "10.1016/0304-3835(96)04131-6",
+				"pub-id_pmid": "8620461",
+				"year": "1996",
+				"source": "Cancer Lett",
+				"type": "ref",
+				"volume": "101",
+				"section_type": "REF",
+				"lpage": "142",
+				"name_5": "surname:Gonzalez;given-names:SR",
+				"name_4": "surname:Cruz;given-names:HJ"
+			},
+			"text": "Analysis of nm23-H1 expression in breast cancer. Correlation with p53 expression and clinicopathologic findings.",
+			"sentences": [{
+				"offset": 16011,
+				"infons": {},
+				"text": "Analysis of nm23-H1 expression in breast cancer.",
+				"annotations": [{
+					"id": "116",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 16023,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 16060,
+				"infons": {},
+				"text": "Correlation with p53 expression and clinicopathologic findings.",
+				"annotations": [{
+					"id": "117",
+					"infons": {
+						"identifier": "7157",
+						"type": "Gene",
+						"NCBI Homologene": "460"
+					},
+					"text": "p53",
+					"locations": [{
+						"offset": 16077,
+						"length": 3
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "114",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 16043,
+					"length": 7
+				}]
+			}, {
+				"id": "115",
+				"infons": {
+					"identifier": "7157",
+					"type": "Gene",
+					"NCBI Homologene": "460"
+				},
+				"text": "p53",
+				"locations": [{
+					"offset": 16097,
+					"length": 3
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 16124,
+			"infons": {
+				"name_3": "surname:Shorthouse;given-names:AJ",
+				"name_2": "surname:Rees;given-names:RC",
+				"name_1": "surname:Stephenson;given-names:TJ",
+				"name_0": "surname:Royds;given-names:JA",
+				"fpage": "727",
+				"pub-id_pmid": "8386774",
+				"year": "1993",
+				"source": "J Natl Cancer Inst",
+				"type": "ref",
+				"volume": "85",
+				"section_type": "REF",
+				"lpage": "731",
+				"name_4": "surname:Silcocks;given-names:PB"
+			},
+			"text": "Nm23 protein expression in tluctal in situ and invasive human breast carcinoma.",
+			"sentences": [{
+				"offset": 16124,
+				"infons": {},
+				"text": "Nm23 protein expression in tluctal in situ and invasive human breast carcinoma.",
+				"annotations": [{
+					"id": "118",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "Nm23",
+					"locations": [{
+						"offset": 16124,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "116",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "Nm23",
+				"locations": [{
+					"offset": 16144,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 16204,
+			"infons": {
+				"name_3": "surname:Scholefield;given-names:JH",
+				"name_2": "surname:Silcocks;given-names:PB",
+				"name_1": "surname:Cross;given-names:SS",
+				"name_0": "surname:Royds;given-names:JA",
+				"fpage": "261",
+				"pub-id_pmid": "8195929",
+				"year": "1994",
+				"source": "J Pathol",
+				"type": "ref",
+				"volume": "172",
+				"section_type": "REF",
+				"lpage": "266",
+				"name_5": "surname:Stephenson;given-names:TJ",
+				"name_4": "surname:Rees;given-names:RC"
+			},
+			"text": "Nm23 'anti- metastatic' gene product expression in colorectal carcinoma.",
+			"sentences": [{
+				"offset": 16204,
+				"infons": {},
+				"text": "Nm23 'anti- metastatic' gene product expression in colorectal carcinoma.",
+				"annotations": [{
+					"id": "119",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "Nm23",
+					"locations": [{
+						"offset": 16204,
+						"length": 4
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "117",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "Nm23",
+				"locations": [{
+					"offset": 16224,
+					"length": 4
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 16277,
+			"infons": {
+				"name_3": "surname:Solomon;given-names:WB",
+				"name_2": "surname:Desoto-LaPaix;given-names:F",
+				"name_1": "surname:Wang;given-names:FS",
+				"name_0": "surname:Cohn;given-names:KH",
+				"fpage": "722",
+				"pub-id_doi": "10.1016/0140-6736(91)91444-Y",
+				"pub-id_pmid": "1679868",
+				"year": "1991",
+				"source": "Lancet",
+				"type": "ref",
+				"volume": "338",
+				"name_10": "surname:Steeg;given-names:PS",
+				"section_type": "REF",
+				"name_9": "surname:Leone;given-names:A",
+				"name_8": "surname:Levy;given-names:AT",
+				"name_7": "surname:Feldman;given-names:JG",
+				"lpage": "724",
+				"name_6": "surname:Weimar;given-names:J",
+				"name_5": "surname:Arnold;given-names:MR",
+				"name_4": "surname:Patterson;given-names:LG"
+			},
+			"text": "Association of nm23-H1 allelic deletions with distant metastases in colorectal carcinoma.",
+			"sentences": [{
+				"offset": 16277,
+				"infons": {},
+				"text": "Association of nm23-H1 allelic deletions with distant metastases in colorectal carcinoma.",
+				"annotations": [{
+					"id": "120",
+					"infons": {
+						"identifier": "4830",
+						"type": "Gene",
+						"NCBI Homologene": "128514"
+					},
+					"text": "nm23-H1",
+					"locations": [{
+						"offset": 16292,
+						"length": 7
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "118",
+				"infons": {
+					"identifier": "4830",
+					"type": "Gene",
+					"NCBI Homologene": "128514"
+				},
+				"text": "nm23-H1",
+				"locations": [{
+					"offset": 16312,
+					"length": 7
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 16367,
+			"infons": {
+				"volume": "217",
+				"name_1": "surname:Hart;given-names:IR",
+				"section_type": "REF",
+				"name_0": "surname:Fidler;given-names:IJ",
+				"fpage": "998",
+				"pub-id_pmid": "7112116",
+				"year": "1982",
+				"source": "Science",
+				"type": "ref",
+				"lpage": "1003"
+			},
+			"text": "Biological diversity in metastatic neoplasms: origins and implications.",
+			"sentences": [{
+				"offset": 16367,
+				"infons": {},
+				"text": "Biological diversity in metastatic neoplasms: origins and implications.",
+				"annotations": [],
+				"relations": []
+			}],
+			"annotations": [],
+			"relations": []
+		}],
+		"annotations": [],
+		"pmid":32021303,
+		"pmcid":"PMC6982432",
+		"journal":"Onco Targets Ther",
+		"year":2020,
+		"authors":[
+			"Zhu W",
+			"Ren C",
+			"Wang Y",
+			"Wen L",
+			"Zhang G",
+			"Liao N"
+		],
+		"relations": [],
+		"keywords": [
+			"kw1",
+			"kw2",
+			"kw3",
+			"kw4"
+		]
+	}]
+}

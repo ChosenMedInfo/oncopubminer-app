@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Home</title>
+	<link rel="stylesheet" th:href="@{/assets/libs/layui/css/layui.css}"/>
+	<link rel="stylesheet" th:href="@{/assets/module/admin.css}"/>
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>                                                          
+		/* Global */
+		.lrIndex{
+			width: 1200px;
+			margin: 20px auto 70px;
+			text-align: center;
+			font-size: 14px;
+			line-height: 30px;
+		}
+		
+		/* Logo */
+		.lrIndex-logo{
+			margin: 50px 0 30px 0;
+		}
+		
+		/* Description */
+		.lrIndex-desc{
+			margin: 0 0 30px 0;
+			text-align: justify;
+		}
+		
+		/* Quick Search */
+		.layui-form > .layui-form-item {
+			position: relative;
+		}
+		.layui-form > .layui-form-item > .layui-input {
+			height: 46px;
+			line-height: 46px;
+			border-radius: 20px !important;
+		}
+		.layui-input-icon-group > .layui-input {
+			padding-left: 46px;
+		}
+		.layui-input-icon-group > .layui-icon {
+			width: 46px;
+			height: 46px;
+			line-height: 46px;
+			font-size: 20px;
+			color: #909399;
+			position: absolute;
+			left: 0;
+			top: 0;
+			text-align: center;
+		}
+		.lrIndex-example{
+			cursor: pointer;
+		}
+		
+		/* Features */
+		.lrIndex-features{
+			width: 100%;
+			padding-bottom: 20px;
+		}
+		.lrIndex-features hr{
+			border-color: red;
+		}
+		.lrIndex-features .layui-form{
+			margin-top: 15px;
+		}
+		.lrIndex-features-title{
+			font-size: 30px;
+			font-weight: bold;
+			color: #0099CC;
+			margin: 40px 0 40px 0;
+		}
+		.lrIndex-features-content-odd,
+		.lrIndex-features-content-even{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.bg{
+			background-color: #F9FFFF !important;
+		}
+		.lrIndex-features-content-odd img{
+			max-height: 100px;
+		}
+		.lrIndex-features-content-odd .lrIndex-features-content-left,
+		.lrIndex-features-content-even .lrIndex-features-content-right{
+			padding: 10px 30px;
+			text-align: left;
+		}
+		.lrIndex-features-content-left-title,
+		.lrIndex-features-content-right-title{
+			font-size: 18px;
+			color: #CC6600;
+			margin: 10px 0 20px 0;
+		}
+		.lrIndex-features-content-right{
+			padding: 10px 30px;
+		}
+		.lrIndex-features-content-odd-hr{
+			width: 65%;
+			margin-left: 20px;
+		}
+		
+		/* Cite Us */
+		.lrIndex-citeUs,
+		.lrIndex-warning{
+			width: 100%;
+			text-align: left;
+		}
+		.layui-elem-quote .emphasize{
+			color: red;
+			font-style: italic;
+		}
+		.lrIndex-citeUs .layui-elem-quote{
+			background-color: rgba(0,0,255,0.1);
+		}
+		.lrIndex-warning .layui-elem-quote{
+			background-color: rgba(255,0,0,0.1);
+		}
+		
+	</style>
+</head>
+<body>
+
+<!-- 正文开始 -->
+<div class="lrIndex">
+	
+	<!-- Logo -->
+	<div class="lrIndex-logo">
+		<img th:src="@{/assets/images/logo.v2.png}"/>
+	</div>
+	
+	<!-- Description -->
+	<div class="lrIndex-desc">
+		OncoPubMiner is a web-based platform, user can open the browser anytime and anywhere to search and read articles without any installation operations. It is worth mentioning that the platform is completely free, and the literature data is continuously updated daily. The core goal of the OncoPubMiner is to work with other public platforms to realize the freedom of interpretation of tumor genetic testing data.
+	</div>
+	
+	<!-- Features -->
+	<div class="lrIndex-features">
+		<!-- Title -->
+		<div class="lrIndex-features-title">Highlights</div>
+		<div class="lrIndex-features-content-odd bg">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-xs9 layui-col-sm9 lrIndex-features-content-left">
+					<div class="lrIndex-features-content-left-title">1. Literatures Online Searching</div>
+					<div class="lrIndex-features-content-text">
+						OncoPubMiner includes the full-text articles in the PMC Open Access subset (~3 million) in addition to the ~30 million abstracts in PubMed.
+						<form class="layui-form">
+							<div class="layui-form-item layui-input-icon-group">
+								<i class="layui-icon layui-icon-search"></i>
+								<input class="layui-input bg" id="idLitKeyword" name="litKeyword" placeholder="Search Literatures Here" autocomplete="off" lay-verType="tips"/>
+							</div>
+							<div class="layui-form-item">
+								Examples: <span class="layui-badge lrIndex-example">EGFR</span> <span class="layui-badge layui-bg-orange lrIndex-example">BRAF V600E</span> <span class="layui-badge layui-bg-green lrIndex-example">Osimertinib</span> <span class="layui-badge layui-bg-blue lrIndex-example">Non-Small Cell Lung Cancer</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="layui-col-xs3 layui-col-sm3 lrIndex-features-content-right">
+					<img th:src="@{/assets/images/lrIndex/onlineSearching2.png}"/>
+				</div>
+			</div>
+		</div>
+		<div class="lrIndex-features-content-odd">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-xs9 layui-col-sm9 lrIndex-features-content-left">
+					<div class="lrIndex-features-content-left-title">2. Automatic Entities Recognition</div>
+					<div class="lrIndex-features-content-text">
+						OncoPubMiner data is free and can be accessed interactively through a web browser, programmatically via RESTful API, or downloaded in bulk via FTP.
+					</div>
+				</div>
+				<div class="layui-col-xs3 layui-col-sm3 lrIndex-features-content-right">
+					<img th:src="@{/assets/images/lrIndex/nlp1.png}"/>
+				</div>
+			</div>
+		</div>
+		<div class="lrIndex-features-content-odd bg">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-xs9 layui-col-sm9 lrIndex-features-content-left">
+					<div class="lrIndex-features-content-left-title">3. Custom Data Collection Form</div>
+					<div class="lrIndex-features-content-text">
+						OncoPubMiner data is free and can be accessed interactively through a web browser, programmatically via RESTful API, or downloaded in bulk via FTP.
+					</div>
+				</div>
+				<div class="layui-col-xs3 layui-col-sm3 lrIndex-features-content-right">
+					<img th:src="@{/assets/images/lrIndex/customForms1.png}"/>
+				</div>
+			</div>
+		</div>
+		<div class="lrIndex-features-content-odd">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-xs9 layui-col-sm9 lrIndex-features-content-left">
+					<div class="lrIndex-features-content-left-title">4. CIViC SOP Compliant</div>
+					<div class="lrIndex-features-content-text">
+						OncoPubMiner data is free and can be accessed interactively through a web browser, programmatically via RESTful API, or downloaded in bulk via FTP.
+					</div>
+				</div>
+				<div class="layui-col-xs3 layui-col-sm3 lrIndex-features-content-right">
+					<img th:src="@{/assets/images/lrIndex/sopCompliant1.png}"/>
+				</div>
+			</div>
+		</div>
+		<div class="lrIndex-features-content-odd bg">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-xs9 layui-col-sm9 lrIndex-features-content-left">
+					<div class="lrIndex-features-content-left-title">5. Multi-Person Collaborative Review Mechanism</div>
+					<div class="lrIndex-features-content-text">
+						OncoPubMiner data is free and can be accessed interactively through a web browser, programmatically via RESTful API, or downloaded in bulk via FTP.
+					</div>
+				</div>
+				<div class="layui-col-xs3 layui-col-sm3 lrIndex-features-content-right">
+					<img th:src="@{/assets/images/lrIndex/collaborativeReview2.png}"/>
+				</div>
+			</div>
+		</div>
+		<div class="lrIndex-features-content-odd">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-xs9 layui-col-sm9 lrIndex-features-content-left">
+					<div class="lrIndex-features-content-left-title">6. Data Always Update-To-Date</div>
+					<div class="lrIndex-features-content-text">
+						OncoPubMiner data is free and can be accessed interactively through a web browser, programmatically via RESTful API, or downloaded in bulk via FTP.
+					</div>
+				</div>
+				<div class="layui-col-xs3 layui-col-sm3 lrIndex-features-content-right">
+					<img th:src="@{/assets/images/lrIndex/updateToDate1.png}"/>
+				</div>
+			</div>
+		</div>
+		<div class="lrIndex-features-content-odd bg">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-xs9 layui-col-sm9 lrIndex-features-content-left">
+					<div class="lrIndex-features-content-left-title">7. Free Access and Docker-based Deployment</div>
+					<div class="lrIndex-features-content-text">
+						OncoPubMiner data is free and can be accessed interactively through a web browser, programmatically via RESTful API, or downloaded in bulk via FTP.
+						
+						<br><br>
+						<i style="color: grey;">Supported By <a class="lrLink" href="https://www.docker.com/" target="_blank">Docker</a></i>
+					</div>
+				</div>
+				<div class="layui-col-xs3 layui-col-sm3 lrIndex-features-content-right">
+					<img th:src="@{/assets/images/lrIndex/dockerBased1.png}"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Warning -->
+	<div class="lrIndex-warning">
+		<blockquote class="layui-elem-quote">
+			This resource is intended for research and educational purposes and it <b class="emphasize">MUST NOT</b> substitute a doctor's medical judgement or healthcare professional advice!
+		</blockquote>
+	</div>
+	
+	<!-- Cite Us -->
+	<div class="lrIndex-citeUs">
+		<blockquote class="layui-elem-quote">
+			When using this service, please cite the following references:<br>
+			<b>Quan Xu, Yueyue Liu, Jifang Hu, Niuben Song, Fan Chen, XiaohongDuan, Qiming Zhou and Beifang Niu, OncoPubMiner: A platform for oncology publication mining, Under preparation.</b>
+		</blockquote>
+	</div>
+	<a href="javascript:;" id="idHideLink" style="display: none;"></a>
+	
+</div>
+
+<!-- Footer -->
+<div class="lr-footer">
+	Copyright © 2021 Oncology Precision Text-Mining Team. Contact Us: quanxu@chosenmedtech.com.
+</div>
+
+<!-- js部分 -->
+<script th:src="@{/assets/libs/layui/layui.js}"></script>
+<script th:src="@{/assets/js/common.js}"></script>
+<script>
+	var $;
+	layui.use(['admin'], function () {
+		$ = layui.jquery;
+		
+		// 监听示例关键词点击事件！
+		$(".lrIndex-example").click(function(){
+			$("#idLitKeyword").val($(this).html());
+			funcPubSearching($(this).html());
+		});
+		
+		// 监听文本框提交事件！
+		$("#idLitKeyword").keydown(function (e) {
+			if (e.which == 13) {
+				funcPubSearching($("#idLitKeyword").val());
+				return false;
+			}
+		});
+		
+		// 高度设置相同，并设置图片上下居中！
+		$(".lrIndex-features-content-odd .lrIndex-features-content-left").each(function(index, element){
+			if($(this).height() >= $(this).next().height()){
+				$(this).next().height($(this).height());
+				var marginTop = ($(this).height() - $(this).next().children("img").height()) / 2;
+				$(this).next().children("img").css("margin-top", marginTop);
+			}else{
+				$(this).height($(this).next().height());
+			}
+		});
+		$(".lrIndex-features-content-even .lrIndex-features-content-left").each(function(index, element){
+			if($(this).height() >= $(this).next().height()){
+				$(this).next().height($(this).height());
+			}else{
+				$(this).height($(this).next().height());
+				var marginTop = ($(this).next().height() - $(this).children("img").height()) / 2;
+				$(this).children("img").css("margin-top", marginTop);
+			}
+		});
+		
+	});
+	
+	// 检索！
+	function funcPubSearching(paramKw){
+		
+		// 关闭其他所有标签页！
+		parent.closeAll("lrIndex");
+		localStorage.setItem('paramKw', paramKw);
+		
+		// 打开检索页面！
+		$("#idHideLink").html("lrIndex");
+		$("#idHideLink").attr("ew-href","/lrSearch");
+		$("#idHideLink").click(); // 模拟点击事件！
+		
+	}
+	
+</script>
+</body>
+</html>

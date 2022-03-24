@@ -1,0 +1,162 @@
+<style>
+.layui-table-tool{
+	display: none;
+}
+</style>
+
+<!-- 正文开始 -->
+<div class="layui-fluid">
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<!-- 表格工具栏 -->
+			<form class="layui-form toolbar" id="idFormPub">
+				<div class="layui-form-item">
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pmid" class="layui-input pubForm" placeholder="PubMed ID"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pmcid" class="layui-input pubForm" placeholder="PMC ID"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pubTitle" class="layui-input pubForm" placeholder="Title"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pubAuthors" class="layui-input pubForm" placeholder="Authors"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="pubJournal" class="layui-input pubForm" placeholder="Journal Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<button class="layui-btn icon-btn" lay-filter="tableSearchPub" lay-submit>
+								<i class="layui-icon">&#xe615;</i>Search
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<!-- 数据表格 -->
+			<table id="dataTablePub" lay-filter="dataTablePub"></table>
+			<!-- 接收传值 -->
+			<form id="addOrUpdateForm" lay-filter="addOrUpdateForm" class="layui-form model-form">
+				<input name="id" type="hidden"/>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 表格操作列 -->
+<script type="text/html" id="tableBarPub">
+	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon">&#xe640;</i></a>
+</script>
+
+<script>
+	layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var table = layui.table;
+		var tableX = layui.tableX;
+		var admin = layui.admin;
+		var form = layui.form;
+		var notice = layui.notice;
+		var xnUtil = layui.xnUtil;
+		
+		/* 获取传值 */
+		var editData = admin.getLayerData('#addOrUpdateForm').data;
+		
+		// 字段！
+		var tableCols = [
+			{field: 'pmid', title: 'PubID(s)', align: 'center', sort: false, width: 120, minWidth: 120, templet: function (d) {
+				let strHtml = '<a href="https://pubmed.ncbi.nlm.nih.gov/' + d.pmid + '/" target="_blank">' + d.pmid + ' <i class="bx bx-link"></i></a>';
+				if(d.pmcid && d.pmcid != ""){
+					strHtml += '<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + d.pmcid + '/" target="_blank">PMC' + d.pmcid + ' <i class="bx bx-link"></i></a>';
+				}
+				return strHtml;
+			}},
+			{field: 'pubTitle', title: 'Title', sort: false, templet: function (d) {
+				return !d.pubTitle || d.pubTitle == "" ? "-" : d.pubTitle;
+			}},
+			{field: 'pubAuthors', title: 'Authors', sort: false, width: 150, minWidth: 150, templet: function (d) {
+				return !d.pubAuthors || d.pubAuthors == "" ? "-" : d.pubAuthors;
+			}},
+			{field: 'pubJournal', title: 'Journal', sort: false, width: 150, minWidth: 150, templet: function (d) {
+				return !d.pubJournal || d.pubJournal == "" ? "-" : d.pubJournal;
+			}},
+			{field: 'pubYear', title: 'Year', align: 'center', sort: false, width: 70, minWidth: 70, templet: function (d) {
+				return !d.pubYear || d.pubYear == "" ? "-" : d.pubYear;
+			}},
+			{field: 'pubIf2020', title: 'IF2020', align: 'center', sort: false, width: 85, minWidth: 85, templet: function (d) {
+				return !d.pubIf2020 || d.pubIf2020 == "" ? "-" : d.pubIf2020;
+			}}
+		];
+		if(editData.groupName != "commonGroup") tableCols.push({title: 'Remove', toolbar: '#tableBarPub', align: 'center', width: 80, minWidth: 80});
+
+		/* 渲染表格 */
+		var insTbPub = tableX.render({
+			elem: '#dataTablePub',
+			url: '/librariesPublications/page',
+			page: true,
+			toolbar: ['<p>',
+				'</p>'].join(''),
+			defaultToolbar: [],
+			cellMinWidth: 100,
+			where: {
+				libraryId: editData.id
+			},
+			cols: [ tableCols ],
+			done: function(res, curr, count) {
+				xnUtil.tableDone(insTbPub, res, curr, count);
+			}
+		});
+
+		/* 表格搜索 */
+		form.on('submit(tableSearchPub)', function (data) {
+			insTbPub.reload({where: data.field, page: {curr: 1}});
+			return false;
+		});
+		
+		/* 表格排序事件 */
+		table.on('sort(dataTablePub)', function(obj){
+			table.reload('dataTablePub', {
+				initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+				where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+					sortBy: obj.field, // 排序字段！
+					orderBy: obj.type // 排序方式！
+				}
+			});
+		});
+
+		/* 表格工具条点击事件 */
+		table.on('tool(dataTablePub)', function (obj) {
+			/* 删除 */
+			if (obj.event === 'delete') {
+				layer.confirm('Are you sure you want to remove this publication from the collection?', {
+					skin: 'layui-layer-admin',
+					shade: .1,
+					btn: ['Yes', 'Cancel'],
+					title: 'Confirm'
+				}, function () {
+					layer.close(layer.index);
+					var indexRemove = layer.load(3, {shade: [0.3, '#393D49']});
+					admin.req('librariesPublications/delete', JSON.stringify([{'id': obj.data.id}]), function(res){
+						layer.close(indexRemove);
+						layer.msg(res.message, {icon: 1, time: 1000}, function () {
+							insTbPub.reload();
+						});
+					}, 'post');
+				});
+			}
+		});
+
+	});
+</script>

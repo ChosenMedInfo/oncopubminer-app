@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Help</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<style type="text/css">
+	/* 帮助部分 - 左侧 */
+	.lrHelp-left{
+		padding: 10px 20px 20px 0 !important;
+		width: 285px !important;
+	}
+	.leftFixed{
+		position: fixed;
+		top: 80px;
+	}
+	.lrHelp-left .demo-tree-top-logo {
+		padding: 15px 10px;
+		border: 1px solid #ddd;
+		border-bottom: 1px solid #eee;
+		border-radius: 5px 5px 0 0;
+		width: 285px;
+	}
+	.lrHelp-left .demo-tree {
+		margin: 0 20px 10px 0;
+	}
+	.lrHelp-left .demo-tree-box {
+		width: 285px;
+		padding: 10px 10px 20px 10px;
+		border: 1px solid #ddd;
+		border-top: none;
+		border-radius: 0 0 5px 5px;
+		overflow: auto;
+		background-color: white;
+	}
+	.lrHelp-left .layui-tree-entry {
+		height: 30px;
+	}
+	.lrHelp-left .layui-tree-icon {
+		height: 16px;
+		width: 14px;
+		border-radius: 2px;
+	}
+	
+	/* 帮助部分 - 右侧 */
+	.lrHelp-right{
+		padding: 10px 0 !important;
+		font-size: 12px;
+		width: calc( 100% - 305px ) !important;
+		margin-left: 15px;
+		margin-right: 5px;
+	}
+	.leftFixedRight{
+		width: 100%;
+		margin-left: 300px;
+	}
+	.lrHelp-right .layui-colla-title {
+		background-color: #ffffff;
+		font-weight: bold;
+	}
+	.lrHelp-right .tutorialImages {
+		max-width: 100%;
+		border: 1px solid #EFEFEF;
+		border-radius: 10px;
+		margin: 10px 0;
+	}
+	.lrHelp-right .screenShotNote {
+		font-style: italic;
+		font-size: 12px;
+		color: #666;
+		margin-top: 5px;
+	}
+	
+	/* 小屏时展示 */
+	@media all and (max-width:888px) {
+		.lrHelp-left{
+			display: none !important;
+		}
+		.lrHelp-right{
+			width: calc( 100% - 40px ) !important;
+			margin-left: 20px !important;
+			margin-right: 20px !important;
+		}
+	}
+	</style>
+	
+</head>
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li class="active"><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="classHero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/images/carousel/1.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">OncoPubMiner Tutorial</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">OncoPubMiner Tutorial</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">OncoPubMiner Tutorial</h2>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+
+		<!-- ======= Our Team Section ======= -->
+		<section id="idDivContent">
+			<div class="container">
+				<div class="section-title" style="padding-bottom: 10px !important;">
+					<h2>Tutorial</h2>
+				</div>
+				<div class="row">
+					<div class="lrHelp-left" data-aos="fade-up" id="idDivLeft">
+						<div class="demo-tree-top-logo"><img src="/assets/images/logo.v3.png" width="100%"></div>
+						<div id="test1" class="demo-tree demo-tree-box"></div>
+					</div>
+					<div class="lrHelp-right" data-aos="fade-up" id="idDivRight" data-aos-delay="100">
+						<div class="layui-collapse" id="idDivCollapse"></div>
+						<p class="screenShotNote">* Most of the pictures were shot from the OncoPubMiner v01.00.11 on Dec 9, 2021.</p>
+					</div>
+				</div>
+			</div>
+		</section><!-- End Our Team Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer"></footer><!-- End Footer -->
+
+	<a href="javascript:;" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<!-- Page Specific JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+	<script type="text/javascript">
+		
+		var $, admin, util, xnUtil, form, formX, element, currentUser;
+		let dataTutorial = [
+			{
+				title: 'Publication Search',
+				id: 'T01',
+				spread: true,
+				content: 
+					strHtmlStartNewParagraph + 'Two modes of literature retrieval are provided by OncoPubMiner including retrieval based on local annotation results (Local Mode) and retrieval based on the PubMed EUtilities API (Remote Mode). The local retrieval mode is divided into two matching methods including Entity-based Matching and Mention-based Matching.',
+				children: [
+					{
+						title: 'Local Mode',
+						id: 'T01-01',
+						spread: true,
+						content: 
+							strHtmlStartNewParagraph + 'The local mode is an article retrieval mode developed based on entity recognition and standardized processing of NLP softwares. The information used is local structured data. After the article identifiers (PubMed ID) are retrieved, the corresponding BioC format data are returned to the user\'s browser.',
+						children: [
+							{
+								title: 'Entity-based Matching',
+								id: 'T01-01-01',
+								spread: true,
+								content: 
+									strHtmlStartNewParagraph + 'The Entity-based Matching is based on a standardized entity identifier, representing an accurate matching strategy.<br>' + 
+									strHtmlStartNewParagraph + '<b>Step1.</b> Enter a keyword, the system will return a set of standard terms, and the user needs to confirm which standard term really wants to search.<br>' + 
+									'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T01-01-01-Step1.png"><br>' + 
+									strHtmlStartNewParagraph + '<b>Step2.</b> Click on the standard entry to be retrieved, and the system will use the standard entry to perform a semantic search. It should be noted that if the keyword entered by the user only matches a standard term, the system will automatically use the term to perform semantic retrieval, and there is no need to manually click the standard term for query.<br>' + 
+									'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T01-01-01-Step2.png"><br>' + 
+									strHtmlStartNewParagraph + '<b>[Description]</b> On the literature search result list page, articles that meet the search criteria are sorted by default in reverse order of publication time. The title, jourmal, author, PMID, PMCID (if any), and abstract (if any) information of each article are displayed in a reasonable manner. At the same time, the article\'s 2020 impact factor (if any), the number of associated collections, the number of stars, the number of remarks, and the highest centence level are also displayed. In order to facilitate the expansion of the literature, the references (if any), cited by literatures (if any) and similar articles of each publication are also displayed. Click the corresponding button to view the article list.<br>' + 
+									'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T01-01-01-Desc1.png"><br>'
+							},
+							{
+								title: 'Mention-based Matching',
+								id: 'T01-01-02',
+								spread: true,
+								content: 
+									strHtmlStartNewParagraph + 'The Mention-based Matching is a method directly based on string matching. If an entity that matches the string entered by the user has appeared in an article, the article will appear in the search results.<br>' + 
+									'<img class="tutorialImages" src="/assets/images/tutorial/mentionBasedMatching.jpg"><br>' +
+									strHtmlStartNewParagraph + 'It should be noted that Mention-based Matching is for entities that are tagged but not standardized, and for standardized terms to be searched in this way, the results may be empty.<br>' +
+									'<img class="tutorialImages" src="/assets/images/tutorial/mentionBasedMatching_empty.jpg"><br>'
+							}
+						]
+					},
+					{
+						title: 'Remote Mode',
+						id: 'T01-02',
+						spread: true,
+						content: 
+							strHtmlStartNewParagraph + 'The remote search mode calls the PubMed interface to query literature. PubMed is the most authoritative and commonly used literature retrieval tool in biomedical research. Thus, investigators are often highly familiar with the platform. To make full use of this feature, OncoPubMiner integrates the ESearch API. Using the PubMed retrieval method, retrieve target articles, and return the annotated BioC format data for these articles after processing in the system background.<br>' +
+							strHtmlStartNewParagraph + '<b>Step1.</b> Select remote search in the drop-down box, and then enter the keywords to be searched in the text box. Note that the keywords here are completely based on PubMed\'s word formation method (please click <a href="https://pubmed.ncbi.nlm.nih.gov/advanced/" target="_blank">here</a> for more information about <a href="https://pubmed.ncbi.nlm.nih.gov/advanced/" target="_blank">PubMed Advanced Search Builder</a>).<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T01-02-Step1.png"><br>'
+					}
+				]
+			},
+			{
+				title: 'Library Management',
+				id: 'T02',
+				spread: true,
+				content: 
+					strHtmlStartNewParagraph + 'This page include collection-oriented presentation and publication-oriented presentation.',
+				children: [
+					{
+						title: 'Collection-Oriented',
+						id: 'T02-01',
+						spread: true,
+						content: 
+							strHtmlStartNewParagraph + 'When you first enter the page, the collection-oriented data table is opened by default. This table has several already created collections. These collections are pre-created by OncoPubMiner for you. The publications in the table correspond to the articles associated with the corresponding evidence types in the CIViC database.<br>' + 
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-A.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-B.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step1.</b> Click the Add button and enter the collection name and other information in the pop-up window to quickly complete the creation of the collection. The user can input a list of keywords used to retrieve documents in local mode and remote mode respectively, and these keywords will be used for quick retrieval and inclusion of articles in the future.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-Step1.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step2.</b> The newly created Collection is in the active state by default, that is, the user can modify all the information including the name, description and search keywords at any time.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-Step2.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step3.</b> The user can also perform a lock operation on the Collection, after which all information cannot be changed. It is worth mentioning that only the locked collection can add publications, and only the locked collection can be added to the projects that will be mentioned later.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-Step3.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step4.</b> Click on a keyword in the collection, and the system will jump to the publication search page, where the user can check the desired article and add it to the created collection.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-Step4A.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-Step4B.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step5.</b> After the articles have been added, we can see that the number of collections corresponding to these articles has changed. They were all "0,0,0", but now they have become "1,0,1". This means that the document is currently included in a collection of the current user group, and there is only one collection in the entire OncoPubMiner system that contains the article. The number in the middle indicates the number of times it has been included in the public collection, and 0 means that the article has not been included in the public collection.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-Step5.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step6.</b> Back to the collection page, we can see that the 3 articles just added have been linked to the current collection. The added articles can also be disconnected by clicking the icon in the Remove field.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-01-Step6.png"><br>'
+					},
+					{
+						title: 'Publication-Oriented',
+						id: 'T02-02',
+						spread: true,
+						content: 
+							strHtmlStartNewParagraph + 'The Publication-Oriented table displays all the articles that have been added to the collection shared by this group and the system. This table shows the article’s PubMed ID, PMC ID, title, author, magazine, impact factor in 2020, and publication year. Click on the extension information to see which collections the article is currently added to.<br>' + 
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T02-02-A.png"><br>'
+					}
+				]
+			},
+			{
+				title: 'Team Management',
+				id: 'T03',
+				spread: true,
+				content: 
+					strHtmlStartNewParagraph + 'Users who register through the <a href="/register" target="_blank">user registration page</a> automatically create a user group with the same name and become the administrator of the user group. Team administrators can manage their team members on this page.<br>' + 
+					strHtmlStartNewParagraph + '<b>Step1.</b> Click the "Add New Member" button and enter the account and passwords, the member account will be generated.<br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T03-Step1.png"><br>' +
+					strHtmlStartNewParagraph + '<b>Step2.</b> Click the edit icon on the member\'s profile picture to edit the information.<br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T03-Step2.png"><br>' +
+					strHtmlStartNewParagraph + '<b>Step3.</b> Click the delete icon on the member\'s profile picture to delete the member account after confirmation.<br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T03-Step3.png"><br>'
+			},
+			{
+				title: 'Data Form Management',
+				id: 'T04',
+				spread: true,
+				content: 
+					strHtmlStartNewParagraph + 'Like the collection page, new registered users can also see multiple public data collection forms when they first enter the page. Users can also follow the steps below to create a data collection form by themselves.<br>' + 
+					strHtmlStartNewParagraph + '<b>Step1.</b> Click the "Add" button in the upper left corner and enter the form name and brief description to complete the creation of a new form.<br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T04-Step1.png"><br>' +
+					strHtmlStartNewParagraph + '<b>Step2.</b> The newly created form is activated by default, and the form content is empty without any form items. Users can click the "Add Item" link to create form items.<br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T04-Step2.png"><br>' +
+					strHtmlStartNewParagraph + '<b>Step3.</b> In the form item creation pop-up window, the user needs the name and type of the form item. At the same time, you can set the default value of the form item and whether it is required. In addition, you can also set the prompt information for each form item and its sort value in the entire form.<br>' +
+					'<img class="tutorialImages" src="/assets/images/t utorial/v20211209/T04-Step3A.png"><br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T04-Step3B.png"><br>' +
+					strHtmlStartNewParagraph + '<b>Step4.</b> After the form item is created, it can be modified or deleted at any time. However, after clicking the "Lock" link to lock the current form, it will only be previewed, and cannot be added, edited or deleted.<br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T04-Step4A.png"><br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T04-Step4B.png"><br>'
+			},
+			{
+				title: 'Project Management',
+				id: 'T05',
+				spread: true,
+				content: 
+					strHtmlStartNewParagraph + 'Like the form page and library page, newly registered users can also see several public items. Users can also add their own projects.<br>' + 
+					strHtmlStartNewParagraph + '<b>Step1.</b> Click the Add button in the upper left corner, and the form information pop-up window will pop up, where the user can enter the project name and brief description. At the same time, the user is also asked to select a form from the previously created and locked data collection forms (the public form can also be selected here), select a collection from the previously created and locked library, and also select members from the created member list. Click the submit button to complete the creation of the project.<br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T05-Step1A.png"><br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T05-Step1B.png"><br>' +
+					strHtmlStartNewParagraph + '<b>Step2.</b> After clicking the submit button in the previous step, the project is activated by default. You can click the lock button to lock the project, or click the "Submit and Save" button to create and lock the project simultaneously. The locked items are as follows.<br>' +
+					'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T05-Step2.png"><br>'
+			},
+			{
+				title: 'Literature Curation',
+				id: 'T06',
+				spread: true,
+				content: 'One of the core functions of OncoPubMiner is to provide an online literature reading and data collection platform. This function includes two modes including team collaboration mode and single user mode.',
+				children: [
+					{
+						title: 'Collaborative Mode',
+						id: 'T06-01',
+						spread: true,
+						content: 
+							strHtmlStartNewParagraph + 'Collaborative Mode is a project based mode. The curation task for each article requires all members to complete the literature reading and data collection, and then the team administrator can review it before it can be completed.<br>' + 
+							strHtmlStartNewParagraph + '<b>Step1.</b> Invite project team members to log in to the system, enter the project, select one of the articles to read, and submit data. After all data collection is complete, click the Done button to mark the article as complete.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-01-Step1A.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-01-Step1B.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step2.</b> After all members have completed the literature reading and data collection, the group administrator logs in to the system for review, and clicks the Review button to start the review operation. After the review is complete, click the Done button to mark that the curation task of the current document has been completed.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-01-Step2A.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-01-Step2B.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-01-Step2C.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-01-Step2D.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-01-Step2E.png"><br>'
+					},
+					{
+						title: 'Single User Mode',
+						id: 'T06-02',
+						spread: true,
+						content: 
+							strHtmlStartNewParagraph + 'In the article search list, click on the title of the article to go directly to the literature reading page. In this mode, as the data collection form is not selected, you can only read the literature and not collect data.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-02A.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-02B.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step1.</b> In the article search list, click the Read button in the lower left corner of each article, and the system will pop up a dialog box asking the user to select the data collection form that they want to use for data collection.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-02-Step1.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step2.</b> After selecting and confirming, it will also jump to the article details page. This time the page is slightly different, divided into three columns. The middle is the annotation result of the selected document. If there is PMC full text, it is the full text, and if there is no PMC, it is the abstract. The left side shows all the entities marked in the article, and the right side shows the data collection form selected by the user.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-02-Step2.png"><br>' +
+							strHtmlStartNewParagraph + '<b>Step3.</b> Read the literature, collect target information, and fill in the corresponding fields on the form. After filling in, you can submit the data. It is worth mentioning that multiple pieces of data can be submitted for the same article.<br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-02-Step3A.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-02-Step3B.png"><br>' +
+							'<img class="tutorialImages" src="/assets/images/tutorial/v20211209/T06-02-Step3C.png"><br>'
+					}
+				]
+			},
+			{
+				title: 'PDF Version',
+				id: 'T07',
+				spread: true,
+				content: 
+					'<a href="/assets/pdf/OncoPubMiner.Tutorial.v20220223.pdf" target="_blank"><img class="tutorialImages" src="/assets/images/pdf.png" style="width:100px"> OncoPubMiner Tutorial (v20220223)</a>'
+			}
+		];
+		
+		// 右侧内容生成！
+		for(let k = 0; k < dataTutorial.length; k++){
+			funcObj2Html(dataTutorial[k], 0); // 添加当前对象本身！
+			
+			if(dataTutorial[k].children && dataTutorial[k].children.length > 0){
+				for(let t = 0; t < dataTutorial[k].children.length; t++){
+					funcObj2Html(dataTutorial[k].children[t], 1); // 一级子节点！
+					
+					if(dataTutorial[k].children[t].children && dataTutorial[k].children[t].children.length > 0){
+						for(let m = 0; m < dataTutorial[k].children[t].children.length; m++){
+							funcObj2Html(dataTutorial[k].children[t].children[m], 2); // 二级子节点！
+							
+							if(dataTutorial[k].children[t].children[m].children && dataTutorial[k].children[t].children[m].children.length > 0){
+								for(let n = 0; n < dataTutorial[k].children[t].children[m].children.length; n++){
+									funcObj2Html(dataTutorial[k].children[t].children[m].children[n], 3); // 三级子节点！
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		function funcObj2Html(thisObj, numLevel){
+			var thisHtml = 
+				'	<div class="layui-colla-item" id="' + thisObj.id + '">' +
+				'		<h2 class="layui-colla-title"' + (numLevel == 1 ? ' style="font-weight: normal;"' : (numLevel == 2 ? 'style="font-weight: normal; font-style: italic;"' : (numLevel == 3 ? 'style="font-weight: normal; font-style: italic; font-size: 12px;"' : ''))) + '>' + thisObj.title + '</h2>' +
+				'		<div class="layui-colla-content' + (thisObj.spread ? ' layui-show' : '') + '">' +
+				'			<p>' + thisObj.content + '</p>' +
+				'		</div>' +
+				'	</div>';
+			$("#idDivCollapse").append(thisHtml);
+		}
+		
+		// LayUI渲染！
+		layui.use(['admin', 'util', 'xnUtil', 'form', 'formX', 'element', 'tree'], function () {
+			$ = layui.jquery;
+			admin = layui.admin;
+			util = layui.util;
+			xnUtil = layui.xnUtil;
+			form = layui.form;
+			formX = layui.formX;
+			element = layui.element;
+			tree = layui.tree;
+			
+			// 获取当前登录用户！
+			currentUser = getCurrentLoginUser();
+			
+			//设置核心版块的最小高度！
+			$("#idDivContent").css("min-height", getClientHeight()-191);
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			// 左侧快速链接！
+			tree.render({
+				elem: '#test1'
+				,data: dataTutorial
+				,click: function(obj){
+					topMao(obj.data.id);
+				}
+			});
+			
+			// 右侧标题点击事件监听！
+			element.on('collapse(helpContent)', function(data){
+				layer.msg('展开状态：'+ data.show);
+			});
+			
+			// 监听页面滚动！
+			funcListenScroll();
+			$(window).scroll(function(event){
+				funcListenScroll();
+			});
+			
+		});
+		
+	</script>
+
+</body>
+
+</html>

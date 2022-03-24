@@ -1,0 +1,3361 @@
+{
+	"code": 200,
+	"msg": "Request success",
+	"success": true,
+	"page": 1,
+	"next": 2,
+	"count": 1990,
+	"limit": 100,
+	"data":[
+		{
+			"id": "3859005",
+			"infons": {},
+			"passages": [
+				{
+					"annotations": [
+			          {
+			            "id": "4", 
+			            "infons": {
+			              "NCBI Homologene": "74545", 
+			              "identifier": "1956", 
+			              "type": "Gene"
+			            }, 
+			            "locations": [
+			              {
+			                "length": 4, 
+			                "offset": 10
+			              }
+			            ], 
+			            "text": "EGFR"
+			          }, 
+			          {
+			            "id": "5", 
+			            "infons": {
+			              "NCBI Homologene": "68464", 
+			              "identifier": "3320", 
+			              "type": "Chemical"
+			            }, 
+			            "locations": [
+			              {
+			                "length": 5, 
+			                "offset": 56
+			              }
+			            ], 
+			            "text": "HSP90"
+			          },{
+			            "id": "7", 
+			            "infons": {
+			              "type": "evidirt"
+			            }, 
+			            "locations": [
+			              {
+			                "length": 5, 
+			                "offset": 72
+			              }
+			            ], 
+			            "text": "cells"
+			          }
+			        ], 
+			        "infons": {
+			          "article-id_pmc": "PMC3431175", 
+			          "article_id_doi": "10.1593/neo.12986", 
+			          "article_id_pmc": "3431175", 
+			          "article_id_pmid": "22952420", 
+			          "authors": "Ahsan A, Ramanand SG, Whitehead C, Hiniker SM, Rehemtulla A, Pratt WB, Jolly S, Gouveia C, Truong K, Van Waes C, Ray D, Lawrence TS, Nyati MK", 
+			          "if2020": 5.696, 
+			          "journal": "Neoplasia; 2012 Aug; 14(8) 670-7", 
+			          "journal_name": "Neoplasia", 
+			          "type": "title", 
+			          "year": "2012"
+			        }, 
+			        "offset": 0, 
+			        "relations": [], 
+			        "sentences": [], 
+			        "text": "Wild-type EGFR is stabilized by direct interaction with HSP90 in cancer cells and tumors."
+				},
+				{
+					"offset": 79,
+					"infons": {
+						"section_type": "ABSTRACT",
+						"type": "abstract_title_1"
+					},
+					"text": "Background and Purpose",
+					"sentences": [
+						{
+							"offset": 79,
+							"infons": {},
+							"text": "Background and Purpose",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 102,
+					"infons": {
+						"section_type": "ABSTRACT",
+						"type": "abstract"
+					},
+					"text": "Widespread use of thrombolytic treatments, along with improved chances of survival after an initial ischemic stroke, increases the possibility of repeated thrombolysis. There are few reports, however, regarding repeated thrombolysis in patients who have suffered acute ischemic stroke. We explored the number and outcome of patients with repeated thrombolytic therapy in the era of multimodal thrombolytic treatments.",
+					"sentences": [
+						{
+							"offset": 102,
+							"infons": {},
+							"text": "Widespread use of thrombolytic treatments, along with improved chances of survival after an initial ischemic stroke, increases the possibility of repeated thrombolysis.",
+							"annotations": [
+								{
+									"id": "2",
+									"infons": {
+										"type": "evidirt",
+										"identifier": "Supports"
+									},
+									"text": "Widespread",
+									"locations": [
+										{
+											"offset": 102,
+											"length": 10
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 271,
+							"infons": {},
+							"text": "There are few reports, however, regarding repeated thrombolysis in patients who have suffered acute ischemic stroke.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 388,
+							"infons": {},
+							"text": "We explored the number and outcome of patients with repeated thrombolytic therapy in the era of multimodal thrombolytic treatments.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "100",
+							"infons": {
+								"type": "evidirt",
+								"identifier": "Supports"
+							},
+							"text": "Widespread",
+							"locations": [
+								{
+									"offset": 102,
+									"length": 10
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 520,
+					"infons": {
+						"section_type": "ABSTRACT",
+						"type": "abstract_title_1"
+					},
+					"text": "Methods",
+					"sentences": [
+						{
+							"offset": 520,
+							"infons": {},
+							"text": "Methods",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 528,
+					"infons": {
+						"section_type": "ABSTRACT",
+						"type": "abstract"
+					},
+					"text": "We investigated patients with acute ischemic stroke who had received thrombolytic treatments for a period of 10 years. Number of thrombolysis was determined in each patient. Recanalization was defined as Thrombolysis in Cerebral Infarction grading >=2a. Symptomatic hemorrhagic transformation was defined as any increase in the National Institutes of Health Stroke Scale score that could be attributed to intracerebral hemorrhage. A good outcome was defined as a modified Rankin scale score <=2.",
+					"sentences": [
+						{
+							"offset": 528,
+							"infons": {},
+							"text": "We investigated patients with acute ischemic stroke who had received thrombolytic treatments for a period of 10 years.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 647,
+							"infons": {},
+							"text": "Number of thrombolysis was determined in each patient.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 702,
+							"infons": {},
+							"text": "Recanalization was defined as Thrombolysis in Cerebral Infarction grading >=2a.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 782,
+							"infons": {},
+							"text": "Symptomatic hemorrhagic transformation was defined as any increase in the National Institutes of Health Stroke Scale score that could be attributed to intracerebral hemorrhage.",
+							"annotations": [
+								{
+									"id": "3",
+									"infons": {
+										"type": "evidirt",
+										"identifier": "Supports"
+									},
+									"text": "increase",
+									"locations": [
+										{
+											"offset": 1017,
+											"length": 8
+										}
+									]
+								},{
+									"id": "4",
+									"infons": {
+										"type": "gene",
+										"identifier": "Supports"
+									},
+									"text": "increase",
+									"locations": [
+										{
+											"offset": 1017,
+											"length": 8
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 959,
+							"infons": {},
+							"text": "A good outcome was defined as a modified Rankin scale score <=2.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 1024,
+					"infons": {
+						"section_type": "ABSTRACT",
+						"type": "abstract_title_1"
+					},
+					"text": "Results",
+					"sentences": [
+						{
+							"offset": 1024,
+							"infons": {},
+							"text": "Results",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 1032,
+					"infons": {
+						"section_type": "ABSTRACT",
+						"type": "abstract"
+					},
+					"text": "Of the 437 patients who received thrombolytic treatments, only 7 underwent repeated thrombolysis (1.6%). The median age at the time of repeated thrombolytic therapy was 71 years old; 4 of the patients were female. All patients had 1 or more potential sources of cardiac embolism. Recanalization was achieved in all patients, in both the first and the second thrombolysis. No symptomatic intracranial hemorrhage occurred after repeated thrombolytic treatments. Five patients (71.4%) showed good outcomes at 3 months.",
+					"sentences": [
+						{
+							"offset": 1032,
+							"infons": {},
+							"text": "Of the 437 patients who received thrombolytic treatments, only 7 underwent repeated thrombolysis (1.6%).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 1137,
+							"infons": {},
+							"text": "The median age at the time of repeated thrombolytic therapy was 71 years old; 4 of the patients were female.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 1246,
+							"infons": {},
+							"text": "All patients had 1 or more potential sources of cardiac embolism.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 1312,
+							"infons": {},
+							"text": "Recanalization was achieved in all patients, in both the first and the second thrombolysis.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 1404,
+							"infons": {},
+							"text": "No symptomatic intracranial hemorrhage occurred after repeated thrombolytic treatments.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 1492,
+							"infons": {},
+							"text": "Five patients (71.4%) showed good outcomes at 3 months.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 1548,
+					"infons": {
+						"section_type": "ABSTRACT",
+						"type": "abstract_title_1"
+					},
+					"text": "Conclusions",
+					"sentences": [
+						{
+							"offset": 1548,
+							"infons": {},
+							"text": "Conclusions",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 1560,
+					"infons": {
+						"section_type": "ABSTRACT",
+						"type": "abstract"
+					},
+					"text": "Repeated thrombolysis for recurrent acute ischemic stroke appears to be safe and feasible. Among patients who experience recurrent acute ischemic stroke, thrombolytic therapy could be considered even if the patient has had previous thrombolytic treatments.",
+					"sentences": [
+						{
+							"offset": 1560,
+							"infons": {},
+							"text": "Repeated thrombolysis for recurrent acute ischemic stroke appears to be safe and feasible.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 1651,
+							"infons": {},
+							"text": "Among patients who experience recurrent acute ischemic stroke, thrombolytic therapy could be considered even if the patient has had previous thrombolytic treatments.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 1817,
+					"infons": {
+						"section_type": "INTRO",
+						"type": "title_1"
+					},
+					"text": "Introduction",
+					"sentences": [
+						{
+							"offset": 1817,
+							"infons": {},
+							"text": "Introduction",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 1830,
+					"infons": {
+						"section_type": "INTRO",
+						"type": "paragraph"
+					},
+					"text": "The possibility of repeated thrombolysis has increased because of the widespread use of thrombolytic treatments, an improved chance of survival after thrombolytic treatment, and an increase in life expectancy. In myocardial infarction and pulmonary embolism, repeated thrombolytic therapy using intravenous recombinant tissue plasminogen activator (rt-PA) has been reported to be safe and effective. However, repeated thrombolytic therapy in patients with acute ischemic stroke is rarely reported, and almost all previous reports were of patients who received intravenous rt-PA. Only 1 case report detailed a successful endovascular treatment for recurrent basilar artery occlusions. Recently, multimodal thrombolytic therapy, which includes intravenous and intra-arterial thrombolytic drugs and mechanical thrombectomy, has been introduced and is fre quently used by stroke teams. The goals of this study are to 1) identify how frequently repeated thrombolytic treatments are performed since the existence of multimodal thrombolytic treatments, and 2) characterize the safety and outcome of repeated thrombolytic therapy in patients with acute ischemic stroke.",
+					"sentences": [
+						{
+							"offset": 1830,
+							"infons": {},
+							"text": "The possibility of repeated thrombolysis has increased because of the widespread use of thrombolytic treatments, an improved chance of survival after thrombolytic treatment, and an increase in life expectancy.",
+							"annotations": [
+								{
+									"id": "4",
+									"infons": {
+										"type": "evidirt",
+										"Identifier": "Supports"
+									},
+									"text": "increased",
+									"locations": [
+										{
+											"offset": 2085,
+											"length": 9
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 2040,
+							"infons": {},
+							"text": "In myocardial infarction and pulmonary embolism, repeated thrombolytic therapy using intravenous recombinant tissue plasminogen activator (rt-PA) has been reported to be safe and effective.",
+							"annotations": [
+								{
+									"id": "5",
+									"infons": {
+										"identifier": "100128998",
+										"type": "Gene"
+									},
+									"text": "tissue plasminogen activator",
+									"locations": [
+										{
+											"offset": 2149,
+											"length": 28
+										}
+									]
+								},
+								{
+									"id": "6",
+									"infons": {
+										"type": "Clinical Significance",
+										"Identifier": "Sensitivity/Response"
+									},
+									"text": "effective",
+									"locations": [
+										{
+											"offset": 2409,
+											"length": 9
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 2230,
+							"infons": {},
+							"text": "However, repeated thrombolytic therapy in patients with acute ischemic stroke is rarely reported, and almost all previous reports were of patients who received intravenous rt-PA. Only 1 case report detailed a successful endovascular treatment for recurrent basilar artery occlusions.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 2514,
+							"infons": {},
+							"text": "Recently, multimodal thrombolytic therapy, which includes intravenous and intra-arterial thrombolytic drugs and mechanical thrombectomy, has been introduced and is fre quently used by stroke teams.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 2712,
+							"infons": {},
+							"text": "The goals of this study are to 1) identify how frequently repeated thrombolytic treatments are performed since the existence of multimodal thrombolytic treatments, and 2) characterize the safety and outcome of repeated thrombolytic therapy in patients with acute ischemic stroke.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "57",
+							"infons": {
+								"identifier": "100128998",
+								"type": "Gene"
+							},
+							"text": "tissue plasminogen activator",
+							"locations": [
+								{
+									"offset": 2151,
+									"length": 28
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 2992,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "title_1"
+					},
+					"text": "Methods",
+					"sentences": [
+						{
+							"offset": 2992,
+							"infons": {},
+							"text": "Methods",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 3000,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "title_2"
+					},
+					"text": "Patients and enrollment",
+					"sentences": [
+						{
+							"offset": 3000,
+							"infons": {},
+							"text": "Patients and enrollment",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 3024,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "paragraph"
+					},
+					"text": "We drew subjects for this study from the Yonsei Stroke Registry. We selected patients with acute ischemic stroke who had received thrombolytic treatments within a 10-year period (from August 2001 to July 2011). Frequency of thrombolysis was determined in each patient, and initial stroke severity was assessed by National Institutes of Health Stroke Scale (NIHSS) scores. Potential cardiac sources of embolism were defined according to the Trial of ORG 10172 in the Acute Stroke Treatment classification. This study was approved by the Severance Hospital Institutional Review Board of Yonsei University Health System (4-2012-0553).",
+					"sentences": [
+						{
+							"offset": 3024,
+							"infons": {},
+							"text": "We drew subjects for this study from the Yonsei Stroke Registry.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 3089,
+							"infons": {},
+							"text": "We selected patients with acute ischemic stroke who had received thrombolytic treatments within a 10-year period (from August 2001 to July 2011).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 3235,
+							"infons": {},
+							"text": "Frequency of thrombolysis was determined in each patient, and initial stroke severity was assessed by National Institutes of Health Stroke Scale (NIHSS) scores.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 3396,
+							"infons": {},
+							"text": "Potential cardiac sources of embolism were defined according to the Trial of ORG 10172 in the Acute Stroke Treatment classification.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 3529,
+							"infons": {},
+							"text": "This study was approved by the Severance Hospital Institutional Review Board of Yonsei University Health System (4-2012-0553).",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 3656,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "title_2"
+					},
+					"text": "Thrombolytic therapy",
+					"sentences": [
+						{
+							"offset": 3656,
+							"infons": {},
+							"text": "Thrombolytic therapy",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 3677,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "paragraph"
+					},
+					"text": "The detailed protocol for thrombolytic treatment has been previously reported. Thrombolytic treatment was performed using intravenous rt-PA (Actilyse, Boehringer Ingelheim, Germany), intra-arterial urokinase (Urokinase, Yuhan, Seoul, Korea), or intra-arterial mechanical devices (microwire, Agility 10, Cordis, Miami, Fla., USA; Penumbra, Alameda, CA, USA; Solitaire, ev3 Inc, Irvine, CA, USA). Inclusion and exclusion criteria for thrombolytic treatments were based on previous trials. Patients who could be treated within 3 hours after the onset of symptoms received intravenous rt-PA (0.9 mg/kg with 10% bolus injection, followed by continuous infusion of the remainder over 60 minutes). After intravenous rt-PA infusion, further treatment with intra-arterial urokinase or mechanical thrombectomy was permitted for patients who showed an unsatisfactory clinical response (improvement on the NIHSS score <50%). Patients who could be treated within 3-6 hours after symptom onset were considered for intra-arterial urokinase (up to 1 million units) or mechanical thrombectomy. Abciximab was also allowed in patients with reocclusion.",
+					"sentences": [
+						{
+							"offset": 3677,
+							"infons": {},
+							"text": "The detailed protocol for thrombolytic treatment has been previously reported.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 3756,
+							"infons": {},
+							"text": "Thrombolytic treatment was performed using intravenous rt-PA (Actilyse, Boehringer Ingelheim, Germany), intra-arterial urokinase (Urokinase, Yuhan, Seoul, Korea), or intra-arterial mechanical devices (microwire, Agility 10, Cordis, Miami, Fla., USA; Penumbra, Alameda, CA, USA; Solitaire, ev3 Inc, Irvine, CA, USA).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 4072,
+							"infons": {},
+							"text": "Inclusion and exclusion criteria for thrombolytic treatments were based on previous trials.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 4164,
+							"infons": {},
+							"text": "Patients who could be treated within 3 hours after the onset of symptoms received intravenous rt-PA (0.9 mg/kg with 10% bolus injection, followed by continuous infusion of the remainder over 60 minutes).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 4368,
+							"infons": {},
+							"text": "After intravenous rt-PA infusion, further treatment with intra-arterial urokinase or mechanical thrombectomy was permitted for patients who showed an unsatisfactory clinical response (improvement on the NIHSS score <50%).",
+							"annotations": [
+								{
+									"id": "7",
+									"infons": {
+										"type": "Clinical Significance",
+										"Identifier": "Sensitivity/Response"
+									},
+									"text": "response",
+									"locations": [
+										{
+											"offset": 4764,
+											"length": 8
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 4590,
+							"infons": {},
+							"text": "Patients who could be treated within 3-6 hours after symptom onset were considered for intra-arterial urokinase (up to 1 million units) or mechanical thrombectomy.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 4754,
+							"infons": {},
+							"text": "Abciximab was also allowed in patients with reocclusion.",
+							"annotations": [
+								{
+									"id": "8",
+									"infons": {
+										"identifier": "MESH:D000077284",
+										"type": "Chemical"
+									},
+									"text": "Abciximab",
+									"locations": [
+										{
+											"offset": 4754,
+											"length": 9
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "94",
+							"infons": {
+								"identifier": "MESH:D000077284",
+								"type": "Chemical"
+							},
+							"text": "Abciximab",
+							"locations": [
+								{
+									"offset": 4756,
+									"length": 9
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 4811,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "title_2"
+					},
+					"text": "Assessment of outcomes",
+					"sentences": [
+						{
+							"offset": 4811,
+							"infons": {},
+							"text": "Assessment of outcomes",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 4834,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "paragraph"
+					},
+					"text": "Recanalization was evaluated at 24+-4 hours after thrombolysis using magnetic resonance angiography or computed tomography angiography. The Thrombolysis in Cerebral Infarction (TICI) grading system (Grade 0: no perfusion; Grade 1: penetration with minimal perfusion; Grade 2a: partial filling 2/3 of the entire vascular territory; Grade 2b: complete filling, but the filling is slower than normal; Grade 3: complete perfusion) was used to assess the success or failure of recanalization. Successful recanalization was defined as TICI >=2a. Hemorrhagic transformations were assessed by computed tomography or magnetic resonance imaging at 24+-4 hours after thrombolysis, or whenever clinical deterioration was suspected. Symptomatic hemorrhagic transformation was defined as any increase in the NIHSS score that could be attributed to intracerebral hemorrhage (ICH) on brain imaging studies. Independent neurologists determined functional outcomes at 3 months with the modified Rankin scale (mRS). A good outcome was defined as an mRS score <=2.",
+					"sentences": [
+						{
+							"offset": 4834,
+							"infons": {},
+							"text": "Recanalization was evaluated at 24+-4 hours after thrombolysis using magnetic resonance angiography or computed tomography angiography.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 4970,
+							"infons": {},
+							"text": "The Thrombolysis in Cerebral Infarction (TICI) grading system (Grade 0: no perfusion; Grade 1: penetration with minimal perfusion; Grade 2a: partial filling 2/3 of the entire vascular territory; Grade 2b: complete filling, but the filling is slower than normal; Grade 3: complete perfusion) was used to assess the success or failure of recanalization.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 5322,
+							"infons": {},
+							"text": "Successful recanalization was defined as TICI >=2a.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 5374,
+							"infons": {},
+							"text": "Hemorrhagic transformations were assessed by computed tomography or magnetic resonance imaging at 24+-4 hours after thrombolysis, or whenever clinical deterioration was suspected.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 5554,
+							"infons": {},
+							"text": "Symptomatic hemorrhagic transformation was defined as any increase in the NIHSS score that could be attributed to intracerebral hemorrhage (ICH) on brain imaging studies.",
+							"annotations": [
+								{
+									"id": "9",
+									"infons": {
+										"type": "evidirt",
+										"Identifier": "Supports"
+									},
+									"text": "increase",
+									"locations": [
+										{
+											"offset": 5783,
+											"length": 8
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 5725,
+							"infons": {},
+							"text": "Independent neurologists determined functional outcomes at 3 months with the modified Rankin scale (mRS).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 5831,
+							"infons": {},
+							"text": "A good outcome was defined as an mRS score <=2.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 5879,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "title_2"
+					},
+					"text": "Statistical analysis",
+					"sentences": [
+						{
+							"offset": 5879,
+							"infons": {},
+							"text": "Statistical analysis",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 5900,
+					"infons": {
+						"section_type": "METHODS",
+						"type": "paragraph"
+					},
+					"text": "Data were analyzed using SPSS 18.0 (SPSS, Chicago, IL, USA) for Windows. The Pearson chi-square test or Fisher's exact test was used to compare frequencies. For continuous variables, data distributions were examined for normality using the Kolmogorov-Smirnov test. Provided that the data did not deviate from normal distribution, the mean and standard deviation were calculated and parametric tests (independent sample t-tests) were applied. For data that were not normally distributed, we report descriptive statistics as the median and interquartile range; these were compared using non-parametric Mann-Whitney U tests. A P-value less than 0.05 was considered significant.",
+					"sentences": [
+						{
+							"offset": 5900,
+							"infons": {},
+							"text": "Data were analyzed using SPSS 18.0 (SPSS, Chicago, IL, USA) for Windows.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 5973,
+							"infons": {},
+							"text": "The Pearson chi-square test or Fisher's exact test was used to compare frequencies.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 6057,
+							"infons": {},
+							"text": "For continuous variables, data distributions were examined for normality using the Kolmogorov-Smirnov test.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 6165,
+							"infons": {},
+							"text": "Provided that the data did not deviate from normal distribution, the mean and standard deviation were calculated and parametric tests (independent sample t-tests) were applied.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 6342,
+							"infons": {},
+							"text": "For data that were not normally distributed, we report descriptive statistics as the median and interquartile range; these were compared using non-parametric Mann-Whitney U tests.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 6522,
+							"infons": {},
+							"text": "A P-value less than 0.05 was considered significant.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 6575,
+					"infons": {
+						"section_type": "RESULTS",
+						"type": "title_1"
+					},
+					"text": "Results",
+					"sentences": [
+						{
+							"offset": 6575,
+							"infons": {},
+							"text": "Results",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 6583,
+					"infons": {
+						"section_type": "RESULTS",
+						"type": "title_2"
+					},
+					"text": "Characteristics of patients with repeated thrombolysis",
+					"sentences": [
+						{
+							"offset": 6583,
+							"infons": {},
+							"text": "Characteristics of patients with repeated thrombolysis",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 6638,
+					"infons": {
+						"section_type": "RESULTS",
+						"type": "paragraph"
+					},
+					"text": "During the 10-year study period, a total of 437 patients with acute ischemic stroke underwent thrombolytic therapy. Of these, a total of 7 patients (1.6%) received thrombolytic therapy twice in chronologically separate events. Table 1 summarizes the demographic and clinical characteristics of the patients with repeated thrombolysis. The median age for patients who received repeated thrombolytic therapy was 71 years old, and 4 patients were female. The median time interval between the first and second thrombolytic treatment was 16 months (ranging from 6 days to 76 months). The median time from the onset of symptoms to thrombolytic therapy was 120 hours for the first thrombolytic treatment, and 125 hours for the repeated treatment. Initial median NIHSS scores were 12 for the first treatment and 15 for the repeated treatment. The occluded cerebral arteries were the middle cerebral arteries in 6 patients and the internal carotid artery in 1 patient. In the second attack, all of the patients experienced the occlusion in the same cerebral arteries as the first ischemic strokes. However, the right and left sides of the particular arteries were reversed for 4 patients in the second attack. In the first thrombolytic treatment, the treatment modalities were intravenous rt-PA in 4 patients, intra-arterial urokinase in 3 patients, and mechanical treatments in 3 patients. Multimodal treatments were performed in 2 patients. In the second thrombolytic treatment, 5 patients were treated with intravenous rt-PA, 3 with intra-arterial urokinase, and 5 with mechanical treatments. Four patients were treated using multimodal treatments. All patients who received repeated thrombolytic treatments had 1 or more potential sources of cardiac embolism. After the first thrombolysis, recanalization was achieved in all patients (TICI 3 in 2 patients and 2b in 4 patients) with no symptomatic ICHs. Five (71.4%) out of 7 patients showed good outcome after 3 months (mRS 0 in 4 patients, mRS 1 in 1, and mRS 4 in 2). Similar to the first thrombolysis, after the second thrombolysis, recanalization was achieved in all patients and no symptomatic ICH occurred. All patients recovered to the baseline mRS score for the first thrombolytic treatment.",
+					"sentences": [
+						{
+							"offset": 6638,
+							"infons": {},
+							"text": "During the 10-year study period, a total of 437 patients with acute ischemic stroke underwent thrombolytic therapy.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 6754,
+							"infons": {},
+							"text": "Of these, a total of 7 patients (1.6%) received thrombolytic therapy twice in chronologically separate events.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 6865,
+							"infons": {},
+							"text": "Table 1 summarizes the demographic and clinical characteristics of the patients with repeated thrombolysis.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 6973,
+							"infons": {},
+							"text": "The median age for patients who received repeated thrombolytic therapy was 71 years old, and 4 patients were female.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 7090,
+							"infons": {},
+							"text": "The median time interval between the first and second thrombolytic treatment was 16 months (ranging from 6 days to 76 months).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 7217,
+							"infons": {},
+							"text": "The median time from the onset of symptoms to thrombolytic therapy was 120 hours for the first thrombolytic treatment, and 125 hours for the repeated treatment.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 7378,
+							"infons": {},
+							"text": "Initial median NIHSS scores were 12 for the first treatment and 15 for the repeated treatment.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 7473,
+							"infons": {},
+							"text": "The occluded cerebral arteries were the middle cerebral arteries in 6 patients and the internal carotid artery in 1 patient.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 7598,
+							"infons": {},
+							"text": "In the second attack, all of the patients experienced the occlusion in the same cerebral arteries as the first ischemic strokes.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 7727,
+							"infons": {},
+							"text": "However, the right and left sides of the particular arteries were reversed for 4 patients in the second attack.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 7839,
+							"infons": {},
+							"text": "In the first thrombolytic treatment, the treatment modalities were intravenous rt-PA in 4 patients, intra-arterial urokinase in 3 patients, and mechanical treatments in 3 patients.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 8020,
+							"infons": {},
+							"text": "Multimodal treatments were performed in 2 patients.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 8072,
+							"infons": {},
+							"text": "In the second thrombolytic treatment, 5 patients were treated with intravenous rt-PA, 3 with intra-arterial urokinase, and 5 with mechanical treatments.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 8225,
+							"infons": {},
+							"text": "Four patients were treated using multimodal treatments.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 8281,
+							"infons": {},
+							"text": "All patients who received repeated thrombolytic treatments had 1 or more potential sources of cardiac embolism.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 8393,
+							"infons": {},
+							"text": "After the first thrombolysis, recanalization was achieved in all patients (TICI 3 in 2 patients and 2b in 4 patients) with no symptomatic ICHs.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 8537,
+							"infons": {},
+							"text": "Five (71.4%) out of 7 patients showed good outcome after 3 months (mRS 0 in 4 patients, mRS 1 in 1, and mRS 4 in 2).",
+							"annotations": [
+								{
+									"id": "10",
+									"infons": {
+										"identifier": "20147",
+										"type": "Gene",
+										"NCBI Homologene": "279"
+									},
+									"text": "mRS 1",
+									"locations": [
+										{
+											"offset": 8625,
+											"length": 5
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 8654,
+							"infons": {},
+							"text": "Similar to the first thrombolysis, after the second thrombolysis, recanalization was achieved in all patients and no symptomatic ICH occurred.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 8797,
+							"infons": {},
+							"text": "All patients recovered to the baseline mRS score for the first thrombolytic treatment.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "134",
+							"infons": {
+								"identifier": "20147",
+								"type": "Gene",
+								"NCBI Homologene": "279"
+							},
+							"text": "mRS 1",
+							"locations": [
+								{
+									"offset": 8629,
+									"length": 5
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 8884,
+					"infons": {
+						"section_type": "RESULTS",
+						"type": "title_2"
+					},
+					"text": "Comparison between single and repeated thrombolysis",
+					"sentences": [
+						{
+							"offset": 8884,
+							"infons": {},
+							"text": "Comparison between single and repeated thrombolysis",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 8936,
+					"infons": {
+						"section_type": "RESULTS",
+						"type": "paragraph"
+					},
+					"text": "To examine safety and outcome of patients with repeated thrombolysis, the data of 430 patients who were given a single thrombolytic treatment were compared. Age, sex, initial stroke severity, door to admission time, initial systolic blood pressure and glucose level, and risk factors including hypertension, diabetes mellitus, hypercholesterolemia, and smoking, were not different between patients with single and repeated treatments. The frequency of potential sources of cardiac embolism, however, was different (100% in the repeated thrombolytic treatment vs. 59.6% in the single treatment, P=0.045). Among the thrombolytic modalities, mechanical thrombolysis was more commonly performed in patients with repeated treatments (71.4% vs. 38.4%, P=0.027). Outcome variables, including recanalization, symptomatic ICH, and good outcome were similar (Table 2).",
+					"sentences": [
+						{
+							"offset": 8936,
+							"infons": {},
+							"text": "To examine safety and outcome of patients with repeated thrombolysis, the data of 430 patients who were given a single thrombolytic treatment were compared.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 9093,
+							"infons": {},
+							"text": "Age, sex, initial stroke severity, door to admission time, initial systolic blood pressure and glucose level, and risk factors including hypertension, diabetes mellitus, hypercholesterolemia, and smoking, were not different between patients with single and repeated treatments.",
+							"annotations": [
+								{
+									"id": "11",
+									"infons": {
+										"identifier": "MESH:D005947",
+										"type": "Chemical"
+									},
+									"text": "glucose",
+									"locations": [
+										{
+											"offset": 9188,
+											"length": 7
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 9371,
+							"infons": {},
+							"text": "The frequency of potential sources of cardiac embolism, however, was different (100% in the repeated thrombolytic treatment vs. 59.6% in the single treatment, P=0.045).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 9540,
+							"infons": {},
+							"text": "Among the thrombolytic modalities, mechanical thrombolysis was more commonly performed in patients with repeated treatments (71.4% vs. 38.4%, P=0.027).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 9692,
+							"infons": {},
+							"text": "Outcome variables, including recanalization, symptomatic ICH, and good outcome were similar (Table 2).",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "183",
+							"infons": {
+								"identifier": "MESH:D005947",
+								"type": "Chemical"
+							},
+							"text": "glucose",
+							"locations": [
+								{
+									"offset": 9192,
+									"length": 7
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 9795,
+					"infons": {
+						"section_type": "DISCUSS",
+						"type": "title_1"
+					},
+					"text": "Discussion",
+					"sentences": [
+						{
+							"offset": 9795,
+							"infons": {},
+							"text": "Discussion",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 9806,
+					"infons": {
+						"section_type": "DISCUSS",
+						"type": "paragraph"
+					},
+					"text": "This study demonstrates that repeated thrombolytic treatments for recurrent ischemic strokes is safe and feasible. In 10 years, only 1.6% of all thrombolyzed patients underwent repeated thrombolysis. All repeatedly treated patients had 1 or more sources of cardiac embolism and achieved recanalization without symptomatic ICH in the first thrombolytic treatment. On repeated thrombolysis, these patients were recanalized again without symptomatic ICH, and all recovered to the baseline neurological state of the first thrombolytic treatment. Compared to the patients who had a single treatment, the rate of mechanical thrombectomy was twice as high in patients with repeated treatments. The outcome of patients with repeated thrombolysis was similar that of patients with only one thrombolysis.",
+					"sentences": [
+						{
+							"offset": 9806,
+							"infons": {},
+							"text": "This study demonstrates that repeated thrombolytic treatments for recurrent ischemic strokes is safe and feasible.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 9921,
+							"infons": {},
+							"text": "In 10 years, only 1.6% of all thrombolyzed patients underwent repeated thrombolysis.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 10006,
+							"infons": {},
+							"text": "All repeatedly treated patients had 1 or more sources of cardiac embolism and achieved recanalization without symptomatic ICH in the first thrombolytic treatment.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 10169,
+							"infons": {},
+							"text": "On repeated thrombolysis, these patients were recanalized again without symptomatic ICH, and all recovered to the baseline neurological state of the first thrombolytic treatment.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 10348,
+							"infons": {},
+							"text": "Compared to the patients who had a single treatment, the rate of mechanical thrombectomy was twice as high in patients with repeated treatments.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 10493,
+							"infons": {},
+							"text": "The outcome of patients with repeated thrombolysis was similar that of patients with only one thrombolysis.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 10601,
+					"infons": {
+						"section_type": "DISCUSS",
+						"type": "paragraph"
+					},
+					"text": "In acute myocardial infarction or pulmonary embolism, repeated thrombolysis has been reported to be safe and feasible. In the case of acute ischemic stroke, however, its effectiveness is largely unknown. The major risk of thrombolytic treatment in ischemic stroke is ICH. Because the brain-blood barrier is disrupted in previously infarcted tissue, repeated thrombolytic treatments may pose a greater possibility for ICH. Few investigators have reported multiple administrations of thrombolytic drugs for recurrent ischemic strokes. A case series of repeated thrombolytic therapy from a German stroke database showed that 9 (1.8%) out of 496 thrombolyzed patients were repeatedly treated with intravenous rt-PA for chronologically separate acute ischemic strokes over a 4-year period. In that study, the median time span between the first and second thrombolysis was 10 months (range, 3 to 48), 67% of patients had favorable outcomes, and no symptomatic ICH occurred. These rates of repeated treatments and outcomes are similar to the current study.",
+					"sentences": [
+						{
+							"offset": 10601,
+							"infons": {},
+							"text": "In acute myocardial infarction or pulmonary embolism, repeated thrombolysis has been reported to be safe and feasible.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 10720,
+							"infons": {},
+							"text": "In the case of acute ischemic stroke, however, its effectiveness is largely unknown.",
+							"annotations": [
+								{
+									"id": "12",
+									"infons": {
+										"type": "Clinical Significance",
+										"Identifier": "Sensitivity/Response"
+									},
+									"text": "effective",
+									"locations": [
+										{
+											"offset": 10856,
+											"length": 9
+										}
+									]
+								},
+								{
+									"id": "13",
+									"infons": {
+										"type": "Clinical Significance",
+										"Identifier": "Unknown"
+									},
+									"text": "unknown",
+									"locations": [
+										{
+											"offset": 10881,
+											"length": 7
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 10805,
+							"infons": {},
+							"text": "The major risk of thrombolytic treatment in ischemic stroke is ICH.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 10873,
+							"infons": {},
+							"text": "Because the brain-blood barrier is disrupted in previously infarcted tissue, repeated thrombolytic treatments may pose a greater possibility for ICH.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 11023,
+							"infons": {},
+							"text": "Few investigators have reported multiple administrations of thrombolytic drugs for recurrent ischemic strokes.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 11134,
+							"infons": {},
+							"text": "A case series of repeated thrombolytic therapy from a German stroke database showed that 9 (1.8%) out of 496 thrombolyzed patients were repeatedly treated with intravenous rt-PA for chronologically separate acute ischemic strokes over a 4-year period.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 11386,
+							"infons": {},
+							"text": "In that study, the median time span between the first and second thrombolysis was 10 months (range, 3 to 48), 67% of patients had favorable outcomes, and no symptomatic ICH occurred.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 11569,
+							"infons": {},
+							"text": "These rates of repeated treatments and outcomes are similar to the current study.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 11651,
+					"infons": {
+						"section_type": "DISCUSS",
+						"type": "paragraph"
+					},
+					"text": "Current guidelines recommend that a stroke in the prior 3 months is considered an exclusionary criterion for intravenous rt-PA. This recommendation, however, is derived from clinical trials for acute myocardial infarction, and the information on acute ischemic stroke is limited. Repeated use of rt-PA after 1 day theoretically will not lead to toxic plasma levels because the half-life of rt-PA is 6 min, and more than 80% of rt-PA is eliminated via urine within 18 h after administration. There are only 4 case reports of repeated thrombolytic therapy within 3 months, where the time interval between the first and second thrombolysis was 24 to 90 hours. Three of those patients received intravenous rt-PA, and the remaining patient underwent intra-arterial chemical and mechanical thrombolysis. All patients showed good outcomes without symptomatic ICH. In our data, 1 patient received the second thrombolysis within 6 days (patient 1). Cardioembolic occlusion occurred on the right internal carotid artery in the first stroke, and recurrent occlusion on the left internal carotid artery in the second stroke. Both thrombi were completely removed using the Solitaire devices, and no chemical thrombolytic agents were used. This patient fully recovered. Therefore, further study of patients with prior stroke in the previous 3 months is needed and may increase the number of eligible patients.",
+					"sentences": [
+						{
+							"offset": 11651,
+							"infons": {},
+							"text": "Current guidelines recommend that a stroke in the prior 3 months is considered an exclusionary criterion for intravenous rt-PA.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 11779,
+							"infons": {},
+							"text": "This recommendation, however, is derived from clinical trials for acute myocardial infarction, and the information on acute ischemic stroke is limited.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 11931,
+							"infons": {},
+							"text": "Repeated use of rt-PA after 1 day theoretically will not lead to toxic plasma levels because the half-life of rt-PA is 6 min, and more than 80% of rt-PA is eliminated via urine within 18 h after administration.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 12142,
+							"infons": {},
+							"text": "There are only 4 case reports of repeated thrombolytic therapy within 3 months, where the time interval between the first and second thrombolysis was 24 to 90 hours.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 12308,
+							"infons": {},
+							"text": "Three of those patients received intravenous rt-PA, and the remaining patient underwent intra-arterial chemical and mechanical thrombolysis.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 12449,
+							"infons": {},
+							"text": "All patients showed good outcomes without symptomatic ICH.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 12508,
+							"infons": {},
+							"text": "In our data, 1 patient received the second thrombolysis within 6 days (patient 1).",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 12591,
+							"infons": {},
+							"text": "Cardioembolic occlusion occurred on the right internal carotid artery in the first stroke, and recurrent occlusion on the left internal carotid artery in the second stroke.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 12764,
+							"infons": {},
+							"text": "Both thrombi were completely removed using the Solitaire devices, and no chemical thrombolytic agents were used.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 12877,
+							"infons": {},
+							"text": "This patient fully recovered.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 12907,
+							"infons": {},
+							"text": "Therefore, further study of patients with prior stroke in the previous 3 months is needed and may increase the number of eligible patients.",
+							"annotations": [
+								{
+									"id": "14",
+									"infons": {
+										"type": "evidirt",
+										"Identifier": "Supports"
+									},
+									"text": "increase",
+									"locations": [
+										{
+											"offset": 13145,
+											"length": 8
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 13047,
+					"infons": {
+						"section_type": "DISCUSS",
+						"type": "paragraph"
+					},
+					"text": "Immunologic reactions following repeated thrombolysis are another concern. In patients with myocardial infarction, repeat ed administration of streptokinase is not recommended because of its antigenicity. Although rt-PA and urokinase are endogenous proteins and are considered non-antigenic, several studies have reported the development of antibodies against rt-PA and allergic reactions after rt-PA administrations. Furthermore, activation of fibrinolysis may facilitate anaphylactoid reactions. Previous reports did not show any immunological reactions in patients who were given repeated treatments. Although we did not check titers of antibodies, our 5 patients who received repeated treatments with rt-PA or urokinase did not show any symptoms or signs of an immunological reaction.",
+					"sentences": [
+						{
+							"offset": 13047,
+							"infons": {},
+							"text": "Immunologic reactions following repeated thrombolysis are another concern.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 13122,
+							"infons": {},
+							"text": "In patients with myocardial infarction, repeat ed administration of streptokinase is not recommended because of its antigenicity.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 13252,
+							"infons": {},
+							"text": "Although rt-PA and urokinase are endogenous proteins and are considered non-antigenic, several studies have reported the development of antibodies against rt-PA and allergic reactions after rt-PA administrations.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 13465,
+							"infons": {},
+							"text": "Furthermore, activation of fibrinolysis may facilitate anaphylactoid reactions.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 13545,
+							"infons": {},
+							"text": "Previous reports did not show any immunological reactions in patients who were given repeated treatments.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 13651,
+							"infons": {},
+							"text": "Although we did not check titers of antibodies, our 5 patients who received repeated treatments with rt-PA or urokinase did not show any symptoms or signs of an immunological reaction.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 13836,
+					"infons": {
+						"section_type": "DISCUSS",
+						"type": "paragraph"
+					},
+					"text": "It is noteworthy that all patients who received repeated thrombolytic treatments had 1 or more sources of cardiac embolism, most of which were atrial fibrillation. Recurrent ischemic stroke after intravenous rt-PA in patients with sources of cardiac embolism is common. Higher recurrence of ischemic stroke in patients with cardiac embolic sources may be connected to the increased likelihood of receiving repeated thrombolysis for those patients. Currently, clinical trials of new anticoagulants yield favorable results and have been adopted for patients with non-valvular atrial fibrillation. Recent guidelines for thrombolytic treatments also allow intravenous rt-PA use in patients who are currently taking a direct thrombin inhibitor or factor Xa inhibitors with normal coagulation laboratory tests. Further study is needed to investigate proper treatments for recurrent stroke in patients with new anticoagulants.",
+					"sentences": [
+						{
+							"offset": 13836,
+							"infons": {},
+							"text": "It is noteworthy that all patients who received repeated thrombolytic treatments had 1 or more sources of cardiac embolism, most of which were atrial fibrillation.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 14000,
+							"infons": {},
+							"text": "Recurrent ischemic stroke after intravenous rt-PA in patients with sources of cardiac embolism is common.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 14106,
+							"infons": {},
+							"text": "Higher recurrence of ischemic stroke in patients with cardiac embolic sources may be connected to the increased likelihood of receiving repeated thrombolysis for those patients.",
+							"annotations": [
+								{
+									"id": "15",
+									"infons": {
+										"type": "evidirt",
+										"Identifier": "Supports"
+									},
+									"text": "increased",
+									"locations": [
+										{
+											"offset": 14386,
+											"length": 9
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 14284,
+							"infons": {},
+							"text": "Currently, clinical trials of new anticoagulants yield favorable results and have been adopted for patients with non-valvular atrial fibrillation.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 14431,
+							"infons": {},
+							"text": "Recent guidelines for thrombolytic treatments also allow intravenous rt-PA use in patients who are currently taking a direct thrombin inhibitor or factor Xa inhibitors with normal coagulation laboratory tests.",
+							"annotations": [
+								{
+									"id": "16",
+									"infons": {
+										"identifier": "2147",
+										"type": "Gene",
+										"NCBI Homologene": "426"
+									},
+									"text": "thrombin",
+									"locations": [
+										{
+											"offset": 14556,
+											"length": 8
+										}
+									]
+								}
+							],
+							"relations": []
+						},
+						{
+							"offset": 14641,
+							"infons": {},
+							"text": "Further study is needed to investigate proper treatments for recurrent stroke in patients with new anticoagulants.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "294",
+							"infons": {
+								"identifier": "2147",
+								"type": "Gene",
+								"NCBI Homologene": "426"
+							},
+							"text": "thrombin",
+							"locations": [
+								{
+									"offset": 14560,
+									"length": 8
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 14756,
+					"infons": {
+						"section_type": "DISCUSS",
+						"type": "paragraph"
+					},
+					"text": "Several limitations exist in this study. First, although our data were collected from consecutive patients of a single stroke team over 10 years, the number of patients with repeated thrombolytic treatment were small. Considering the similar frequency of repeated thrombolysis in a different stroke database, it can be assumed that repeated thrombolysis is rarely performed. Second, our data do not enable us to draw conclusions about the optimal thrombolytic modality in repeated cases. In this study, mechanical thrombectomy in repeated treatment was twice as likely to be performed. Thrombolytic modality in each case was decided according to predefined protocol; however, conditions including age, stroke severity, occluded cerebral arteries, underlying medical conditions, and medication may influence the selection of thrombolytic modality for repeated events. The advancement of mechanical devices for acute ischemic stroke may allow for more safe and favorable outcomes in repeated thrombolytic treatments. Third, we examined the safety and outcome of patients with repeated thrombolysis through comparison to those with single thrombolytic treatment. Caution must be taken in interpreting these results. Because the number of cases was small, the number of severe strokes was not large, and the thrombolysis modalities were heterogeneous, the negative results from this comparison cannot be regarded as evidence for the safety and feasibility of repeated thrombolytic treatments. Further prospective study is warranted.",
+					"sentences": [
+						{
+							"offset": 14756,
+							"infons": {},
+							"text": "Several limitations exist in this study.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 14797,
+							"infons": {},
+							"text": "First, although our data were collected from consecutive patients of a single stroke team over 10 years, the number of patients with repeated thrombolytic treatment were small.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 14974,
+							"infons": {},
+							"text": "Considering the similar frequency of repeated thrombolysis in a different stroke database, it can be assumed that repeated thrombolysis is rarely performed.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 15131,
+							"infons": {},
+							"text": "Second, our data do not enable us to draw conclusions about the optimal thrombolytic modality in repeated cases.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 15244,
+							"infons": {},
+							"text": "In this study, mechanical thrombectomy in repeated treatment was twice as likely to be performed.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 15342,
+							"infons": {},
+							"text": "Thrombolytic modality in each case was decided according to predefined protocol; however, conditions including age, stroke severity, occluded cerebral arteries, underlying medical conditions, and medication may influence the selection of thrombolytic modality for repeated events.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 15623,
+							"infons": {},
+							"text": "The advancement of mechanical devices for acute ischemic stroke may allow for more safe and favorable outcomes in repeated thrombolytic treatments.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 15771,
+							"infons": {},
+							"text": "Third, we examined the safety and outcome of patients with repeated thrombolysis through comparison to those with single thrombolytic treatment.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 15916,
+							"infons": {},
+							"text": "Caution must be taken in interpreting these results.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 15969,
+							"infons": {},
+							"text": "Because the number of cases was small, the number of severe strokes was not large, and the thrombolysis modalities were heterogeneous, the negative results from this comparison cannot be regarded as evidence for the safety and feasibility of repeated thrombolytic treatments.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 16245,
+							"infons": {},
+							"text": "Further prospective study is warranted.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 16285,
+					"infons": {
+						"section_type": "CONCL",
+						"type": "title_1"
+					},
+					"text": "Conclusion",
+					"sentences": [
+						{
+							"offset": 16285,
+							"infons": {},
+							"text": "Conclusion",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 16296,
+					"infons": {
+						"section_type": "CONCL",
+						"type": "paragraph"
+					},
+					"text": "Our study investigated the safety and outcome of patients with repeated thrombolysis in the era of multimodal thrombolytic treatments. Although it is rarely performed, repeated thrombolysis appears to be safe and feasible for patients with recurrent acute ischemic stroke. Repeated thrombolytic therapy could be considered, even if patients have had previous history of thrombolytic treatments.",
+					"sentences": [
+						{
+							"offset": 16296,
+							"infons": {},
+							"text": "Our study investigated the safety and outcome of patients with repeated thrombolysis in the era of multimodal thrombolytic treatments.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 16431,
+							"infons": {},
+							"text": "Although it is rarely performed, repeated thrombolysis appears to be safe and feasible for patients with recurrent acute ischemic stroke.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 16569,
+							"infons": {},
+							"text": "Repeated thrombolytic therapy could be considered, even if patients have had previous history of thrombolytic treatments.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 16691,
+					"infons": {
+						"section_type": "CONCL",
+						"type": "footnote"
+					},
+					"text": "This study was supported by a Korea Science and Engineering Foundation grant funded by the Korea government (2009-0069165), the Korea Healthcare Technology Research and Development Project, Ministry for Health, Welfare, and Family Affairs, Republic of Korea (HI10C2020), and a faculty research grant from Yonsei University College of Medicine for 2011 (6-2011-0095).",
+					"sentences": [
+						{
+							"offset": 16691,
+							"infons": {},
+							"text": "This study was supported by a Korea Science and Engineering Foundation grant funded by the Korea government (2009-0069165), the Korea Healthcare Technology Research and Development Project, Ministry for Health, Welfare, and Family Affairs, Republic of Korea (HI10C2020), and a faculty research grant from Yonsei University College of Medicine for 2011 (6-2011-0095).",
+							"annotations": [
+								{
+									"id": "17",
+									"infons": {
+										"type": "evidirt",
+										"Identifier": "Supports"
+									},
+									"text": "support",
+									"locations": [
+										{
+											"offset": 17073,
+											"length": 7
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 17058,
+					"infons": {
+						"section_type": "CONCL",
+						"type": "footnote"
+					},
+					"text": "The authors have no financial conflicts of interest.",
+					"sentences": [
+						{
+							"offset": 17058,
+							"infons": {},
+							"text": "The authors have no financial conflicts of interest.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 17111,
+					"infons": {
+						"name_3": "surname:Lee;given-names:HS",
+						"name_2": "surname:Kim;given-names:YD",
+						"name_1": "surname:Kim;given-names:HC",
+						"name_0": "surname:Nam;given-names:HS",
+						"fpage": "2948",
+						"pub-id_pmid": "22933583",
+						"year": "2012",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "43",
+						"section_type": "REF",
+						"lpage": "2956",
+						"name_5": "surname:Lee;given-names:DH",
+						"name_4": "surname:Kim;given-names:J"
+					},
+					"text": "Long-term mortality in patients with stroke of undetermined etiology",
+					"sentences": [
+						{
+							"offset": 17111,
+							"infons": {},
+							"text": "Long-term mortality in patients with stroke of undetermined etiology",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 17180,
+					"infons": {
+						"name_3": "surname:Engelhorn;given-names:T",
+						"name_2": "surname:Breuer;given-names:L",
+						"name_1": "surname:Huttner;given-names:HB",
+						"name_0": "surname:Sauer;given-names:R",
+						"fpage": "1829",
+						"pub-id_pmid": "20616322",
+						"year": "2010",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "41",
+						"section_type": "REF",
+						"lpage": "1832",
+						"name_5": "surname:Schwab;given-names:S",
+						"name_4": "surname:Schellinger;given-names:PD"
+					},
+					"text": "Repeated thrombolysis for chronologically separated ischemic strokes: a case series",
+					"sentences": [
+						{
+							"offset": 17180,
+							"infons": {},
+							"text": "Repeated thrombolysis for chronologically separated ischemic strokes: a case series",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 17264,
+					"infons": {
+						"volume": "102",
+						"name_2": "surname:Norell;given-names:MS",
+						"name_1": "surname:Clark;given-names:AL",
+						"section_type": "REF",
+						"name_0": "surname:Banerjee;given-names:P",
+						"fpage": "515",
+						"pub-id_pmid": "16004899",
+						"year": "2005",
+						"source": "Int J Cardiol",
+						"type": "ref",
+						"lpage": "519"
+					},
+					"text": "Repeat thrombolysis for acute myocardial infarction",
+					"sentences": [
+						{
+							"offset": 17264,
+							"infons": {},
+							"text": "Repeat thrombolysis for acute myocardial infarction",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 17316,
+					"infons": {
+						"name_3": "surname:Hudson;given-names:M",
+						"name_2": "surname:Bogaerts;given-names:K",
+						"name_1": "surname:Birnbaum;given-names:Y",
+						"name_0": "surname:Barbash;given-names:GI",
+						"fpage": "954",
+						"pub-id_pmid": "11181469",
+						"year": "2001",
+						"source": "Circulation",
+						"type": "ref",
+						"volume": "103",
+						"section_type": "REF",
+						"lpage": "960",
+						"name_5": "surname:Fu;given-names:Y",
+						"name_4": "surname:Lesaffre;given-names:E"
+					},
+					"text": "Treatment of reinfarction after thrombolytic therapy for acute myocardial infarction: an analysis of outcome and treatment choices in the global utilization of streptokinase and tissue plasminogen activator for occluded coronary arteries (GUSTO I) and assessment of the safety of a new thrombolytic (ASSENT 2) studies",
+					"sentences": [
+						{
+							"offset": 17316,
+							"infons": {},
+							"text": "Treatment of reinfarction after thrombolytic therapy for acute myocardial infarction: an analysis of outcome and treatment choices in the global utilization of streptokinase and tissue plasminogen activator for occluded coronary arteries (GUSTO I) and assessment of the safety of a new thrombolytic (ASSENT 2) studies",
+							"annotations": [
+								{
+									"id": "18",
+									"infons": {
+										"identifier": "100128998",
+										"type": "Gene"
+									},
+									"text": "tissue plasminogen activator",
+									"locations": [
+										{
+											"offset": 17494,
+											"length": 28
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "348",
+							"infons": {
+								"identifier": "100128998",
+								"type": "Gene"
+							},
+							"text": "tissue plasminogen activator",
+							"locations": [
+								{
+									"offset": 17498,
+									"length": 28
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 17634,
+					"infons": {
+						"name_3": "surname:Legalery;given-names:P",
+						"name_2": "surname:Blonde;given-names:MC",
+						"name_1": "surname:Seronde;given-names:MF",
+						"name_0": "surname:Meneveau;given-names:N",
+						"fpage": "1043",
+						"pub-id_pmid": "16608956",
+						"year": "2006",
+						"source": "Chest",
+						"type": "ref",
+						"volume": "129",
+						"section_type": "REF",
+						"lpage": "1050",
+						"name_5": "surname:Briand;given-names:F",
+						"name_4": "surname:Didier-Petit;given-names:K"
+					},
+					"text": "Management of unsuccessful thrombolysis in acute massive pulmonary embolism",
+					"sentences": [
+						{
+							"offset": 17634,
+							"infons": {},
+							"text": "Management of unsuccessful thrombolysis in acute massive pulmonary embolism",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 17710,
+					"infons": {
+						"volume": "21",
+						"name_1": "surname:Topcuoglu;given-names:MA",
+						"section_type": "REF",
+						"name_0": "surname:Arsava;given-names:EM",
+						"fpage": "605",
+						"pub-id_pmid": "20644467",
+						"year": "2010",
+						"source": "Blood Coagul Fibrinolysis",
+						"type": "ref",
+						"lpage": "607"
+					},
+					"text": "De-novo thrombolysis for recurrent stroke in a patient with prior history of thrombolysis",
+					"sentences": [
+						{
+							"offset": 17710,
+							"infons": {},
+							"text": "De-novo thrombolysis for recurrent stroke in a patient with prior history of thrombolysis",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 17800,
+					"infons": {
+						"name_3": "surname:Haring;given-names:HP",
+						"name_2": "surname:Fellner;given-names:FA",
+						"name_1": "surname:Gruber;given-names:F",
+						"name_0": "surname:Topakian;given-names:R",
+						"fpage": "e162",
+						"pub-id_pmid": "16210551",
+						"year": "2005",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "36",
+						"section_type": "REF",
+						"lpage": "e164",
+						"name_4": "surname:Aichner;given-names:FT"
+					},
+					"text": "Thrombolysis beyond the guidelines: two treatments in one subject within 90 hours based on a modified magnetic resonance imaging brain clock concept",
+					"sentences": [
+						{
+							"offset": 17800,
+							"infons": {},
+							"text": "Thrombolysis beyond the guidelines: two treatments in one subject within 90 hours based on a modified magnetic resonance imaging brain clock concept",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 17949,
+					"infons": {
+						"name_3": "surname:Bovi;given-names:P",
+						"name_2": "surname:Tomelleri;given-names:G",
+						"name_1": "surname:Bovi;given-names:T",
+						"name_0": "surname:Brigo;given-names:F",
+						"fpage": "114",
+						"pub-id_pmid": "22384509",
+						"year": "2012",
+						"source": "Can J Neurol Sci",
+						"type": "ref",
+						"volume": "39",
+						"section_type": "REF",
+						"lpage": "116",
+						"name_4": "surname:Moretto;given-names:G"
+					},
+					"text": "Repeated systemic thrombolysis after early recurrent stroke: always hazardous?",
+					"sentences": [
+						{
+							"offset": 17949,
+							"infons": {},
+							"text": "Repeated systemic thrombolysis after early recurrent stroke: always hazardous?",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 18028,
+					"infons": {
+						"name_3": "surname:Gialdini;given-names:G",
+						"name_2": "surname:Terni;given-names:E",
+						"name_1": "surname:Pizzanelli;given-names:C",
+						"name_0": "surname:Chiti;given-names:A",
+						"fpage": "95",
+						"pub-id_pmid": "21364363",
+						"year": "2011",
+						"source": "Neurologist",
+						"type": "ref",
+						"volume": "17",
+						"section_type": "REF",
+						"lpage": "97",
+						"name_5": "surname:Puglioli;given-names:M",
+						"name_4": "surname:Cosottini;given-names:M"
+					},
+					"text": "A case of recurrent basilar artery occlusion successful ly treated with repeated intravascular procedures",
+					"sentences": [
+						{
+							"offset": 18028,
+							"infons": {},
+							"text": "A case of recurrent basilar artery occlusion successful ly treated with repeated intravascular procedures",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 18134,
+					"infons": {
+						"name_3": "surname:Jovin;given-names:TG",
+						"name_2": "surname:Levy;given-names:EI",
+						"name_1": "surname:Jahan;given-names:R",
+						"name_0": "surname:Saver;given-names:JL",
+						"fpage": "1241",
+						"pub-id_pmid": "22932715",
+						"year": "2012",
+						"source": "Lancet",
+						"type": "ref",
+						"volume": "380",
+						"section_type": "REF",
+						"lpage": "1249",
+						"name_5": "surname:Nogueira;given-names:RG",
+						"name_4": "surname:Baxter;given-names:B"
+					},
+					"text": "Solitaire flow restoration device versus the Merci Retriever in patients with acute ischaemic stroke (SWIFT): a randomised, parallel-group, non-inferiority trial",
+					"sentences": [
+						{
+							"offset": 18134,
+							"infons": {},
+							"text": "Solitaire flow restoration device versus the Merci Retriever in patients with acute ischaemic stroke (SWIFT): a randomised, parallel-group, non-inferiority trial",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 18296,
+					"infons": {
+						"volume": "31",
+						"name_2": "surname:Cho;given-names:KH",
+						"name_1": "surname:Park;given-names:MS",
+						"section_type": "REF",
+						"name_0": "surname:Yoon;given-names:W",
+						"fpage": "161",
+						"pub-id_pmid": "19713319",
+						"year": "2010",
+						"source": "AJNR Am J Neuroradiol",
+						"type": "ref",
+						"lpage": "164"
+					},
+					"text": "Low-dose intra-arterial urokinase and aggressive mechanical clot disruption for acute ischemic stroke after failure of intravenous thrombolysis",
+					"sentences": [
+						{
+							"offset": 18296,
+							"infons": {},
+							"text": "Low-dose intra-arterial urokinase and aggressive mechanical clot disruption for acute ischemic stroke after failure of intravenous thrombolysis",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 18440,
+					"infons": {
+						"name_3": "surname:Yeatts;given-names:SD",
+						"name_2": "surname:Demchuk;given-names:AM",
+						"name_1": "surname:Palesch;given-names:YY",
+						"name_0": "surname:Broderick;given-names:JP",
+						"fpage": "893",
+						"pub-id_pmid": "23390923",
+						"year": "2013",
+						"source": "N Engl J Med",
+						"type": "ref",
+						"volume": "368",
+						"section_type": "REF",
+						"lpage": "903",
+						"name_5": "surname:Hill;given-names:MD",
+						"name_4": "surname:Khatri;given-names:P"
+					},
+					"text": "Endovascular therapy after intravenous t-PA versus t-PA alone for stroke",
+					"sentences": [
+						{
+							"offset": 18440,
+							"infons": {},
+							"text": "Endovascular therapy after intravenous t-PA versus t-PA alone for stroke",
+							"annotations": [
+								{
+									"id": "19",
+									"infons": {
+										"identifier": "5327",
+										"type": "Gene",
+										"NCBI Homologene": "717"
+									},
+									"text": "t-PA",
+									"locations": [
+										{
+											"offset": 18479,
+											"length": 4
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "371",
+							"infons": {
+								"identifier": "5327",
+								"type": "Gene",
+								"NCBI Homologene": "717"
+							},
+							"text": "t-PA",
+							"locations": [
+								{
+									"offset": 18495,
+									"length": 4
+								}
+							]
+						},
+						{
+							"id": "372",
+							"infons": {
+								"identifier": "5327",
+								"type": "Gene",
+								"NCBI Homologene": "717"
+							},
+							"text": "t-PA",
+							"locations": [
+								{
+									"offset": 18483,
+									"length": 4
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 18513,
+					"infons": {
+						"name_3": "surname:Alexandrov;given-names:AV",
+						"name_2": "surname:Hall;given-names:CE",
+						"name_1": "surname:Shaltoni;given-names:HM",
+						"name_0": "surname:Noser;given-names:EA",
+						"fpage": "292",
+						"pub-id_pmid": "15625300",
+						"year": "2005",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "36",
+						"section_type": "REF",
+						"lpage": "296",
+						"name_5": "surname:Cacayorin;given-names:ED",
+						"name_4": "surname:Garami;given-names:Z"
+					},
+					"text": "Aggressive mechanical clot disruption: a safe adjunct to thrombolytic therapy in acute stroke?",
+					"sentences": [
+						{
+							"offset": 18513,
+							"infons": {},
+							"text": "Aggressive mechanical clot disruption: a safe adjunct to thrombolytic therapy in acute stroke?",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 18608,
+					"infons": {
+						"name_3": "surname:Kim;given-names:DI",
+						"volume": "12",
+						"name_2": "surname:Heo;given-names:JH",
+						"name_1": "surname:Nam;given-names:HS",
+						"section_type": "REF",
+						"name_0": "surname:Lee;given-names:BI",
+						"fpage": "145",
+						"pub-id_pmid": "11641577",
+						"year": "2001",
+						"source": "Cerebrovasc Dis",
+						"type": "ref",
+						"lpage": "151"
+					},
+					"text": "Yonsei Stroke Registry. Analysis of 1,000 patients with acute cerebral infarctions",
+					"sentences": [
+						{
+							"offset": 18608,
+							"infons": {},
+							"text": "Yonsei Stroke Registry.",
+							"annotations": [],
+							"relations": []
+						},
+						{
+							"offset": 18632,
+							"infons": {},
+							"text": "Analysis of 1,000 patients with acute cerebral infarctions",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 18691,
+					"infons": {
+						"name_3": "surname:Ford;given-names:GA",
+						"name_2": "surname:Davalos;given-names:A",
+						"name_1": "surname:Ahmed;given-names:N",
+						"name_0": "surname:Wahlgren;given-names:N",
+						"fpage": "275",
+						"pub-id_pmid": "17258667",
+						"year": "2007",
+						"source": "Lancet",
+						"type": "ref",
+						"volume": "369",
+						"section_type": "REF",
+						"lpage": "282",
+						"name_5": "surname:Hacke;given-names:W",
+						"name_4": "surname:Grond;given-names:M"
+					},
+					"text": "Thrombolysis with alteplase for acute ischaemic stroke in the Safe Implementation of Thrombolysis in Stroke-Monitoring Study (SITS-MOST): an observational study",
+					"sentences": [
+						{
+							"offset": 18691,
+							"infons": {},
+							"text": "Thrombolysis with alteplase for acute ischaemic stroke in the Safe Implementation of Thrombolysis in Stroke-Monitoring Study (SITS-MOST): an observational study",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 18852,
+					"infons": {
+						"name_3": "surname:Kim;given-names:DI",
+						"volume": "60",
+						"name_2": "surname:Kim;given-names:SH",
+						"name_1": "surname:Lee;given-names:KY",
+						"section_type": "REF",
+						"name_0": "surname:Heo;given-names:JH",
+						"fpage": "1684",
+						"pub-id_pmid": "12771267",
+						"year": "2003",
+						"source": "Neurology",
+						"type": "ref",
+						"lpage": "1687"
+					},
+					"text": "Immediate reocclusion following a successful thrombolysis in acute stroke: a pilot study",
+					"sentences": [
+						{
+							"offset": 18852,
+							"infons": {},
+							"text": "Immediate reocclusion following a successful thrombolysis in acute stroke: a pilot study",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 18941,
+					"infons": {
+						"name_3": "surname:Yoon;given-names:PH",
+						"volume": "56",
+						"name_2": "surname:Lee;given-names:SI",
+						"name_1": "surname:Heo;given-names:JH",
+						"section_type": "REF",
+						"name_0": "surname:Lee;given-names:KY",
+						"fpage": "1585",
+						"pub-id_pmid": "11402123",
+						"year": "2001",
+						"source": "Neurology",
+						"type": "ref",
+						"lpage": "1587"
+					},
+					"text": "Rescue treatment with abciximab in acute ischemic stroke",
+					"sentences": [
+						{
+							"offset": 18941,
+							"infons": {},
+							"text": "Rescue treatment with abciximab in acute ischemic stroke",
+							"annotations": [
+								{
+									"id": "20",
+									"infons": {
+										"identifier": "MESH:D000077284",
+										"type": "Chemical"
+									},
+									"text": "abciximab",
+									"locations": [
+										{
+											"offset": 18963,
+											"length": 9
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "392",
+							"infons": {
+								"identifier": "MESH:D000077284",
+								"type": "Chemical"
+							},
+							"text": "abciximab",
+							"locations": [
+								{
+									"offset": 18967,
+									"length": 9
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 18998,
+					"infons": {
+						"name_3": "surname:Lee;given-names:SI",
+						"name_2": "surname:Kim;given-names:SH",
+						"name_1": "surname:Kim;given-names:DI",
+						"name_0": "surname:Lee;given-names:KY",
+						"fpage": "1470",
+						"pub-id_pmid": "15502123",
+						"year": "2004",
+						"source": "AJNR Am J Neuroradiol",
+						"type": "ref",
+						"volume": "25",
+						"section_type": "REF",
+						"lpage": "1475",
+						"name_5": "surname:Shim;given-names:YW",
+						"name_4": "surname:Chung;given-names:HW"
+					},
+					"text": "Sequential combination of intravenous recombinant tissue plasminogen activator and intra-arterial urokinase in acute ischemic stroke",
+					"sentences": [
+						{
+							"offset": 18998,
+							"infons": {},
+							"text": "Sequential combination of intravenous recombinant tissue plasminogen activator and intra-arterial urokinase in acute ischemic stroke",
+							"annotations": [
+								{
+									"id": "21",
+									"infons": {
+										"identifier": "100128998",
+										"type": "Gene"
+									},
+									"text": "tissue plasminogen activator",
+									"locations": [
+										{
+											"offset": 19048,
+											"length": 28
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "396",
+							"infons": {
+								"identifier": "100128998",
+								"type": "Gene"
+							},
+							"text": "tissue plasminogen activator",
+							"locations": [
+								{
+									"offset": 19052,
+									"length": 28
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 19131,
+					"infons": {
+						"name_3": "surname:Kim;given-names:SH",
+						"name_2": "surname:Han;given-names:SW",
+						"name_1": "surname:Lee;given-names:KY",
+						"name_0": "surname:Nam;given-names:HS",
+						"fpage": "69",
+						"pub-id_pmid": "19304298",
+						"year": "2009",
+						"source": "J Neurol Sci",
+						"type": "ref",
+						"volume": "281",
+						"section_type": "REF",
+						"lpage": "73",
+						"name_5": "surname:Ahn;given-names:SH",
+						"name_4": "surname:Lee;given-names:JY"
+					},
+					"text": "Prediction of long-term outcome by percent improvement after the first day of thrombolytic treatment in stroke patients",
+					"sentences": [
+						{
+							"offset": 19131,
+							"infons": {},
+							"text": "Prediction of long-term outcome by percent improvement after the first day of thrombolytic treatment in stroke patients",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 19251,
+					"infons": {
+						"volume": "333",
+						"section_type": "REF",
+						"fpage": "1581",
+						"pub-id_pmid": "7477192",
+						"year": "1995",
+						"source": "N Engl J Med",
+						"type": "ref",
+						"lpage": "1587"
+					},
+					"text": "Tissue plasminogen activator for acute ischemic stroke",
+					"sentences": [
+						{
+							"offset": 19251,
+							"infons": {},
+							"text": "Tissue plasminogen activator for acute ischemic stroke",
+							"annotations": [
+								{
+									"id": "22",
+									"infons": {
+										"identifier": "100128998",
+										"type": "Gene"
+									},
+									"text": "Tissue plasminogen activator",
+									"locations": [
+										{
+											"offset": 19251,
+											"length": 28
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "402",
+							"infons": {
+								"identifier": "100128998",
+								"type": "Gene"
+							},
+							"text": "Tissue plasminogen activator",
+							"locations": [
+								{
+									"offset": 19255,
+									"length": 28
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 19306,
+					"infons": {
+						"name_3": "surname:Brozman;given-names:M",
+						"name_2": "surname:Bluhmki;given-names:E",
+						"name_1": "surname:Kaste;given-names:M",
+						"name_0": "surname:Hacke;given-names:W",
+						"fpage": "1317",
+						"pub-id_pmid": "18815396",
+						"year": "2008",
+						"source": "N Engl J Med",
+						"type": "ref",
+						"volume": "359",
+						"section_type": "REF",
+						"lpage": "1329",
+						"name_5": "surname:Guidetti;given-names:D",
+						"name_4": "surname:Davalos;given-names:A"
+					},
+					"text": "Thrombolysis with Alteplase 3 to 4.5 Hours after Acute Ischemic Stroke",
+					"sentences": [
+						{
+							"offset": 19306,
+							"infons": {},
+							"text": "Thrombolysis with Alteplase 3 to 4.5 Hours after Acute Ischemic Stroke",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 19377,
+					"infons": {
+						"name_3": "surname:Kim;given-names:YD",
+						"name_2": "surname:Kim;given-names:SH",
+						"name_1": "surname:Kim;given-names:EY",
+						"name_0": "surname:Nam;given-names:HS",
+						"fpage": "786",
+						"pub-id_pmid": "22318312",
+						"year": "2012",
+						"source": "Thromb Haemost",
+						"type": "ref",
+						"volume": "107",
+						"section_type": "REF",
+						"lpage": "794",
+						"name_5": "surname:Lee;given-names:HS",
+						"name_4": "surname:Kim;given-names:J"
+					},
+					"text": "Prediction of thrombus resolution after intravenous thrombolysis assessed by CT-based thrombus imaging",
+					"sentences": [
+						{
+							"offset": 19377,
+							"infons": {},
+							"text": "Prediction of thrombus resolution after intravenous thrombolysis assessed by CT-based thrombus imaging",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 19480,
+					"infons": {
+						"name_3": "surname:Tomsick;given-names:T",
+						"name_2": "surname:Roberts;given-names:H",
+						"name_1": "surname:Furlan;given-names:AJ",
+						"name_0": "surname:Higashida;given-names:RT",
+						"fpage": "e109",
+						"pub-id_pmid": "12869717",
+						"year": "2003",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "34",
+						"section_type": "REF",
+						"lpage": "e137",
+						"name_5": "surname:Barr;given-names:J",
+						"name_4": "surname:Connors;given-names:B"
+					},
+					"text": "Trial design and reporting standards for intra-arterial cerebral thrombolysis for acute ischemic stroke",
+					"sentences": [
+						{
+							"offset": 19480,
+							"infons": {},
+							"text": "Trial design and reporting standards for intra-arterial cerebral thrombolysis for acute ischemic stroke",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 19584,
+					"infons": {
+						"name_3": "surname:Bruno;given-names:A",
+						"name_2": "surname:Adams;given-names:HP;suffix:Jr",
+						"name_1": "surname:Saver;given-names:JL",
+						"name_0": "surname:Jauch;given-names:EC",
+						"fpage": "870",
+						"pub-id_pmid": "23370205",
+						"year": "2013",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "44",
+						"section_type": "REF",
+						"lpage": "947",
+						"name_5": "surname:Demaerschalk;given-names:BM",
+						"name_4": "surname:Connors;given-names:JJ"
+					},
+					"text": "Guidelines for the early management of patients with acute ischemic stroke: a guideline for healthcare professionals from the American Heart Association/American Stroke Association",
+					"sentences": [
+						{
+							"offset": 19584,
+							"infons": {},
+							"text": "Guidelines for the early management of patients with acute ischemic stroke: a guideline for healthcare professionals from the American Heart Association/American Stroke Association",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 19765,
+					"infons": {
+						"name_3": "surname:Vroomen;given-names:PC",
+						"name_2": "surname:Uyttenboogaart;given-names:M",
+						"name_1": "surname:Gdovinova;given-names:Z",
+						"name_0": "surname:De Keyser;given-names:J",
+						"fpage": "2612",
+						"pub-id_pmid": "17656661",
+						"year": "2007",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "38",
+						"section_type": "REF",
+						"lpage": "2618",
+						"name_4": "surname:Luijckx;given-names:GJ"
+					},
+					"text": "Intravenous alteplase for stroke: beyond the guidelines and in particular clinical situations",
+					"sentences": [
+						{
+							"offset": 19765,
+							"infons": {},
+							"text": "Intravenous alteplase for stroke: beyond the guidelines and in particular clinical situations",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 19859,
+					"infons": {
+						"volume": "8",
+						"name_1": "surname:Ford;given-names:GA",
+						"section_type": "REF",
+						"name_0": "surname:Acheampong;given-names:P",
+						"fpage": "271",
+						"pub-id_pmid": "22248305",
+						"year": "2012",
+						"source": "Expert Opin Drug Metab Toxicol",
+						"type": "ref",
+						"lpage": "281"
+					},
+					"text": "Pharmacokinetics of alteplase in the treatment of ischaemic stroke",
+					"sentences": [
+						{
+							"offset": 19859,
+							"infons": {},
+							"text": "Pharmacokinetics of alteplase in the treatment of ischaemic stroke",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 19926,
+					"infons": {
+						"volume": "15",
+						"name_2": "surname:Parsonsb;given-names:MW",
+						"name_1": "surname:Lin;given-names:L",
+						"section_type": "REF",
+						"name_0": "surname:Bivard;given-names:A",
+						"fpage": "90",
+						"pub-id_pmid": "24324944",
+						"year": "2013",
+						"source": "J Stroke",
+						"type": "ref",
+						"lpage": "98"
+					},
+					"text": "Review of stroke thrombolytics",
+					"sentences": [
+						{
+							"offset": 19926,
+							"infons": {},
+							"text": "Review of stroke thrombolytics",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 19957,
+					"infons": {
+						"name_3": "surname:Bovi;given-names:P",
+						"name_2": "surname:Carletti;given-names:M",
+						"name_1": "surname:Tomelleri;given-names:G",
+						"name_0": "surname:Cappellari;given-names:M",
+						"fpage": "78",
+						"pub-id_pmid": "22089941",
+						"year": "2012",
+						"source": "Blood Coagul Fibrinolysis",
+						"type": "ref",
+						"volume": "23",
+						"section_type": "REF",
+						"lpage": "81",
+						"name_4": "surname:Moretto;given-names:G"
+					},
+					"text": "Intravenous thrombolysis on early recurrent cardioembolic stroke: 'Dr Jekyll' or 'Mr Hyde'?",
+					"sentences": [
+						{
+							"offset": 19957,
+							"infons": {},
+							"text": "Intravenous thrombolysis on early recurrent cardioembolic stroke: 'Dr Jekyll' or 'Mr Hyde'?",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 20049,
+					"infons": {
+						"name_3": "surname:Norris;given-names:RM",
+						"volume": "64",
+						"name_2": "surname:Williams;given-names:BF",
+						"name_1": "surname:Cross;given-names:DB",
+						"section_type": "REF",
+						"name_0": "surname:White;given-names:HD",
+						"fpage": "177",
+						"pub-id_pmid": "2119665",
+						"year": "1990",
+						"source": "Br Heart J",
+						"type": "ref",
+						"lpage": "181"
+					},
+					"text": "Safety and efficacy of repeat thrombolytic treatment after acute myocardial infarction",
+					"sentences": [
+						{
+							"offset": 20049,
+							"infons": {},
+							"text": "Safety and efficacy of repeat thrombolytic treatment after acute myocardial infarction",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 20136,
+					"infons": {
+						"name_3": "surname:Demchuk;given-names:AM",
+						"name_2": "surname:Takahashi;given-names:J",
+						"name_1": "surname:Barber;given-names:PA",
+						"name_0": "surname:Hill;given-names:MD",
+						"fpage": "1281",
+						"pub-id_pmid": "10813008",
+						"year": "2000",
+						"source": "CMAJ",
+						"type": "ref",
+						"volume": "162",
+						"section_type": "REF",
+						"lpage": "1284",
+						"name_5": "surname:Buchan;given-names:AM",
+						"name_4": "surname:Feasby;given-names:TE"
+					},
+					"text": "Anaphylactoid reactions and angioedema during alteplase treatment of acute ischemic stroke",
+					"sentences": [
+						{
+							"offset": 20136,
+							"infons": {},
+							"text": "Anaphylactoid reactions and angioedema during alteplase treatment of acute ischemic stroke",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 20227,
+					"infons": {
+						"name_3": "surname:Prince;given-names:WS",
+						"name_2": "surname:Tanswell;given-names:P",
+						"name_1": "surname:Chen;given-names:AB",
+						"name_0": "surname:Reed;given-names:BR",
+						"fpage": "276",
+						"pub-id_pmid": "2125377",
+						"year": "1990",
+						"source": "Thromb Haemost",
+						"type": "ref",
+						"volume": "64",
+						"section_type": "REF",
+						"lpage": "280",
+						"name_5": "surname:Glaesle-Schwarz;given-names:L",
+						"name_4": "surname:Wert;given-names:RM;suffix:Jr"
+					},
+					"text": "Low incidence of antibodies to recombinant human tissue-type plasminogen activator in treated patients",
+					"sentences": [
+						{
+							"offset": 20227,
+							"infons": {},
+							"text": "Low incidence of antibodies to recombinant human tissue-type plasminogen activator in treated patients",
+							"annotations": [
+								{
+									"id": "23",
+									"infons": {
+										"identifier": "5327",
+										"type": "Gene",
+										"NCBI Homologene": "717"
+									},
+									"text": "tissue-type plasminogen activator",
+									"locations": [
+										{
+											"offset": 20276,
+											"length": 33
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "438",
+							"infons": {
+								"identifier": "5327",
+								"type": "Gene",
+								"NCBI Homologene": "717"
+							},
+							"text": "tissue-type plasminogen activator",
+							"locations": [
+								{
+									"offset": 20280,
+									"length": 33
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 20330,
+					"infons": {
+						"name_3": "surname:Bisiani;given-names:G",
+						"name_2": "surname:Colucci;given-names:M",
+						"name_1": "surname:Cicardi;given-names:M",
+						"name_0": "surname:Cugno;given-names:M",
+						"fpage": "234",
+						"pub-id_pmid": "8865537",
+						"year": "1996",
+						"source": "Thromb Haemost",
+						"type": "ref",
+						"volume": "76",
+						"section_type": "REF",
+						"lpage": "238",
+						"name_5": "surname:Spinola;given-names:A",
+						"name_4": "surname:Merlini;given-names:PA"
+					},
+					"text": "Non neutralizing antibodies to tissue type plasminogen activator in the serum of acute myocardial infarction patients treated with the recombinant protein",
+					"sentences": [
+						{
+							"offset": 20330,
+							"infons": {},
+							"text": "Non neutralizing antibodies to tissue type plasminogen activator in the serum of acute myocardial infarction patients treated with the recombinant protein",
+							"annotations": [
+								{
+									"id": "24",
+									"infons": {
+										"identifier": "5327",
+										"type": "Gene",
+										"NCBI Homologene": "717"
+									},
+									"text": "tissue type plasminogen activator",
+									"locations": [
+										{
+											"offset": 20361,
+											"length": 33
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "443",
+							"infons": {
+								"identifier": "5327",
+								"type": "Gene",
+								"NCBI Homologene": "717"
+							},
+							"text": "tissue type plasminogen activator",
+							"locations": [
+								{
+									"offset": 20365,
+									"length": 33
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 20485,
+					"infons": {
+						"volume": "12",
+						"name_2": "surname:Wiedermann;given-names:CJ",
+						"name_1": "surname:Knapp;given-names:E",
+						"section_type": "REF",
+						"name_0": "surname:Pechlaner;given-names:C",
+						"fpage": "491",
+						"pub-id_pmid": "11555703",
+						"year": "2001",
+						"source": "Blood Coagul Fibrinolysis",
+						"type": "ref",
+						"lpage": "494"
+					},
+					"text": "Hypersensitivity reactions associated with recombinant tissue-type plasminogen activator and urokinase",
+					"sentences": [
+						{
+							"offset": 20485,
+							"infons": {},
+							"text": "Hypersensitivity reactions associated with recombinant tissue-type plasminogen activator and urokinase",
+							"annotations": [
+								{
+									"id": "25",
+									"infons": {
+										"identifier": "5327",
+										"type": "Gene",
+										"NCBI Homologene": "717"
+									},
+									"text": "tissue-type plasminogen activator",
+									"locations": [
+										{
+											"offset": 20540,
+											"length": 33
+										}
+									]
+								},
+								{
+									"id": "26",
+									"infons": {
+										"type": "Clinical Significance",
+										"Identifier": "Sensitivity/Response"
+									},
+									"text": "sensitivity",
+									"locations": [
+										{
+											"offset": 20593,
+											"length": 11
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "448",
+							"infons": {
+								"identifier": "5327",
+								"type": "Gene",
+								"NCBI Homologene": "717"
+							},
+							"text": "tissue-type plasminogen activator",
+							"locations": [
+								{
+									"offset": 20544,
+									"length": 33
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 20588,
+					"infons": {
+						"name_3": "surname:Teasdale;given-names:E",
+						"name_2": "surname:Santosh;given-names:C",
+						"name_1": "surname:MacDougall;given-names:N",
+						"name_0": "surname:Awadh;given-names:M",
+						"fpage": "1990",
+						"pub-id_pmid": "20705933",
+						"year": "2010",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "41",
+						"section_type": "REF",
+						"lpage": "1995",
+						"name_5": "surname:Muir;given-names:KW",
+						"name_4": "surname:Baird;given-names:T"
+					},
+					"text": "Early recurrent ischemic stroke complicating intravenous thrombolysis for stroke: incidence and association with atrial fibrillation",
+					"sentences": [
+						{
+							"offset": 20588,
+							"infons": {},
+							"text": "Early recurrent ischemic stroke complicating intravenous thrombolysis for stroke: incidence and association with atrial fibrillation",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 20721,
+					"infons": {
+						"name_3": "surname:Dalkara;given-names:T",
+						"volume": "18",
+						"name_2": "surname:Topcuoglu;given-names:MA",
+						"name_1": "surname:Akpinar;given-names:E",
+						"section_type": "REF",
+						"name_0": "surname:Yalcin-Cakmakli;given-names:G",
+						"fpage": "74",
+						"pub-id_pmid": "19110150",
+						"year": "2009",
+						"source": "J Stroke Cerebrovasc Dis",
+						"type": "ref",
+						"lpage": "77"
+					},
+					"text": "Right internal carotid artery occlusion during intravenous thrombolysis for left middle cerebral artery occlusion",
+					"sentences": [
+						{
+							"offset": 20721,
+							"infons": {},
+							"text": "Right internal carotid artery occlusion during intravenous thrombolysis for left middle cerebral artery occlusion",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 20835,
+					"infons": {
+						"name_3": "surname:Khatri;given-names:P",
+						"name_2": "surname:Albers;given-names:GW",
+						"name_1": "surname:Goldstein;given-names:LB",
+						"name_0": "surname:Furie;given-names:KL",
+						"fpage": "3442",
+						"pub-id_pmid": "22858728",
+						"year": "2012",
+						"source": "Stroke",
+						"type": "ref",
+						"volume": "43",
+						"section_type": "REF",
+						"lpage": "3453",
+						"name_5": "surname:Turakhia;given-names:MP",
+						"name_4": "surname:Neyens;given-names:R"
+					},
+					"text": "Oral antithrombotic agents for the prevention of stroke in nonvalvular atrial fibrillation: a science advisory for healthcare professionals from the American Heart Association/American Stroke Association",
+					"sentences": [
+						{
+							"offset": 20835,
+							"infons": {},
+							"text": "Oral antithrombotic agents for the prevention of stroke in nonvalvular atrial fibrillation: a science advisory for healthcare professionals from the American Heart Association/American Stroke Association",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 21039,
+					"infons": {
+						"section_type": "TABLE",
+						"type": "table_footnote"
+					},
+					"text": "A-fib, atrial fibrillation; IA UK, intra-arterial urokinase; ICA, internal carotid artery; ICH, intracranial hemorrhage; IV rt-PA, intravenous recombinant tissue plasminogen activator; LAA, left atrial appendage; LA, left atrium; MCA, middle cerebral artery; MS, mitral stenosis; MVP, mitral valve stenosis; mRS, modified Rankin scale; NIHSS, the National Institute of Health Stroke Scale; TICI, Thrombolysis in Cerebral Infarction.",
+					"sentences": [
+						{
+							"offset": 21039,
+							"infons": {},
+							"text": "A-fib, atrial fibrillation; IA UK, intra-arterial urokinase; ICA, internal carotid artery; ICH, intracranial hemorrhage; IV rt-PA, intravenous recombinant tissue plasminogen activator; LAA, left atrial appendage; LA, left atrium; MCA, middle cerebral artery; MS, mitral stenosis; MVP, mitral valve stenosis; mRS, modified Rankin scale; NIHSS, the National Institute of Health Stroke Scale; TICI, Thrombolysis in Cerebral Infarction.",
+							"annotations": [
+								{
+									"id": "27",
+									"infons": {
+										"identifier": "100128998",
+										"type": "Gene"
+									},
+									"text": "tissue plasminogen activator",
+									"locations": [
+										{
+											"offset": 21194,
+											"length": 28
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "475",
+							"infons": {
+								"identifier": "100128998",
+								"type": "Gene"
+							},
+							"text": "tissue plasminogen activator",
+							"locations": [
+								{
+									"offset": 21198,
+									"length": 28
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 21472,
+					"infons": {
+						"section_type": "TABLE",
+						"file": "T1.xml",
+						"id": "T1",
+						"type": "table_caption"
+					},
+					"text": "Demographic characteristics of patients who received repeated thrombolytic treatment",
+					"sentences": [
+						{
+							"offset": 21472,
+							"infons": {},
+							"text": "Demographic characteristics of patients who received repeated thrombolytic treatment",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 21557,
+					"infons": {
+						"section_type": "TABLE",
+						"type": "table_footnote"
+					},
+					"text": "Values are given as median with IQR or number with percentage.",
+					"sentences": [
+						{
+							"offset": 21557,
+							"infons": {},
+							"text": "Values are given as median with IQR or number with percentage.",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				},
+				{
+					"offset": 21620,
+					"infons": {
+						"section_type": "TABLE",
+						"type": "table_footnote"
+					},
+					"text": "IA UK, intra-arterial urokinase; ICH, intracranial hemorrhage; IV rt-PA, intravenous recombinant tissue plasminogen activator; mRS, modified Rankin scale; NIHSS, the National Institute of Health Stroke Scale; PCSE, potent cardiac source of embolism; SBP, systolic blood pressure; TICI, Thrombolysis in Cerebral Infarction.",
+					"sentences": [
+						{
+							"offset": 21620,
+							"infons": {},
+							"text": "IA UK, intra-arterial urokinase; ICH, intracranial hemorrhage; IV rt-PA, intravenous recombinant tissue plasminogen activator; mRS, modified Rankin scale; NIHSS, the National Institute of Health Stroke Scale; PCSE, potent cardiac source of embolism; SBP, systolic blood pressure; TICI, Thrombolysis in Cerebral Infarction.",
+							"annotations": [
+								{
+									"id": "28",
+									"infons": {
+										"identifier": "100128998",
+										"type": "Gene"
+									},
+									"text": "tissue plasminogen activator",
+									"locations": [
+										{
+											"offset": 21717,
+											"length": 28
+										}
+									]
+								},
+								{
+									"id": "29",
+									"infons": {
+										"identifier": "8991",
+										"type": "Gene",
+										"NCBI Homologene": "2930"
+									},
+									"text": "SBP",
+									"locations": [
+										{
+											"offset": 21870,
+											"length": 3
+										}
+									]
+								}
+							],
+							"relations": []
+						}
+					],
+					"annotations": [
+						{
+							"id": "493",
+							"infons": {
+								"identifier": "8991",
+								"type": "Gene",
+								"NCBI Homologene": "2930"
+							},
+							"text": "SBP",
+							"locations": [
+								{
+									"offset": 21874,
+									"length": 3
+								}
+							]
+						},
+						{
+							"id": "494",
+							"infons": {
+								"identifier": "100128998",
+								"type": "Gene"
+							},
+							"text": "tissue plasminogen activator",
+							"locations": [
+								{
+									"offset": 21721,
+									"length": 28
+								}
+							]
+						}
+					],
+					"relations": []
+				},
+				{
+					"offset": 21943,
+					"infons": {
+						"section_type": "TABLE",
+						"file": "T2.xml",
+						"id": "T2",
+						"type": "table_caption"
+					},
+					"text": "Comparison between patients with a repeated treatment and patients with single thrombolytic therapy",
+					"sentences": [
+						{
+							"offset": 21943,
+							"infons": {},
+							"text": "Comparison between patients with a repeated treatment and patients with single thrombolytic therapy",
+							"annotations": [],
+							"relations": []
+						}
+					],
+					"annotations": [],
+					"relations": []
+				}
+			],
+			"annotations": [],
+			"relations": []
+		}
+	]
+}

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Home</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	<meta content="bNAj2H4FTmU2rE5YGuSb8jTCJCJY3dlLl7r6V3APxdg" name="google-site-verification" />
+	
+	<!-- Cookie consent -->
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ef1f4c12-9b0f-46c6-b138-8726e988cf85" data-blockingmode="auto" type="text/javascript"></script>
+
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<style type="text/css">
+	#header-sticky-wrapper{
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+	}
+	#hero,
+	#hero .carousel-item {
+		height: 100vh;
+	}
+	</style>
+	
+</head>
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header" style="background: transparent;">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li class="active"><a href="/">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<!--
+					<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+					-->
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/images/carousel/index5.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown"><img style="max-width: 100%;" th:src="@{/assets/images/logo.v3.png}"/></h2>
+									<p class="animated fadeInUp briefDesc" style="font-size: 16px;"></p>
+									<a href="#about" class="btn-get-started animated fadeInUp scrollto" style="margin-top: 40px;">Read More</a>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/index2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown"><img style="max-width: 100%;" th:src="@{/assets/images/logo.v3.png}"/></h2>
+									<p class="animated fadeInUp briefDesc" style="font-size: 16px;"></p>
+									<a href="#about" class="btn-get-started animated fadeInUp scrollto" style="margin-top: 40px;">Read More</a>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/index4.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown"><img style="max-width: 100%;" th:src="@{/assets/images/logo.v3.png}"/></h2>
+									<p class="animated fadeInUp briefDesc" style="font-size: 16px;"></p>
+									<a href="#about" class="btn-get-started animated fadeInUp scrollto" style="margin-top: 40px;">Read More</a>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Slide 4 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/index3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown"><img style="max-width: 100%;" th:src="@{/assets/images/logo.v3.png}"/></h2>
+									<p class="animated fadeInUp briefDesc" style="font-size: 16px;"></p>
+									<a href="#about" class="btn-get-started animated fadeInUp scrollto" style="margin-top: 40px;">Read More</a>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+					<!--
+					<a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+					-->
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+		
+		<!-- ======= About Us Section ======= -->
+		<section id="about" class="about">
+			<div class="container">
+
+				<div class="row no-gutters">
+					<div class="col-lg-6 video-box">
+						<img th:src="@{/assets/images/workflow.v6.jpg}" class="img-fluid" alt="">
+					</div>
+
+					<div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+						<div class="section-title" style="text-align: left;">
+							<h2>One-Stop Service</h2>
+						</div>
+
+						<div class="icon-box" data-aos="fade-up" data-aos-delay="50">
+							<div class="icon"><i class='bx bxs-archive-in'></i></div>
+							<h4 class="title">Keyword In</h4>
+							<p class="description">All operations start with the input of keywords.</p>
+						</div>
+
+						<div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+							<div class="icon"><i class='bx bxs-archive-out'></i></div>
+							<h4 class="title">Knowledge Out</h4>
+							<p class="description">Structured knowledge data available as output.</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section><!-- End About Us Section -->
+
+		<!-- ======= About Lists Section ======= -->
+		<section class="about-lists">
+			<div class="container">
+
+				<div class="row no-gutters">
+
+					<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+						<span>01</span>
+						<h4>Scientific Publications</h4>
+						<p>A platform that focuses on extracting knowledge from scientific research articles.</p>
+					</div>
+
+					<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="50">
+						<span>02</span>
+						<h4>Daily Update</h4>
+						<p>Articles are routinely updated and processed on a daily basis.</p>
+					</div>
+
+					<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+						<span>03</span>
+						<h4>Entities Recognition</h4>
+						<p>Automated entity recognition based on published NLP tools and internal thesaurus.</p>
+					</div>
+					
+					<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="150">
+						<span>04</span>
+						<h4>Adaptable</h4>
+						<p>The form customisation service guarantees that it fulfills the various requirements of data structures.</p>
+					</div>
+
+					<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+						<span>05</span>
+						<h4>Standards Compliant</h4>
+						<p>Pre-designed data collection forms adhere to community-accepted standards.</p>
+					</div>
+
+					<div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="250">
+						<span>06</span>
+						<h4>High Quality</h4>
+						<p>Unique collaborative mode ensures high-quality data collection.</p>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End About Lists Section -->
+
+		<!-- ======= Counts Section ======= -->
+		<section class="counts section-bg">
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+						<div class="count-box">
+							<i class='bx bx-receipt' style="color: #f44336;"></i>
+							<span data-toggle="counter-up" id="idStatAbstracts"></span>
+							<p>Abstracts</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="50">
+						<div class="count-box">
+							<i class='bx bx-receipt' style="color: #009688;"></i>
+							<span data-toggle="counter-up" id="idStatFullTexts"></span>
+							<p>Full Articles</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+						<div class="count-box">
+							<i class='bx bxs-component' style="color: #9c27b0;"></i>
+							<span data-toggle="counter-up" id="idStatEntityPubPairs"></span>
+							<p>Entity-Pub Pairs</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="150">
+						<div class="count-box">
+							<i class="bx bxs-group" style="color: #3f51b5;"></i>
+							<span data-toggle="counter-up" id="idStatTeams"></span>
+							<p>Teams</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+						<div class="count-box">
+							<i class='bx bx-collection' style="color: #2196f3;"></i>
+							<span data-toggle="counter-up" id="idStatCollections"></span>
+							<p>Collections</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="250">
+						<div class="count-box">
+							<i class='bx bxs-customize' style="color: #4caf50;"></i>
+							<span data-toggle="counter-up" id="idStatForms"></span>
+							<p>Data Forms</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
+						<div class="count-box">
+							<i class='bx bx-grid-alt' style="color: #ffc107;"></i>
+							<span data-toggle="counter-up" id="idStatProjects"></span>
+							<p>Projects</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="350">
+						<div class="count-box">
+							<i class="bx bx-dna" style="color: #ff5722;"></i>
+							<span data-toggle="counter-up" id="idStatDatasets"></span>
+							<p>Data sets</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Counts Section -->
+
+		<!-- ======= Services Section ======= -->
+		<section id="services" class="services">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Main Services</h2>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+						<div class="icon"><i class='bx bx-search-alt'></i></div>
+						<h4 class="title"><a href="javascript:;">Publication Search</a></h4>
+						<p class="description">Local Entity-based Search, Local Mention-based Search, Remote EUtilities-based Search</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="50">
+						<div class="icon"><i class='bx bx-filter-alt'></i></div>
+						<h4 class="title"><a href="javascript:;">Publication Filtering</a></h4>
+						<p class="description">Impact factor, Collection-included, Highest Sentence-Level, Stars and Comments</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+						<div class="icon"><i class='bx bx-link'></i></div>
+						<h4 class="title"><a href="javascript:;">Association Retrieval</a></h4>
+						<p class="description">Cited by, References and Similar articles association</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="150">
+						<div class="icon"><i class='bx bx-collection'></i></div>
+						<h4 class="title"><a href="javascript:;">Library Management</a></h4>
+						<p class="description">Management of Publication Collections</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+						<div class="icon"><i class='bx bx-user-plus'></i></div>
+						<h4 class="title"><a href="javascript:;">Account Registration</a></h4>
+						<p class="description">Synchronize the registration of user accounts with the formation of user groups.</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="250">
+						<div class="icon"><i class='bx bxs-group'></i></div>
+						<h4 class="title"><a href="javascript:;">Team Building</a></h4>
+						<p class="description">Team Building for Knowledge Data Extraction</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+						<div class="icon"><i class='bx bxs-customize'></i></div>
+						<h4 class="title"><a href="javascript:;">Form Customization</a></h4>
+						<p class="description">Customize the Knowledge Data Collection Form</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="350">
+						<div class="icon"><i class='bx bxs-book'></i></div>
+						<h4 class="title"><a href="javascript:;">Field Standards</a></h4>
+						<p class="description">Pre-defined Data Structure Conforms to Field Standards </p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+						<div class="icon"><i class='bx bx-grid-alt'></i></div>
+						<h4 class="title"><a href="javascript:;">Project Management</a></h4>
+						<p class="description">Createing Knowledge Data Collection Projects</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="450">
+						<div class="icon"><i class='bx bx-book-reader'></i></div>
+						<h4 class="title"><a href="javascript:;">Online Reading</a></h4>
+						<p class="description">Reading Articles and Collecting Data at any time and from any location</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+						<div class="icon"><i class='bx bx-check-shield'></i></div>
+						<h4 class="title"><a href="javascript:;">Data Auditing</a></h4>
+						<p class="description">Group Admin Reviews the Collected Data Online</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="550">
+						<div class="icon"><i class='bx bx-cloud-download'></i></div>
+						<h4 class="title"><a href="javascript:;">Dataset Download</a></h4>
+						<p class="description">Download All Collected Structured Data within the Scope of Authority</p>
+					</div>
+					<!--
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="550">
+						<div class="icon"><i class='bx bx-server'></i></div>
+						<h4 class="title"><a href="javascript:;">Self-Deployment</a></h4>
+						<p class="description">Download the Docker Image and Deploy OncoPubMiner Yourself</p>
+					</div>
+					-->
+				</div>
+
+			</div>
+		</section><!-- End Services Section -->
+
+		<!-- ======= Our Portfolio Section ======= -->
+		<section id="portfolio" class="portfolio section-bg">
+			<div class="container" data-aos="fade-up" data-aos-delay="100">
+
+				<div class="section-title">
+					<h2>Core Functional Modules</h2>
+					<p>Core functional modules are listed below.</p>
+				</div>
+
+				<div class="row portfolio-container">
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up">
+						<div class="portfolio-wrap">
+							<img src="/assets/images/modules/search.v2.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Publication Search</h4>
+								<p>Search and Filtering Publications</p>
+								<div class="portfolio-links">
+									<a href="javascript:;" title="One of the Core Functional Modules"><i class='bx bx-heart'></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="50">
+						<div class="portfolio-wrap">
+							<img src="/assets/images/modules/library.v2.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Library Management</h4>
+								<p>Publication Collections Management</p>
+								<div class="portfolio-links">
+									<a href="javascript:;" title="One of the Core Functional Modules"><i class='bx bx-heart'></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="100">
+						<div class="portfolio-wrap">
+							<img src="/assets/images/modules/member.v2.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Team Management</h4>
+								<p>Management of Team Members</p>
+								<div class="portfolio-links">
+									<a href="javascript:;" title="One of the Core Functional Modules"><i class='bx bx-heart'></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="150">
+						<div class="portfolio-wrap">
+							<img src="/assets/images/modules/form.v2.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Form Management</h4>
+								<p>Management of Data Forms</p>
+								<div class="portfolio-links">
+									<a href="javascript:;" title="One of the Core Functional Modules"><i class='bx bx-heart'></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="200">
+						<div class="portfolio-wrap">
+							<img src="/assets/images/modules/project.v2.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Project Management</h4>
+								<p>Management of Data Collection Projects</p>
+								<div class="portfolio-links">
+									<a href="javascript:;" title="One of the Core Functional Modules"><i class='bx bx-heart'></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="250">
+						<div class="portfolio-wrap">
+							<img src="/assets/images/modules/reading.v2.png" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<h4>Publication Reading</h4>
+								<p>Online Publication Reading and Auditing</p>
+								<div class="portfolio-links">
+									<a href="javascript:;" title="One of the Core Functional Modules"><i class='bx bx-heart'></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Our Portfolio Section -->
+
+		<!-- ======= Contact Us Section ======= -->
+		<section id="contact" class="contact">
+			<div class="container">
+
+				<div class="section-title">
+					<!--
+					<h2>Cite And Contact Us</h2>
+					-->
+					<h2>Contact Us</h2>
+				</div>
+
+				<div class="row">
+
+					<!--
+					<div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
+						<div class="info-box ">
+							<i class='bx bxs-quote-left'></i>
+							<h3>Cite Us</h3>
+							<p style="width: 100; padding-left: 20px; padding-right: 20px; text-align: left;">Quan Xu<sup>*</sup>, Dawei Sun<sup>*</sup>, Yueyue Liu, Jifang Hu, Niuben Song, Jiale Zhou, Fan Chen, Zhongjia Guo, Hexiang Li, XiaohongDuan, Qiming Zhou and Beifang Niu, OncoPubMiner: A platform for oncology publication mining (Under review).</p>
+						</div>
+					</div>
+					-->
+
+					<div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
+						<div class="info-box">
+							<i class="bx bx-map"></i>
+							<h3>Our Address</h3>
+							<p>C3-1, Jinghai Industrial Park<br>Beijing 100176, China</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
+						<div class="info-box">
+							<i class="bx bx-envelope"></i>
+							<h3>Email Us</h3>
+							<p>medinfoservice(at)<br>chosenmedtech.com</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+						<div class="info-box ">
+							<i class="bx bx-phone-call"></i>
+							<h3>Call Us</h3>
+							<p>+86-010-56380035<br>+86-010-59544150</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-12" data-aos="fade-up" data-aos-delay="150">
+						<form action="#" method="post" role="form" class="php-email-form">
+							<div class="form-row">
+								<div class="col-lg-6 form-group">
+									<input type="text" name="name" id="idFeedbackName" class="form-control" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+								</div>
+								<div class="col-lg-6 form-group">
+									<input type="email" class="form-control" name="email" id="idFeedbackEmail" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" name="subject" id="idFeedbackSubject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="message" id="idFeedbackMessage" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+							</div>
+							<div class="text-center"><button type="submit" id="idFeedback">Send Message</button></div>
+						</form>
+					</div>
+					
+				</div>
+
+			</div>
+		</section><!-- End Contact Us Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer"></footer><!-- End Footer -->
+
+	<a href="javascript:;" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<!-- Page Specific JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+	<script type="text/javascript">
+		
+		var $, admin, util, xnUtil, form, formX, element, currentUser;
+		layui.use(['admin', 'util', 'xnUtil', 'form', 'formX', 'element'], function () {
+			$ = layui.jquery;
+			admin = layui.admin;
+			util = layui.util;
+			xnUtil = layui.xnUtil;
+			form = layui.form;
+			formX = layui.formX;
+			element = layui.element;
+			
+			// 获取当前登录用户！
+			currentUser = getCurrentLoginUser();
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			// 用户反馈！
+			$("#idFeedback").click(function(){
+				
+				// 获取信息！
+				let strName    = $("#idFeedbackName").val().trim();
+				let strEmail   = $("#idFeedbackEmail").val().trim();
+				let strSubject = $("#idFeedbackSubject").val().trim();
+				let strMessage = $("#idFeedbackMessage").val().trim();
+				
+				// 验证！
+				var myreg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+				if(strName === ""){
+					layer.msg("Please input your name.");
+					$("#idFeedbackName").focus();
+					return false;
+				}else if(strEmail === ""){
+					layer.msg("Please input your email.");
+					$("#idFeedbackEmail").focus();
+					return false;
+				}else if(!myreg.test(strEmail)){
+					layer.msg("Please input a valid email.");
+					$("#idFeedbackEmail").focus();
+					return false;
+				}else if(strSubject === ""){
+					layer.msg("Please input your subject.");
+					$("#idFeedbackSubject").focus();
+					return false;
+				}else if(strMessage === ""){
+					layer.msg("Please input your message.");
+					$("#idFeedbackMessage").focus();
+					return false;
+				}
+				
+				// 通过验证，提交！
+				var indexFeedback = layer.load(3, {shade: [0.01, '#393D49']});
+				$.ajax({
+					type: "post",
+					url: "/feedback/add",
+					dataType: "json",
+					async: true,
+					data: JSON.stringify({feedbackName: strName, feedbackEmail: strEmail, feedbackSubject: strSubject, feedbackMessage: strMessage}),
+					contentType: "application/json; charset=utf-8",
+					success: function(result){
+						layer.close(indexFeedback); // 关闭loading弹窗！
+						layer.msg(result.message); // 给出报告的返回提示信息！
+						if(result.success){
+							$("#idFeedbackName").val('');
+							$("#idFeedbackEmail").val('');
+							$("#idFeedbackSubject").val('');
+							$("#idFeedbackMessage").val('');
+						}
+					}
+				});
+				
+				// 禁用返回！
+				return false;
+				
+			});
+			
+			// 2021-12-01（V0009-01.00.06-06）：监听滚动条位置！
+			funcCheckScrollPos();
+			$(window).scroll(function(event){
+				funcCheckScrollPos();
+			});
+			
+		});
+		
+		// 2021-12-01（V0009-01.00.06-06）：监听滚动条位置！
+		function funcCheckScrollPos(){
+			let winHeight = $(window).height(); // 浏览器窗口高度！
+			let heightNoTop = winHeight - 70; // 减去导航条后的高度！
+			if($(window).scrollTop() === 0) {
+				$("#header").css("background", "transparent"); // 全透明！
+			}else if($(window).scrollTop() <= winHeight) {
+				$("#header").css("background", "rgba(255, 255, 255, 0.95)"); // 一定的透明度！
+			}else{
+				$("#header").css("background", "#fff"); // 白色！
+			}
+		}
+		
+	</script>
+	
+	<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+	<!--
+	<script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/4.0.0/cookie-consent.js" charset="UTF-8"></script>
+	<script type="text/javascript" charset="UTF-8">
+	document.addEventListener('DOMContentLoaded', function () {
+	cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"website_name":"OncoPubMiner"});
+	});
+	</script>
+	<noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/free-privacy-policy-generator/" rel="nofollow noopener">Free Privacy Policy website</a></noscript>
+	-->
+	<!-- End Cookie Consent -->
+	
+</body>
+
+</html>

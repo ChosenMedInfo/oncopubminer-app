@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.xiaonuo.modular.formsitemsdata.mapper.FormsItemsDataMapper">
+
+	<select id="getBatchCountAll" resultType="java.lang.Integer">
+		SELECT COUNT(DISTINCT batch_id)
+		FROM lr_forms_items_data
+	</select>
+
+	<select id="getBatchCount" resultType="java.lang.Integer">
+		SELECT COUNT(DISTINCT batch_id)
+		FROM lr_forms_items_data
+		WHERE project_id = ${projectId}
+		AND (group_name = '${groupName}' OR group_name = 'commonGroup')
+		<if test="pmid != null">
+		AND pmid = ${pmid}
+		</if>
+		<if test='accountType != "1"'>
+		AND (create_user_name = '${createUserName}' OR create_user_name = 'CIViC')
+		</if>
+		ORDER BY batch_id ASC
+	</select>
+	
+	<select id="getBatchDataForDownload" resultType="java.lang.String">
+		SELECT CONCAT_WS('######', lfid.batch_id, lfi.item_name, lfid.item_value, lfid.create_user_name, lfid.create_time, lfid.pmid) as result
+		FROM lr_forms_items_data lfid, lr_forms_items lfi
+		WHERE lfid.item_id = lfi.id
+		AND lfid.project_id = ${projectId}
+		AND (lfid.group_name = '${groupName}' OR lfid.group_name = 'commonGroup')
+		<if test="pmid != null">
+		AND lfid.pmid = ${pmid}
+		</if>
+		<if test='accountType != "1"'>
+		AND (lfid.create_user_name = '${createUserName}' OR lfid.create_user_name = 'CIViC')
+		</if>
+		ORDER BY lfid.batch_id, lfi.item_sort ASC
+	</select>
+
+</mapper>

@@ -1,0 +1,5223 @@
+{
+  "_id": "32021487|PMC6982440",
+  "id": "6982440",
+  "infons": {
+  },
+  "passages": [
+    {
+      "infons": {
+        "name_3": "surname:Jemere Aragaw;given-names:Tezera",
+        "name_2": "surname:Ayalew Getahun;given-names:Kefyalew",
+        "name_1": "surname:Weldu;given-names:Haile",
+        "name_0": "surname:Temesgen;given-names:Eyosiyas",
+        "article-id_pmid": "32021487",
+        "fpage": "59",
+        "year": "2020",
+        "article-id_pmc": "6982440",
+        "article-id_publisher-id": "221130",
+        "alt-title": "Temesgen et al",
+        "article-id_doi": "10.2147/HIV.S221130",
+        "title": "Keywords",
+        "type": "front",
+        "volume": "12",
+        "license": "This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.php and incorporate the Creative Commons Attribution - Non Commercial (unported, v3.0) License (http://creativecommons.org/licenses/by-nc/3.0/). By accessing the work you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).",
+        "section_type": "TITLE",
+        "journal": "HIV AIDS (Auckl); 2020 ; 12 59-67. doi:10.2147/HIV.S221130",
+        "kwd": "PEP PEP utilization nPEP HIV healthcare workers University of Gondar Comprehensive Specialized Hospital",
+        "lpage": "67",
+        "authors": "Temesgen E, Weldu H, Ayalew Getahun K, Jemere Aragaw T, ",
+        "section": "Title"
+      },
+      "offset": 0,
+      "text": "Evaluation of Post-Exposure Prophylaxis Utilization Among Human Immunodeficiency Virus Exposed Victims at University of Gondar Comprehensive Specialized Hospital, North West Ethiopia",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "3",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "Human Immunodeficiency Virus",
+          "locations": [
+            {
+              "offset": 58,
+              "length": 28
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "infons": {
+            "identifier": "MESH:D003428",
+            "type": "Disease"
+          },
+          "text": "Specialized Hospital",
+          "locations": [
+            {
+              "offset": 141,
+              "length": 20
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "infons": {
+            "identifier": "MESH:D013036",
+            "type": "Disease"
+          },
+          "text": "West Ethiopia",
+          "locations": [
+            {
+              "offset": 169,
+              "length": 13
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "ABSTRACT",
+        "type": "abstract_title_1",
+        "section": "Abstract"
+      },
+      "offset": 183,
+      "text": "Background",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "ABSTRACT",
+        "type": "abstract",
+        "section": "Abstract"
+      },
+      "offset": 194,
+      "text": "Human immunodeficiency virus (HIV) infection is a serious public health problem costing the lives of many people including healthcare workers worldwide. Ethiopia is one of the most seriously affected countries in sub-Saharan Africa, with a large number of people who are living with HIV/AIDS and AIDS -related deaths. Prevention of the virus transmission through the appropriate utilization of post exposure prophylaxis is one of the major strategies. Therefore, the aim of this study was to evaluate the utilization of post-exposure prophylaxis (PEP) among victims of HIV at the University of Gondar Comprehensive Specialized Hospital, north-west Ethiopia. A retrospective cross-sectional study was conducted from May 17, 2018, to May 24, 2018 and descriptive statistics were carried out to analyze the Data using SPSS version 20.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "14",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "people",
+          "locations": [
+            {
+              "offset": 300,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "15",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "people",
+          "locations": [
+            {
+              "offset": 450,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "16",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 477,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "17",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 763,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "18",
+          "infons": {
+            "identifier": "MESH:D015658",
+            "type": "Disease"
+          },
+          "text": "immunodeficiency virus (HIV) infection",
+          "locations": [
+            {
+              "offset": 200,
+              "length": 38
+            }
+          ]
+        },
+        {
+          "id": "19",
+          "infons": {
+            "identifier": "MESH:D000163",
+            "type": "Disease"
+          },
+          "text": "AIDS",
+          "locations": [
+            {
+              "offset": 481,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "id": "20",
+          "infons": {
+            "identifier": "MESH:D000163",
+            "type": "Disease"
+          },
+          "text": "AIDS",
+          "locations": [
+            {
+              "offset": 490,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "id": "21",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 809,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "ABSTRACT",
+        "type": "abstract_title_1",
+        "section": "Abstract"
+      },
+      "offset": 1026,
+      "text": "Results",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "ABSTRACT",
+        "type": "abstract",
+        "section": "Abstract"
+      },
+      "offset": 1034,
+      "text": "From a total of 309 patients PEP was prescribed during the study period, of whom 239 (77.34%) were occupational victims and 55 (17.8%) were rape victims, with one missing data. Occupational victims were exposed by blood and blood product splashes and nurses and physicians were exposed almost equally, 14.24% and 13.92%, respectively. The majority of the victims were exposed at a health facility. Two hundred and eighty-five (92.23%) victims received prescriptions containing three-drug regimens, tenofovir + lamivudine + efavirenz, followed by 9 victims (2.91%) with two-drug regimens; zidovudine + lamivudine. There are no follow-up mechanisms as a result the completion rate and the outcome of PEP was not determined.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "29",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 1054,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "30",
+          "infons": {
+            "identifier": "3708",
+            "type": "Species"
+          },
+          "text": "rape",
+          "locations": [
+            {
+              "offset": 1174,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "id": "31",
+          "infons": {
+            "identifier": "MESH:C096918",
+            "type": "Chemical"
+          },
+          "text": "tenofovir",
+          "locations": [
+            {
+              "offset": 1532,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "id": "32",
+          "infons": {
+            "identifier": "MESH:D019259",
+            "type": "Chemical"
+          },
+          "text": "lamivudine",
+          "locations": [
+            {
+              "offset": 1544,
+              "length": 10
+            }
+          ]
+        },
+        {
+          "id": "33",
+          "infons": {
+            "identifier": "MESH:C098320",
+            "type": "Chemical"
+          },
+          "text": "efavirenz",
+          "locations": [
+            {
+              "offset": 1557,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "id": "34",
+          "infons": {
+            "identifier": "MESH:D015215",
+            "type": "Chemical"
+          },
+          "text": "zidovudine",
+          "locations": [
+            {
+              "offset": 1622,
+              "length": 10
+            }
+          ]
+        },
+        {
+          "id": "35",
+          "infons": {
+            "identifier": "MESH:D019259",
+            "type": "Chemical"
+          },
+          "text": "lamivudine",
+          "locations": [
+            {
+              "offset": 1635,
+              "length": 10
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "ABSTRACT",
+        "type": "abstract_title_1",
+        "section": "Abstract"
+      },
+      "offset": 1757,
+      "text": "Conclusion",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "ABSTRACT",
+        "type": "abstract",
+        "section": "Abstract"
+      },
+      "offset": 1768,
+      "text": "PEP was initiated within 72 hr, most within 24 hr. The adherence was unknown with poor follow-up despite the strong recommendations of the national and WHO guidelines.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "INTRO",
+        "type": "title_1",
+        "section": "Background"
+      },
+      "offset": 1936,
+      "text": "Background",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "INTRO",
+        "type": "paragraph",
+        "section": "Background"
+      },
+      "offset": 1947,
+      "text": "Acquired human immunodeficiency syndrome is a disease of the human immune system caused by the human immunodeficiency virus (HIV). It has presented enormous challenges for the survival of mankind, and it is transmitted primarily via unprotected sexual intercourse, contaminated blood transmission, hypodermic needles, skin contact with potentially infectious body fluids and from mother to child. The overall risk of HIV transmission is estimated to be 0.3%, 0.09%, 0.1% and 30% for per cutaneous, mucocutaneous exposures and sexual contact depending on the nature of the exposure, respectively. Post-exposure prophylaxis (PEP) is of considerable interest and the Joint United Nations Program declaration on HIV and AIDS in 2011 confirms that HIV prevention must remain the cornerstone of the HIV response. PEP is the use of short-term antiretroviral therapy (ART) to reduce the risk of acquisition of HIV infection following exposure to needle sticks and mucocutaneous splash injuries to HIV and sexual intercourse to HIV partners. PEP includes first aid, counseling, risk assessment, relevant laboratory investigations based on the informed consent of the exposed person and source and provision of short-term of antiretroviral drugs for 28 days, along with follow-up evaluation. The recommended standard follow-up includes testing for HIV antibodies at baseline and 6 weeks; or at baseline, 8 and 16 weeks after sexual exposure for untreated and treated patients, respectively. Although guidelines were developed to provide recommendations for the initiation of HIV PEP and the selection of antiretroviral regimens, utilization of PEP in clinical practice may differ from published guidelines. It is estimated that 36.7 million people were living with HIV globally at the end of 2016. It is among the top 10 causes of death in developing countries, and the leading cause of death in sub-Saharan Africa. Sub-Saharan Africa contains only 10% of the world's population, although it accounts for more than two-thirds of the world's HIV-infected people.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "61",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "human",
+          "locations": [
+            {
+              "offset": 1956,
+              "length": 5
+            }
+          ]
+        },
+        {
+          "id": "62",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "human",
+          "locations": [
+            {
+              "offset": 2008,
+              "length": 5
+            }
+          ]
+        },
+        {
+          "id": "63",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "human immunodeficiency virus",
+          "locations": [
+            {
+              "offset": 2042,
+              "length": 28
+            }
+          ]
+        },
+        {
+          "id": "64",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "child",
+          "locations": [
+            {
+              "offset": 2337,
+              "length": 5
+            }
+          ]
+        },
+        {
+          "id": "65",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "person",
+          "locations": [
+            {
+              "offset": 3113,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "66",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 3404,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "67",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "people",
+          "locations": [
+            {
+              "offset": 3678,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "68",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "people",
+          "locations": [
+            {
+              "offset": 3991,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "69",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 2072,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "70",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 2364,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "71",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 2655,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "72",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 2690,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "73",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 2740,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "74",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 2849,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "75",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 2936,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "76",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 2966,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "77",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 3285,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "78",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 3512,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "79",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 3702,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "80",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 3978,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "81",
+          "infons": {
+            "identifier": "MESH:D007153",
+            "type": "Disease"
+          },
+          "text": "immunodeficiency syndrome",
+          "locations": [
+            {
+              "offset": 1962,
+              "length": 25
+            }
+          ]
+        },
+        {
+          "id": "82",
+          "infons": {
+            "identifier": "MESH:D010009",
+            "type": "Disease"
+          },
+          "text": "hypodermic needles",
+          "locations": [
+            {
+              "offset": 2245,
+              "length": 18
+            }
+          ]
+        },
+        {
+          "id": "83",
+          "infons": {
+            "identifier": "MESH:D000163",
+            "type": "Disease"
+          },
+          "text": "AIDS",
+          "locations": [
+            {
+              "offset": 2663,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "id": "84",
+          "infons": {
+            "identifier": "MESH:D003643",
+            "type": "Disease"
+          },
+          "text": "death",
+          "locations": [
+            {
+              "offset": 3768,
+              "length": 5
+            }
+          ]
+        },
+        {
+          "id": "85",
+          "infons": {
+            "identifier": "MESH:D003643",
+            "type": "Disease"
+          },
+          "text": "death",
+          "locations": [
+            {
+              "offset": 3824,
+              "length": 5
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "INTRO",
+        "type": "paragraph",
+        "section": "Background"
+      },
+      "offset": 4003,
+      "text": "Ethiopia is one of the most seriously affected countries in sub-Saharan Africa with many people affected (~800,000 cases) and 45,200 AIDS-related deaths. Non-occupational victims and healthcare workers are at risk of contracting HIV during their duties. To prevent transmission of pathogens after potential exposure and further development of infection, PEP is recommended. When PEP is taken shortly following exposure it has been shown to reduce the risk of HIV infection by 81% and some studies have shown that 28 days of subcutaneous tenofovir administered to macaques after intravenous or intravaginal exposure prevented 100% of infections if given within 24-36 hr. The Centers for Disease Control and Prevention and the Ethiopian Federal Ministry of Health developed guidelines for infection prevention and PEP guidelines. A survey of more than 2400 USA heathcare workers (HCWs) showed that more than half had experienced per cutaneous injury in their career, almost a quarter in the last year. In a study in northern India, 63% of participants reported per cutaneous injury in the previous year, and mucocutaneous and per cutaneous exposures over the previous week reported at 11% and 30%, respectively. Fifty-five percent of HCWs in Uganda and 57% of injection providers in Mongolia experienced per cutaneous exposure in the last year. The overall rate of HIV transmission through per cutaneous inoculation is reported to be 0.3%. The estimated risk of transmission of HIV infection per exposure of splashes of infectious material to mucous membranes or broken skin is 0.09%. Per-contact risk of HIV transmission from sexual exposure varies according to the nature of the exposure. The estimated risks are 1-30% with receptive anal intercourse, 0.1-10.0% with insertive anal and vaginal intercourse and 0.1-1.0% with insertive vaginal intercourse. Although oral intercourse is considered to pose a lower risk of HIV transmission, there are case reports of HIV infections in persons in whom the only reported risk factor was oral intercourse. The risks of sexual transmission are influenced by the presence or absence of concomitant genital ulcer disease, cervical or anal dysplasia; circumcision status; viral load in the genital compartment; and degree of viral virulence. The estimated risk of transmission associated with sharing needles for injection-drug use is approximately 0.67% per needle-sharing contact. The remarkably low rate of PEP utilization among HCWs may be largely attributed to HCWs' fear of getting HIV testing, fear of drug side effects, lack of established regulations and absence of legislation for PEP utilization following occupational exposure to HIV/AIDS risk factors. In a study conducted in the University of Gondar Comprehensive Specialized Hospital to assess the level of knowledge, attitude and practice towards PEP for HIV among 195 HCWs, 72 (36.92%) were found to have inadequate knowledge about PEP for HIV. However, 147 (75.38%) respondents had good attitudes toward PEP and 66 (33.85%) respondents had been exposed to blood, body fluids, needles or sharp objects one or more times while caring for patients. Among these exposed respondents, 49 (74.24%) took PEP but the rest 17 (25.76%) did not. Twenty-three (46.9%) of the exposed respondents took PEP correctly and started at the exact initiation time, but the rest started late after the recommended initiation time. Among those who took PEP, 39 (79.59%) completed their course; however, 10 (20.4%) did not complete the PEP regimen, although the country has clear guidelines for the appropriate implementation of PEP. A retrospective chart review was conducted in a single French HIV-infection care center to identify the predictors of Standard Follow-Up Completion (FC) after Sexual Exposure. Between 2009 and 2013, 646 sexual exposures to HIV were evaluated for nPEP, of which 507 (78%) effectively received nPEP. FC rate was 194 (30%). In the multivariate analysis, FC rates rose with age of exposed individuals and decreased with the year of sexual exposure. FC was associated with a sexual encounter with a sex worker and nPEP use. Early discontinuation of nPEP was associated with decreased FC rates. No documented nPEP failures were identified. However, five Men who have Sex with Men (MSM) nPEP recipients for unprotected anal receptive intercourse subsequently seroconverted to HIV more than 6 months after nPEP. Seroconversion to HIV was associated with the lack of FC and multiple presentations for nPEP over the study period.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "116",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "people",
+          "locations": [
+            {
+              "offset": 4092,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "117",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "participants",
+          "locations": [
+            {
+              "offset": 5040,
+              "length": 12
+            }
+          ]
+        },
+        {
+          "id": "118",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "persons",
+          "locations": [
+            {
+              "offset": 5984,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "119",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 7146,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "Men",
+          "locations": [
+            {
+              "offset": 8267,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "Men",
+          "locations": [
+            {
+              "offset": 8289,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "122",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 4232,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "123",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 4462,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "124",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 5366,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "125",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 5479,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "126",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 5606,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "127",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 5922,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "128",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 5966,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "129",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 6530,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "130",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 6684,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "131",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 6863,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "132",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 6949,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "133",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 7681,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "134",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 7842,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "135",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 8388,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "136",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 8441,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "137",
+          "infons": {
+            "identifier": "MESH:C096918",
+            "type": "Chemical"
+          },
+          "text": "tenofovir",
+          "locations": [
+            {
+              "offset": 4540,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "id": "138",
+          "infons": {
+            "identifier": "MESH:C093780",
+            "type": "Chemical"
+          },
+          "text": "MSM",
+          "locations": [
+            {
+              "offset": 8294,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "139",
+          "infons": {
+            "identifier": "MESH:D000163",
+            "type": "Disease"
+          },
+          "text": "AIDS",
+          "locations": [
+            {
+              "offset": 4136,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "id": "140",
+          "infons": {
+            "identifier": "MESH:D016116",
+            "type": "Disease"
+          },
+          "text": "cutaneous injury",
+          "locations": [
+            {
+              "offset": 4934,
+              "length": 16
+            }
+          ]
+        },
+        {
+          "id": "141",
+          "infons": {
+            "identifier": "MESH:D016116",
+            "type": "Disease"
+          },
+          "text": "cutaneous injury",
+          "locations": [
+            {
+              "offset": 5066,
+              "length": 16
+            }
+          ]
+        },
+        {
+          "id": "142",
+          "infons": {
+            "identifier": "MESH:D014456",
+            "type": "Disease"
+          },
+          "text": "absence of concomitant genital ulcer disease",
+          "locations": [
+            {
+              "offset": 6119,
+              "length": 44
+            }
+          ]
+        },
+        {
+          "id": "143",
+          "infons": {
+            "identifier": "MESH:D001005",
+            "type": "Disease"
+          },
+          "text": "anal dysplasia",
+          "locations": [
+            {
+              "offset": 6177,
+              "length": 14
+            }
+          ]
+        },
+        {
+          "id": "144",
+          "infons": {
+            "identifier": "MESH:D000163",
+            "type": "Disease"
+          },
+          "text": "AIDS",
+          "locations": [
+            {
+              "offset": 6688,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "id": "145",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 6770,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "INTRO",
+        "type": "paragraph",
+        "section": "Background"
+      },
+      "offset": 8547,
+      "text": "In the presence of a high HIV/AIDS prevalence environment, HCWs and other employees are at risk of contracting HIV during their duties and managing these patients' potentially infectious sources. In order to prevent transmission of pathogens after potential exposure and for comprehensive management to minimize the risk, PEP is one of the main strategies.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "150",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 8701,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "151",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 8573,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "152",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 8658,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "153",
+          "infons": {
+            "identifier": "MESH:D000163",
+            "type": "Disease"
+          },
+          "text": "AIDS",
+          "locations": [
+            {
+              "offset": 8577,
+              "length": 4
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "INTRO",
+        "type": "paragraph",
+        "section": "Background"
+      },
+      "offset": 8906,
+      "text": "At the same time, only providing PEP to these exposed people is not sufficient, because initiation time, type of recommended regimen, completeness and follow-up are determinant factors and crucial for PEP effectiveness. Therefore, the main aim of this study was to evaluate these determinant factors against the national protocol and WHO standards. In addition, so far there was no research done to evaluate initiation time, type of recommended regimen, the rate of completeness and follow-up status once the exposed victims initiated PEP. If the course of drugs is not completed, there could be a possibility of seroconversion; therefore, patients should be put on full ART and even this may lead to development of drug resistance unless the prescribed regimen is completed. This study also helps as an input to further investigation or to take corrective measures on PEP follow-up and completeness.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "156",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "people",
+          "locations": [
+            {
+              "offset": 8960,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "157",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 9546,
+              "length": 8
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_1",
+        "section": "Methods"
+      },
+      "offset": 9807,
+      "text": "Methods",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 9815,
+      "text": "Study Area",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 9826,
+      "text": "The historical city of Gondar is located in Northern Amhara region of Ethiopia. The study was conducted in the Antiretroviral Treatment Clinic at the University of Gondar Comprehensive Specialized Hospital, 738 km north-west of Addis Ababa, capital city of Ethiopia. The hospital was established in 1954 GC, currently having 680 beds, Comprehensive Specialized Hospital located in the Amhara region, north-west Ethiopia.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "160",
+          "infons": {
+            "identifier": "MESH:D003428",
+            "type": "Disease"
+          },
+          "text": "Specialized Hospital",
+          "locations": [
+            {
+              "offset": 10011,
+              "length": 20
+            }
+          ]
+        },
+        {
+          "id": "161",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 10175,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 10247,
+      "text": "Study Design and Period",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 10271,
+      "text": "Study Design",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 10284,
+      "text": "We conducted retrospective cross-sectional registration record review at the ART clinic in the University of Gondar Comprehensive Specialized Hospital, all registered victims from November 9, 2015 to May 24, 2018 who were offered PEP were included.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "163",
+          "infons": {
+            "identifier": "MESH:D003428",
+            "type": "Disease"
+          },
+          "text": "Specialized Hospital",
+          "locations": [
+            {
+              "offset": 10414,
+              "length": 20
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 10533,
+      "text": "Study Period",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 10546,
+      "text": "The record review was done from May 17, 2018, to May 24, 2018, in order to revise the three years recorded registration book.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 10672,
+      "text": "Source and Study Population",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 10700,
+      "text": "Source Population",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 10718,
+      "text": "All people who were exposed to potentially infectious sources of HIV and visited the ART clinic at the University of Gondar Comprehensive Specialized Hospital who came to seek PEP.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "167",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "people",
+          "locations": [
+            {
+              "offset": 10722,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "168",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 10783,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "169",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 10856,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 10899,
+      "text": "Study Population",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 10916,
+      "text": "All victims who were potentially exposed to infectious sources and who started PEP from November 9, 2015 to May 24, 2018 at the University of Gondar Comprehensive Specialized Hospital.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "171",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 11079,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 11101,
+      "text": "Variables",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 11111,
+      "text": "Dependent Variables",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 11131,
+      "text": "ARV regimen and initiation time.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 11164,
+      "text": "Independent Variables",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 11186,
+      "text": "  Sociodemographic characteristics",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 11223,
+      "text": "  Professional category",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 11249,
+      "text": "  Ward",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 11258,
+      "text": "Sample Size Determination",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 11284,
+      "text": "Conveniently, all victims recorded from November 9, 2015 to May 24, 2018, were included.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 11373,
+      "text": "Data Collection Method and Tool",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 11405,
+      "text": "Review of the PEP standard log book was done as a secondary source of data using the data abstraction format.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 11515,
+      "text": "Data Processing and Analysis",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 11544,
+      "text": "The collected data were checked for completeness and errors and analyzed by personal computer. Finally, the data were organized and presented using frequency distribution, tables and figures.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 11736,
+      "text": "Data Quality Control",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 11757,
+      "text": "Data were checked for completeness and consistency and finally statistical analysis were performed using SPSS version 20.0 software and the results were presented as texts, tables and figures.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 11950,
+      "text": "Operational Definitions",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 11974,
+      "text": "Exposure to HIV Risk Conditions",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "173",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 11986,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 12006,
+      "text": "HCWs' and other occupationals' exposure to HIV risk sources, such as blood, patients'/clients' body fluids, needle prick/sharps injury at their workplace.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "177",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 12082,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "178",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 12049,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "179",
+          "infons": {
+            "identifier": "MESH:D016602",
+            "type": "Disease"
+          },
+          "text": "sharps injury",
+          "locations": [
+            {
+              "offset": 12127,
+              "length": 13
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 12161,
+      "text": "Healthcare Workers",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 12180,
+      "text": "Health professionals working in healthcare settings who have the potential for exposure to infectious materials/conditions.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 12304,
+      "text": "Non-Occupational Exposure",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 12330,
+      "text": "Conditions that expose people other than HCWs to a risk of infection, including rape.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "182",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "people",
+          "locations": [
+            {
+              "offset": 12353,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "183",
+          "infons": {
+            "identifier": "3708",
+            "type": "Species"
+          },
+          "text": "rape",
+          "locations": [
+            {
+              "offset": 12410,
+              "length": 4
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 12416,
+      "text": "Occupational Exposure",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 12438,
+      "text": "Procedures that expose the HCWs and other occupationals accidentally to risks of infection during their work.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 12548,
+      "text": "Post-Exposure Prophylaxis",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 12574,
+      "text": "PEP is an emergency medical response that can be used to protect individuals exposed to the HIV and short-term ART drugs to reduce the likelihood of HIV infection after potential exposure, either occupational or through sexual intercourse. It consists of counseling, laboratory tests and/or medication.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "186",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 12666,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "187",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 12723,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 12877,
+      "text": "Regimen",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 12885,
+      "text": "This is the prescribed course of medical treatment, diet, or exercise for the promotion or restoration of health.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_3",
+        "section": "Methods"
+      },
+      "offset": 12999,
+      "text": "Ward",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 13004,
+      "text": "A division in a hospital, which is a large room in a hospital with a number of patients often requiring similar treatment.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "189",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 13083,
+              "length": 8
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_2",
+        "section": "Methods"
+      },
+      "offset": 13127,
+      "text": "Ethical Consideration",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Methods"
+      },
+      "offset": 13149,
+      "text": "Ethical clearance was obtained from the University of Gondar, College of Medicine and Health Sciences, School of Pharmacy ethical committee with reference number SOP 288/2018 and an official permission letter was obtained from Chief Clinical Director of College of Medicine and Health Sciences and Comprehensive Specialized Hospital. This research is fully waived for informed consent which was approved by the University of Gondar, School of Pharmacy Ethics Committee because we used secondary data and as acceptable per inernational guidelines for health-related research involving humans, waiver would be allowed if the study participants would not be accessed, the study has important social value and with no or minimal risk on study participants, in which our study fullfil all of them. Confidentiality was kept by using codes and were made anonymous, rather than stating their names.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "194",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "humans",
+          "locations": [
+            {
+              "offset": 13733,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "195",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "participants",
+          "locations": [
+            {
+              "offset": 13778,
+              "length": 12
+            }
+          ]
+        },
+        {
+          "id": "196",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "participants",
+          "locations": [
+            {
+              "offset": 13888,
+              "length": 12
+            }
+          ]
+        },
+        {
+          "id": "197",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 13461,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "RESULTS",
+        "type": "title_1",
+        "section": "Results"
+      },
+      "offset": 14040,
+      "text": "Results",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "TABLE",
+        "file": "T0001.xml",
+        "id": "T0001",
+        "type": "table",
+        "xml": "&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt; &lt;table frame=\"hsides\" rules=\"groups\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;Characteristics&lt;/th&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;Age Range&lt;/th&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;N (%)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td rowspan=\"5\" colspan=\"1\"&gt;Age in years&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;2-9&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;13 (4.21)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;10-17&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;63 (20.39)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;18-25&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;127 (41.10)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;26-34&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;82 (26.54)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;35-41&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;15 (4.85)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;&gt;=42&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;9 (2.91)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"9\" colspan=\"1\"&gt;Occupational&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Nurse&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;44 (14.24)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Physician&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;43 (13.92)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Health Officer&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;21 (6.80)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Health Assistant&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;2 (0.65)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Laboratory&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;10 (3.24)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Sanitarian&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;1 (0.32)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Cleaner&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;20 (6.47)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Porter&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;35 (11.33)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Maintenance&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;33 (10.68)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Gardner&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;30 (9.71)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"2\" colspan=\"1\"&gt;Others&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Unspecified&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;13 (4.21)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Rape&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;55 (17.8)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Not recorded&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;2 (0.65)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; ",
+        "section": "Results"
+      },
+      "offset": 14048,
+      "text": "Characteristics Age Range N (%) Age in years 2-9 13 (4.21) 10-17 63 (20.39) 18-25 127 (41.10) 26-34 82 (26.54) 35-41 15 (4.85) &gt;=42 9 (2.91) Occupational Nurse 44 (14.24) Physician 43 (13.92) Health Officer 21 (6.80) Health Assistant 2 (0.65) Laboratory 10 (3.24) Sanitarian 1 (0.32) Cleaner 20 (6.47) Porter 35 (11.33) Maintenance 33 (10.68) Gardner 30 (9.71) Others Unspecified 13 (4.21) Rape 55 (17.8) Not recorded 2 (0.65) ",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "200",
+          "infons": {
+            "identifier": "32644",
+            "type": "Species"
+          },
+          "text": "Unspecified",
+          "locations": [
+            {
+              "offset": 14416,
+              "length": 11
+            }
+          ]
+        },
+        {
+          "id": "201",
+          "infons": {
+            "identifier": "3708",
+            "type": "Species"
+          },
+          "text": "Rape",
+          "locations": [
+            {
+              "offset": 14438,
+              "length": 4
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "TABLE",
+        "file": "T0001.xml",
+        "id": "T0001",
+        "type": "table_caption",
+        "section": "Results"
+      },
+      "offset": 14487,
+      "text": "Sociodemographic Characteristics of HIV Victims Attending UoGCSH in 2015-2018 GC",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "203",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 14523,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "RESULTS",
+        "type": "paragraph",
+        "section": "Results"
+      },
+      "offset": 14570,
+      "text": "A total of 309 occupational and non-occupational victims had sought PEP during the study period; among these, 172 (55.66%) were female and the rest 137 (44.34%) male. The majority of the victims 239 (77.34%) were exposed at health facilities. Fifty-five (17.8%) were victims of rape. Of the occupational victims, most were nurses and physicians, 44 (14.24%) and 43 (13.92%), respectively. Most of the victims 209 (64.64%) were youngsters in the age group between 18 and 34 years and 63 (20.39%) were between 29 and 39 years, as depicted in Table 1.  ",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "205",
+          "infons": {
+            "identifier": "3708",
+            "type": "Species"
+          },
+          "text": "rape",
+          "locations": [
+            {
+              "offset": 14848,
+              "length": 4
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "RESULTS",
+        "type": "paragraph",
+        "section": "Results"
+      },
+      "offset": 15122,
+      "text": "The most drug regimen utilized was tenofovir + lamivudine + efavirenz (TDF+3TC+EFV), which accounts for 285 (92.2%) patients, followed by Zidovudine + lamivudine (AZT+3TC), which accounts for 9 (2.91%) patients as depicted in Table 2.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "215",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 15238,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "216",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 15324,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "217",
+          "infons": {
+            "identifier": "MESH:C096918",
+            "type": "Chemical"
+          },
+          "text": "tenofovir",
+          "locations": [
+            {
+              "offset": 15157,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "id": "218",
+          "infons": {
+            "identifier": "MESH:D019259",
+            "type": "Chemical"
+          },
+          "text": "lamivudine",
+          "locations": [
+            {
+              "offset": 15169,
+              "length": 10
+            }
+          ]
+        },
+        {
+          "id": "219",
+          "infons": {
+            "identifier": "MESH:C098320",
+            "type": "Chemical"
+          },
+          "text": "efavirenz",
+          "locations": [
+            {
+              "offset": 15182,
+              "length": 9
+            }
+          ]
+        },
+        {
+          "id": "220",
+          "infons": {
+            "identifier": "MESH:C472745",
+            "type": "Chemical"
+          },
+          "text": "TDF+3TC+EFV",
+          "locations": [
+            {
+              "offset": 15193,
+              "length": 11
+            }
+          ]
+        },
+        {
+          "id": "221",
+          "infons": {
+            "identifier": "MESH:D015215",
+            "type": "Chemical"
+          },
+          "text": "Zidovudine",
+          "locations": [
+            {
+              "offset": 15260,
+              "length": 10
+            }
+          ]
+        },
+        {
+          "id": "222",
+          "infons": {
+            "identifier": "MESH:D019259",
+            "type": "Chemical"
+          },
+          "text": "lamivudine",
+          "locations": [
+            {
+              "offset": 15273,
+              "length": 10
+            }
+          ]
+        },
+        {
+          "id": "223",
+          "infons": {
+            "identifier": "MESH:D015215",
+            "type": "Chemical"
+          },
+          "text": "AZT+3TC",
+          "locations": [
+            {
+              "offset": 15285,
+              "length": 7
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "TABLE",
+        "file": "T0002.xml",
+        "id": "T0002",
+        "type": "table",
+        "xml": "&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt; &lt;table frame=\"hsides\" rules=\"groups\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;ART Regimen&lt;/th&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;N (%)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;AZT+3TC&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;9 (2.91)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;TDF+3TC&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;5 (1.62)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;TDF+3TC+EFV&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;285 (92.23)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;AZT+3TC+EFV&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;4 (1.29)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;AZT+3TC+LPV/r&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;1 (0.32)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Not recorded&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;5 (1.62)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; ",
+        "section": "Results"
+      },
+      "offset": 15357,
+      "text": "ART Regimen N (%) AZT+3TC 9 (2.91) TDF+3TC 5 (1.62) TDF+3TC+EFV 285 (92.23) AZT+3TC+EFV 4 (1.29) AZT+3TC+LPV/r 1 (0.32) Not recorded 5 (1.62) ",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "229",
+          "infons": {
+            "identifier": "MESH:D015215",
+            "type": "Chemical"
+          },
+          "text": "AZT",
+          "locations": [
+            {
+              "offset": 15375,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "230",
+          "infons": {
+            "identifier": "MESH:C472745",
+            "type": "Chemical"
+          },
+          "text": "TDF",
+          "locations": [
+            {
+              "offset": 15392,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "231",
+          "infons": {
+            "identifier": "MESH:C472745",
+            "type": "Chemical"
+          },
+          "text": "TDF+3TC",
+          "locations": [
+            {
+              "offset": 15409,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "232",
+          "infons": {
+            "identifier": "MESH:D015215",
+            "type": "Chemical"
+          },
+          "text": "AZT+3TC",
+          "locations": [
+            {
+              "offset": 15433,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "233",
+          "infons": {
+            "identifier": "MESH:D015215",
+            "type": "Chemical"
+          },
+          "text": "AZT+3TC+LPV",
+          "locations": [
+            {
+              "offset": 15454,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "TABLE",
+        "file": "T0002.xml",
+        "id": "T0002",
+        "type": "table_caption",
+        "section": "Results"
+      },
+      "offset": 15500,
+      "text": "Type of PEP Regimen Taken by Victims Attending University of Gondar Comprehensive Specialized Hospital in 2015-2018 GC (N= 309)",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "235",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 15582,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "TABLE",
+        "file": "T0003.xml",
+        "id": "T0003",
+        "type": "table",
+        "xml": "&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt; &lt;table frame=\"hsides\" rules=\"groups\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;Ward&lt;/th&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;N (%)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Labor ward&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;17 (5.5)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Emergency&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;38 (12.3)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Regular OPD&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;22 (7.12)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Inpatient&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;20 (6.47)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Operating theatre&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;28 (9.06)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Unspecified&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;104 (33.66)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Rape&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;55 (17.80)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Not recorded&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;25 (8.09)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; ",
+        "section": "Results"
+      },
+      "offset": 15630,
+      "text": "Ward N (%) Labor ward 17 (5.5) Emergency 38 (12.3) Regular OPD 22 (7.12) Inpatient 20 (6.47) Operating theatre 28 (9.06) Unspecified 104 (33.66) Rape 55 (17.80) Not recorded 25 (8.09) ",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "239",
+          "infons": {
+            "identifier": "32644",
+            "type": "Species"
+          },
+          "text": "Unspecified",
+          "locations": [
+            {
+              "offset": 15751,
+              "length": 11
+            }
+          ]
+        },
+        {
+          "id": "240",
+          "infons": {
+            "identifier": "3708",
+            "type": "Species"
+          },
+          "text": "Rape",
+          "locations": [
+            {
+              "offset": 15775,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "id": "241",
+          "infons": {
+            "identifier": "MESH:C538089",
+            "type": "Disease"
+          },
+          "text": "OPD",
+          "locations": [
+            {
+              "offset": 15689,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "TABLE",
+        "file": "T0003.xml",
+        "id": "T0003",
+        "type": "table_caption",
+        "section": "Results"
+      },
+      "offset": 15815,
+      "text": "Ward Sections of the HCW and Non-Occupational Victims Who Were Attending University of Gondar Comprehensive Specialized Hospital in 2015-2018",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "243",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 15923,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "RESULTS",
+        "type": "paragraph",
+        "section": "Results"
+      },
+      "offset": 15959,
+      "text": "Among the different wards, emergency ward workers were highly exposed accidentally to infectious sources, which accounts for 38 (12%), followed by workers in the operating theater, which accounts for about 28 (9.06%) victims, with potential exposure sources of blood, blood products splash and needle stick injury, 76 (24.6%), and 61 (19.7%), respectively, as depicted in Table 3.   ",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "245",
+          "infons": {
+            "identifier": "MESH:D016602",
+            "type": "Disease"
+          },
+          "text": "needle stick injury",
+          "locations": [
+            {
+              "offset": 16253,
+              "length": 19
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "FIG",
+        "file": "HIV-12-59-g0001.jpg",
+        "id": "F0001",
+        "type": "fig_caption",
+        "section": "Results"
+      },
+      "offset": 16343,
+      "text": "Sources of exposure for victims who sought PEP. ",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "RESULTS",
+        "type": "paragraph",
+        "section": "Results"
+      },
+      "offset": 16392,
+      "text": "According to our findings, we saw sources of HIV exposure as 61 (19.74%) victims exposed to needle stick injuries, 20 (6.47%) were exposed via skin injury with sharps, 76 (24.60%) had exposure via blood products and its splash, 6 (1.94%) had exposure via potentially infectious body fluids, 55 (17.80%) were victims of rape, 13 (4.21%) and 78 (25.24%) others were unrecorded sources, respectively (see Figure 1). ",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "250",
+          "infons": {
+            "identifier": "3708",
+            "type": "Species"
+          },
+          "text": "rape",
+          "locations": [
+            {
+              "offset": 16711,
+              "length": 4
+            }
+          ]
+        },
+        {
+          "id": "251",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 16437,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "252",
+          "infons": {
+            "identifier": "MESH:D016602",
+            "type": "Disease"
+          },
+          "text": "needle stick injuries",
+          "locations": [
+            {
+              "offset": 16484,
+              "length": 21
+            }
+          ]
+        },
+        {
+          "id": "253",
+          "infons": {
+            "identifier": "MESH:D012871",
+            "type": "Disease"
+          },
+          "text": "skin injury",
+          "locations": [
+            {
+              "offset": 16535,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "TABLE",
+        "file": "T0004.xml",
+        "id": "T0004",
+        "type": "table",
+        "xml": "&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt; &lt;table frame=\"hsides\" rules=\"groups\"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;Characteristics&lt;/th&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;Time Range (Hours)&lt;/th&gt;&lt;th rowspan=\"1\" colspan=\"1\"&gt;N (%)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td rowspan=\"3\" colspan=\"1\"&gt;Duration&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;0-24&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;245 (79.29)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;24-48&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;38 (12.30)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;48-72&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;24 (7.77)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Not recorded&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;2 (0.65)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"3\" colspan=\"1\"&gt;Time between exposure and PEP started&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;0-24&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;204 (66.02)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;24-48&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;52 (16.83)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;48-72&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;24 (7.77)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;Not recorded&lt;/td&gt;&lt;td rowspan=\"1\" colspan=\"1\"&gt;29 (9.39)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt; ",
+        "section": "Results"
+      },
+      "offset": 16806,
+      "text": "Characteristics Time Range (Hours) N (%) Duration 0-24 245 (79.29) 24-48 38 (12.30) 48-72 24 (7.77) Not recorded 2 (0.65) Time between exposure and PEP started 0-24 204 (66.02) 24-48 52 (16.83) 48-72 24 (7.77) Not recorded 29 (9.39) ",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "TABLE",
+        "file": "T0004.xml",
+        "id": "T0004",
+        "type": "table_caption",
+        "section": "Results"
+      },
+      "offset": 17052,
+      "text": "Timing of Initiation of PEP Among Victims Who Visited UoGCSH in 2015-2018 GC",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "RESULTS",
+        "type": "paragraph",
+        "section": "Results"
+      },
+      "offset": 17131,
+      "text": "Two hundred and forty-five (79.3%) victims arrived at the ART clinic in the range of 0-24 hr and 204 (66%) were given PEP in this range of hours. Thirty-eight victims (12.3%) arrived between 24 and 48 hr, as shown in Table 4.  ",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "RESULTS",
+        "type": "paragraph",
+        "section": "Results"
+      },
+      "offset": 17361,
+      "text": "Based on a baseline HIV status of a source person and an exposed person, they are 100% eligible for PEP provision.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "257",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "person",
+          "locations": [
+            {
+              "offset": 17404,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "258",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "person",
+          "locations": [
+            {
+              "offset": 17426,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "259",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 17381,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "FIG",
+        "file": "HIV-12-59-g0002.jpg",
+        "id": "F0002",
+        "type": "fig_caption",
+        "section": "Results"
+      },
+      "offset": 17476,
+      "text": "HIV status of both source and exposed subjects. ",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "261",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 17476,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "RESULTS",
+        "type": "paragraph",
+        "section": "Results"
+      },
+      "offset": 17525,
+      "text": "In this study, from the source population 121 (39.16%) were HIV-positive, 13 (4.21%) were HIV-negative and 175 (56.63%) were not tested for HIV, and of exposed persons who visited seeking PEP, 2 (0.65%) were HIV-positive, 292 (94.50%) were HIV-negative and 15 (4.85%) were not tested (as depicted in Figure 2). ",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "268",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "persons",
+          "locations": [
+            {
+              "offset": 17685,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "269",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 17585,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "270",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 17615,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "271",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 17665,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "272",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 17733,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "273",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 17765,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "title_1",
+        "section": "Discussion"
+      },
+      "offset": 17837,
+      "text": "Discussion",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 17848,
+      "text": "This study evaluated the utilization of PEP among victims who visited the ART clinic at the University of Gondar Comprehensive Specialized Hospital, Gondar, Ethiopia.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "275",
+          "infons": {
+            "identifier": "MESH:D003428",
+            "type": "Disease"
+          },
+          "text": "Specialized Hospital",
+          "locations": [
+            {
+              "offset": 17975,
+              "length": 20
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 18015,
+      "text": "Nurses, physicians, health officers (HO), health assistants and medical laboratory technologists are among health professionals who were accidentally exposed to potentially infectious sources of HIV. Among other occupations, porters (11.17%), maintenance workers (10.5%), gardeners (10.5%) and cleaners (6.5%) were among victims exposed to infectious sources at health facilities. Nurses and physicians are among the most exposed groups to infectious sources, which could be associated with their closer contact with infectious sources than other professionals have, which is in line with a study conducted in Debrebirehan for nurses.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "277",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 18210,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 18650,
+      "text": "Among the total of 309 victim records reviewed, most of them took three-drug regimens, which was TDF+3TC+EFV 285 (92.2%), and 9 (2.91%) took dual therapy. This result is quite different to that of the research done in Malawi, where a dual ART regimen was prescribed in 85.2% and triple therapy in 14.8% of the cases. Also, research done in a US military trauma hospital in Afghanistan shows 96.8% two-drug regimens prescribed, with the remaining cases prescribed a three-drug regimen. Our study finding was consistent both with WHO guidelines and national protocol, which we come up with as best practice. In our study with 39.2% of HIV-positive source persons, there could be more likelihood of contracting the virus; therefore, to avoid seroconversion, three-drug regimens are appropriate. This is in line with the guidelines concerning severity of exposure. Three-drug regimens as one tablet also increase adherence as well as decreasing HIV seroconversion. Health professionals were highly exposed at the emergency department, 38 (12%), followed by the operating theater, 28 (9.06%). This is probably due to casualty handling at the emergency department and most of the patients were unscreened for HIV in both sites. Potential exposure sources of the virus were found to be blood, blood product splash and needle stick injury, 76 (24.6%), 61 (19.7%), respectively, in all circumstances mandating strict precaution and follow-up of infection prevention principles, which is similar to studies found elsewhere.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "286",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "persons",
+          "locations": [
+            {
+              "offset": 19303,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "287",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "patients",
+          "locations": [
+            {
+              "offset": 19824,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "288",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 19283,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "289",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 19591,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "290",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 19853,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "291",
+          "infons": {
+            "identifier": "MESH:C472745",
+            "type": "Chemical"
+          },
+          "text": "TDF+3TC",
+          "locations": [
+            {
+              "offset": 18747,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "292",
+          "infons": {
+            "identifier": "MESH:D014947",
+            "type": "Disease"
+          },
+          "text": "trauma",
+          "locations": [
+            {
+              "offset": 19004,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "293",
+          "infons": {
+            "identifier": "MESH:D016602",
+            "type": "Disease"
+          },
+          "text": "needle stick injury",
+          "locations": [
+            {
+              "offset": 19961,
+              "length": 19
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 20165,
+      "text": "The mean duration between the occupational injury and PEP initiation was 17.3 hr (range: 0.75-72 hr, SD 18.64); in 2 victims the duration was not reported. PEP was started within 24 hr by the majority (79.3%) of clients, and 91.6% started within 48 hr; 62 (20.1%) clients started PEP within 2 hr. There were no significant differences in time between exposure and PEP start between the exposed clients. While in Malawi the mean duration between the occupational injury and PEP initiation was 7.66 hr (range: 0.3-72 hr, SD 13.74), in 86 cases the duration was not reported. PEP was started within 2 hrs by the majority (55.7%) of clients, and 96.5% started within 48 hr. This significant difference may be because our study includes non-occupational victims; this means they may come from far areas. For this reason, the number of clients who took PEP within 2 hr was small. To be effective, prophylaxis has to commence as soon as possible (within 1-2 hr post-exposure). Considering PEP beyond 72 hr post-exposure has no impactful result. Prophylaxis has to be given for 28 days. In this regard our finding revealed that PEP was given within the standard range of hours.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "296",
+          "infons": {
+            "identifier": "MESH:D060051",
+            "type": "Disease"
+          },
+          "text": "occupational injury",
+          "locations": [
+            {
+              "offset": 20195,
+              "length": 19
+            }
+          ]
+        },
+        {
+          "id": "297",
+          "infons": {
+            "identifier": "MESH:D060051",
+            "type": "Disease"
+          },
+          "text": "occupational injury",
+          "locations": [
+            {
+              "offset": 20614,
+              "length": 19
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 21342,
+      "text": "The national guideline recommends the ART clinic must be open for 24 hr per day and 7 days per week, but this was not fully practical here in this case, where it is only open for 8 hr per day and 5 days per week. This may contribute to the poor outcome in evaluation of PEP utilization in terms of follow-up and adherence, which is contrary to WHO and national guidelines. Moreover, the national guideline recommends the ART clinic should have one trained physician/HO/nurse as the PEP focal person for the facility. The contact address of the facility PEP focal person and the facility ART nurse or any other second person assigned to coordinated PEP activity in the facility should be posted in all outpatient and inpatient departments within the health facility. This was in line with our study site facility.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "302",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "person",
+          "locations": [
+            {
+              "offset": 21834,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "303",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "person",
+          "locations": [
+            {
+              "offset": 21905,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "304",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "person",
+          "locations": [
+            {
+              "offset": 21959,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "305",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "outpatient",
+          "locations": [
+            {
+              "offset": 22043,
+              "length": 10
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 22155,
+      "text": "We found no documented data on follow-up completion, which includes adherence, side effect evaluation and HIV status. The national guideline recommends follow-up HIV testing must be done at 6, 12 and 24 weeks post-exposure. Therefore, this study found that the major challenge in PEP utilization was that it was unknown whether the victims adhere to their medication, whether there is seroconversion, and it is impossible to measure PEP outcome.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "308",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 22261,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "309",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 22317,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 22601,
+      "text": "Exposed clients should be reassessed within 3-5 days for medication tolerability and toxicity. If further details about the source become available, a risk assessment re-evaluation may also be appropriate. Clients taking PEP should be monitored for drug toxicity by testing at baseline and again 2 weeks after starting PEP. The scope of testing should be based on medical conditions in the exposed person and the toxicity of drugs included in the PEP regimen. Minimally, laboratory monitoring for toxicity should include a complete blood count and liver function tests. If toxicity is noted, modification of the regimen should be considered.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "316",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "person",
+          "locations": [
+            {
+              "offset": 22999,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "317",
+          "infons": {
+            "identifier": "MESH:D064420",
+            "type": "Disease"
+          },
+          "text": "toxicity",
+          "locations": [
+            {
+              "offset": 22686,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "318",
+          "infons": {
+            "identifier": "MESH:D064420",
+            "type": "Disease"
+          },
+          "text": "drug toxicity",
+          "locations": [
+            {
+              "offset": 22850,
+              "length": 13
+            }
+          ]
+        },
+        {
+          "id": "319",
+          "infons": {
+            "identifier": "MESH:D064420",
+            "type": "Disease"
+          },
+          "text": "toxicity",
+          "locations": [
+            {
+              "offset": 23014,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "320",
+          "infons": {
+            "identifier": "MESH:D064420",
+            "type": "Disease"
+          },
+          "text": "toxicity",
+          "locations": [
+            {
+              "offset": 23098,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "321",
+          "infons": {
+            "identifier": "MESH:D064420",
+            "type": "Disease"
+          },
+          "text": "toxicity",
+          "locations": [
+            {
+              "offset": 23174,
+              "length": 8
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 23245,
+      "text": "In other studies, follow-up showed 30% in France, whereas in Malawi, very few clients attended follow-up visits: 25.2% of the clients who started PEP attended the first follow-up visit, 12.6% the second, 6.3% the third and 1.9% the fourth. The most common side effects reported at the first follow-up visit were nausea (36.6%), headache (14.6%), fatigue (12.2%), vomiting (7.3%) and abdominal pains (7.3%). Side effects led to discontinuation of PEP in only two cases. Adherence to the PEP regimen was recorded during the second follow-up visit from 19 clients: 13 had completed the full course, 6 had missed at least one dose. A total of 12 HIV test results were recorded and all were negative. However, according to key informants, most occupationals checked themselves individually in their related wards. There was no information about non-occupational follow-up. This may be due lack of knowledge, it was in line with the research done in assessment of knowledge, attitude and practice towards PEP for HIV among HCWs in Gondar, north-west Ethiopia. It shows that 36.9% were found to have inadequate knowledge about PEP for HIV.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "330",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 23887,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "331",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 24252,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "332",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 24373,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "333",
+          "infons": {
+            "identifier": "MESH:D009325",
+            "type": "Disease"
+          },
+          "text": "nausea",
+          "locations": [
+            {
+              "offset": 23557,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "334",
+          "infons": {
+            "identifier": "MESH:D006261",
+            "type": "Disease"
+          },
+          "text": "headache",
+          "locations": [
+            {
+              "offset": 23573,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "335",
+          "infons": {
+            "identifier": "MESH:D005221",
+            "type": "Disease"
+          },
+          "text": "fatigue",
+          "locations": [
+            {
+              "offset": 23591,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "336",
+          "infons": {
+            "identifier": "MESH:D014839",
+            "type": "Disease"
+          },
+          "text": "vomiting",
+          "locations": [
+            {
+              "offset": 23608,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "id": "337",
+          "infons": {
+            "identifier": "MESH:D015746",
+            "type": "Disease"
+          },
+          "text": "abdominal pains",
+          "locations": [
+            {
+              "offset": 23628,
+              "length": 15
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 24378,
+      "text": "Having 39.2% source persons being HIV-positive, plus unknown adherence and no follow-up may lead the exposed person to seroconvert.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "341",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "persons",
+          "locations": [
+            {
+              "offset": 24398,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "342",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "person",
+          "locations": [
+            {
+              "offset": 24487,
+              "length": 6
+            }
+          ]
+        },
+        {
+          "id": "343",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 24412,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "DISCUSS",
+        "type": "paragraph",
+        "section": "Discussion"
+      },
+      "offset": 24510,
+      "text": "This study has a number of limitations because of the retrospective record quality and mono-centric.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "CONCL",
+        "type": "title_1",
+        "section": "Conclusion and Recommendation"
+      },
+      "offset": 24611,
+      "text": "Conclusion and Recommendation",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "CONCL",
+        "type": "paragraph",
+        "section": "Conclusion and Recommendation"
+      },
+      "offset": 24641,
+      "text": "The findings of this study revealed that emergency department and operating theaters were exposure sites where nurses and physicians were most exposed to blood, blood products splash and needle stick injuries as infectious sources. Three-drug regimens, TDF+3TC+EFV, were the most frequently prescribed, followed by two-drug regimens, AZT+3TC, and PEP was initiated within 72 hr, in fact most within 24 hr, which was found to be the best practice of the hospital. On the other hand, the adherence was unknown with poor follow-up despite the strong recommendations of the national and WHO guidelines, which resulted in an inability to determine the outcome of PEP utilization in this particular Comprehensive Specialized Hospital.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "348",
+          "infons": {
+            "identifier": "MESH:C472745",
+            "type": "Chemical"
+          },
+          "text": "TDF+3TC+EFV",
+          "locations": [
+            {
+              "offset": 24894,
+              "length": 11
+            }
+          ]
+        },
+        {
+          "id": "349",
+          "infons": {
+            "identifier": "MESH:D015215",
+            "type": "Chemical"
+          },
+          "text": "AZT+3TC",
+          "locations": [
+            {
+              "offset": 24975,
+              "length": 7
+            }
+          ]
+        },
+        {
+          "id": "350",
+          "infons": {
+            "identifier": "MESH:D016602",
+            "type": "Disease"
+          },
+          "text": "needle stick injuries",
+          "locations": [
+            {
+              "offset": 24828,
+              "length": 21
+            }
+          ]
+        },
+        {
+          "id": "351",
+          "infons": {
+            "identifier": "MESH:D012678",
+            "type": "Disease"
+          },
+          "text": "Specialized",
+          "locations": [
+            {
+              "offset": 25348,
+              "length": 11
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "CONCL",
+        "type": "title_2",
+        "section": "Conclusion and Recommendation"
+      },
+      "offset": 25370,
+      "text": "Recommendation",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "CONCL",
+        "type": "paragraph",
+        "section": "Conclusion and Recommendation"
+      },
+      "offset": 25385,
+      "text": "We recommend that PEP starter packs including antiretroviral drugs should be made available in designated sites inside the health facility which may be accessible to all exposed staff, 24 hr a day and 7 days a week, and care must be given in the way of documentation. We strongly recommend to the institution to follow-up and check adherence and to check the HIV status of any victim at 8 and 16 weeks by creating awareness to the PEP users. We also recommend following infection prevention principles and conducting a further prospective cohort study.",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "353",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 25744,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "title_1",
+        "section": "Availability of Data and Material"
+      },
+      "offset": 25938,
+      "text": "Availability of Data and Material",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "METHODS",
+        "type": "paragraph",
+        "section": "Availability of Data and Material"
+      },
+      "offset": 25972,
+      "text": "All data generated or analyzed during this study are available upon request to the corresponding author.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "AUTH_CONT",
+        "type": "title_1",
+        "section": "Author Contributions"
+      },
+      "offset": 26077,
+      "text": "Author Contributions",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "AUTH_CONT",
+        "type": "paragraph",
+        "section": "Author Contributions"
+      },
+      "offset": 26098,
+      "text": "All authors contributed to data analysis, drafting or revising the article, gave final approval of the version to be published, and agree to be accountable for all aspects of the work.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "COMP_INT",
+        "type": "title_1",
+        "section": "Disclosure"
+      },
+      "offset": 26283,
+      "text": "Disclosure",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "COMP_INT",
+        "type": "paragraph",
+        "section": "Disclosure"
+      },
+      "offset": 26294,
+      "text": "The authors report no conflicts of interest in this work.",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "type": "title",
+        "section": "References"
+      },
+      "offset": 26352,
+      "text": "References",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "2",
+        "section_type": "REF",
+        "fpage": "a006965",
+        "pub-id_doi": "10.1101/cshperspect.a006965",
+        "pub-id_pmid": "23043157",
+        "year": "2012",
+        "source": "Cold Spring Harb Perspect Med",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26363,
+      "text": "HIV transmission",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "355",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 26363,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "177",
+        "section_type": "REF",
+        "pub-id_doi": "10.1016/j.exer.2018.07.029",
+        "year": "2018",
+        "source": "Military Med",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26380,
+      "text": "Evaluation of HIV postexposure prophylaxis for occupational and nonoccupational exposures at a deployed U. S. Military Trauma Hospital",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "358",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 26394,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "359",
+          "infons": {
+            "identifier": "MESH:D003428",
+            "type": "Disease"
+          },
+          "text": "Trauma Hospital",
+          "locations": [
+            {
+              "offset": 26499,
+              "length": 15
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2013",
+        "comment": "Available from",
+        "source": "Global report: UNAIDS report on the global AIDS epidemic 2013",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26515,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "6",
+        "section_type": "REF",
+        "fpage": "147",
+        "year": "2014",
+        "source": "Dove Press HIV/AIDS-Res Palliative Care",
+        "type": "ref",
+        "lpage": "158",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26516,
+      "text": "Current perspectives in HIV post-exposure prophylaxis",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "361",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 26540,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2009",
+        "source": "Ministry of Health and Family Welfare: Government of India National AIDS Control Organization: Management of Occupational Exposure Including Postexposure Prophylaxis for HIV",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26570,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "18",
+        "section_type": "REF",
+        "fpage": "174",
+        "pub-id_pmid": "21245519",
+        "year": "2010",
+        "source": "Top HIV Med",
+        "type": "ref",
+        "lpage": "177",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26571,
+      "text": "Occupational postexposure prophylaxis for HIV: the PEP line perspective",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "363",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 26613,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "pub-id_doi": "10.1094/PDIS-11-11-0999-PDN",
+        "year": "2011",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26643,
+      "text": "Non-guideline PEP regimens for occupational percutaneous exposures to HIV+ source patients",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "365",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 26713,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "361",
+        "section_type": "REF",
+        "fpage": "1768",
+        "issue": "18",
+        "pub-id_doi": "10.1056/NEJMcp0904189",
+        "pub-id_pmid": "19864675",
+        "year": "2009",
+        "source": "N Engl J Med",
+        "type": "ref",
+        "lpage": "1775",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26734,
+      "text": "Clinical practice. Postexposure prophylaxis for HIV infection",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "367",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 26782,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "39",
+        "section_type": "REF",
+        "fpage": "91",
+        "issue": "2",
+        "pub-id_doi": "10.2181/036.039.0205",
+        "year": "2006",
+        "source": "J Arizona-Nevada Acad Sci",
+        "type": "ref",
+        "lpage": "98",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26796,
+      "text": "Sexual risk behavior among Kenyan university students",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2014",
+        "source": "Report on progress towards implementation of the UN declaration of commitment on HIV/AIDS",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26850,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "pub-id_doi": "10.1094/PDIS-11-11-0999-PDN",
+        "year": "2012",
+        "source": "Country progress report on HIV/AIDS response",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26851,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2007",
+        "source": "Guide for Implementation of the Antiretroviral Therapy Program in Ethiopia",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26852,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "28",
+        "section_type": "REF",
+        "fpage": "61",
+        "issue": "2",
+        "pub-id_doi": "10.4103/0253-7184,39006",
+        "year": "2007",
+        "source": "Indian J Sexually Transmitted Dis AIDS",
+        "type": "ref",
+        "lpage": "68",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26853,
+      "text": "Post-exposure prophylaxis for HIV",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2005",
+        "source": "Occupational and Non-occupational Post-Exposure Prophylaxis for HIV Infection (HIV-PEP), Joint ILO/WHO Technical Meeting for Development of Policy and Guidelines",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26887,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2004",
+        "comment": "Available from:",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26888,
+      "text": "Post-exposure prophylaxis (PEP) in South Africa: analysis of calls to the national AIDS help line",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "369",
+          "infons": {
+            "identifier": "MESH:D000163",
+            "type": "Disease"
+          },
+          "text": "AIDS",
+          "locations": [
+            {
+              "offset": 26971,
+              "length": 4
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2004",
+        "source": "Infection Prevention Guidelines for Healthcare Facilities in Ethiopia",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26986,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2005",
+        "source": "Guideline for Implementation of Antiretroviral Therapy in Ethiopia",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26987,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "15",
+        "section_type": "REF",
+        "fpage": "243",
+        "pub-id_doi": "10.2307/30145576",
+        "pub-id_pmid": "8207191",
+        "year": "1994",
+        "source": "Infect Control Hosp Epidemiol",
+        "type": "ref",
+        "lpage": "252",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 26988,
+      "text": "Use of infection control guidelines by workers in healthcare facilities to prevent occupational transmission of HBV and HIV: results from a national survey",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "371",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 27108,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "33",
+        "section_type": "REF",
+        "fpage": "34",
+        "issue": "1",
+        "pub-id_doi": "10.1016/j.ajic.2004.07.015",
+        "pub-id_pmid": "15685133",
+        "year": "2005",
+        "source": "Am J Infect Control",
+        "type": "ref",
+        "lpage": "41",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27144,
+      "text": "Occupational exposure to blood and risk of bloodborne virus infection among health care workers in rural North Indian health care settings",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "373",
+          "infons": {
+            "identifier": "MESH:D014412",
+            "type": "Disease"
+          },
+          "text": "bloodborne virus infection",
+          "locations": [
+            {
+              "offset": 27187,
+              "length": 26
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "96",
+        "section_type": "REF",
+        "fpage": "517",
+        "pub-id_doi": "10.1179/000349802125001186",
+        "pub-id_pmid": "12194713",
+        "year": "2002",
+        "source": "Ann Trop Med Parasitol",
+        "type": "ref",
+        "lpage": "522",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27283,
+      "text": "Needle-stick injuries in a Ugandan teaching hospital",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2003",
+        "comment": "WHOIBCT/03.1O",
+        "source": "WHO. Pilot-Testing the WHO Tools to Assess and Evaluate Injection Practices: A Summary of 10 Assessments Coordinated by WHO in Seven Countries (2000-2001)",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27336,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "337",
+        "section_type": "REF",
+        "fpage": "1485",
+        "pub-id_doi": "10.1056/NEJM199711203372101",
+        "pub-id_pmid": "9366579",
+        "year": "1997",
+        "source": "N Engl J Med",
+        "type": "ref",
+        "lpage": "1490",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27337,
+      "text": "A case-control study of HIV seroconversion in health care workers after percutaneous exposure",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "375",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 27361,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "153",
+        "section_type": "REF",
+        "fpage": "1451",
+        "pub-id_doi": "10.1001/archinte.1993.00410120035005",
+        "pub-id_pmid": "8512436",
+        "year": "1993",
+        "source": "Arch Intern Med",
+        "type": "ref",
+        "lpage": "1458",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27433,
+      "text": "The risk of occupational human immunodeficiency virus infection in health care workers",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "377",
+          "infons": {
+            "identifier": "MESH:D015658",
+            "type": "Disease"
+          },
+          "text": "occupational human immunodeficiency virus infection",
+          "locations": [
+            {
+              "offset": 27445,
+              "length": 51
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2005",
+        "source": "Antiretroviral Postexposure Prophylaxis After Sexual, Injection Drug Use, or Other Nonoccupational Exposure to HIV in the United States: Recommendations from the U.S. Department of Health and Human Services",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27520,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "8",
+        "section_type": "REF",
+        "fpage": "553",
+        "pub-id_doi": "10.1016/S1473-3099(08)70156-7",
+        "pub-id_pmid": "18684670",
+        "year": "2008",
+        "source": "Lancet Infect Dis",
+        "type": "ref",
+        "lpage": "563",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27521,
+      "text": "Rethinking the heterosexual infectivity of HIV-1: a systematic review and meta-analysis",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "379",
+          "infons": {
+            "identifier": "11676",
+            "type": "Species"
+          },
+          "text": "HIV-1",
+          "locations": [
+            {
+              "offset": 27564,
+              "length": 5
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "9",
+        "section_type": "REF",
+        "fpage": "118",
+        "pub-id_doi": "10.1016/S1473-3099(09)70021-0",
+        "pub-id_pmid": "19179227",
+        "year": "2009",
+        "source": "Lancet Infect Dis",
+        "type": "ref",
+        "lpage": "129",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27609,
+      "text": "Heterosexual risk of HIV-1 infection per sexual act: systematic review and metaanalysis of observational studies",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "381",
+          "infons": {
+            "identifier": "11676",
+            "type": "Species"
+          },
+          "text": "HIV-1",
+          "locations": [
+            {
+              "offset": 27630,
+              "length": 5
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "80",
+        "section_type": "REF",
+        "fpage": "1509",
+        "pub-id_doi": "10.2105/AJPH.80.12.1509",
+        "pub-id_pmid": "2240343",
+        "year": "1990",
+        "source": "Am J Public Health",
+        "type": "ref",
+        "lpage": "1511",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27722,
+      "text": "HIV seroconversion in two homosexual men after receptive oral intercourse with ejaculation: implications for counseling concerning safe sexual practices",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "384",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "men",
+          "locations": [
+            {
+              "offset": 27759,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "385",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 27722,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "1",
+        "section_type": "REF",
+        "fpage": "1395",
+        "pub-id_doi": "10.1016/S0140-6736(88)92205-2",
+        "year": "1988",
+        "source": "Lancet",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27875,
+      "text": "HIV transmission by oral sex",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "387",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 27875,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "10",
+        "section_type": "REF",
+        "fpage": "175",
+        "pub-id_doi": "10.1097/00042560-199510020-00010",
+        "year": "1995",
+        "source": "J Acquir Immune Syndr Hum Retrovirol",
+        "type": "ref",
+        "lpage": "176",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 27904,
+      "text": "HIV incidence among New Haven needle exchange participants: updated estimates from syringe tracking and testing data",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "390",
+          "infons": {
+            "identifier": "9606",
+            "type": "Species"
+          },
+          "text": "participants",
+          "locations": [
+            {
+              "offset": 27950,
+              "length": 12
+            }
+          ]
+        },
+        {
+          "id": "391",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 27904,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "11",
+        "section_type": "REF",
+        "fpage": "2",
+        "year": "2015",
+        "source": "Int J Infect Control",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 28021,
+      "text": "Post exposure prophylaxis uptake against exposure to HIV/AIDS risk factors in healthcare settings was very low",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "394",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 28074,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "395",
+          "infons": {
+            "identifier": "MESH:D000163",
+            "type": "Disease"
+          },
+          "text": "AIDS",
+          "locations": [
+            {
+              "offset": 28078,
+              "length": 4
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "13",
+        "section_type": "REF",
+        "fpage": "508",
+        "pub-id_doi": "10.1186/1471-2458-13-508",
+        "pub-id_pmid": "23705668",
+        "year": "2013",
+        "source": "BMC Public Health",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 28132,
+      "text": "Assessment of knowledge, attitude and practice towards post exposure prophylaxis for HIV among health care workers in Gondar, North West Ethiopia",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "398",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 28217,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "399",
+          "infons": {
+            "identifier": "MESH:D013036",
+            "type": "Disease"
+          },
+          "text": "West Ethiopia",
+          "locations": [
+            {
+              "offset": 28264,
+              "length": 13
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "section_type": "REF",
+        "year": "2014",
+        "source": "National guidelines for comprehensive HIV prevention, care and treatment",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 28278,
+      "text": "",
+      "sentences": [
+      ],
+      "annotations": [
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "2014",
+        "section_type": "REF",
+        "pub-id_doi": "10.1155/2014/731848",
+        "source": "AIDS Res Treat",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 28279,
+      "text": "Assessment of prevalence and determinants of occupational exposure to HIV infection among healthcare workers in selected health institutions in Debre Berhan Town, North Shoa Zone, Amhara Region, Ethiopia, 2014",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "401",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 28349,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "22",
+        "section_type": "REF",
+        "fpage": "15",
+        "pub-id_doi": "10.4314/mmj.v22i1.55903",
+        "pub-id_pmid": "21618843",
+        "year": "2010",
+        "source": "Malawi Med J",
+        "type": "ref",
+        "lpage": "19",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 28489,
+      "text": "Post exposure prophylaxis of HIV transmission after occupational injuries in Queen Elizabeth Central Hospital, Blantyre, Malawi, 2003 - 2008",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "404",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 28518,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "405",
+          "infons": {
+            "identifier": "MESH:D060051",
+            "type": "Disease"
+          },
+          "text": "occupational injuries",
+          "locations": [
+            {
+              "offset": 28541,
+              "length": 21
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "60",
+        "section_type": "REF",
+        "fpage": "S161",
+        "issue": "Suppl 3",
+        "pub-id_doi": "10.1093/cid/civ068",
+        "year": "2015",
+        "source": "WHO guidelines HIV PEP CID",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 28632,
+      "text": "World health organization guidelines on post exposure prophylaxis for HIV: recommendations for a public health approach",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "407",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 28702,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    },
+    {
+      "infons": {
+        "volume": "10",
+        "section_type": "REF",
+        "fpage": "e0145440",
+        "issue": "12",
+        "pub-id_doi": "10.1371/journal.pone.0145440",
+        "pub-id_pmid": "26696009",
+        "year": "2015",
+        "source": "PLoS One",
+        "type": "ref",
+        "section": "References",
+        "authors": [
+        ]
+      },
+      "offset": 28752,
+      "text": "Predictors of standard follow-up completion after sexual exposure to HIV: five-year retrospective analysis in a French HIV-infection care center",
+      "sentences": [
+      ],
+      "annotations": [
+        {
+          "id": "410",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 28821,
+              "length": 3
+            }
+          ]
+        },
+        {
+          "id": "411",
+          "infons": {
+            "identifier": "12721",
+            "type": "Species"
+          },
+          "text": "HIV",
+          "locations": [
+            {
+              "offset": 28871,
+              "length": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+      ]
+    }
+  ],
+  "relations": [
+  ],
+  "pmid": 32021487,
+  "pmcid": "PMC6982440",
+  "created": "2021-06-08T13:56:54.245000",
+  "accessions": [
+    "disease@MESH:D000163",
+    "chemical@MESH:C472745",
+    "disease@MESH:D003428",
+    "disease@MESH:D014456",
+    "disease@MESH:D064420",
+    "species@32644",
+    "species@3708",
+    "disease@MESH:D015658",
+    "chemical@MESH:D015215",
+    "disease@MESH:D006261",
+    "disease@MESH:D016116",
+    "species@12721",
+    "disease@MESH:D014947",
+    "chemical@MESH:D019259",
+    "disease@MESH:D016602",
+    "disease@MESH:C538089",
+    "disease@MESH:D012871",
+    "disease@MESH:D015746",
+    "disease@MESH:D001005",
+    "disease@MESH:D012678",
+    "disease@MESH:D013036",
+    "disease@MESH:D007153",
+    "species@11676",
+    "chemical@MESH:C093780",
+    "disease@MESH:D010009",
+    "disease@MESH:D009325",
+    "species@9606",
+    "chemical@MESH:C096918",
+    "disease@MESH:D005221",
+    "disease@MESH:D014839",
+    "disease@MESH:D003643",
+    "chemical@MESH:C098320",
+    "disease@MESH:D060051",
+    "disease@MESH:D014412"
+  ],
+  "journal": "HIV AIDS (Auckl)",
+  "year": 2020,
+  "authors": [
+    "Temesgen E",
+    "Weldu H",
+    "Ayalew Getahun K",
+    "Jemere Aragaw T"
+  ]
+}

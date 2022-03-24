@@ -1,0 +1,148 @@
+<style>
+xm-select > .xm-label .xm-label-block > span {
+	margin-left: 10px !important;
+}
+</style>
+<form id="addOrUpdateForm" lay-filter="addOrUpdateForm" class="layui-form model-form popupForm">
+	<div class="layui-col-md12">
+		<input name="strPmids" id="idStrPmids" type="hidden"/>
+		<input name="pmid" id="idPmid" type="hidden"/>
+		
+		<!--
+		<input name="pmcid" type="hidden"/>
+		<input name="doi" id="idPmid" type="hidden"/>
+		<input name="title" type="hidden"/>
+		<input name="authors" type="hidden"/>
+		<input name="journal" type="hidden"/>
+		<input name="year" type="hidden"/>
+		<input name="if2020" type="hidden"/>
+		<input name="citation" type="hidden"/>
+		<input name="abstract" type="hidden"/>
+		-->
+		
+		<div class="layui-form-item">
+			<label class="layui-form-label layui-form-required">Collections</label>
+			<div class="layui-input-block">
+				<div id="idDivCollections" name="collections" class="xm-select-style"></div>
+				<p>* One or more collections can be selected here!</p>
+			</div>
+		</div>
+	</div>
+	<div class="layui-col-md12" style="margin-bottom: 20px;">
+		<div class="layui-form-item text-right">
+			<button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">Cancel</button>
+			<button class="layui-btn" lay-filter="formSubmitBtn" lay-submit>Add</button>
+		</div>
+	</div>
+</form>
+
+<script>
+	var currentUser;
+	layui.use(['layer', 'form', 'admin', 'table', 'tableX', 'xnUtil', 'xmSelect', 'laydate'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var table = layui.table;
+		var tableX = layui.tableX;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+		var xmSelect = layui.xmSelect;
+		var laydate = layui.laydate;
+		
+		// 获取当前登录用户！
+		currentUser = getCurrentLoginUser();
+		if(currentUser == null) {
+			$("#addOrUpdateForm").html("");
+			$("#addOrUpdateForm").remove();
+		}
+
+		// 获取数据！
+		var editData = admin.getLayerData('#addOrUpdateForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('addOrUpdateForm', editData);
+		}
+		
+		// 根据PMID不同，获取列表不同！
+		var thisListUrl = '/libraries/listByPmidAndGroupName';
+		var thisListData = {date: new Date(), pmid: editData.pmid};
+		var strPmids = editData.pmid;
+		if(editData.strPmids != null && editData.pmid == null){
+			if(editData.strPmids.indexOf(",") != -1){ // 多选方式，且选中了多条，获取全部collection列表！
+				thisListUrl = '/libraries/list';
+				thisListData = {date: new Date()};
+				strPmids = editData.strPmids;
+			}else{ // 多选方式，但是只选中了一条，也按照单个添加的方式获取collection列表！
+				thisListUrl = '/libraries/listByPmidAndGroupName';
+				thisListData = {date: new Date(), pmid: editData.strPmids};
+				strPmids = editData.strPmids;
+			}
+		}
+		
+		// 获取Collections列表！
+		var xmSelectRenderObj = funcGenerateXmSelectRenderObj('idDivCollections', "collections", 'required', 100);
+		var xs = xmSelect.render(xmSelectRenderObj);
+		var xmData = [];
+		//var indexLoad = layer.load(3, {shade: [0.3, '#393D49']});
+		$.ajax({
+			type: "get",
+			url: thisListUrl,
+			async: false,
+			data: thisListData,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function (result) {
+				//layer.close(indexLoad);
+				if(result == null || result.data == null || result.data.length == 0){
+					// do nothing!
+				}else{
+					for(var i = 0; i < result.data.length; i++){
+						// 2021-12-29（V0022-01.01.06-08）：demoAdmin用户组的特定文库不允许被添加文献！
+						if(result.data[i].id === "1476081732896686082" || result.data[i].id === "1476081732896686082"){ // 待根据最终的文库进行修改！！！
+							// 不加入到列表！
+						}else{
+							xmData.push({name: result.data[i].libraryName, value: result.data[i].id});
+						}
+					}
+				}
+				// 更新列表！
+				xs.update({
+					data: xmData
+				});
+			}
+		});
+		
+		// 提交事件！
+		form.on('submit(formSubmitBtn)', function (data) {
+			var objArr = [];
+			var valArr = xs.getValue('value');
+			for(var i = 0; i < valArr.length; i++){
+				objArr.push({
+					libraryId: valArr[i], 
+					strPmids: strPmids
+					
+					// 2021-12-09（V0013-01.00.10-09）：注释掉下列参数！
+					//pmcid: editData.pmcid,
+					//doi: editData.doi,
+					//pubTitle: editData.title,
+					////pubAuthors: editData.authors,
+					//pubAuthors: editData.authors.join("; "), // 2021-12-03（V0011-01.00.08-10）：authors是一个数组，需要转化为字符串！
+					//pubJournal: editData.journal,
+					//pubYear: editData.year,
+					//pubIf2020: editData.if2020,
+					//pubCitation: editData.citation,
+					//pubAbstract: editData.abstract
+				});
+			}
+			var indexLoadAddBatch = layer.load(3, {shade: [0.3, '#393D49']});
+			admin.req('librariesPublications/addBatch', JSON.stringify(objArr), function(res){
+				layer.close(indexLoadAddBatch);
+				layer.msg(res.message, {icon: 1, time: 1000}, function () {
+					admin.putLayerData('formOk', true, '#addOrUpdateForm');
+					admin.closeDialog('#addOrUpdateForm');
+				});
+			}, 'post');
+			return false;
+		});
+
+	});
+</script>

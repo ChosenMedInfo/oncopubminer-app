@@ -1,0 +1,82 @@
+<form id="dataViewerForm" lay-filter="dataViewerForm" class="layui-form model-form popupForm">
+	<input name="projectId" type="hidden" value="0"/>
+	<input name="formId" type="hidden"/>
+	<input name="pmid" type="hidden"/>
+</form>
+
+<div class="layui-form" style="margin: -10px 20px 20px 20px;">
+	<div id="idDivLoadingData" style="width: 100%; text-align: center;">
+		<img src="/assets/images/loading2.gif" width="300">
+	</div>
+	<a href="javascript:;" id="idLinkDownload" style="display: none;"><i class='bx bx-cloud-download'></i> Download All</a>
+	<table class="layui-table" id="idTable">
+	
+	
+	</table>
+</div>
+
+<script>
+	layui.use(['layer', 'form', 'admin', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+
+		// 参数回显！
+		var editData = admin.getLayerData('#dataViewerForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('dataViewerForm', editData);
+		}
+		
+		// 下载！
+		$("#idLinkDownload").click(function(){
+			if(editData.pmid){
+				window.open("/formsItemsData/exportData?projectId=" + editData.projectId + "&formId=" + editData.formId + "&pmid=" + editData.pmid);
+			}else{
+				window.open("/formsItemsData/exportData?projectId=" + editData.projectId + "&formId=" + editData.formId);
+			}
+		});
+		
+		// 根据参数获取数据，然后生成表格！
+		$.ajax({
+			type: "get",
+			url: "/formsItemsData/listData",
+			async: true,
+			contentType: "application/json; charset=utf-8",
+			data: editData,
+			dataType: "json",
+			success: function (result) {
+				$("#idDivLoadingData").hide(); // 隐藏loading图片！
+				$("#idLinkDownload").show(); // 显示下载链接！
+				let strHtmlThead = '<th style="text-align: center; width: 50px;">NO.</th>'; // 序号列！
+				let strHtmlTbody = "";
+				let intLineNum = 0; // 序号计算！
+				for(let i = 0; i < result.data.length; i++){
+					if(result.data[i].substr(0,1) == "#") continue;
+					let strArr = result.data[i].split("\t");
+					if(strArr[0].substr(0,6) == "Submit"){
+						for(let j = 1; j < strArr.length; j++){ // 从第二列开始：Submit ID不需要显示！
+							strHtmlThead += '<th>' + strArr[j] + '</th>';
+						}
+					}else{
+						intLineNum++;
+						let strHtmlBodyTr = '<td style="text-align: center;">' + intLineNum + '</td>'; // 序号列！
+						for(let j = 1; j < strArr.length; j++){ // 从第二列开始：Submit ID不需要显示！
+							strHtmlBodyTr += '<td>' + strArr[j] + '</td>';
+						}
+						strHtmlBodyTr = '<tr>' + strHtmlBodyTr + '</tr>';
+						strHtmlTbody += strHtmlBodyTr;
+					}
+				}
+				strHtmlThead = '<thead><tr>' + strHtmlThead + '</tr></thead>';
+				strHtmlTbody = '<tbody>' + strHtmlTbody + '</tbody>';
+				$("#idTable").html(strHtmlThead);
+				$("#idTable").append(strHtmlTbody);
+			}
+		});
+		
+	});
+</script>
+</body>
+</html>

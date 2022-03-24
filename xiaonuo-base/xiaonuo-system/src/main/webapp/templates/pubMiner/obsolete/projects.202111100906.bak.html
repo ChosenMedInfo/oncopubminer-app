@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Projects</title>
+	<link rel="stylesheet" th:href="@{/assets/libs/layui/css/layui.css}"/>
+	<link rel="stylesheet" th:href="@{/assets/module/admin.css}"/>
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>                                                          
+		/* Global */
+		.lrProject{
+			width: 1200px;
+			margin: 20px auto 70px;
+			text-align: left;
+			font-size: 14px;
+			line-height: 30px;
+		}
+		
+		/* Project */
+		.lrProject .layui-fluid {
+			padding: 0px 0px 15px;
+		}
+		.lrProject .layui-card-body {
+			padding: 0px;
+		}
+		.layui-form-label{
+			width: 120px;
+			font-size: 14px;
+		}
+		.layui-input-block {
+			margin-left: 150px;
+			font-size: 12px;
+		}
+		.layui-border-green,
+		.layui-border-blue,
+		.layui-border-orange,
+		.layui-border-red,
+		.layui-border-black {
+			cursor: default;
+		}
+		
+	</style>
+</head>
+<body>
+
+<!-- 正文开始 -->
+<div class="lrProject">
+	
+	<!-- Title -->
+	<div class="page-title">OncoPubMiner - Projects</div>
+	<hr>
+	
+	<div class="layui-fluid">
+		<div class="layui-card">
+			<div class="layui-card-body">
+				<!-- 表格工具栏 -->
+				<form class="layui-form toolbar">
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="projectName" class="layui-input" placeholder="Project Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="projectDesc" class="layui-input" placeholder="Project Desc"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="formName" class="layui-input" placeholder="Form Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="libraryName" class="layui-input" placeholder="Collection Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								<input name="members" class="layui-input" placeholder="Member Name"/>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<button class="layui-btn icon-btn" lay-filter="tableSearch" lay-submit>
+								<i class="layui-icon">&#xe615;</i>Search
+							</button>
+						</div>
+					</div>
+				</form>
+				<!-- 数据表格 -->
+				<table id="dataTable" lay-filter="dataTable"></table>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!-- Footer -->
+<div class="lr-footer">
+	Copyright © 2021 Oncology Precision Text-Mining Team. Contact Us: quanxu@chosenmedtech.com.
+</div>
+
+<!-- js部分 -->
+<script th:src="@{/assets/libs/layui/layui.js}"></script>
+<script th:src="@{/assets/module/xmSelect.js}"></script>
+<script th:src="@{/assets/js/common.js}"></script>
+<script>
+	var currentUser;
+	layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var table = layui.table;
+		var tableX = layui.tableX;
+		var admin = layui.admin;
+		var form = layui.form;
+		var notice = layui.notice;
+		var xnUtil = layui.xnUtil;
+		
+		// 获取当前登录用户！
+		var arrToolBars = ['<p>',
+			'<button lay-event="add" class="layui-btn layui-btn-sm icon-btn"><i class="layui-icon">&#xe654;</i>Add</button>&nbsp;',
+			'<button lay-event="delete" class="layui-btn layui-btn-sm layui-btn-danger icon-btn"><i class="layui-icon">&#xe640;</i>Delete</button>',
+			'</p>'];
+		currentUser = getCurrentLoginUser();
+		if(currentUser == null || currentUser.accountType != "1"){
+			arrToolBars = [];
+		}
+		
+		/* 渲染表格 */
+		var insTb = tableX.render({
+			elem: '#dataTable',
+			url: '/projects/page',
+			page: true,
+			toolbar: arrToolBars.join(''),
+			defaultToolbar: ['filter'],
+			cellMinWidth: 100,
+			cols: [
+				[
+					{type: 'checkbox'},
+					{field: 'groupName', title: 'Type', sort: true, align: 'center', width: 88, minWidth: 88, templet: function (d) {
+						var strContent = '<img src="/assets/images/private.png" class="groupType">';
+						if(d.groupName == 'commonGroup') strContent = '<img src="/assets/images/public.png" class="groupType">';
+						return strContent;
+					}},
+					{field: 'projectName', title: 'Project Name', sort: true, width: 180},
+					{field: 'projectDesc', title: 'Project Desc', sort: false},
+					{field: 'formName', title: 'Form Name', sort: true, width: 160},
+					{field: 'libraryName', title: 'Collection Name', sort: true, width: 160},
+					{field: 'members', title: 'Members', align: 'center', sort: false, width: 160, templet: function (d) {
+						var strMembers = "";
+						if(d.groupName == "commonGroup"){
+							strMembers = "-";
+						}else{
+							var strArrMembers = d.members.split(" | ");
+							for(var i = 0; i < strArrMembers.length; i++){
+								var strThisMember = '<span class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue"><i class="layui-icon">&#xe612;</i>' + strArrMembers[i] + '</span>';
+								strMembers = strMembers == "" ? strThisMember : strMembers + " " + strThisMember;
+							}
+						}
+						return strMembers;
+					}},
+					{field: 'createTime', title: 'Create Time', sort: true, hide: true, align: 'center', width: 170, templet: function (d) {
+						var strContent = d.createTime + " (UTC+8)";
+						return strContent;
+					}},
+					{field: 'status', title: 'Operate', align: 'center', width: 150, minWidth: 150}
+				]
+			],
+			done: function(res, curr, count) {
+				xnUtil.tableDone(insTb, res, curr, count);
+				// 权限判定：未登录或者非组管理员，不显示工具行！
+				if(currentUser == null || currentUser.accountType != "1"){
+					$(".layui-table-tool").each(function(){
+						$(this.remove());
+					});
+				}
+				// 行数据处理！
+				res.data.forEach(function (item, index) {
+					var thisId = "idDatasetIndex" + index;
+					if(item.status == 2){
+						$('div[lay-id="dataTable"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="pubList"><i class="layui-icon">&#xe60a;</i>Publications</a>');
+						$('div[lay-id="dataTable"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').append(' <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="dataset" id="' + thisId + '"><i class="layui-icon">&#xe67d;</i>Data Set</a>');
+					}else{
+						if(currentUser.accountType != "1"){
+							$('div[lay-id="dataTable"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('-');
+						}else{
+							$('div[lay-id="dataTable"]').find('tr[data-index="' + index + '"] td[data-field="status"] div').html('<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit"><i class="layui-icon">&#xe642;</i></a> <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon">&#xe640;</i></a>');
+						}
+					}
+					// 获取Dataset数量！
+					$.ajax({
+						type: "get",
+						url: "/formsItemsData/getBatchCount",
+						async: true,
+						contentType: "application/json; charset=utf-8",
+						data: {projectId: item.id, date: new Date()},
+						dataType: "json",
+						success: function (res) {
+							if(res == 0){ // 没有数据的情况下，不允许下载了！
+								$("#" + thisId).replaceWith('<span class="layui-btn layui-btn-primary layui-btn-xs" lay-event="nodata" id="' + thisId + '"><i class="layui-icon">&#xe67d;</i>Data Set (0)</span>');
+							}else{ // 有数据的情况下，显示数字并允许下载！
+								$("#" + thisId).append(" (" + res + ")");
+							}
+						}
+					});
+				});
+			}
+		});
+	
+		/* 表格搜索 */
+		form.on('submit(tableSearch)', function (data) {
+			insTb.reload({where: data.field, page: {curr: 1}});
+			return false;
+		});
+		
+		/* 表格排序事件 */
+		table.on('sort(dataTable)', function(obj){
+			table.reload('dataTable', {
+				initSort: obj, // 记录初始排序，如果不设的话，将无法标记表头的排序状态！
+				where: { // 请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）！
+					sortBy: obj.field, // 排序字段！
+					orderBy: obj.type // 排序方式！
+				}
+			});
+		});
+	
+		/* 表格工具条点击事件 */
+		table.on('tool(dataTable)', function (obj) {
+			/* 删除 */
+			if (obj.event === 'delete') {
+				layer.confirm('Are you sure you want to operate on this data?', {
+					skin: 'layui-layer-admin',
+					shade: .1,
+					btn: ['Yes', 'Cancel'],
+					title: 'Confirm'
+				}, function () {
+					admin.req('projects/delete', JSON.stringify([{'id': obj.data.id}]), function(res){
+						layer.msg(res.message, {icon: 1, time: 1000}, function () {
+							insTb.reload();
+						});
+					}, 'post');
+				});
+			}
+			/* 编辑 */
+			if (obj.event === 'edit') {
+				showAddOrUpdateModel(obj.data);
+			}
+			/* 文献列表 */
+			if (obj.event === 'pubList') {
+				var layIndex = admin.open({
+					title: '<i class="layui-icon">&#xe656;</i> Publication List',
+					url: 'lrProjectPubs',
+					area: '98%',
+					data: { data: obj.data },	 // 传递数据到表单页面
+					end: function () {
+						insTb.reload(); // 只要关闭弹窗就刷新表格！
+					},
+					success: function (layero, dIndex) {
+						// 弹窗超出范围不出现滚动条
+						$(layero).children('.layui-layer-content').css('overflow', 'visible');
+						$(layero).find('[lay-submit]').focus();
+					}
+				});
+			}
+			/* 数据集 */
+			if (obj.event === 'dataset') {
+				//location.href = "/formsItemsData/exportData?projectId=" + obj.data.id + "&formId=" + obj.data.formId;
+				window.open("/formsItemsData/exportData?projectId=" + obj.data.id + "&formId=" + obj.data.formId);
+			}
+			if (obj.event === 'nodata') {
+				layer.msg("No data available!");
+			}
+		});
+	
+		/* 表格头工具栏点击事件 */
+		table.on('toolbar(dataTable)', function (obj) {
+			if (obj.event === 'add') { // 添加
+				showAddOrUpdateModel();
+			}
+			if (obj.event === 'delete') { // 删除
+				var checkRows = table.checkStatus('dataTable');
+				if (checkRows.data.length === 0) {
+					notice.msg('Please select the data to operate', {icon: 2});
+					return;
+				}
+				layer.confirm('Are you sure you want to operate on this data?', {
+					skin: 'layui-layer-admin',
+					shade: .1,
+					btn: ['Yes', 'Cancel'],
+					title: 'Confirm'
+				}, function () {
+					var ids = checkRows.data.map(function (d) {
+						return {"id": d.id};
+					});
+					admin.req('projects/delete', JSON.stringify(ids), function(res){
+						layer.msg(res.message, {icon: 1, time: 1000}, function () {
+							insTb.reload();
+						});
+					}, 'post');
+				});
+			}
+		});
+	
+		// 显示表单弹窗
+		function showAddOrUpdateModel(data) {
+			var layIndex = admin.open({
+				title: (data ? '<i class="layui-icon">&#xe642;</i> Edit' : '<i class="layui-icon">&#xe654;</i> Add') + ' Project',
+				url: 'lrProjectForm',
+				area: '800px',
+				offset: '20px', // 定义top坐标！
+				data: { data: data }, // 传递数据到表单页面
+				end: function () {
+					insTb.reload(); // 只要关闭弹窗就刷新表格！
+				},
+				success: function (layero, dIndex) {
+					// 弹窗超出范围不出现滚动条
+					$(layero).children('.layui-layer-content').css('overflow', 'visible');
+					$(layero).find('[lay-submit]').focus();
+				}
+			});
+		}
+	});
+</script>
+</body>
+</html>

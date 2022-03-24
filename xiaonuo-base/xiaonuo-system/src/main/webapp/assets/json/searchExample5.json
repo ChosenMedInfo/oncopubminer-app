@@ -1,0 +1,45 @@
+{
+	"code": 200,
+	"msg": "Request success",
+	"success": true,
+	"page": 1,
+	"next": 2,
+	"count": 1990,
+	"limit": 100,
+	
+	"type": 1,
+	
+	"data":[
+		{
+			"label": "cancer",
+			"identifier": "MESH:C535553",
+			"symbol": "Abdominal cystic lymphangioma",
+			"synonyms": "|Abdominal retroperitoneal lymphangioma|Abdominal-retroperitoneal-lymphangioma|Retroperitoneal cystic lymphangioma|Retroperitoneal-cystic-lymphangioma|"
+		},{
+			"label": "cancer",
+			"identifier": "MESH:D018250",
+			"symbol": "Acrospiroma",
+			"synonyms": "|Eccrine-Spiradenomas|Hidradenoma, Solid Cystic|Solid-Cystic-Hidradenomas|Clear Cell Hidradrenomas|Hidradrenoma, Clear Cell|Nodular-Hidradrenomas|Solid Cystic Hidradenoma|Hidradrenoma, Nodular|Hidradenoma, Cystic|Clear-Cell-Hidradrenomas|Hidradenoma, Solid-Cystic|Hidradrenomas, Nodular|Eccrine-Acrospiromas|Eccrine Acrospiroma|Solid-Cystic-Hidradenoma|Clear Cell Hidradrenoma|Nodular Hidradrenoma|Eccrine Spiradenoma|Spiradenomas|Acrospiromas|Cystic-Hidradenomas|Solid-Cystic Hidradenomas|Cystic-Hidradenoma|Eccrine-Acrospiroma|Nodular Hidradrenomas|Eccrine-Spiradenoma|Spiradenoma, Eccrine|Hidradenoma|Solid Cystic Hidradenomas|Acrospiroma, Eccrine|Eccrine Acrospiromas|Clear-Cell Hidradrenoma|Spiradenoma|Cystic Hidradenomas|Solid-Cystic Hidradenoma|Spiradenomas, Eccrine|Clear-Cell Hidradrenomas|Nodular-Hidradrenoma|Eccrine Spiradenomas|Hidradrenoma, Clear-Cell|Clear-Cell-Hidradrenoma|Cystic Hidradenoma|Hidradenomas|"
+		},{
+			"label": "chemical",
+			"identifier": "MESH:C084912",
+			"symbol": "Zymocel",
+			"synonyms": "|poly-(1-6)-beta-D-glucopyranosyl-(1-3)-beta-D-glucopyranose polymer|"
+		},{
+			"label": "gene",
+			"identifier": "1038",
+			"symbol": "CDR1",
+			"synonyms": "|CDR|CDR34|CDR62A|"
+		},{
+			"label": "gene",
+			"identifier": "1039",
+			"symbol": "CDR2",
+			"synonyms": "|CDR62|Yo|"
+		},{
+			"label": "gene",
+			"identifier": "1039",
+			"symbol": "CDR2",
+			"synonyms": "|CDR62|Yo|"
+		}
+	]
+}

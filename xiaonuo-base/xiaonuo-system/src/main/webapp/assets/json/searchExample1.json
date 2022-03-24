@@ -1,0 +1,194 @@
+{
+	"code": 200,
+	"msg": "Request success",
+	"success": true,
+	"page": 1,
+	"next": 2,
+	"count": 1990,
+	"limit": 10,
+	"data":[
+		{
+			"pmid": "29462255",
+			"pmcid": "",
+			"doi": "10.1093/annonc/mdx704",
+			"title": "Osimertinib and other third-generation EGFR TKI in EGFR-mutant NSCLC patients",
+			"authors": "Remon J, Steuer CE, Ramalingam SS, Felip E.",
+			"journal": "Ann Oncol",
+			"year": "2018",
+			"if2020": "5.321",
+			"citation": "Ann Oncol. 2018 Jan 1;29(suppl_1):i20-i27. doi: 10.1093/annonc/mdx704.",
+			"abstract": "Osimertinib was the first third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) to receive FDA and EMA approval for metastatic EGFR-mutant non-small-cell lung cancer (NSCLC) patients that have acquired the EGFR T790M resistance mutation. Clinical trials have demonstrated the efficacy of osimertinib in this patient population and clinical trials of other third-generation EGFR TKI are currently under way. Additional challenges in this patient population, such as the upfront efficacy of osimertinib, validation of T790M in liquid biopsies as a dynamic predictive marker of efficacy, along with combination with immune checkpoint inhibitors are being explored, representing an extraordinary time of development for EGFR-mutant NSCLC.",
+			"citedby": [
+				{
+					"pmid": "20887192",
+					"pmcid": "",
+					"doi": "10.1146/annurev-pathol-011110-130206",
+					"title": "EGFR mutations and lung cancer",
+					"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+					"journal": "Annu Rev Pathol",
+					"year": "2011",
+					"if2020": "7.687",
+					"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+					"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+				},{
+					"pmid": "20887192",
+					"pmcid": "",
+					"doi": "10.1146/annurev-pathol-011110-130206",
+					"title": "EGFR mutations and lung cancer",
+					"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+					"journal": "Annu Rev Pathol",
+					"year": "2011",
+					"if2020": "7.687",
+					"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+					"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+				},{
+					"pmid": "20887192",
+					"pmcid": "",
+					"doi": "10.1146/annurev-pathol-011110-130206",
+					"title": "EGFR mutations and lung cancer",
+					"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+					"journal": "Annu Rev Pathol",
+					"year": "2011",
+					"if2020": "7.687",
+					"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+					"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+				},{
+					"pmid": "20887192",
+					"pmcid": "",
+					"doi": "10.1146/annurev-pathol-011110-130206",
+					"title": "EGFR mutations and lung cancer",
+					"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+					"journal": "Annu Rev Pathol",
+					"year": "2011",
+					"if2020": "7.687",
+					"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+					"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+				},{
+					"pmid": "20887192",
+					"pmcid": "",
+					"doi": "10.1146/annurev-pathol-011110-130206",
+					"title": "EGFR mutations and lung cancer",
+					"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+					"journal": "Annu Rev Pathol",
+					"year": "2011",
+					"if2020": "7.687",
+					"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+					"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+				}
+			],
+			"similar": [
+				{
+					"pmid": "29462255",
+					"pmcid": "",
+					"doi": "10.1093/annonc/mdx704",
+					"title": "Osimertinib and other third-generation EGFR TKI in EGFR-mutant NSCLC patients",
+					"authors": "Remon J, Steuer CE, Ramalingam SS, Felip E.",
+					"journal": "Ann Oncol",
+					"year": "2018",
+					"if2020": "5.321",
+					"citation": "Ann Oncol. 2018 Jan 1;29(suppl_1):i20-i27. doi: 10.1093/annonc/mdx704.",
+					"abstract": "Osimertinib was the first third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) to receive FDA and EMA approval for metastatic EGFR-mutant non-small-cell lung cancer (NSCLC) patients that have acquired the EGFR T790M resistance mutation. Clinical trials have demonstrated the efficacy of osimertinib in this patient population and clinical trials of other third-generation EGFR TKI are currently under way. Additional challenges in this patient population, such as the upfront efficacy of osimertinib, validation of T790M in liquid biopsies as a dynamic predictive marker of efficacy, along with combination with immune checkpoint inhibitors are being explored, representing an extraordinary time of development for EGFR-mutant NSCLC."
+				}
+			]
+		},{
+			"pmid": "20887192",
+			"pmcid": "",
+			"doi": "10.1146/annurev-pathol-011110-130206",
+			"title": "EGFR mutations and lung cancer",
+			"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+			"journal": "Annu Rev Pathol",
+			"year": "2011",
+			"if2020": "7.687",
+			"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+			"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+		},{
+			"pmid": "29462255",
+			"pmcid": "",
+			"doi": "10.1093/annonc/mdx704",
+			"title": "Osimertinib and other third-generation EGFR TKI in EGFR-mutant NSCLC patients",
+			"authors": "Remon J, Steuer CE, Ramalingam SS, Felip E.",
+			"journal": "Ann Oncol",
+			"year": "2018",
+			"if2020": "5.321",
+			"citation": "Ann Oncol. 2018 Jan 1;29(suppl_1):i20-i27. doi: 10.1093/annonc/mdx704.",
+			"abstract": "Osimertinib was the first third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) to receive FDA and EMA approval for metastatic EGFR-mutant non-small-cell lung cancer (NSCLC) patients that have acquired the EGFR T790M resistance mutation. Clinical trials have demonstrated the efficacy of osimertinib in this patient population and clinical trials of other third-generation EGFR TKI are currently under way. Additional challenges in this patient population, such as the upfront efficacy of osimertinib, validation of T790M in liquid biopsies as a dynamic predictive marker of efficacy, along with combination with immune checkpoint inhibitors are being explored, representing an extraordinary time of development for EGFR-mutant NSCLC."
+		},{
+			"pmid": "20887192",
+			"pmcid": "",
+			"doi": "10.1146/annurev-pathol-011110-130206",
+			"title": "EGFR mutations and lung cancer",
+			"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+			"journal": "Annu Rev Pathol",
+			"year": "2011",
+			"if2020": "7.687",
+			"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+			"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+		},{
+			"pmid": "29462255",
+			"pmcid": "",
+			"doi": "10.1093/annonc/mdx704",
+			"title": "Osimertinib and other third-generation EGFR TKI in EGFR-mutant NSCLC patients",
+			"authors": "Remon J, Steuer CE, Ramalingam SS, Felip E.",
+			"journal": "Ann Oncol",
+			"year": "2018",
+			"if2020": "5.321",
+			"citation": "Ann Oncol. 2018 Jan 1;29(suppl_1):i20-i27. doi: 10.1093/annonc/mdx704.",
+			"abstract": "Osimertinib was the first third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) to receive FDA and EMA approval for metastatic EGFR-mutant non-small-cell lung cancer (NSCLC) patients that have acquired the EGFR T790M resistance mutation. Clinical trials have demonstrated the efficacy of osimertinib in this patient population and clinical trials of other third-generation EGFR TKI are currently under way. Additional challenges in this patient population, such as the upfront efficacy of osimertinib, validation of T790M in liquid biopsies as a dynamic predictive marker of efficacy, along with combination with immune checkpoint inhibitors are being explored, representing an extraordinary time of development for EGFR-mutant NSCLC."
+		},{
+			"pmid": "20887192",
+			"pmcid": "",
+			"doi": "10.1146/annurev-pathol-011110-130206",
+			"title": "EGFR mutations and lung cancer",
+			"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+			"journal": "Annu Rev Pathol",
+			"year": "2011",
+			"if2020": "7.687",
+			"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+			"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+		},{
+			"pmid": "29462255",
+			"pmcid": "",
+			"doi": "10.1093/annonc/mdx704",
+			"title": "Osimertinib and other third-generation EGFR TKI in EGFR-mutant NSCLC patients",
+			"authors": "Remon J, Steuer CE, Ramalingam SS, Felip E.",
+			"journal": "Ann Oncol",
+			"year": "2018",
+			"if2020": "5.321",
+			"citation": "Ann Oncol. 2018 Jan 1;29(suppl_1):i20-i27. doi: 10.1093/annonc/mdx704.",
+			"abstract": "Osimertinib was the first third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) to receive FDA and EMA approval for metastatic EGFR-mutant non-small-cell lung cancer (NSCLC) patients that have acquired the EGFR T790M resistance mutation. Clinical trials have demonstrated the efficacy of osimertinib in this patient population and clinical trials of other third-generation EGFR TKI are currently under way. Additional challenges in this patient population, such as the upfront efficacy of osimertinib, validation of T790M in liquid biopsies as a dynamic predictive marker of efficacy, along with combination with immune checkpoint inhibitors are being explored, representing an extraordinary time of development for EGFR-mutant NSCLC."
+		},{
+			"pmid": "20887192",
+			"pmcid": "",
+			"doi": "10.1146/annurev-pathol-011110-130206",
+			"title": "EGFR mutations and lung cancer",
+			"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+			"journal": "Annu Rev Pathol",
+			"year": "2011",
+			"if2020": "7.687",
+			"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+			"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+		},{
+			"pmid": "29462255",
+			"pmcid": "",
+			"doi": "10.1093/annonc/mdx704",
+			"title": "Osimertinib and other third-generation EGFR TKI in EGFR-mutant NSCLC patients",
+			"authors": "Remon J, Steuer CE, Ramalingam SS, Felip E.",
+			"journal": "Ann Oncol",
+			"year": "2018",
+			"if2020": "5.321",
+			"citation": "Ann Oncol. 2018 Jan 1;29(suppl_1):i20-i27. doi: 10.1093/annonc/mdx704.",
+			"abstract": "Osimertinib was the first third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) to receive FDA and EMA approval for metastatic EGFR-mutant non-small-cell lung cancer (NSCLC) patients that have acquired the EGFR T790M resistance mutation. Clinical trials have demonstrated the efficacy of osimertinib in this patient population and clinical trials of other third-generation EGFR TKI are currently under way. Additional challenges in this patient population, such as the upfront efficacy of osimertinib, validation of T790M in liquid biopsies as a dynamic predictive marker of efficacy, along with combination with immune checkpoint inhibitors are being explored, representing an extraordinary time of development for EGFR-mutant NSCLC."
+		},{
+			"pmid": "20887192",
+			"pmcid": "",
+			"doi": "10.1146/annurev-pathol-011110-130206",
+			"title": "EGFR mutations and lung cancer",
+			"authors": "da Cunha Santos G, Shepherd FA, Tsao MS.",
+			"journal": "Annu Rev Pathol",
+			"year": "2011",
+			"if2020": "7.687",
+			"citation": "Annu Rev Pathol. 2011;6:49-69. doi: 10.1146/annurev-pathol-011110-130206.",
+			"abstract": "Epidermal growth factor receptor (EGFR) is a transmembrane protein with cytoplasmic kinase activity that transduces important growth factor signaling from the extracellular milieu to the cell. Given that more than 60% of non-small cell lung carcinomas (NSCLCs) express EGFR, EGFR has become an important therapeutic target for the treatment of these tumors. Inhibitors that target the kinase domain of EGFR have been developed and are clinically active. More importantly, such tyrosine kinase inhibitors (TKIs) are especially effective in patients whose tumors harbor activating mutations in the tyrosine kinase domain of the EGFR gene. More recent trials have suggested that for advanced NSCLC patients with EGFR mutant tumors, initial therapy with a TKI instead of chemotherapy may be the best choice of treatment. Therefore, mutation testing is mandatory to identify these patients, given that selection based only on clinico-pathologic characteristics is inadequate. We review the role of EGFR mutations in the diagnosis and management of NSCLC."
+		}
+	]
+}

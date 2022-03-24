@@ -1,0 +1,153 @@
+{
+	"source": "ChosenLitReviewer",
+	"date": "",
+	"key": "BioC.key",
+	"infons": {},
+	"documents": [{
+		"id": "11056691",
+		"infons": {},
+		"passages": [{
+			"offset": 0,
+			"infons": {
+				"journal": "Breast Cancer Res.; 2000; 2(6) 438-43",
+				"year": "2000",
+				"article-id_pmc": "PMC13921",
+				"type": "title",
+				"authors": "Metcalfe S, Wheeler TK, Picken S, Negus S, Jo Milner A"
+			},
+			"text": "P53 autoantibodies in 1006 patients followed up for breast cancer.",
+			"sentences": [],
+			"annotations": [{
+				"id": "1",
+				"infons": {
+					"identifier": "7157",
+					"type": "Gene",
+					"NCBI Homologene": "460"
+				},
+				"text": "P53",
+				"locations": [{
+					"offset": 0,
+					"length": 3
+				}]
+			}],
+			"relations": []
+		}, {
+			"offset": 67,
+			"infons": {
+				"type": "abstract"
+			},
+			"text": "Serial plasma samples from 1006 patients with breast cancer revealed: (i) no correlation of p53 autoantibody status with disease status at the time of sample collection, or with menopausal status at time of primary diagnosis of breast cancer; (ii) 155 out of 1006 (15%) of patients were positive for p53 autoantibodies, and these patients tended to have a persistent autoantibody status throughout follow up, irrespective of disease behaviour; and (iii) where a negative autoantibody status was found at primary diagnosis of breast cancer, this negative status persisted throughout follow up, irrespective of later disease behaviour. We conclude that screening for p53 autoantibody status is not informative on residual tumour activity nor on therapeutic responsiveness.",
+			"sentences": [{
+				"offset": 67,
+				"infons": {},
+				"text": "Serial plasma samples from 1006 patients with breast cancer revealed: (i) no correlation of p53 autoantibody status with disease status at the time of sample collection, or with menopausal status at time of primary diagnosis of breast cancer; (ii) 155 out of 1006 (15%) of patients were positive for p53 autoantibodies, and these patients tended to have a persistent autoantibody status throughout follow up, irrespective of disease behaviour; and (iii) where a negative autoantibody status was found at primary diagnosis of breast cancer, this negative status persisted throughout follow up, irrespective of later disease behaviour.",
+				"annotations": [{
+					"id": "4",
+					"infons": {
+						"identifier": "7157",
+						"type": "Gene",
+						"NCBI Homologene": "460"
+					},
+					"text": "p53",
+					"locations": [{
+						"offset": 159,
+						"length": 3
+					}]
+				}, {
+					"id": "5",
+					"infons": {
+						"identifier": "7157",
+						"type": "Gene",
+						"NCBI Homologene": "460"
+					},
+					"text": "p53",
+					"locations": [{
+						"offset": 367,
+						"length": 3
+					}]
+				}, {
+					"id": "6",
+					"infons": {
+						"type": "Clinical Significance",
+						"Identifier": "Positive"
+					},
+					"text": "diagnosis",
+					"locations": [{
+						"offset": 916,
+						"length": 9
+					}]
+				}],
+				"relations": []
+			}, {
+				"offset": 701,
+				"infons": {},
+				"text": "We conclude that screening for p53 autoantibody status is not informative on residual tumour activity nor on therapeutic responsiveness.",
+				"annotations": [{
+					"id": "7",
+					"infons": {
+						"identifier": "7157",
+						"type": "Gene",
+						"NCBI Homologene": "460"
+					},
+					"text": "p53",
+					"locations": [{
+						"offset": 732,
+						"length": 3
+					}]
+				}, {
+					"id": "8",
+					"infons": {
+						"type": "Clinical Significance",
+						"Identifier": "NaN"
+					},
+					"text": "not inform",
+					"locations": [{
+						"offset": 896,
+						"length": 10
+					}]
+				}],
+				"relations": []
+			}],
+			"annotations": [{
+				"id": "2",
+				"infons": {
+					"identifier": "7157",
+					"type": "Gene",
+					"NCBI Homologene": "460"
+				},
+				"text": "p53",
+				"locations": [{
+					"offset": 159,
+					"length": 3
+				}]
+			}, {
+				"id": "3",
+				"infons": {
+					"identifier": "7157",
+					"type": "Gene",
+					"NCBI Homologene": "460"
+				},
+				"text": "p53",
+				"locations": [{
+					"offset": 367,
+					"length": 3
+				}]
+			}, {
+				"id": "4",
+				"infons": {
+					"identifier": "7157",
+					"type": "Gene",
+					"NCBI Homologene": "460"
+				},
+				"text": "p53",
+				"locations": [{
+					"offset": 732,
+					"length": 3
+				}]
+			}],
+			"relations": []
+		}],
+		"annotations": [],
+		"relations": []
+	}]
+}

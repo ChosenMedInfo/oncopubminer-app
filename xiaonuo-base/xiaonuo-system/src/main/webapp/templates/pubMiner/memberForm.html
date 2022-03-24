@@ -1,0 +1,72 @@
+<form id="addOrUpdateForm" lay-filter="addOrUpdateForm" class="layui-form model-form popupForm">
+	<div class="layui-col-md12">
+		<input name="id" type="hidden"/>
+		<div class="layui-form-item" id="idDivAccount">
+			<label class="layui-form-label layui-form-required">Account</label>
+			<div class="layui-input-block">
+				<input name="account" id="idAccount" class="layui-input" placeholder="Please input account" lay-verType="tips" lay-verify="required" required/>
+				<p>* Once an account been created, it cannot be deleted!</p>
+			</div>
+		</div>
+		<div class="layui-form-item" style="display: none;">
+			<label class="layui-form-label">Email</label>
+			<div class="layui-input-block">
+				<input name="email" class="layui-input" placeholder="Please input password email" lay-verType="tips" lay-verify="emailX"/>
+			</div>
+		</div>
+		<div id="passwordFormItemBox" class="layui-form-item">
+			<label class="layui-form-label layui-form-required">Password</label>
+			<div class="layui-input-block">
+				<input name="password" type="password" class="layui-input" placeholder="Please input password" lay-verType="tips" lay-verify="required|psw" required/>
+			</div>
+		</div>
+		<div id="rePasswordFormItemBox" class="layui-form-item">
+			<label class="layui-form-label layui-form-required">PW again</label>
+			<div class="layui-input-block">
+				<input name="rePassword" type="password" class="layui-input" placeholder="Please input password again" lay-verType="tips" lay-verify="required|equalTo" lay-equalTo="input[name=password]" required/>
+			</div>
+		</div>
+	</div>
+	<div class="layui-col-md12">
+		<div class="layui-form-item text-right">
+			<button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">Cancel</button>
+			<button class="layui-btn" lay-filter="formSubmitBtn" lay-submit>Create</button>
+		</div>
+	</div>
+</form>
+
+<script>
+	layui.use(['layer', 'form', 'admin', 'table', 'tableX', 'xnUtil', 'xmSelect', 'laydate'], function () {
+		var $ = layui.jquery;
+		var layer = layui.layer;
+		var form = layui.form;
+		var table = layui.table;
+		var tableX = layui.tableX;
+		var admin = layui.admin;
+		var xnUtil = layui.xnUtil;
+		var xmSelect = layui.xmSelect;
+		var laydate = layui.laydate;
+
+		var editData = admin.getLayerData('#addOrUpdateForm').data;
+		if(editData !== null && editData !== undefined) {
+			form.val('addOrUpdateForm', editData);
+			$("#idDivAccount").hide();
+			$("#idAccount").attr("disabled",true);
+			$("#idAccount").addClass("layui-disabled");
+		}
+
+		// 表单提交事件
+		form.on('submit(formSubmitBtn)', function (data) {
+			layer.load(2);
+			var url = editData && editData.id ? 'sysUser/resetPassMember' : 'sysUser/addMember';
+			admin.req(url, JSON.stringify(data.field), function(res){
+				layer.msg(res.message, {icon: 1, time: 1000}, function () {
+					admin.putLayerData('formOk', true, '#addOrUpdateForm');
+					admin.closeDialog('#addOrUpdateForm');
+				});
+			}, 'post');
+			return false;
+		});
+
+	});
+</script>

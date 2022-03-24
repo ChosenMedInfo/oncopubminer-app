@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Details</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<!-- Page Specific CSS Files -->
+	<link rel="stylesheet" th:href="@{/assets/module/hjf-ptc/css/style.css}" media="all">
+	<link rel="stylesheet" th:href="@{/assets/module/hjf-ptc/css/fontawesome-all.min.css}" media="all">
+	
+	<style type="text/css">
+	/* 页面全局 */
+	#header {
+		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	}
+	#header .container{
+		width: 100%;
+		max-width: 100%;
+		padding: 0 20px 0 10px;
+	}
+	#main .container{
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+	
+	/* 检索信息展示 */
+	.lrSearch-info {
+		font-size: 12px;
+		margin: 0 5px 10px 0;
+	}
+	.lrSearch-info .card-title{
+		min-width: 100px;
+		text-align: justify;
+		line-height: 24px;
+		margin-top: 5px;
+	}
+	.lrSearch-info .concept {
+		/*float: left;*/
+		margin-right: 10px;
+		padding-left: 5px;
+		background-color: #fff;
+		line-height: 22px;
+	}
+	.lrSearch-info .concepts-menu {
+		margin: 0;
+	}
+	.lrSearch-info hr {
+		height: 1px;
+		border: none;
+		background-color: #E6E6E6;
+		margin: 10px 0 8px 0;
+	}
+	
+	/* 检索结果 - 左侧 */
+	.lrSearch-result-left{
+		margin-top: 0;
+		padding: 10px 20px 10px 10px !important;
+		width: 270px !important;
+		position: fixed;
+		left: 0;
+		
+		overflow: auto;
+		/* 隐藏滚动条 */
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE 10+ */
+	}
+	.lrSearch-result-left #summary .side-table-content1 {
+		font-size: 11px;
+		background-color: #fff;
+		line-height: 12px;
+	}
+	.lrSearch-result-left #summary .annotations-table-view {
+		overflow: auto;
+		height: auto;
+		border-top: 0px;
+		padding-top: 15px;
+		margin-left: 5px;
+	}
+	.lrSearch-result-left #idSideTableContent::-webkit-scrollbar { 
+		width: 0 !important;
+		display: none; /* Chrome Safari */
+	}
+	.lrSearch-result-left #filterText {
+		width: 100%;
+		background-color: transparent;
+		border-left: none;
+		border-right: none;
+		border-top: none;
+		border-bottom: 1px solid #E6E6E6;
+		padding: 0 15px 5px 4px;
+		font-size: 12px;
+		line-height: 18px;
+		margin: 0;
+	}
+	.lrSearch-result-left .fa-times {
+		width: 12px;
+		height: 12px;
+		line-height: 12px;
+		font-size: 12px;
+		color: #E4E6E7;
+		position: absolute;
+		right: 5px;
+		top: 12px;
+		text-align: center;
+		z-index: 10000;
+		display: none;
+	}
+	.lrSearch-result-left #idGroupControls,
+	.lrSearch-result-left #idSortControls {
+		float: left;
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid #E6E6E6;
+		padding: 5px 2px;
+		font-size: 12px;
+		line-height: 22px;
+		color: #444;
+		margin: 0;
+	}
+	.lrSearch-result-left #idGroupControls{
+		width: 53%;
+	}
+	.lrSearch-result-left #idSortControls{
+		width: 47%;
+	}
+	.lrSearch-result-left .annType{
+		text-align: right;
+	}
+	.lrSearch-result-left #summary .row .col {
+		float: left;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 .75rem;
+		min-height: 1px;
+	}
+	.lrSearch-result-left #summary .card {
+		position: absolute;
+		z-index: 999;
+		margin-top: 0;
+		background-color: #fff;
+	}
+	.lrSearch-result-left #summary .row::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	/* 检索结果 - 中间 */
+	.lrSearch-result-middle{
+		margin-left: 270px;
+		padding: 15px 10px !important;
+		border-left: 1px solid #F4F4F4;
+		border-right: 1px solid #F4F4F4;
+		font-size: 12px;
+		width: calc( 100% - 670px );
+	}
+	.lrSearch-result-middle .full-view .publication-title {
+		margin-top: 0;
+	}
+	
+	/* 检索结果 - 右侧 */
+	.lrSearch-result-right{
+		padding: 0 0 10px 10px !important;
+		font-size: 12px;
+		position: fixed;
+		right: 0;
+	}
+	.lrSearch-result-right #idDataCollectionDiv {
+		overflow: auto;
+		width: 390px;
+		padding-top: 15px;
+		padding-right: 10px;
+		
+		/* 隐藏滚动条 */
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE 10+ */
+	}
+	.lrSearch-result-right #idDataCollectionDiv::-webkit-scrollbar { 
+		width: 0 !important;
+		display: none; /* Chrome Safari */
+	}
+	.lrSearch-result-right #idDataCollectionDiv #idSpanFormName {
+		color: #333333;
+		font-size: 14px;
+	}
+	.lrSearch-result-right #idDataCollectionDiv #idSpanFormName .classTitleSpanMode {
+		display: -moz-inline-box;
+		display: inline-block;
+		width: 100%;
+		text-align: left;
+		color: #0299CC;
+		font-size: 16px;
+	}
+	.lrSearch-result-right #idDataCollectionDiv #idSpanFormName .classTitleSpanFormName {
+		display: -moz-inline-box;
+		display: inline-block;
+		width: 96px;
+		text-align: left;
+		color: #2D8CF0;
+	}
+	.lrSearch-result-right #idDataCollectionDiv .layui-form-item {
+		margin-bottom: 8px;
+	}
+	.lrSearch-result-right #idDataCollectionDiv .layui-form-label {
+		width: 100%;
+		text-align: left;
+		padding: 0;
+		font-weight: bold;
+		float: none;
+		display: block;
+		line-height: 20px;
+		color: #333333;
+	}
+	.lrSearch-result-right #idDataCollectionDiv .layui-input-block {
+		margin-left: 0px;
+		min-height: 26px;
+	}
+	.lrSearch-result-right #idDataCollectionDiv .formItemTips {
+		line-height: 12px;
+		margin-bottom: 5px;
+	}
+	.lrSearch-result-right #idDataCollectionDiv .submittedData {
+		font-size: 12px;
+		line-height: 14px;
+		color: grey;
+		cursor: pointer;
+	}
+	/* 悬停高亮 */
+	.lrSearch-result-right #idDataCollectionDiv .hoverHighlight{
+		color: red !important;
+	}
+	.lrSearch-result-right #idDataCollectionDiv .layui-input, 
+	.lrSearch-result-right #idDataCollectionDiv .layui-select, 
+	.lrSearch-result-right #idDataCollectionDiv .layui-textarea {
+		height: 24px;
+		margin: 0;
+		font-size: 12px;
+		padding-left: 2px;
+		border: none;
+		border-bottom: 1px solid #e6e6e6;
+		border-radius: 0;
+		/*
+		line-height: 1.0;
+		border-width: 1px;
+		border-style: solid;
+		padding: 0;
+		*/
+	}
+	.lrSearch-result-right #idDataCollectionDiv .layui-form-select dl {
+		top: 25px;
+	}
+	.lrSearch-result-right #idDataCollectionDiv dd {
+		font-size: 12px;
+		line-height: 24px;
+		padding: 0 5px;
+		padding-left: 5px !important;
+	}
+	.lrSearch-result-right #idDataCollectionDiv .layui-form-radio {
+		line-height: 14px;
+		margin: 0 10px 0 0;
+		padding-right: 10px;
+		cursor: pointer;
+		font-size: 0;
+	}
+	.lrSearch-result-right #idDataCollectionDiv .layui-form-radio > i {
+		margin-right: 8px;
+		font-size: 14px;
+		color: #c2c2c2;
+	}
+	.lrSearch-result-right #idDataCollectionDiv xm-select {
+		min-height: 26px;
+		line-height: 26px;
+		border: none;
+		border-bottom: 1px solid #e6e6e6;
+		border-radius: 0;
+	}
+	.lrSearch-result-right #idDataCollectionDiv xm-select * {
+		font-size: 12px;
+	}
+	.lrSearch-result-right #idDataCollectionDiv xm-select > .xm-tips {
+		color: #cccccc;
+		padding: 0 2px 0 2px;
+		position: absolute;
+		display: flex;
+		height: 100%;
+		align-items: center;
+	}
+	.lrSearch-result-right #idDataCollectionDiv xm-select .xm-input {
+		line-height: 26px;
+		height: 26px;
+		border: none;
+		border-bottom: 1px solid #e6e6e6;
+		border-radius: 0;
+		font-size: 12px;
+		padding-left: 20px;
+	}
+	.lrSearch-result-right #idDataCollectionDiv xm-select .xm-body {
+		top: 26px !important;
+	}
+	
+	/* 小屏时展示 */
+	@media all and (min-width:699px) and (max-width:888px) {
+		.lrSearch-result-left{
+			display: none !important;
+		}
+		.lrSearch-result-middle{
+			width: calc( 100% - 400px ) !important;
+			margin-left: 0 !important;
+		}
+	}
+	@media all and (max-width:698px) {
+		.lrSearch-result-left,
+		.lrSearch-result-right{
+			display: none !important;
+		}
+		.lrSearch-result-middle{
+			width: 100% !important;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+	
+	/* 2021-12-13：解决下拉菜单超过浏览器范围时不能显示全的问题 */
+	#idDataCollectionFormDiv .layui-form-select dl {
+		position: unset;
+	}
+	#idDataCollectionFormDiv .layui-form-select .layui-edge {
+		top: 8px;
+	}
+	
+	</style>
+
+</head>
+<body class="show-chemical show-gene show-disease show-mutation show-clinsig show-evidirt">
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= About Lists Section ======= -->
+		<section style="padding: 0;">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="content-item lrSearch-result-left" data-aos="fade-up" data-aos-delay="100">
+						<!-- 实体类别高亮设定 -->
+						<div class="lrSearch-info">
+							<div class="concepts-menu animated zoomIn" id="idDivBioConcepts">
+								<div class="card-title"><i class='bx bxs-grid' ></i> BioConcepts: </div>
+							</div>
+							<div style="clear: both;"></div>
+						</div>
+						<!-- 检索结果中识别出的实体分类列表 -->
+						<div id="summary" class="summaryInSearch">
+							<div class="side-table-content1 animated zoomIn show-true" id="idSideTableContent">
+								<div class="sidebar-controls">
+									<div class="row" style="margin: 0px;">
+										<div style="padding-left: 0px; width: 100%;">
+											<input id="filterText" type="text" placeholder="Search bioconcepts..." class="annotations-filter">
+											<i onclick="clearFilter()" class="fa fa-times"></i>
+										</div>
+									</div>
+									<div class="row" style="margin: 0px;">
+										<div style="padding-left: 0px; width: 100%;">
+											<select id="idGroupControls" name="groupControls">
+												<option value="0">Group by: type</option>
+												<option value="1">Group by: section</option>
+												<option value="2">Group by: none</option>
+											</select>
+											<select id="idSortControls" name="sortControls">
+												<option value="0">Sort by: freq</option>
+												<option value="1">Sort by: offset</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="annotations-table-view">
+									<i class='ann-name'>No matched bioconcept!</i><br><br>
+								</div>
+								<div id="sections-menu" style="display: none">
+				                    <div class="card-title">Navigation</div>
+				                    <ul id="navigation-ul">
+				                        <li><a class="toc-item" onclick="scrollToSection('title')"><i class="layui-icon layui-icon-triangle-r"></i> Title</a></li>
+				                    </ul>
+				                </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="content-item lrSearch-result-middle" data-aos="fade-up" data-aos-delay="200">
+						<div class="full-view">
+							<div id="publication-view">
+								<div class="publication">
+									<div class="card-title">
+										<div class="title publication-title section" data-section="title" data-passage-id="title" style="padding-bottom: 0;"></div>
+									</div>
+									<div class="card-content">
+										<div class="meta" id="idDivMeta">
+											<div class="basic-meta">
+												<a class="pubmed-link" title="View on PubMed" target="_blank"></a>
+												<div id="idDivBeforePmcLink" class="bullet fas fa-circle"></div>
+												<a class="pmc-link" title="View on PMC Central" target="_blank"></a>
+												<div class="bullet fas fa-circle"></div>
+												<div class="authors"></div>
+												<div class="bullet fas fa-circle"></div>
+												<div class="journal"></div>
+												<div class="bullet fas fa-circle"></div>
+												<div class="header-date"></div>
+											</div>
+										</div>
+										<hr style="background-color: #E6E6E6; margin: 2px 0;">
+										<div class="abstract-show-true">
+											<div class="passages-wrapper"></div>
+											<div class="mesh-terms"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-item lrSearch-result-right" id="idDataCollectionDivOuter1" data-aos="fade-up" data-aos-delay="300">
+						<div class="side-table-content animated zoomIn show-true" id="idDataCollectionDivOuter2">
+							<div id="idDataCollectionDiv">
+								<h6><b><span id="idSpanFormName"></span></b></h6>
+								<form class="layui-form" id="idDataCollectionFormDiv">
+									
+								</form>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End About Lists Section -->
+
+	</main><!-- End #main -->
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+	
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<!-- Page Specific JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/module/hjf-ptc/js/jquery-3.6.0.min.js}"></script>
+	<script th:src="@{/assets/module/hjf-ptc/js/vendor.min.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+	
+	<script>
+		var $, admin, util, xnUtil, form, formX, element, currentUser, layer;
+		var projectName = getQueryVariable("pn");
+		var projectId   = getQueryVariable("pi");
+		var formId      = getQueryVariable("fi");
+		var libraryId   = getQueryVariable("li");
+		var libraryName = getQueryVariable("ln");
+		var memberIds   = getQueryVariable("mis");
+		var pmid        = getQueryVariable("pid");
+		var pmcid       = getQueryVariable("pcid");
+		var ivt         = getQueryVariable("t");
+		
+		var allConcepts = getAllConcepts(); // 获取全部概念类别！
+		var allPassages = []; // 当页加载的全部passages：用于左侧实体统计！
+		layui.use(['layer', 'admin', 'util', 'xnUtil', 'form', 'formX', 'element', 'table', 'tableX'], function () {
+			$ = layui.jquery;
+			admin = layui.admin;
+			util = layui.util;
+			xnUtil = layui.xnUtil;
+			form = layui.form;
+			formX = layui.formX;
+			element = layui.element;
+			layer = layui.layer;
+			var table = layui.table;
+			var tableX = layui.tableX;
+			
+			// 确保字典可用！
+			xnUtil.cacheDictData();
+			
+			// 加载！
+			var indexLoading = layer.load(3, {shade: [0.01, '#393D49']});
+			
+			// 获取当前登录用户！
+			currentUser = getCurrentLoginUser();
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			// 2021-12-29（V0022-01.01.06-05）：提前定义各种变量！
+			let pmcid, pTitle, pAuthors, pJournal, pYear, pIf2020;
+			
+			// === 文献部分 - START ====================================================================================== //
+			
+			// 获取文献对象并渲染页面！
+			$.ajax({
+				url: strApiIdSearching + pmid,
+				async: false, // 2021-12-29（V0022-01.01.06-05）：由于后续需要用到文献的数据，所以这里不能异步！
+				dataType: 'json',
+				success: function (data) {
+					layer.close(indexLoading);
+					
+					// 判断是否正常！
+					if(data.code == 500 || data.data == null || data.data.passages == null){
+						layer.msg("Request failed, please contact administrator!");
+						return false;
+					}
+					
+					// 正常返回数据了！
+					$("#idDivMeta").show();
+					
+					// 获取真正的文献对象！
+					data = data.data // OncoPubMiner！
+					//console.log(data);
+					
+					// 获取PMID和PMCID！
+					let pmid     = data && data.passages[0].infons.article_id_pmid;
+					//let pmcid    = data && data.passages[0].infons.article_id_pmc || null;
+					pmcid    = data && data.passages[0].infons.article_id_pmc || null;
+	
+					// 获取过滤后的全部段落信息：这里主要过滤掉参考文献相关段落！
+					let passages = _.filter(data.passages || [], function (passage) {
+						return shouldProcessPassage(passage);
+					});
+					 
+					// 标题处理！
+					let titlePassage = _.nth(passages); // 标题段落：取passages数组的第0个元素！
+					let titleHTML = getTitleHtml(titlePassage, false, pmid, pmcid); // 生成标题HTML代码！
+					$('div[data-passage-id="title"]').html(titleHTML); // 标题显示！
+					
+					// 2021-12-29（V0022-01.01.06-05）：除PMID外，还要考虑文献的其他信息！
+					pTitle   = titlePassage.text;
+					pAuthors = getAllAuthors(data);
+					pJournal = getJournal(data);
+					pYear    = getYear(data);
+					pIf2020  = getIf2020(data);
+					
+					// 其他元信息显示！
+					$('.publication').attr('data-pmid', pmid).attr('data-pmcid', pmcid)
+					$('.pubmed-link').attr('href', 'https://www.ncbi.nlm.nih.gov/pubmed/' + pmid).html('PMID' + pmid)
+					if(pmcid) {
+						$('.pmc-link').attr('href', 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC' + pmcid).html("PMC" + pmcid);
+						$('#idDivBeforePmcLink').css('display', 'inline-block');
+					}else{
+						$('#idDivBeforePmcLink').css('display', 'none'); // PMCID不存在时，隐藏其前面的圆点！
+					}
+					$('.authors').html(getCondensedAuthors(data))
+					$('.journal').html(pJournal)
+					let $headerDate = $('.header-date')
+					$headerDate.html(pYear)
+					
+					// 获取不含标题段落的其他所有内容段落节点！
+					let nonTitlePassages = _.slice(passages, 1);
+					let nonTitleSentences = [];
+					for(var i = 0; i < nonTitlePassages.length; i++){
+						//console.log(nonTitlePassages.length);
+						if(nonTitlePassages[i].sentences.length == 0){ // 没有切分出句子：这个基本不存在，目前应该只有标题没有切分句子！
+							nonTitleSentences.push(nonTitlePassages[i]); // 直接将段落当成句子添加！
+						}else if(nonTitlePassages[i].infons.type.indexOf("title") > -1){ // 标题相关段落，直接添加原始段落！
+							nonTitleSentences.push(nonTitlePassages[i]); // 直接将段落当成句子添加！
+						}else{
+							for(var j = 0; j < nonTitlePassages[i].sentences.length; j++){
+								nonTitleSentences.push(nonTitlePassages[i].sentences[j]); // 添加句子！
+							}
+						}
+					}
+					//let nonTitleNodes = _.map(nonTitlePassages, function (passage) { // 原始段落展示的形式！
+					let nonTitleNodes = _.map(nonTitleSentences, function (passage) { // 用句子替换！
+						return getPassageNode(passage, data, pmid, pmcid);
+					});
+					
+					// 统计图表及参考文献数据：用不上了！
+					//data.figCounter = 0;
+					//data.tableCounter = 0;
+					//data.refCounter = 0;
+					
+					// 左侧实体分组显示！
+					$("#idGroupControls").on("change",function(){
+						loadSummaryConcepts(passages);
+					});
+					
+					// 左侧实体分组后的排序！
+					$("#idSortControls").on("change",function(){
+						loadSummaryConcepts(passages);
+					});
+					
+					// 过滤实体！
+					$('#filterText').bind('input propertychange', function () {
+						initSearch(passages);
+					})
+					$('#filterText').change(function () {
+						initSearch(passages);
+					})
+					
+					// 加载所有概念！
+					loadSummaryConcepts(passages);
+					
+					// 左侧实体列表处理完毕之后，显示相应div！
+					$('#summary').show();
+					
+					// 注释好的节点添加到DOM中去！
+					annotate(nonTitleNodes);
+					
+					// 文章关键词显示！
+					for (let term of getKeywords(data)) {
+						$('.mesh-terms').append('<span class="mesh-term">' + term + '</span>')
+					}
+					
+					// 章节锚链接显示！
+					if(getSectionTitles(passages).length != 0){ // 显示的前提：已经生成SectionTitle！
+						for (let title of getSectionTitles(passages)) {
+							$('#navigation-ul').append('<li><a class="toc-item" onclick="scrollToSection(\'' + title.offset + '\')"><i class="layui-icon layui-icon-triangle-r"></i> ' + title.text + '</a></li>')
+						}
+						$('#sections-menu').show()
+					}
+					
+					// 实体点击效果！
+					funcEntityClick();
+				}
+			});
+			
+			// === 文献部分 - END ====================================================================================== //
+			
+			// === 表单部分 - START ====================================================================================== //
+			
+			if(formId != null && formId != false && formId != "NONE"){
+				
+				// 获取表单信息！
+				var checkCommonGroup = false;
+				$.ajax({
+					type: "get",
+					url: "/forms/detail",
+					async: false,
+					contentType: "application/json; charset=utf-8",
+					data: {id: formId},
+					dataType: "json",
+					success: function (res) {
+						if(res != null && res.data != null){
+							if(projectName && libraryName){
+								$("#idSpanFormName").html('<span class="classTitleSpanMode"><i class="layui-icon">&#xe613;</i> Collaborative Working Mode</span><br><i class="classTitleSpanFormName">ProjectName:</i> ' + projectName + '<br><i class="classTitleSpanFormName">LibraryName:</i> ' + libraryName + '<br><i class="classTitleSpanFormName">FormName:</i> ' + res.data.formName);
+							}else{
+								$("#idSpanFormName").html('<span class="classTitleSpanMode"><i class="layui-icon">&#xe612;</i> Single User Mode</span><br><i class="classTitleSpanFormName">FormName:</i> ' + res.data.formName);
+							}
+							if(res.data.groupName == "commonGroup") checkCommonGroup = true;
+						}
+					}
+				});
+				
+				//获取表单项列表！
+				var strArrSdClassNames = [];
+				var xmSelectName2ObjArr = [];
+				var objItemFields2Required = {}; // 2021-12-15（V0018-01.01.02-12）：记录全部字段的字段名及其是否required！
+				funcGetFormsItemsListCommon(formId, $("#idDataCollectionFormDiv"));
+				function funcGetFormsItemsListCommon(currentFormId, targetHtmlObj){
+					$.ajax({
+						type: "post",
+						url: "/formsItems/list",
+						timeout: 6000000, // 超时时间设置，单位毫秒！
+						async: false,
+						data: JSON.stringify({id: currentFormId}),
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function (res) {
+							if(res.data != null && res.data.length != 0){
+								var hrHtml = '<hr style="background-color: #2D8CF0; margin: 2px 0;">';
+								var $idPreviewItems = targetHtmlObj;
+								$idPreviewItems.empty(); // 清空表单！
+								// 2021-12-15（V0018-01.01.02-08）：提前确定当前用户是否完成提交（Done）！
+								let intUserDonePub = 0; // 0不考虑 1未完成 2已完成！
+								let strHtmlFormDataSubmitDoneBtns = "";
+								if(currentUser != null && projectId != null && projectId != false) {
+									$.ajax({
+										type: "get",
+										url: "/projectPubStatus/getStatus",
+										async: false,
+										contentType: "application/json; charset=utf-8",
+										data: {id: projectId + "|" + libraryId + "|" + formId + "|" + pmid + "|" + currentUser.id, projectId: projectId, date: new Date()},
+										dataType: "json",
+										success: function (result) {
+											//if(res.data.length > 0 && result != null && result.data == "0" && !checkCommonGroup){
+											if(res.data.length > 0 && result != null && result.data == "0"){ // 2021-12-13：不管是否公共组的表单，都要允许提交数据！
+												var formDataSubmitDoneBtns = hrHtml + '<button class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue" lay-filter="formSubmitBtn" style="margin: 10px 0;" lay-submit><i class="layui-icon">&#x1005;</i>Submit</button> <span class="layui-btn layui-btn-primary layui-btn-xs layui-border-green" style="margin: 10px 0;" onclick="funcDoneBtnEvent()"><i class="layui-icon">&#xe609;</i>Done</span>';
+												strHtmlFormDataSubmitDoneBtns = formDataSubmitDoneBtns;
+												intUserDonePub = 1; // 未完成！
+											}else{
+												intUserDonePub = 2; // 当做已完成！
+											}
+										}
+									});
+								}
+								// 遍历表单项，渲染成html代码！
+								for(var i = 0; i < res.data.length; i++){
+									var id = res.data[i].id,
+									itemName = res.data[i].itemName,
+									itemType = xnUtil.rendDataTableDict(res.data[i].itemType, 'lr_item_type'),
+									itemDefault = res.data[i].itemDefault,
+									itemMaxLength = res.data[i].itemMaxLength,
+									itemMaxCount = res.data[i].itemMaxCount,
+									itemRequired = res.data[i].itemRequired,
+									itemTips = res.data[i].itemTips,
+									itemSort = res.data[i].itemSort,
+									itemOptionType = res.data[i].itemOptionType,
+									itemOptions = res.data[i].formsItemOptionsList;
+									
+									currentItemId = currentFormId + '-' + id;
+									
+									// 2021-12-15（V0018-01.01.02-12）：记录全部字段的字段名及其是否required！
+									objItemFields2Required[currentItemId] = itemRequired;
+									
+									//// 2021-10-13：PMID特殊处理！
+									//if((itemType == 'text' || itemType == 'textarea') && itemDefault != null && itemDefault.toUpperCase() == "[PMID]"){
+									//	itemDefault = pmid;
+									//}
+									// 2021-12-29（V0022-01.01.06-05）：除PMID外，还要考虑文献的其他信息！
+									if((itemType == 'text' || itemType == 'textarea') && itemDefault != null){
+										if(itemDefault.toUpperCase() == "[PMID]"){
+											itemDefault = pmid;
+										}else if(itemDefault.toUpperCase() == "[PMCID]"){
+											itemDefault = pmcid || "N/A";
+										}else if(itemDefault.toUpperCase() == "[TITLE]"){
+											itemDefault = pTitle || "N/A";
+										}else if(itemDefault.toUpperCase() == "[AUTHORS]"){
+											itemDefault = pAuthors || "N/A";
+										}else if(itemDefault.toUpperCase() == "[JOURNAL]"){
+											itemDefault = pJournal || "N/A";
+										}else if(itemDefault.toUpperCase() == "[YEAR]"){
+											itemDefault = pYear || "N/A";
+										}else if(itemDefault.toUpperCase() == "[IF2020]"){
+											itemDefault = pIf2020 || "N/A";
+										}
+									}
+									
+									//表单元素公共头
+									var itemNode = '<div class="layui-form-item">' + hrHtml + '<label class="layui-form-label item-label" id="item_' + id + '"><i style="color: #2D8CF0;">Field' + (i+1) + ':</i> ' + (itemRequired == 1 ? '<span style="pointer-events: none;color: red">* </span>' : '') + itemName + '</label>';
+									itemNode += '<div class="layui-input-block item-block">';
+								   
+									//分情况添加内容
+									switch (itemType) {
+										case 'text':
+											itemNode += '<input name="' + currentItemId + '" type="text"' + ' placeholder="' + (itemTips != null ? itemTips : 'please input..') + '"' + (itemMaxLength > 0 ? (' maxlength="' + itemMaxLength + '"') : '') + ' class="layui-input" value="' + itemDefault + '" ' +  (itemRequired == 1 ? 'lay-verify="required" required' : '') + '>';
+											break;
+										case 'radio':
+											if (itemOptions != null) {
+												for (var j = 0; j < itemOptions.length; j++) {
+													// 这里必须有name不然会无法选中且会报错
+													//itemNode += '<input type="radio" name="' + currentItemId + '" value="' + itemOptions[j].optionValue + '" title="' + itemOptions[j].optionValue + '"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '>';
+													itemNode += '<input type="radio"' + (itemRequired == 1 ? '' : ' lay-filter="radioCanBeRemoveChecked"') + ' name="' + currentItemId + '" value="' + itemOptions[j].optionValue + '" title="' + itemOptions[j].optionValue + '"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '>'; // 2021-12-15（V0018-01.01.02-11）：radio非必选的情况下，需要允许removeChecked！
+												}
+											}
+											break;
+										case 'checkbox':
+											if (itemOptions != null) {
+												for (var j = 0; j < itemOptions.length; j++) {
+													//itemNode += '<input name="' + currentItemId + '" type="checkbox"' + (itemMaxCount > 0 ? (' maxCount="'+ itemMaxCount + '"') : '') + ' title="' + itemOptions[j].optionValue + '"' + ' lay-filter="maxCountChecked"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '' +  (itemRequired == 1 ? 'lay-verify="required" required' : '') + '>';
+													itemNode += '<input name="' + currentItemId + '" type="checkbox"' + (itemMaxCount > 0 ? (' maxCount="'+ itemMaxCount + '"') : '') + ' title="' + itemOptions[j].optionValue + '" value="' + itemOptions[j].optionValue + '"' + ' lay-filter="maxCountChecked"' + ($.inArray(itemOptions[j].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) != -1 ? ' checked' : '') + '' +  (itemRequired == 1 ? 'lay-verify="required" required' : '') + '>'; // 2021-12-15（V0018-01.01.02-13）：bug修复：checkbox的值都是on，而不是该有的选项值！
+												}
+											}
+											break;
+										case 'select':
+											//itemNode += '<select name="' + currentItemId + '">' + (itemRequired === 1 ? '' : '<option value="">please select..</option>');
+											itemNode += '<select name="' + currentItemId + '" ' +  (itemRequired == 1 ? 'lay-verify="required" required' : '')+ '>' + '<option value="">' + (itemTips != null ? itemTips : 'please select..') + '</option>';
+											if (itemOptionType == 1 && itemOptions != null) { // Customize!
+												for (var j = 0; j < itemOptions.length; j++) {
+													//itemNode += '<option value="' + itemOptions[j].id + '"' + (itemDefault != '' ? (itemOptions[j].optionValue == itemDefault ? ' selected' : '') : (j == 0 && itemRequired == 1 ? ' selected' : '')) + '>' + itemOptions[j].optionValue + '</option>';
+													itemNode += '<option value="' + itemOptions[j].optionValue + '"' + (itemDefault != '' ? (itemOptions[j].optionValue == itemDefault ? ' selected' : '') : (j == 0 && itemRequired == 1 ? ' selected' : '')) + '>' + itemOptions[j].optionValue + '</option>';
+												}
+											}else if(itemOptionType > 1){
+												var xmData = funcFromItemOptionType2XmData(itemOptionType, "OncoPubMiner"); // 癌种、药物、基因、变异等列表！
+												for(var j = 0; j < xmData.length; j++){
+													//itemNode += '<option value="' + xmData[j].value + '"' + (itemDefault != '' ? (xmData[j].value == itemDefault ? ' selected' : '') : (j == 0 && itemRequired == 1 ? ' selected' : '')) + '>' + xmData[j].name + '</option>';
+													itemNode += '<option value="' + xmData[j].name + '"' + (itemDefault != '' ? (xmData[j].value == itemDefault ? ' selected' : '') : (j == 0 && itemRequired == 1 ? ' selected' : '')) + '>' + xmData[j].name + '</option>';
+												}
+											}
+											itemNode += '</select>';
+											break;
+										case 'textarea':
+											itemNode += '<textarea name="' + currentItemId + '" placeholder="' + (itemTips != null ? itemTips : 'please input..') + '" class="layui-textarea"' + (itemMaxLength > 0 ? (' maxlength="'+ itemMaxLength + '"') : '') + '' +  (itemRequired == 1 ? 'lay-verify="required" required' : '') + '>' + itemDefault + '</textarea>';
+											break;
+										case 'xmselect':
+											itemNode += '<div id="xm-' + currentItemId + '" class="xm-select-style"></div>';
+											break;
+									}
+									// 根据是否设置了Tips，确定是否显示该部分代码！
+									if(itemTips != null && itemTips != "" && itemType != "text" && itemType != "textarea" && itemType != "select" && itemType != "xmselect"){
+										itemNode += '<p class="formItemTips"><b>Tips:</b> ' + itemTips + '</p>';
+									}
+									// 补上“layui-input-block item-block”的关闭标签！
+									itemNode += '</div>';
+									
+									// 加上已提交的数据！
+									var strArrSubmittedData = []; // 2021-10-20：收录已经提交的数据，作为xm-select的首次默认选项！
+									var objSubmittedData = {}; // 2021-12-10：收录已经提交的数据，避免重复添加！
+									if(currentUser != null){
+										
+										// 2021-12-03（V0011-01.00.08-07）：解决单用户模式阅读文献时，提交的数据不能回显的问题！
+										let objGetItemDataParams = {formId: formId, pmid: pmid, itemId: id};
+										if(libraryId != false) objGetItemDataParams.libraryId = libraryId;
+										if(projectId != false) objGetItemDataParams.projectId = projectId;
+										
+										$.ajax({
+											type: "get",
+											url: "/formsItemsData/getItemData",
+											async: false, // 不能异步！
+											contentType: "application/json; charset=utf-8",
+											//data: {projectId: projectId === false ? null : projectId, libraryId: libraryId === false ? null : libraryId, formId: formId, pmid: pmid, itemId: id},
+											data: objGetItemDataParams, // 2021-12-03（V0011-01.00.08-07）：解决单用户模式阅读文献时，提交的数据不能回显的问题！
+											dataType: "json",
+											success: function (res) {
+												if(res != null && res.data != null){
+													for(var k = 0; k < res.data.length; k++){
+														var strHtmlUserOrTimeTips = '[' + res.data[k].createTime + ']';
+														if(currentUser.accountType == 1 && res.data[k].createUserName != currentUser.account){
+															strHtmlUserOrTimeTips = '[' + res.data[k].createTime + ', ' + res.data[k].createUserName + ']'; // 组管理员查看组员提交的数据，除了显示提交时间，还要显示提交人！
+														}
+														//if(currentUser.accountGroup = "commonGroup") strHtmlUserOrTimeTips = ""; // 公共组的数据，不显示时间提交者：这部分信息无意义！
+														if(res.data[k].groupName == "commonGroup") strHtmlUserOrTimeTips = "<sup><i class='bx bx-share-alt'></i></sup>"; // 2021-12-03（V0011-01.00.08-07）：顺道解决一个小bug：公共组的数据不显示提交者和提交事件，而是显示一个标注“共享”的图标！
+														
+														// 2021-12-15（V0018-01.01.02-08）：判断是否需要提供删除功能！
+														let strHtmlDeleteData = "";
+														if(intUserDonePub === 1 && currentUser.id === res.data[k].createUser){
+															strHtmlDeleteData = ' <a href="javascript:;" onclick="funcDeleteItemData(\'' + res.data[k].batchId + '\')" style="color: red;"><i class="layui-icon layui-icon-delete"></i></a>'
+														}
+														
+														var thisSdClass = 'sd' + (k+1);
+														//itemNode += '<p class="submittedData ' + thisSdClass + '">(' + (k+1) + ') ' + strHtmlUserOrTimeTips + ' ' + res.data[k].itemValue.replace(/\|\|\|/g, ' | ').replace(/\n/g, ' | ') + '</p>'; // 组管理员由于可以查看多个组员提交的数据，所以这里需要显示提交者信息！
+														itemNode += '<p class="submittedData ' + thisSdClass + '">(' + (k+1) + ') ' + strHtmlUserOrTimeTips + ' ' + res.data[k].itemValue.replace(/\|\|\|/g, ' | ').replace(/\n/g, ' | ') + strHtmlDeleteData + '</p>'; // 组管理员由于可以查看多个组员提交的数据，所以这里需要显示提交者信息！
+														strArrSdClassNames.push(thisSdClass);
+														// 2021-10-20：收录已经提交的数据，作为xm-select的首次默认选项！
+														var strArrThisValues = res.data[k].itemValue.replace(/\|\|\|/g, '\n').split("\n");
+														
+														// 2021-12-10：这里！！！！！不能直接把一个数组push到另一个！！！！！！
+														//strArrSubmittedData.push(strArrThisValues);
+														for(let vvv = 0; vvv < strArrThisValues.length; vvv++){
+															strArrSubmittedData.push(strArrThisValues[vvv]);
+														}
+													}
+												}
+											}
+										});
+									}
+									// 补上“<div class="layui-form-item">”对应的关闭标签！
+									itemNode += '</div>';
+									// 添加表单项节点！
+									$idPreviewItems.append(itemNode);
+									// 重新渲染表单！
+									form.render();
+									
+									// 2021-12-15（V0018-01.01.02-11）：radio非必选的情况下，需要允许removeChecked！
+									form.on('radio(radioCanBeRemoveChecked)', function (data) {
+										
+										let bolWasChecked = $(this).attr("wasChecked");
+										let strRadioName = $(this).attr("name");
+										
+										// 同名radio全部清除“wasChecked”属性！
+										$("input[name='" + strRadioName + "']").each(function(){
+											$(this).removeAttr("wasChecked");
+										});
+										
+										// 执行选中/取消选中操作！
+										if(bolWasChecked){ // 已选中的情况下，取消选中！
+											//console.log("1");
+											$(this).prop('checked', false);
+										}else{ // 没有选中的情况下，执行选中！
+											//console.log("2");
+											$(this).attr("wasChecked", true);
+											$(this).prop('checked', true);
+										}
+										
+										// 重新渲染全部radio！
+										form.render("radio");
+										
+									});
+									
+									// 渲染多选下拉框
+									if(itemType === 'xmselect'){
+										let xmSelectRenderObj = funcGenerateXmSelectRenderObj('xm-' + currentItemId, currentItemId, itemRequired === 1 ? 'required' : '', itemMaxCount, itemOptionType);
+										xmSelectRenderObj.tips = itemTips != null ? itemTips : 'please select..'; // 更新提示内容！
+										let xs = xmSelect.render(xmSelectRenderObj);
+										let xmData = [];
+										if(itemOptionType == 1 && itemOptions != null){ // Customize!
+											for(let k = 0; k < itemOptions.length; ++k){
+												if ($.inArray(itemOptions[k].optionValue, itemDefault.split(funcGetSplitter4DefaultValues())) !== -1) {
+													xmData.push({name: itemOptions[k].optionValue, value: itemOptions[k].optionValue, selected: true});
+												} else {
+													xmData.push({name: itemOptions[k].optionValue, value: itemOptions[k].optionValue});
+												}
+											}
+										}else {
+											//xmData = funcFromItemOptionType2XmData(itemOptionType, "OncoPubMiner"); // 癌种、药物、基因、变异等列表！
+											// 2021-10-20：xm-select的首次默认选项为前面收录的已经提交的数据！
+											strArrSubmittedData = strArrSubmittedData.clearRepeat(); // 去重后排序！
+											for(let k = 0; k < strArrSubmittedData.length; ++k){
+												xmData.push({name: strArrSubmittedData[k], value: strArrSubmittedData[k]});
+											}
+										}
+										// 更新列表！
+										//console.log("xmData: " + JSON.stringify(xmData));
+										xs.update({
+											data: xmData
+										});
+										xmSelectName2ObjArr.push({"name": currentItemId, "xmobj": xs});
+									}
+									
+								}
+								// 提交按钮+完成按钮！
+								//if(currentUser != null && projectId != null && projectId != false) {
+								//	$.ajax({
+								//		type: "get",
+								//		url: "/projectPubStatus/getStatus",
+								//		async: true,
+								//		contentType: "application/json; charset=utf-8",
+								//		data: {id: projectId + "|" + libraryId + "|" + formId + "|" + pmid + "|" + currentUser.id, projectId: projectId, date: new Date()},
+								//		dataType: "json",
+								//		success: function (result) {
+								//			//if(res.data.length > 0 && result != null && result.data == "0" && !checkCommonGroup){
+								//			if(res.data.length > 0 && result != null && result.data == "0"){ // 2021-12-13：不管是否公共组的表单，都要允许提交数据！
+								//				var formDataSubmitDoneBtns = hrHtml + '<button class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue" lay-filter="formSubmitBtn" style="margin: 10px 0;" lay-submit><i class="layui-icon">&#x1005;</i>Submit</button> <span class="layui-btn layui-btn-primary layui-btn-xs layui-border-green" style="margin: 10px 0;" onclick="funcDoneBtnEvent()"><i class="layui-icon">&#xe609;</i>Done</span>';
+								//				$idPreviewItems.append(formDataSubmitDoneBtns);
+								//			}
+								//		}
+								//	});
+								//}else{
+								if(intUserDonePub == 0){ // 前面判断过了，这里不再重复判断一遍，而是利用前面的结果！
+									if(!checkCommonGroup){
+										//var formDataSubmitDoneBtns = hrHtml + '<button class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue" lay-filter="formSubmitBtn" style="margin: 10px 0;" lay-submit><i class="layui-icon">&#x1005;</i>Submit and Download</button>';
+										var formDataSubmitDoneBtns = hrHtml + '<button class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue" lay-filter="formSubmitBtn" style="margin: 10px 0;" lay-submit><i class="layui-icon">&#x1005;</i>Submit</button>'; // 2021-12-03（V0011-01.00.08-06）：由于前面已经改了设计，这里不再有直接Download了，所以需要去掉！
+										$idPreviewItems.append(formDataSubmitDoneBtns);
+									}else{
+										// 2021-12-03（V0011-01.00.08-06）：是公共组的表单也要允许显示按钮，否则怎么提交数据？！！
+										var formDataSubmitDoneBtns = hrHtml + '<button class="layui-btn layui-btn-primary layui-btn-xs layui-border-blue" lay-filter="formSubmitBtn" style="margin: 10px 0;" lay-submit><i class="layui-icon">&#x1005;</i>Submit</button>';
+										$idPreviewItems.append(formDataSubmitDoneBtns);
+										
+									}
+								}else{
+									$idPreviewItems.append(strHtmlFormDataSubmitDoneBtns);
+								}
+								
+								// 监听多选框！
+								layui.use('form', function () {
+									let form = layui.form;
+									form.on('checkbox(maxCountChecked)', function(data){
+										let $elem = $(data.elem)
+										let max = $elem.attr('maxCount')
+										if(max != null){
+											if ($elem.siblings("input:checked").length >= max){
+												$elem.next().attr("class","layui-unselect layui-form-checkbox");
+												$elem.prop("checked",false);
+												layer.tips('Select up to ' + max + ' items!', $elem.parent().siblings(), {
+													tips: [1, "#ff691b"],
+													time: 2000,
+												});
+											}
+										}
+									});
+								});
+							}
+						}
+					});
+				}
+				
+				// 对strArrSdClassNames进行效果处理：鼠标放上后该序号对应的全部items都高亮！
+				strArrSdClassNames = strArrSdClassNames.clearRepeat(); // 去重后排序！
+				for(let i = 0; i < strArrSdClassNames.length; i++){
+					let thisClassName = "." + strArrSdClassNames[i]; // 注意，这里只能用let不能用var，否则后面的mouseover等事件均只对最后一个有效果！！！
+					$(thisClassName).mouseover(function(){
+						$(thisClassName).each(function(){
+							$(this).addClass("hoverHighlight");
+						});
+					});
+					$(thisClassName).mouseout(function(){
+						$(thisClassName).each(function(){
+							$(this).removeClass("hoverHighlight");
+						});
+					});
+					// 双击事件！
+					$(thisClassName).dblclick(function(){
+						for(let j = 0; j < strArrSdClassNames.length; j++){
+							if(j == i) continue; // 相同的不做处理！
+							let thisClassNameToBeToggled = "." + strArrSdClassNames[j];
+							$(thisClassNameToBeToggled).each(function(){
+								$(this).toggle();
+							});
+						}
+					});
+				}
+				
+				// 表单提交监听事件！
+				form.on('submit(formSubmitBtn)', function (data) {
+					layer.confirm('Are you sure to submit the data?', {
+						skin: 'layui-layer-admin',
+						shade: .1,
+						btn: ['Yes', 'Cancel'],
+						title: 'Confirm'
+					}, function (index) {
+						layer.close(index);
+						var index = layer.load(3, {shade: [0.01, '#393D49']}); // 然后添加加载背景！
+						// 加入xmSelect类型的item名对应的值：由于xmSelect的值本身可能带有逗号，因此不能直接使用form提交时的xmSelect值串（用逗号隔开的）！
+						for(var xmi = 0; xmi < xmSelectName2ObjArr.length; xmi++){
+							var thisXmDataArr = xmSelectName2ObjArr[xmi].xmobj.getValue('value');
+							var thisXmDataStr = "";
+							//debugger;
+							for(var j = 0; j < thisXmDataArr.length; j++){
+								thisXmDataStr = thisXmDataStr === "" ? thisXmDataArr[j] : thisXmDataStr + "|||" + thisXmDataArr[j];
+							}
+							if(thisXmDataStr != "") data.field[xmSelectName2ObjArr[xmi].name] = thisXmDataStr;
+						}
+						// 遍历所有字段，着手整理成提交的类型！
+						var dataFieldArr = [];
+						let intNumField = 0;
+						for(let fieldKey in objItemFields2Required){ // 2021-12-15（V0018-01.01.02-12）：记录全部字段的字段名及其是否required！
+							//console.log("fieldKey: “" + fieldKey + "”，fieldRequired：“" + objItemFields2Required[fieldKey] + "”..");
+							let fieldValue = "";
+							for(let fff in data.field){ // 2021-12-15（V0018-01.01.02-12）：不能在最外层遍历data.field，否则可能漏掉未选择值的radio或checkbox！
+								if(fieldKey == fff) fieldValue = data.field[fff];
+							}
+							
+							// 2021-12-15（V0018-01.01.02-12）：判断是否必填/必选，但是值为空！是的话提示报错，并不允许提交！
+							intNumField++;
+							if(objItemFields2Required[fieldKey] == 1 && fieldValue == ""){
+								layer.msg("Field" + intNumField + " is required!");
+								layer.close(index);
+								return false;
+							}
+							
+							var strArrKey = fieldKey.split("-");
+							var thisDataObj = {};
+							thisDataObj["projectId"] = projectId == false ? 0 : projectId;
+							thisDataObj["libraryId"] = libraryId == false ? 0 : libraryId;
+							thisDataObj["pmid"] = pmid;
+							if(pmcid != "") thisDataObj["pmcid"] = pmcid;
+							thisDataObj["formId"] = formId;
+							thisDataObj["itemId"] = strArrKey[1];
+							thisDataObj["itemValue"] = fieldValue;
+							thisDataObj["itemValueType"] = ivt;
+							dataFieldArr.push(thisDataObj);
+						}
+						//console.log("data.field: “" + JSON.stringify(data.field) + "”..");
+						//console.log("dataFieldArr: “" + JSON.stringify(dataFieldArr) + "”..");
+						
+						// 数据提交！
+						var indexLoadAdd = layer.load(3, {shade: [0.01, '#393D49']});
+						admin.req('formsItemsData/add', JSON.stringify(dataFieldArr), function(res){
+							layer.close(indexLoadAdd);
+							layer.msg(res.message, {icon: 1, time: 1000}, function () {
+								if(currentUser == null || !projectId){ // 未登录用户及登录用户的单用户模式，都要下载数据！
+									// 提交完成之后，下载数据！
+									//location.href = "/formsItemsData/exportData?projectId=0&formId=" + formId + "&pmid=" + pmid;
+									//window.open("/formsItemsData/exportData?projectId=0&formId=" + formId + "&pmid=" + pmid); // 2021-11-30（V0008-01.00.05-09）：由于变为了弹窗，这里不再下载！
+									
+									// 2021-11-30（V0008-01.00.05-09）：变更为弹窗展示！
+									var layDataViewerIndex = admin.open({
+										title: '<i class="bx bx-grid"></i> Data Viewer',
+										url: 'lrDataViewer',
+										area: ['100%', '100%'],
+										offset: '0', // 距离顶部位置！
+										scrollbar: false, // 弹窗打开后，禁用原页面的浏览器滚动条，只显示弹窗的滚动条！
+										data: { data: {projectId: 0, formId: formId, pmid: pmid} },	 // 传递数据到表单页面
+										end: function () {
+											location.reload(); // 2021-11-30（V0008-01.00.05-09）：关掉弹窗后刷新页面！
+										},
+										success: function (layero, dIndex) {
+											// 弹窗超出范围不出现滚动条
+											//$(layero).children('.layui-layer-content').css('overflow', 'visible');
+											//$(layero).find('[lay-submit]').focus();
+										}
+									});
+									
+									// 提交完成之后，刷新页面！
+									//location.reload(); // 2021-11-30（V0008-01.00.05-09）：由于变为了弹窗，这里不再刷新！
+									
+								}else{
+									location.reload();
+								}
+							});
+						}, 'post');
+						
+					});
+					return false;
+				});
+				
+			}else{
+				// 隐藏表单版块！
+				$(".lrSearch-result-right").remove();
+				// 文献版块放大！
+				$(".lrSearch-result-middle").width($(window).width() - 270);
+			}
+			
+			// === 表单部分 - END ====================================================================================== //
+			
+		});
+		
+		// 文献星标等级筛选！
+		function funcScreenPubStars(othis){
+			let bolCheckHide = false;
+			// 先遍历一轮，看看是否存在已隐藏的文献！
+			$(".pubLevel").each(function(){
+				if($(this).parent().parent().parent().parent().parent().parent().parent().is(':hidden')){ bolCheckHide = true; }
+			});
+			// 再遍历一轮：根据前面的结果，确定这里是显示全部文献，还是只显示与当前文献相同等级的文献！
+			$(".pubLevel").each(function(){
+				if(bolCheckHide){
+					$(this).parent().parent().parent().parent().parent().parent().parent().show(); // 显示全部文献！
+					funcShowOrHideNoContent(true);
+				}else{
+					if($(this).html() != $(othis).html()){
+						$(this).parent().parent().parent().parent().parent().parent().parent().hide(); // 隐藏与当前文献等级不同的文献：即只显示相同等级的文献！
+					}
+					funcShowOrHideNoContent(false);
+				}
+			});
+		}
+		function funcShowOrHideNoContent(bolShow){
+			$(".nocontent").each(function(){
+				if(bolShow){
+					$(this).parent().parent().parent().parent().parent().show(); // 显示全部nocontent文献！
+				}else{
+					$(this).parent().parent().parent().parent().parent().hide(); // 隐藏全部nocontent文献！
+				}
+			});
+		}
+		
+		// 文献完成点击监听事件！
+		function funcDoneBtnEvent(){
+			layer.confirm('Are you sure you have done with this publication?', {
+				skin: 'layui-layer-admin',
+				shade: .1,
+				btn: ['Yes', 'Cancel'],
+				title: 'Confirm'
+			}, function (index) {
+				layer.close(index);
+				var indexLoadDone = layer.load(3, {shade: [0.01, '#393D49']});
+				admin.req('projectPubStatus/done', JSON.stringify({id: projectId + "|" + libraryId + "|" + formId + "|" + pmid + "|" + currentUser.id, projectId: projectId, date: new Date()}), function(res){
+					layer.close(indexLoadDone);
+					layer.msg(res.message, {icon: 1, time: 1000}, function () {
+						// 提交完成之后，刷新页面！
+						location.reload();
+					});
+				}, 'post');
+			});
+			return false;
+		}
+		
+		/* 高度/宽度设置 */
+		function resetWidthAndHeight(){
+			
+			// 设置数据采集框div的高度！
+			$("#idDataCollectionDiv").height(getClientHeight() - 90); // 减去导航条高度+20!
+			
+			// 设置左侧高度！
+			$(".lrSearch-result-left").height(getClientHeight() - 90); // 减去导航条高度+20!
+			
+		}
+		window.onload = function(){
+			window.onresize = resetWidthAndHeight; // 监听浏览器窗口大小调整！
+			resetWidthAndHeight(); // 初始化设置！
+		}
+		
+		/* 获取URL中的参数 */
+		function getQueryVariable(variable){
+			var query = window.location.search.substring(1);
+			query = decodeURIComponent(query); // 2021-09-22：解码！
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){ return pair[1] == "undefined" || pair[1] == "" ? null : pair[1]; }
+			}
+			return(false);
+		}
+		
+		// 删除已提交的数据！
+		function funcDeleteItemData(strBatchId){
+			$.ajax({
+				type: "post",
+				url: "/formsItemsData/deleteByBatchId",
+				async: true,
+				contentType: "application/json; charset=utf-8",
+				data: JSON.stringify({batchId: strBatchId}),
+				dataType: "json",
+				success: function (res) {
+					location.reload(); // 刷新页面！
+				}
+			});
+		}
+		
+		// ================================================================= //
+		
+		//获取全部概念类别！
+		function getAllConcepts() {
+			let all;
+			$.ajax({
+				url: '/assets/module/hjf-ptc/data/concept_list.json',
+				dataType: 'json',
+				async: false,
+				success: function (concepts) {
+					let extendedConcepts = _.map(concepts, function (o) {
+						o.show = true;
+						o.identifier = o._id; // TODO identifier useless since we have _id in DB
+						return o;
+					});
+					all = _.keyBy(extendedConcepts, function (o) {
+						return o._id;
+					});
+					//console.info("Loaded concept types: " + _.size(all));
+				},
+				error: function () {
+					console.error('Can not load concept types!')
+				}
+			})
+			return all;
+		}
+		
+		// 展示全部概念类别！
+		for (let concept of getOrderedConcepts()) {
+			$('.concepts-menu').append('<div class="concept-switch concept concept-' + concept.identifier + '" onclick="concept_toggle(\'' + concept.identifier + '\')"><span class="far icon"></span> ' + concept.name + '</div>');
+		}
+	
+	</script>
+
+</body>
+
+</html>

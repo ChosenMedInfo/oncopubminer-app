@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<link rel="icon" th:href="@{/assets/images/favicon.ico}" >
+	<title>OncoPubMiner - Members</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+	
+	<!-- Google Fonts -->
+	<link href="/assets/module/index/css/css.css" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="/assets/module/index/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/icofont.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/boxicons.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/animate.min.css" rel="stylesheet">
+	<link href="/assets/module/index/css/venobox.css" rel="stylesheet">
+	<link href="/assets/module/index/css/aos.css" rel="stylesheet">
+	
+	<!-- LayUI -->
+	<link th:href="@{/assets/libs/layui/css/layui.css}" rel="stylesheet">
+	<link th:href="@{/assets/module/admin.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="/assets/module/index/css/style.css" rel="stylesheet">
+	
+	<!-- Page Specific CSS Files -->
+	<link rel="stylesheet" th:href="@{/assets/module/hjf-ptc/css/style.css}" media="all">
+	<link rel="stylesheet" th:href="@{/assets/module/hjf-ptc/css/fontawesome-all.min.css}" media="all">
+	
+	<style type="text/css">
+	/* 检索框 */
+	.lrSearch-search-parent {
+		padding: 0 !important;
+		z-index: 10; /* 大于下方块的，但是要小于导航条的 */
+		/*border-bottom: 1px #F5F5F5 solid;*/
+		height: 60px;
+	}
+	.lrSearch-search .layui-form > .layui-form-item {
+		position: relative;
+	}
+	.lrSearch-search .layui-input-icon-group > .layui-icon {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 20px;
+		color: #909399;
+		position: absolute;
+		left: 0;
+		top: 0;
+		text-align: center;
+		z-index: 10000;
+	}
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input {
+		height: 40px;
+		line-height: 40px;
+		border-right: none;
+		border-radius: 6px 0 0 6px !important;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc( 100% - 98px );
+	}
+	.lrSearch-search #idMemberName {
+		padding-left: 44px;
+	}
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input:hover,
+	.lrSearch-search .layui-form > .layui-form-item > .layui-input:focus,
+	.lrSearch-search .layui-form-select .layui-input:hover,
+	.lrSearch-search .layui-form-select .layui-input:focus {
+		border-color: #e6e6e6 !important;
+	}
+	.lrSearch-search #idSubmit{
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 0px 6px 6px 0px !important;
+		border-left: 1px #F5F5F5 solid;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 14px !important;
+		background-color: #0299CC;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.lrSearch-search #idSubmit:hover{
+		background-color: #0299CC !important;
+	}
+	
+	/* 检索结果 */
+	.layui-table-view {
+		display: none;
+	}
+	#team{
+		padding: 0 0 30px 0;
+		min-height: 736px;
+	}
+	#idMemberList{
+		display: none;
+	}
+	.member-info a{
+		color: white !important;
+	}
+	</style>
+
+</head>
+<body class="show-chemical show-gene show-disease show-mutation show-clinsig show-evidirt">
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container">
+
+			<div class="logo float-left" style="margin-top: 5px;">
+				<a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a>
+			</div>
+
+			<nav class="nav-menu float-right d-none d-lg-block">
+				<ul>
+					<li><a href="/"><img th:src="@{/assets/images/logo.v1.png}" class="img-fluid"></a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/lrSearch">Search</a></li>
+					<li id="idNavLibrary"><a href="/lrLibrary">Library</a></li>
+					<li id="idNavMembers" class="active"><a href="/lrMembers">Team</a></li>
+					<li id="idNavForms"><a href="/lrForms">Forms</a></li>
+					<li id="idNavProjects"><a href="/lrProjects">Projects</a></li>
+					<li id="idNavApiDoc"></li>
+					<!--
+					<li><a href="/lrStat">Statistics</a></li>
+					-->
+					<li><a href="/lrHelp">Tutorial</a></li>
+					<li><a href="/lrAbout">About</a></li>
+					<li id="idNavUser"><a href="/login">Sign In <i class="bx bx-log-in"></i></a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<main id="main">
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="classHero">
+			<div class="hero-container">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	
+					<div class="carousel-inner" role="listbox">
+	
+						<!-- Slide 1 -->
+						<div class="carousel-item active" style="background-image: url('/assets/images/carousel/1.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Team Members</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 2 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/2.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Team Members</h2>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Slide 3 -->
+						<div class="carousel-item" style="background-image: url('/assets/images/carousel/3.jpg');">
+							<div class="carousel-container">
+								<div class="carousel-content container">
+									<h2 class="animated fadeInDown">Team Members</h2>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+	
+				</div>
+			</div>
+		</section><!-- End Hero -->
+
+		<!-- ======= About Lists Section ======= -->
+		<section id="team" class="team" style="padding-top: 20px; padding-bottom: 0px;">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-lg-12 content-item lrSearch-search-parent" data-aos="fade-up">
+						<div class="lrSearch-search">
+							<form class="layui-form searchFormForTable">
+								<div class="layui-form-item layui-input-icon-group">
+									<i class="layui-icon layui-icon-search"></i>
+									<input class="layui-input" id="idMemberName" name="memberName" placeholder="Search Team Members Here" autocomplete="off" lay-verType="tips"/>
+									<button class="layui-btn icon-btn" id="idSubmit" lay-submit><i class="layui-icon">&#xe615;</i>Search</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<table id="dataTable" lay-filter="dataTable" style="display: none;"></table>
+				<div class="row" id="idMemberList">
+					<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+						<a href="javascript:;" id="idBtnAdd">
+							<div class="member">
+								<div class="pic"><img th:src="@{/assets/images/addMember.jpg}" class="img-fluid" alt=""></div>
+								<div class="member-info">
+									<h4>New Member</h4>
+									<span>Click to Add New Team Member</span>
+								</div>
+							 </div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section><!-- End Our Team Section -->
+
+	</main><!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer"></footer><!-- End Footer -->
+
+	<!-- Vendor JS Files -->
+	<script src="/assets/module/index/js/jquery.min.js"></script>
+	<script src="/assets/module/index/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/module/index/js/jquery.easing.min.js"></script>
+	<script src="/assets/module/index/js/jquery.sticky.js"></script>
+	<script src="/assets/module/index/js/venobox.min.js"></script>
+	<script src="/assets/module/index/js/jquery.waypoints.min.js"></script>
+	<script src="/assets/module/index/js/counterup.min.js"></script>
+	<script src="/assets/module/index/js/isotope.pkgd.min.js"></script>
+	<script src="/assets/module/index/js/aos.js"></script>
+	
+	<!-- Template Main JS File -->
+	<script src="/assets/module/index/js/main.js"></script>
+	
+	<!-- Page Specific JS Files -->
+	<script th:src="@{/assets/libs/layui/layui.js}"></script>
+	<script th:src="@{/assets/module/hjf-ptc/js/jquery-3.6.0.min.js}"></script>
+	<script th:src="@{/assets/module/hjf-ptc/js/vendor.min.js}"></script>
+	<script th:src="@{/assets/js/common.js}"></script>
+	
+	<script>
+		
+		var strHtmlAddBtn = $("#idMemberList").html();
+		var currentUser;
+		layui.use(['layer', 'table', 'tableX', 'notice', 'xnUtil'], function () {
+			var $ = layui.jquery;
+			var layer = layui.layer;
+			var table = layui.table;
+			var tableX = layui.tableX;
+			var admin = layui.admin;
+			var form = layui.form;
+			var notice = layui.notice;
+			var xnUtil = layui.xnUtil;
+			
+			// 获取当前登录用户！
+			currentUser = getCurrentLoginUser();
+			
+			//设置核心版块的最小高度！
+			$("#team").css("min-height", getClientHeight()-191);
+			
+			// 获取统计信息！
+			funcGetStatInfo();
+			
+			/* 渲染表格 */
+			var insTb = tableX.render({
+				elem: '#dataTable',
+				url: '/sysUser/pageMember',
+				page: true,
+				limits: [100,200,500,1000],
+				limit: 500, //每页默认显示的数量
+				toolbar: ['<p>',
+					'<button lay-event="add" class="layui-btn layui-btn-sm icon-btn"><i class="layui-icon">&#xe654;</i>Add</button>&nbsp;',
+					'</p>'].join(''),
+				defaultToolbar: [],
+				cellMinWidth: 100,
+				cols: [
+					[
+						//{field: 'account', title: 'Member Account', width: 200, minWidth: 200, sort: false},
+						{field: 'name', title: 'Member Name', sort: false},
+						{field: 'email', title: 'Email', sort: false}
+					]
+				],
+				done: function(res, curr, count) {
+					xnUtil.tableDone(insTb, res, curr, count);
+					// 完成检索后，显示该div！
+					$("#idMemberList").css("display", "flex"); // 注意：这里不能用“.show()”或者“.css("display", "block")”，否则会一行一个，而不是一行多个！
+					// 重新检索后，清空原有内容，加入添加btn！
+					$("#idMemberList").html(strHtmlAddBtn);
+					// 重新进行监听：新增成员按钮点击事件！
+					$("#idBtnAdd").click(function(){
+						showAddOrUpdateModel();
+						return false;
+					});
+					// 遍历数据行，用于用另一种形式进行展示！
+					let i = 0;
+					res.data.forEach(function (item, index) {
+						i++;
+						let delayMs = i * 50;
+						let thisDeleteLinkId = "idDeleteTeamMember" + i;
+						let thisEditLinkId = "idEditTeamMember" + i;
+						let thisMemberOperate = item.name == 'demoMemberA' || item.name == 'demoMemberB' || item.name == 'demoMemberC' ? '<span>Team Member</span>' : '<span>Team Member <a href="javascript:;" id="' + thisEditLinkId + '"><i class="bx bxs-edit"></i></a> <a href="javascript:;" id="' + thisDeleteLinkId + '" style="display: none;"><i class="bx bx-trash"></i></a><br>Since: ' + item.createTime + ' (UTC+8)</span>';
+						let strThisMember = 
+							'<div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="' + delayMs + '">' +
+							'	<div class="member">' +
+							'		<div class="pic"><img src="/assets/images/teamMember.jpg" class="img-fluid" alt=""></div>' +
+							'		<div class="member-info">' +
+							'			<h4>' + item.name + '</h4>' +
+							'			' + thisMemberOperate +
+							'		</div>' +
+							'	</div>' +
+							'</div>';
+						$("#idMemberList").append(strThisMember);
+						
+						// 监听点击事件！
+						$("#" + thisEditLinkId).click(function(){
+							var layIndex = admin.open({
+								title: '<i class="bx bxs-edit"></i> Reset Password',
+								url: 'lrMemberForm',
+								area: '800px',
+								offset: '100px', // 距离顶部位置！
+								data: { data: item },	 // 传递数据到表单页面
+								end: function () {
+									var layerData = admin.getLayerData(layIndex, 'formOk');
+									if (layerData) {  // 判断表单操作成功标识
+										insTb.reload();  // 成功刷新表格
+									}
+								},
+								success: function (layero, dIndex) {
+									// 弹窗超出范围不出现滚动条
+									$(layero).children('.layui-layer-content').css('overflow', 'visible');
+									$(layero).find('[lay-submit]').focus();
+								}
+							});
+						});
+						$("#" + thisDeleteLinkId).click(function(){
+							layer.confirm('Are you sure to delete this team member?', {
+								skin: 'layui-layer-admin',
+								shade: .1,
+								btn: ['Yes', 'Cancel'],
+								title: 'Confirm'
+							}, function (index) {
+								layer.close(index);
+								$.ajax({
+									type: "post",
+									url: "/sysUser/delMember",
+									dataType: "json",
+									async: true,
+									data: JSON.stringify({id: item.id}),
+									contentType: "application/json; charset=utf-8",
+									success: function(result){
+										if(result.code == 200){
+											insTb.reload(); // 成功刷新表格
+										}else{
+											layer.msg(result.message);
+										}
+									}
+								});
+							});
+							return false;
+						});
+						
+						// 判断是否允许删除！
+						$.ajax({
+							type: "post",
+							url: "/projects/checkDelMember",
+							dataType: "json",
+							async: true,
+							data: JSON.stringify({id: item.id}),
+							contentType: "application/json; charset=utf-8",
+							success: function(result){
+								if(result.data == "CBD"){
+									$("#" + thisDeleteLinkId).show();
+								}else if(result.data == "CNBD"){
+									$("#" + thisDeleteLinkId).remove();
+								}
+							}
+						});
+						
+					});
+				}
+			});
+		
+			// 监听按钮点击事件！
+			$("#idSubmit").click(function () {
+				insTb.reload({where: {name : $("#idMemberName").val()}, page: {curr: 1}});
+				return false;
+			});
+			
+			/* 新增成员 */
+			$("#idBtnAdd").click(function(){
+				showAddOrUpdateModel();
+				return false;
+			});
+		
+			/* 表格头工具栏点击事件 */
+			table.on('toolbar(dataTable)', function (obj) {
+				if (obj.event === 'add') { // 添加
+					showAddOrUpdateModel();
+				}
+			});
+		
+			// 显示表单弹窗
+			function showAddOrUpdateModel(data) {
+				var layIndex = admin.open({
+					title: '<i class="bx bxs-user-plus"></i> Add Team Member',
+					url: 'lrMemberForm',
+					area: '800px',
+					offset: '100px', // 距离顶部位置！
+					data: { data: data },	 // 传递数据到表单页面
+					end: function () {
+						var layerData = admin.getLayerData(layIndex, 'formOk');
+						if (layerData) {  // 判断表单操作成功标识
+							insTb.reload();  // 成功刷新表格
+						}
+					},
+					success: function (layero, dIndex) {
+						// 弹窗超出范围不出现滚动条
+						$(layero).children('.layui-layer-content').css('overflow', 'visible');
+						$(layero).find('[lay-submit]').focus();
+					}
+				});
+			}
+		});
+	
+	</script>
+
+</body>
+
+</html>
